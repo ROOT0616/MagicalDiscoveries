@@ -1,0 +1,138 @@
+# 魔法部隊
+#				ダメージ : 耐久 , 士気 , 副次的損害  7 , 10 , 75% 
+#				耐久 , 士気  400 , 400
+black_magic_army = {
+	damage = 2.33
+	health = 2.00
+	morale = 2.00
+	morale_damage = 1.7
+  collateral_damage = 0.75
+	war_exhaustion = 1
+	time = 60
+	icon_frame = 2
+	prerequisites = { "tech_black_magic_army" }
+	resources = {
+		category = armies
+		cost = {
+			minerals = 250
+		}
+
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+# 精鋭魔法部隊
+#				ダメージ : 耐久 , 士気 , 副次的損害  8 , 15 , 40% 
+#				耐久 , 士気  600 , 600
+elite_black_magic_army = {
+	damage = 2.66
+	health = 3.00
+	morale = 3.00
+	morale_damage = 2
+	collateral_damage = 0.4
+	war_exhaustion = 1.00
+	time = 180
+	icon_frame = 2
+	prerequisites = { "tech_elite_black_magic_army" }
+	resources = {
+		category = armies
+		cost = {
+			minerals = 400
+		}
+
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+
+# 死霊部隊
+death_squad = {
+	damage = 1.66
+	health = 5
+	morale_damage = 2.5
+	has_morale = no
+	collateral_damage = 2
+	war_exhaustion = 1.00
+	time = 30
+	icon_frame = 2
+	prerequisites = { "tech_necromancy" }
+	resources = {
+		category = armies
+		cost = {
+			philosophers_stone = 2
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_authority = auth_machine_intelligence }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_authority = auth_machine_intelligence }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}

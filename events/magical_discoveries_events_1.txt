@@ -1,0 +1,403 @@
+#############################
+#####  魔法使いイベント  ######
+#############################
+
+namespace = magical_discoveries
+
+## 魔法との出会い
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.1
+	title = magical_discoveries.1.name
+	desc = magical_discoveries.1.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = { 
+		NOT = { has_country_flag = MeetMagicFlag }
+		NOT = { has_country_flag = DenyMagicFlag }
+	}
+	
+	## イベント発生時の効果
+	immediate = {
+	}
+		## イベントの効果
+	option = {
+		name = magical_discoveries.1a.name
+		set_country_flag	= MeetMagicFlag
+	}
+	option = {
+		name = magical_discoveries.1b.name
+		set_country_flag	= MeetMagicFlag
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+	}
+	option = {
+		name = magical_discoveries.1c.name
+		set_country_flag	= MeetMagicFlag
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	option = {
+		name = magical_discoveries.1d.name
+		set_country_flag	= DenyMagicFlag
+	}
+}
+
+## 魔導書1の購入
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.2
+	title = magical_discoveries.2.name
+	desc = magical_discoveries.2.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = { 
+		is_regular_empire = yes
+		has_country_flag = MeetMagicFlag
+		NOT = { has_country_flag = BuyGrimoireFlag01 }
+	}
+		## イベントの効果
+	option = {
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		name = magical_discoveries.2a.name
+		set_country_flag	= BuyGrimoireFlag01
+		owner = { add_resource = { energy = -1000 } }
+
+	}
+	option = {
+		name = magical_discoveries.2b.name
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		set_country_flag	= BuyGrimoireFlag01
+		owner = { add_resource = { energy = -1000 } }
+	}
+	option = {
+		name = magical_discoveries.2c.name
+	}
+	option = {
+		name = magical_discoveries.2d.name
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+## 魔導書2の購入
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.3
+	title = magical_discoveries.3.name
+	desc = magical_discoveries.3.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = { 
+		is_regular_empire = yes
+		has_country_flag = MeetMagicFlag
+		has_country_flag = BuyGrimoireFlag01
+		NOT = { has_country_flag = BuyGrimoireFlag02 }
+	}
+		## イベントの効果
+	option = {
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 2000 } } }
+		name = magical_discoveries.3a.name
+		set_country_flag	= BuyGrimoireFlag02
+		owner = { add_resource = { energy = -2000 } }
+	}
+	option = {
+		name = magical_discoveries.3b.name
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 2000 } } }
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		set_country_flag	= BuyGrimoireFlag02
+		owner = { add_resource = { energy = -2000 } }
+	}
+	option = {
+		name = magical_discoveries.3c.name
+	}
+	option = {
+		name = magical_discoveries.3d.name
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+## 魔導書3の購入
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.4
+	title = magical_discoveries.4.name
+	desc = magical_discoveries.4.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = { 
+		is_regular_empire = yes
+		has_country_flag = MeetMagicFlag
+		has_country_flag = BuyGrimoireFlag02
+		NOT = { has_country_flag = BuyGrimoireFlag03 }
+	}
+		
+		## イベントの効果
+	option = {
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 3000 } } }
+		owner = { add_resource = { energy = -3000 } }
+		name = magical_discoveries.4a.name
+		set_country_flag	= BuyGrimoireFlag03
+	}
+	option = {
+		name = magical_discoveries.4b.name
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 3000 } } }
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		set_country_flag	= BuyGrimoireFlag03
+		owner = { add_resource = { energy = -3000 } }
+	}
+	option = {
+		name = magical_discoveries.4c.name
+	}
+	option = {
+		name = magical_discoveries.4d.name
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+## 錬金術の書1の購入
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.5
+	title = magical_discoveries.5.name
+	desc = magical_discoveries.5.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = { 
+		is_regular_empire = yes
+		has_country_flag = MeetMagicFlag
+		NOT = { has_country_flag = BuyAlchemyFlag01 }
+	}
+		## イベントの効果
+	option = {
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		name = magical_discoveries.5a.name
+		set_country_flag	= BuyAlchemyFlag01
+		owner = { add_resource = { energy = -1000 } }
+	}
+	option = {
+		name = magical_discoveries.5b.name
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		set_country_flag	= BuyAlchemyFlag01
+		owner = { add_resource = { energy = -1000 } }
+	}
+	option = {
+		name = magical_discoveries.5c.name
+	}
+	option = {
+		name = magical_discoveries.5d.name
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+## 錬金術の書2の購入
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.6
+	title = magical_discoveries.6.name
+	desc = magical_discoveries.6.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = { 
+		is_regular_empire = yes
+		has_country_flag = MeetMagicFlag
+		has_country_flag = BuyAlchemyFlag01
+		NOT = { has_country_flag = BuyAlchemyFlag02 }
+	}
+		## イベントの効果
+	option = {
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 2000 } } }
+		name = magical_discoveries.6a.name
+		set_country_flag	= BuyAlchemyFlag02
+		owner = { add_resource = { energy = -2000 } }
+	}
+	option = {
+		name = magical_discoveries.6b.name
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 2000 } } }
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		set_country_flag	= BuyAlchemyFlag02
+		owner = { add_resource = { energy = -2000 } }
+	}
+	option = {
+		name = magical_discoveries.6c.name
+	}
+	option = {
+		name = magical_discoveries.6d.name
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+## 錬金術の書3の購入
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.7
+	title = magical_discoveries.7.name
+	desc = magical_discoveries.7.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = {
+		is_regular_empire = yes
+		has_country_flag = MeetMagicFlag
+		has_country_flag = BuyAlchemyFlag01
+		has_country_flag = BuyAlchemyFlag02
+		NOT = { has_country_flag = BuyAlchemyFlag03 }
+	}
+		## イベントの効果
+	option = {
+		name = magical_discoveries.7a.name
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 3000 } } }
+		set_country_flag	= BuyAlchemyFlag03
+		owner = { add_resource = { energy = -3000 } }
+	}
+	option = {
+		name = magical_discoveries.7b.name
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 3000 } } }
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		set_country_flag	= BuyAlchemyFlag03
+		owner = { add_resource = { energy = -3000 } }
+	}
+	option = {
+		name = magical_discoveries.7c.name
+	}
+	option = {
+		name = magical_discoveries.7d.name
+		trigger = { 
+			OR = { 
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+## ネクロノミコンの購入Necronomicon
+country_event = {
+	## イベントの基本情報
+	id = magical_discoveries.8
+	title = magical_discoveries.8.name
+	desc = magical_discoveries.8.desc
+	picture = GFX_evt_ship_in_orbit
+	hide_window = no
+	
+	## イベントの発生条件
+	is_triggered_only = no
+	fire_only_once = no
+	mean_time_to_happen = { years = 15 }
+	trigger = { 
+		is_regular_empire = yes
+		has_country_flag = BuyGrimoireFlag03
+		has_country_flag = BuyAlchemyFlag03
+		NOT = { has_country_flag = BuyNecronomiconFlag }
+		NOT = { has_country_flag = DenyNecronomiconFlag }
+	}
+		## イベントの効果
+	option = {
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 3500 } } }
+		name = magical_discoveries.8a.name
+		set_country_flag = BuyNecronomiconFlag
+		owner = { add_resource = { energy = -3500 } }
+	}
+	option = {
+		name = magical_discoveries.8b.name
+		set_country_flag = DenyNecronomiconFlag
+	}
+}

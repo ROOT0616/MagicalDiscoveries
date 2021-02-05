@@ -1,0 +1,16 @@
+heavenly_invasion_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_wormhole
+	counter = {
+		heavenly_anchors_1 = {
+		}
+		heavenly_kills_us_1 = {
+		}
+		heavenly_kills_others_1 = {
+		}
+		# heavenly_victims_1 = {
+		# }
+		# heavenly_planets_1 = {
+		# }
+	}
+}

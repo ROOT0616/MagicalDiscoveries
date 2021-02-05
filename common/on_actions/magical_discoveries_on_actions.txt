@@ -1,0 +1,10 @@
+# This = construction ship
+# Fires when construction is complete,
+# immediately before station is created
+
+on_building_starbase_exd_0 = {
+	events = {
+		magical_discoveries_crisis.1300
+		magical_discoveries_crisis.1310
+	}
+}

@@ -1,0 +1,479 @@
+# ミスリル装甲	 	Tire3 160 400 920
+# 			cost ミスリル 22 44 88 合金 11 22 44
+utility_component_template = {
+	key = "SMALL_MITHRIL_ARMOR"
+	size = small
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 160
+		ship_armor_regen_add_static = 1
+	}
+
+	prerequisites = { "tech_mithril_armor" }
+	component_set = "MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 11
+			mithrils = 22
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_MITHRIL_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 400
+		ship_armor_regen_add_static = 1
+	}
+	
+	prerequisites = { "tech_mithril_armor" }
+	component_set = "MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 22
+			mithrils = 44
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_MITHRIL_ARMOR"
+	size = large
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 920
+		ship_armor_regen_add_static = 1
+	}
+	
+	prerequisites = { "tech_mithril_armor" }
+	component_set = "MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+			mithrils = 88
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# オリハルコン装甲*2   Tire4	280  700  1500
+# cost  オリハルコン 11 22 44  合金  22  44  88
+utility_component_template = {
+	key = "SMALL_ORICHALCONE_ARMOR"
+	size = small
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 280
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_orichalcone_armor" }
+	component_set = "ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			orichalcones = 12
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_ORICHALCONE_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 700
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_orichalcone_armor" }
+	component_set = "ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 60
+			orichalcones = 24
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_ORICHALCONE_ARMOR"
+	size = large
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 1500
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_orichalcone_armor" }
+	component_set = "ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 120
+			orichalcones = 48
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# アダマンタイト装甲*2 Tire5	400  900  2000
+# cost  アダマンタイト 22 44 88  合金  22  44  88
+utility_component_template = {
+	key = "SMALL_ADAMANTINE_ARMOR"
+	size = small
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 400
+	}
+
+	prerequisites = { "tech_adamantine_armor" }
+	component_set = "ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 30
+			adamantines = 10
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_ADAMANTINE_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 900
+	}
+	
+	prerequisites = { "tech_adamantine_armor" }
+	component_set = "ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 90
+			adamantines = 20
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_ADAMANTINE_ARMOR"
+	size = large
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 2000
+	}
+	
+	prerequisites = { "tech_adamantine_armor" }
+	component_set = "ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 170
+			adamantines = 30
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+
+# 神の盾*2 Tire5	600 1500 2400
+# cost	アダマンタイト	30	60	90 賢者の石	1	2	3
+utility_component_template = {
+	key = "SMALL_GODS_SHIELD"
+	size = small
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	hidden = yes
+	power = 150
+	modifier = {
+		ship_shield_add = 600
+		ship_shield_regen_add_static = 60
+	}
+
+	component_set = "GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 30
+			philosophers_stone = 1
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			adamantines = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_GODS_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	hidden = yes
+	power = 200
+	modifier = {
+		ship_shield_add = 1500
+		ship_shield_regen_add_static = 150
+	}
+	
+	component_set = "GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 60
+			philosophers_stone = 2
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_GODS_SHIELD"
+	size = large
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	hidden = yes
+	power = 350
+	modifier = {
+		ship_shield_add = 2000
+		ship_shield_regen_add_static = 200
+	}
+	
+	component_set = "GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 90
+			philosophers_stone = 3
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# 神の御加護
+utility_component_template = {
+	key = "SMALL_GODS_BLESSINGS"
+	size = small
+	icon = "GFX_ship_part_gods_blessing"
+	icon_frame = 1
+	hidden = yes
+	power = 150
+	modifier = {
+		ship_evasion_mult = 3
+		ship_hull_add	= 3000
+		ship_interstellar_speed_mult = 6
+		ship_armor_regen_add_static = 20
+	}
+
+	component_set = "GODS_BLESSINGS"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 30
+			philosophers_stone = 1
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			adamantines = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_GODS_BLESSINGS"
+	size = medium
+	icon = "GFX_ship_part_gods_blessing"
+	icon_frame = 1
+	hidden = yes
+	power = 200
+	modifier = {
+		ship_evasion_mult = 3
+		ship_interstellar_speed_mult = 4
+		ship_hull_add	= 6000
+		ship_armor_regen_add_static = 60
+	}
+	
+	component_set = "GODS_BLESSINGS"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 60
+			philosophers_stone = 2
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_GODS_BLESSINGS"
+	size = large
+	icon = "GFX_ship_part_gods_blessing"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	modifier = {
+		ship_evasion_mult = 3
+		ship_interstellar_speed_mult = 3.5
+		ship_hull_add	= 9000
+		ship_armor_regen_add_static = 90
+	}
+	
+	component_set = "GODS_BLESSINGS"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 90
+			philosophers_stone = 3
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+#	天界の肌
+utility_component_template = {
+	key = "SMALL_GODS_SKIN"
+	size = small
+	icon = "GFX_ship_part_gods_skin"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	modifier = {
+		ship_armor_add = 400
+		ship_armor_regen_add_static = 40
+	}
+
+	component_set = "GODS_SKIN"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 30
+			philosophers_stone = 1
+		}		
+		upkeep = {
+			adamantines = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_GODS_SKIN"
+	size = medium
+	icon = "GFX_ship_part_gods_skin"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	modifier = {
+		ship_armor_add = 900
+		ship_armor_regen_add_static = 90
+	}
+	
+	component_set = "GODS_SKIN"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 60
+			philosophers_stone = 2
+		}		
+		upkeep = {
+			adamantines = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_GODS_SKIN"
+	size = large
+	icon = "GFX_ship_part_gods_skin"
+	icon_frame = 1
+	hidden = yes
+	power = 0
+	modifier = {
+		ship_armor_add = 2000
+		ship_armor_regen_add_static = 200
+	}
+	
+	component_set = "GODS_SKIN"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 90
+			philosophers_stone = 3
+		}		
+		upkeep = {
+			adamantines = @l_t6_upkeep_alloys
+		}
+	}
+}
+

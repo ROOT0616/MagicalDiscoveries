@@ -1,0 +1,86 @@
+spriteTypes = {
+
+	### mithrils ミスリル
+	spriteType = {
+		name = "GFX_mithrils"
+		textureFile = "gfx/interface/icons/resources/mithrils.dds"
+	}
+	spriteType = {
+		name = "GFX_mithrils_large"
+		textureFile = "gfx/interface/icons/resources/mithrils_large.dds"
+	}
+	spriteType = {
+		name = "GFX_resource_mithrils_large"
+		textureFile = "gfx/interface/icons/resources/mithrils_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_mithrils_grey"
+		textureFile = "gfx/interface/icons/resources/mithrils_grey.dds"
+	}
+
+	### orichalcones オリハルコン
+	spriteType = {
+		name = "GFX_orichalcones"
+		textureFile = "gfx/interface/icons/resources/orichalcones.dds"
+	}
+
+	spriteType = {
+		name = "GFX_orichalcones_large"
+		textureFile = "gfx/interface/icons/resources/orichalcones_large.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_resource_orichalcones_large"
+		textureFile = "gfx/interface/icons/resources/orichalcones_large.dds"
+	}
+
+
+	spriteType = {
+		name = "GFX_orichalcones_grey"
+		textureFile = "gfx/interface/icons/resources/orichalcones_grey.dds"
+	}
+
+	### アダマンタイト adamantines 
+	spriteType = {
+		name = "GFX_adamantines"
+		textureFile = "gfx/interface/icons/resources/adamantines.dds"
+	}
+
+	spriteType = {
+		name = "GFX_adamantines_large"
+		textureFile = "gfx/interface/icons/resources/orichalcones_large.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_resource_adamantines_large"
+		textureFile = "gfx/interface/icons/resources/orichalcones_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_adamantines_grey"
+		textureFile = "gfx/interface/icons/resources/adamantines_grey.dds"
+    }
+
+	### 賢者の石 philosophers_stone
+	spriteType = {
+		name = "GFX_philosophers_stone"
+		textureFile = "gfx/interface/icons/resources/philosophers_stone.dds"
+	}
+
+	spriteType = {
+		name = "GFX_philosophers_stone_large"
+		textureFile = "gfx/interface/icons/resources/philosophers_stone_large.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_resource_philosophers_stone_large"
+		textureFile = "gfx/interface/icons/resources/philosophers_stone_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_philosophers_stone_grey"
+		textureFile = "gfx/interface/icons/resources/philosophers_stone_grey.dds"
+    }
+
+}

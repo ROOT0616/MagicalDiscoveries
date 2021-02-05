@@ -1,0 +1,378 @@
+
+
+# ####################
+# 	神の吐息	Gods breath
+# ####################
+# key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
+# SMALL_GODS_BREATH_WEAPON	40	-25	60	120	3	2	0.5	2	0.5	2	18	20	120	0.96	0.8
+# MEDIUM_GODS_BREATH_WEAPON	80	-50	150	300	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
+# LARGE_GODS_BREATH_WEAPON	160	-100	200	750	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+
+weapon_component_template = {
+	key = "SMALL_GODS_BREATH_WEAPON"
+
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_gods_breath"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	hidden = yes
+	component_set = "GODSBREATH"
+	
+	cost = 40
+	power = -25
+	damage = { min = 180 max = 240 }
+	hull_damage = 3
+	shield_damage = 2
+	shield_penetration = 1
+	armor_damage = 2
+	armor_penetration = 1
+	windup = { min = 2 max = 18 }
+	total_fire_time = 20
+	range = 120
+	accuracy = 0.96
+	tracking = 0.8
+	
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @s_t6_cost
+			philosophers_stone = 0.2
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			philosophers_stone = @s_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# MEDIUM_GODS_BREATH_WEAPON	80	-50	150	300	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
+weapon_component_template = {
+	key = "MEDIUM_GODS_BREATH_WEAPON"
+
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_gods_breath"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	hidden = yes
+	component_set = "GODSBREATH"
+
+	cost = 80
+	power = -50
+	damage = { min = 360 max = 420 }
+	hull_damage = 3
+	shield_damage = 2
+	shield_penetration = 1
+	armor_damage = 2
+	armor_penetration = 1
+	windup = { min = 2 max = 18 }
+	total_fire_time = 20
+	range = 160
+	accuracy = 0.96
+	tracking = 0.6
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @m_t6_cost
+			philosophers_stone = 0.4
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			philosophers_stone = @m_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# LARGE_GODS_BREATH_WEAPON	160	-100	200	750	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+weapon_component_template = {
+	key = "LARGE_GODS_BREATH_WEAPON"
+
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_gods_breath"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	hidden = yes
+	component_set = "GODSBREATH"
+
+	cost = 160
+	power = -100
+	damage = { min = 810 max = 870 }
+	hull_damage = 3
+	shield_damage = 2
+	shield_penetration = 1
+	armor_damage = 2
+	armor_penetration = 1
+	windup = { min = 2 max = 18 }
+	total_fire_time = 20
+	range = 200
+	accuracy = 0.96
+	tracking = 0.4
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @l_t6_cost
+			philosophers_stone = 0.6
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			philosophers_stone = @l_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# ####################
+# 	クサナギノツヨシ	mythical decay
+# ####################
+# key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
+#
+weapon_component_template = {
+	key = "KUSANAGI_WEAPON"
+
+	size = extra_large
+	type = instant
+	icon = "GFX_ship_part_kusanagi"
+	icon_frame = 1
+	projectile_gfx = "tachyon_lance"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	hidden = yes
+	
+	component_set = "KUSANAGI"
+
+	cost = 160
+	power = -100
+	damage = { min = 15000 max = 20000 }
+	hull_damage = 4
+	shield_damage = 2
+	shield_penetration = 1
+	armor_damage = 2
+	armor_penetration = 1
+	windup = { min = 150 max = 300 }
+	total_fire_time = 150
+	range = 300
+	accuracy = 0.98
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @l_t6_cost
+			philosophers_stone = 0.6
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			philosophers_stone = @l_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# ####################
+# 	神話崩壊砲	mythical decay
+# ####################
+# key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
+# SMALL_MYTHICAL_DECRAY_WEAPON	40	-25	60	120	3	2	0.5	2	0.5	2	18	20	120	0.96	0.8
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
+# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+
+weapon_component_template = {
+	key = "SMALL_MYTHICAL_DECRAY_WEAPON"
+
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY"
+	prerequisites = { "tech_mythical_decay" }
+	
+	cost = 40
+	power = -25
+	damage = { min = 180 max = 240 }
+	hull_damage = 3
+	shield_damage = 2
+	shield_penetration = 0.5
+	armor_damage = 2
+	armor_penetration = 0.5
+	windup = { min = 2 max = 18 }
+	total_fire_time = 20
+	range = 120
+	accuracy = 0.96
+	tracking = 0.8
+	
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @s_t6_cost
+			philosophers_stone = 0.2
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			philosophers_stone = @s_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
+weapon_component_template = {
+	key = "MEDIUM_MYTHICAL_DECRAY_WEAPON"
+
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY"
+	prerequisites = { "tech_mythical_decay" }
+
+	cost = 80
+	power = -50
+	damage = { min = 360 max = 420 }
+	hull_damage = 3
+	shield_damage = 2
+	shield_penetration = 0.5
+	armor_damage = 2
+	armor_penetration = 0.5
+	windup = { min = 2 max = 18 }
+	total_fire_time = 20
+	range = 160
+	accuracy = 0.96
+	tracking = 0.6
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @m_t6_cost
+			philosophers_stone = 0.4
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			philosophers_stone = @m_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+weapon_component_template = {
+	key = "LARGE_MYTHICAL_DECRAY_WEAPON"
+
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY"
+	prerequisites = { "tech_mythical_decay" }
+
+	cost = 160
+	power = -100
+	damage = { min = 810 max = 870 }
+	hull_damage = 3
+	shield_damage = 2
+	shield_penetration = 0.5
+	armor_damage = 2
+	armor_penetration = 0.5
+	windup = { min = 2 max = 18 }
+	total_fire_time = 20
+	range = 200
+	accuracy = 0.96
+	tracking = 0.4
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @l_t6_cost
+			philosophers_stone = 0.6
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			philosophers_stone = @l_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}

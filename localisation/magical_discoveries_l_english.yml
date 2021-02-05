@@ -1,0 +1,386 @@
+﻿l_english:
+
+#######################
+#####    技術    ######
+#######################
+
+ tech_magical_science:0 "魔法科学"
+ tech_magical_science_desc:0 "「どうして」を研究する科学はその域を超えつつある。\nそれはいったい科学なのか？しかし、それはいまだに科学なのである。"
+
+ tech_advanced_magical_science:0 "発展魔法科学"
+ tech_advanced_magical_science_desc:0 "「どうして」？そう考える前にこう考えるべきなのだ「こうあってほしい」と。\n科学は一歩前進することで、原初で古典的な考えへと帰着した。"
+
+ tech_ultimate_magical_science:0 "究極魔法科学"
+ tech_ultimate_magical_science_desc:0 "もはや想像は創造となりつつある。工学分野の話ではない。物理学分野の話だ。"
+ 
+ tech_alchemy:0 "錬金術"
+ tech_alchemy_desc:0 "冶金学はその理論を飛躍させ、机上の空論と言われた作品や物品を生み出す素材を誕生させた。\nこの研究により「工学的不可能」とは過去のものとなりつつある。"
+
+ tech_advanced_alchemy:0 "発展錬金術"
+ tech_advanced_alchemy_desc:0 "あらゆる合金の作成難易度は急激に下がり、あらゆる合金が国内にあふれている。軍事力はいやおうなしに向上するだろう。"
+
+ tech_ultimate_alchemy:0 "究極錬金術"
+ tech_ultimate_alchemy_desc:0 "工学、合金の生産力向上は帝国全体の軍事力と建築を根本から変化させ、工業技師の大半は壺を前にして合金製造を行っていると噂される…実際は当事者しか知らない。"
+
+ tech_black_magic:0 "黒魔法"
+ tech_black_magic_desc:0 "魔力を操ることで様々な能力を発揮することができるだろう。我々は「力」に注力するべきだろう。"
+
+ tech_attac_magic:0 "攻撃魔法"
+ tech_attac_magic_desc:0 "物を破壊し、他者を攻撃することに特化したこの魔法は陸軍や警察の目に留まり、研究発展に多くのリソースが投じられた。結果として恐ろしいまでの「兵器」となるだろう。"
+ 
+ tech_advanced_attac_magic:0 "発展攻撃魔法"
+ tech_advanced_attac_magic_desc:0 "世の中で、最もよい組み合わせは力と慈悲、最も悪い組み合わせは弱さと争いである。"
+
+ tech_defensive_magic:0 "防衛魔法"
+ tech_defensive_magic_desc:0 "他者を守ることは、他者を傷つけることより難しい。この魔法は、（少なくとも肉体上での話ではあるが）そういった言説を過去のものにしようとしている。"
+ 
+ tech_advanced_defensive_magic:0 "発展防衛魔法"
+ tech_advanced_defensive_magic_desc:0 "自己を守ることができないものは他者を守ることもできない。しかし、魔法があれば、愛するものを守ることができるだろう。"
+ 
+ tech_black_magic_army:0 "魔法部隊"
+ tech_black_magic_army_desc:0 "体系的な魔法教育を受け、戦争へと駆り出された魔導士を見た魔法使いはどう思うだろうか？"
+ 
+ tech_elite_black_magic_army:0 "精鋭魔法部隊"
+ tech_elite_black_magic_army_desc:0 "彼らは言うだろう「やっちゃえ」"
+ 
+ tech_necromancy:0 "死霊魔法"
+ tech_necromancy_desc:0 "おばちゃん「命がおひとり様一個言うとるけどまた店に来れば買えんの？」"
+ 
+ tech_white_magic:0 "白魔法"
+ tech_white_magic_desc:0 "物を修復し、肉体を回復することに特化したこの魔法は医学界や生物学界の目に留まり、研究発展に多くのリソースが投じられた。結果として素晴らしい「戦略技術」が誕生した。"
+ 
+ tech_white_magic_court:0 "白魔法院"
+ tech_white_magic_court_desc:0 "白魔法を研究し、社会に成果を還元する研究教育機関。"
+ 
+ tech_advanced_white_magic:0 "発展白魔法"
+ tech_advanced_white_magic_desc:0 "修復、修繕は創造を補い、あらゆる保守作業を簡略化することに成功した。"
+ 
+ tech_barrier_magic:0 "結界魔法"
+ tech_barrier_magic_desc:0 "Ils ne passeront pas!"
+
+ tech_resuscitation_magic:0 "蘇生魔法"
+ tech_resuscitation_magic_desc:0 "「やあ」"
+ 
+ tech_philosophers_stone:0 "賢者の石"
+ tech_philosophers_stone_desc:0 "賢者の石-既知の化学組成を超えた物質-をかつての物理学者は定義した。\n通常存在しえない物質-安定的で、物質の酸化を抑え、金属の性質を根本から変化させるもの-を我々は作ることに成功したのである。"
+ 
+ tech_mithril_refinery:0 "ミスリル"
+ tech_mithril_refinery_desc:0 "白銀色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
+ 
+ tech_mithril_armor:0 "ミスリル装甲"
+ tech_mithril_armor_desc:0 "美しいだけではなく実用性にも優れた装甲。"
+ 
+ tech_orichalcone_refinery:0 "オリハルコン"
+ tech_orichalcone_refinery_desc:0 "赤金色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
+ 
+ tech_orichalcone_armor:0 "オリハルコン装甲"
+ tech_orichalcone_armor_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
+
+ tech_adamantine_refinery:0 "アダマンタイト"
+ tech_adamantine_refinery_desc:0 "非常に硬く、加工すら難しいこの金属は様々な重要部品として活用される。特に軍需品においてこの金属は革命的な存在となるだろう。"
+ 
+ tech_adamantine_armor:0 "アダマンタイト装甲"
+ tech_adamantine_armor_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
+
+ tech_mythical_decay:0 "神話崩壊砲"
+ tech_mythical_decay_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
+
+ tech_gods_skin:0 "天界の肌"
+ tech_gods_skin_desc:0 "我々の研究者の一部は天界人と呼ぶ存在の表層部分はシールドや装甲にも似たような性質を有している。これらを研究することにより美しく、実用性の高い艦船等を作ることができるだろう。"
+
+#######################
+#####    資源    ######
+#######################
+ 
+ mithrils:0 "ミスリル"
+ mithrils_desc:0 "白銀色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
+
+ orichalcones:0 "オリハルコン"
+ orichalcones_desc:0 "赤金色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
+
+ adamantines:0 "アダマンタイト"
+ adamantines_desc:0 "非常に硬く、加工すら難しいこの金属は様々な重要部品として活用される。特に軍需品においてこの金属は革命的な存在となるだろう。"
+
+ philosophers_stone:0 "賢者の石"
+ philosophers_stone_desc:0 "賢者の石-既知の化学組成を超えた物質-をかつての物理学者は定義した。\n通常存在しえない物質-安定的で、物質の酸化を抑え、金属の性質を根本から変化させるもの-を我々は作ることに成功したのである。"
+ 
+#######################
+#####    建物    ######
+#######################
+
+ building_white_magic_court:0 "白魔法院"
+ building_white_magic_court_desc:0 "白魔法を研究し、社会に成果を還元する研究教育機関。"
+
+ building_barrier_magic_court:0 "結界魔法院"
+ building_barrier_magic_court_desc:0 "Ils ne passeront pas!"
+
+ building_mithril_refinery:0 "ミスリル錬金所"
+ building_mithril_refinery_desc:0 "ミスリルを錬成し、加工可能な状態へと変化させる施設。"
+
+ building_mithril_magic_tool_factory:0 "ミスリル魔道具工場"
+ building_mithril_magic_tool_factory_desc:0 "ミスリルを利用した美しく実用性のある道具を加工する工場。"
+
+ building_orichalcone_refinery:0 "オリハルコン錬金所"
+ building_orichalcone_refinery_desc:0 "オリハルコンを錬成し、加工可能な状態へと変化させる施設。"
+
+ building_orichalcone_workshop:0 "オリハルコン工芸所"
+ building_orichalcone_workshop_desc:0 "オリハルコンを利用した工芸を行う場所。硬すぎるため実用性は低い。"
+
+ building_adamantine_refinery:0 "アダマンタイト錬金所"
+ building_adamantine_refinery_desc:0 "アダマンタイトを錬成し、加工可能な状態へと変化させる施設。"
+
+ building_the_legendary_alchem_house:0 "賢者の石錬金所"
+ building_the_legendary_alchem_house_desc:0 "賢者の石を錬成し、加工可能な状態へと変化させる施設。"
+
+#######################
+#####    仕事    ######
+#######################
+ 
+ job_white_magician:0 "白魔道士"
+ job_white_magician_desc:0 "回復や修繕を行う専門家にして恐るべき力の体現者"
+ job_white_magician_plural:0 "白魔道士"
+ mod_job_white_magician_add:0 "白魔道士の職業枠"
+
+ job_mithril_refiner:0 "ミスリル錬金術師"
+ job_mithril_refiner_desc:0 "鉱物等から魔力によりミスリルを合成させる専門家"
+ job_mithril_refiner_plural:0 "ミスリル錬金術師"
+ mod_job_mithril_refiner_add:0 "ミスリル錬金術師の職業枠"
+
+ job_mithril_magic_tool_crafter:0 "ミスリル魔道具師 "
+ job_mithril_magic_tool_crafter_desc:0 "ミスリルを様々な魔法道具に加工する職人"
+ job_mithril_magic_tool_crafter_plural:0 "ミスリル魔道具師 "
+ mod_job_mithril_magic_tool_crafter_add:0 "ミスリル魔道具師の職業枠"
+
+ job_orichalcone_refiner:0 "オリハルコン錬金術師"
+ job_orichalcone_refiner_desc:0 "ミスリル等から魔力によりオリハルコンを合成させる専門家"
+ job_orichalcone_refiner_plural:0 "オリハルコン錬金術師"
+ mod_job_orichalcone_refiner_add:0 "オリハルコン錬金術師の職業枠"
+ 
+ job_orichalcone_crafter:0 "オリハルコン工芸士"
+ job_orichalcone_crafter_desc:0 "オリハルコンを工芸に使う冶金学の大家"
+ job_orichalcone_crafter_plural:0 "オリハルコン工芸士"
+ mod_job_orichalcone_crafter_add:0 "オリハルコン工芸士の職業枠"
+
+ job_adamantine_refiner:0 "アダマンタイト錬金術師"
+ job_adamantine_refiner_desc:0 "オリハルコン等から魔力によりアダマンタイトを合成させる専門家"
+ job_adamantine_refiner_plural:0 "アダマンタイト錬金術師"
+ mod_job_adamantine_refiner_add:0 "アダマンタイト錬金術師の職業枠"
+
+ job_the_legendary_alchemist:0 "伝説の錬金術師"
+ job_the_legendary_alchemist_desc:0 "錬金術を極めた国家有数の専門家"
+ job_the_legendary_alchemist_plural:0 "伝説の錬金術師"
+ mod_job_the_legendary_alchemist_add:0 "伝説の錬金術師の職業枠"
+
+ black_magic_army:0 "魔法部隊"
+ black_magic_army_desc:0 "体系的な魔法教育を受け、戦争へと駆り出された魔導士を見た魔法使いはどう思うだろうか？"
+
+ elite_black_magic_army:0 "精鋭魔法部隊"
+ elite_black_magic_army_desc:0 "彼らは言うだろう「やっちゃえ」"
+
+ death_squad:0 "死霊部隊"
+ death_squad_desc:0 "死ねば味方も敵も関係なくその隊列に加わるだろう"
+
+#######################
+#####  イベント  ######
+#######################
+
+ magical_discoveries.1.name:0 "魔法使いとの邂逅"
+ magical_discoveries.1.desc:0 "首都の国家元首官邸に奇妙な来客があった。警備には全く問題がないにもかかわらず、その来客は国家元首執務室に直接乗り込んだ。\nその者は自分を§Y魔法使い§!と名乗り、§Y魔法の存在§!を伝授したいと言う。その力は強大で§G国力を増大§!させるが§R大いなる存在の怒り§!を買わぬようにしなければならないと言ってその者は姿をくらました。まるで現れた時と同じように。\nそして、その場には奇妙な静寂が流れた。"
+ magical_discoveries.1a.name:0 "魔法使いは存在するのか......"
+ magical_discoveries.1b.name:0 "一体どのような技術なのだろうか......"
+ magical_discoveries.1c.name:0 "おお......これぞ我々の求めていたものだ！"
+ magical_discoveries.1d.name:0 "馬鹿馬鹿しい！ 警備を強化しろ！"
+
+ magical_discoveries.2.name:0 "魔導書の購入"
+ magical_discoveries.2.desc:0 "再度、首都の国家元首官邸に奇妙な来客があった。警備には全く問題がないにもかかわらず、その来客は国家元首執務室に直接乗り込んできたが、前回とは様子が違うようだ。\n今回は旅費が足りず、その旅費を融資して欲しいと言う。莫大な額をその魔法使いは提示したが、その代わりに§G魔導書§!を譲ると言う。\nこの本を研究すれば彼らの技術の一端が掴めると言う。\n判断は国家元首に任された。"
+ magical_discoveries.2a.name:0 "良いだろう。すぐに用意したまえ。"
+ magical_discoveries.2b.name:0 "困っている隣人には手を差し伸べるべきだ"
+ magical_discoveries.2c.name:0 "申し訳ないがそのような余力は我が国にはない。"
+ magical_discoveries.2d.name:0 "この部外者をすぐに連れ出せ！"
+
+ magical_discoveries.3.name:0 "究極の魔導書を購入"
+ magical_discoveries.3.desc:0 "再度、首都の国家元首官邸に奇妙な来客があった。警備には全く問題がないにもかかわらず、その来客は国家元首執務室に直接乗り込んできたが、前回とは様子が違うようだ。\n今回は旅費が足りず、その旅費を融資して欲しいと言う。莫大な額をその魔法使いは提示したが、その代わりに§G究極の魔導書§!を譲ると言う。\nこの本を研究すれば彼らの技術の一端が掴めると言う。\n判断は国家元首に任された。"
+ magical_discoveries.3a.name:0 "良いだろう。すぐに用意したまえ。"
+ magical_discoveries.3b.name:0 "困っている隣人には手を差し伸べるべきだ"
+ magical_discoveries.3c.name:0 "申し訳ないがそのような余力は我が国にはない。"
+ magical_discoveries.3d.name:0 "この部外者をすぐに連れ出せ！"
+
+ magical_discoveries.4.name:0 "伝説の魔導書の購入"
+ magical_discoveries.4.desc:0 "再度、首都の国家元首官邸に奇妙な来客があった。警備には全く問題がないにもかかわらず、その来客は国家元首執務室に直接乗り込んできたが、前回とは様子が違うようだ。\n今回は旅費が足りず、その旅費を融資して欲しいと言う。莫大な額をその魔法使いは提示したが、その代わりに§G伝説の魔導書§!を譲ると言う。\nこの本を研究すれば彼らの技術の一端が掴めると言う。\n判断は国家元首に任された。"
+ magical_discoveries.4a.name:0 "良いだろう。すぐに用意したまえ。"
+ magical_discoveries.4b.name:0 "困っている隣人には手を差し伸べるべきだ"
+ magical_discoveries.4c.name:0 "申し訳ないがそのような余力は我が国にはない。"
+ magical_discoveries.4d.name:0 "この部外者をすぐに連れ出せ！"
+
+ magical_discoveries.5.name:0 "錬金術の書物の購入"
+ magical_discoveries.5.desc:0 "再度、首都の国家元首官邸に奇妙な来客があった。警備には全く問題がないにもかかわらず、その来客は国家元首執務室に直接乗り込んできたが、前回とは様子が違うようだ。\n今回は旅費が足りず、その旅費を融資して欲しいと言う。莫大な額をその魔法使いは提示したが、その代わりに§G錬金術の書物§!を譲ると言う。\nこの本を研究すれば彼らの技術の一端が掴めると言う。\n判断は国家元首に任された。"
+ magical_discoveries.5a.name:0 "良いだろう。すぐに用意したまえ。"
+ magical_discoveries.5b.name:0 "困っている隣人には手を差し伸べるべきだ"
+ magical_discoveries.5c.name:0 "申し訳ないがそのような余力は我が国にはない。"
+ magical_discoveries.5d.name:0 "この部外者をすぐに連れ出せ！"
+
+ magical_discoveries.6.name:0 "究極の錬金術の書物の購入"
+ magical_discoveries.6.desc:0 "再度、首都の国家元首官邸に奇妙な来客があった。警備には全く問題がないにもかかわらず、その来客は国家元首執務室に直接乗り込んできたが、前回とは様子が違うようだ。\n今回は旅費が足りず、その旅費を融資して欲しいと言う。莫大な額をその魔法使いは提示したが、その代わりに§G究極の錬金術§!を譲ると言う。\nこの本を研究すれば彼らの技術の一端が掴めると言う。\n判断は国家元首に任された。"
+ magical_discoveries.6a.name:0 "良いだろう。すぐに用意したまえ。"
+ magical_discoveries.6b.name:0 "困っている隣人には手を差し伸べるべきだ"
+ magical_discoveries.6c.name:0 "申し訳ないがそのような余力は我が国にはない。"
+ magical_discoveries.6d.name:0 "この部外者をすぐに連れ出せ！"
+
+ magical_discoveries.7.name:0 "伝説の錬金術の書物の購入"
+ magical_discoveries.7.desc:0 "再度、首都の国家元首官邸に奇妙な来客があった。警備には全く問題がないにもかかわらず、その来客は国家元首執務室に直接乗り込んできたが、前回とは様子が違うようだ。\n今回は旅費が足りず、その旅費を融資して欲しいと言う。莫大な額をその魔法使いは提示したが、その代わりに§G伝説の錬金術の書物§!を譲ると言う。\nこの本を研究すれば彼らの技術の一端が掴めると言う。\n判断は国家元首に任された。"
+ magical_discoveries.7a.name:0 "良いだろう。すぐに用意したまえ。"
+ magical_discoveries.7b.name:0 "困っている隣人には手を差し伸べるべきだ"
+ magical_discoveries.7c.name:0 "申し訳ないがそのような余力は我が国にはない。"
+ magical_discoveries.7d.name:0 "この部外者をすぐに連れ出せ！"
+
+ magical_discoveries.8.name:0 "ネクロノミコンの購入"
+ magical_discoveries.8.desc:0 "素晴らしい書物を売ってくれた魔法使いと再開した。今度はのネクロノミコンを売ってくれるらしい"
+ magical_discoveries.8a.name:0 "ネクロノミコンを購入する"
+ magical_discoveries.8b.name:0 "ネクロノミコンだと恐ろしいそんなものを持ってくるな！"
+
+ magical_discoveries_crisis.1.name:0 "天使の目撃"
+ magical_discoveries_crisis.1.desc:0 "この銀河の各地で神話で語り継がれている天使ような生物の目撃が報告されている。"
+
+ magical_discoveries_crisis.2.name:0 "天使の発見"
+ magical_discoveries_crisis.2.desc:0 "ついに我々は天使を見つけた。"
+ magical_discoveries_crisis.2a.name:0 "天使と平和的に話を行う"
+ magical_discoveries_crisis.2b.name:0 "天使を捕獲する"
+ magical_discoveries_crisis.2c.name:0 "そっとしておこう"
+
+ magical_discoveries_crisis.3.name:0 "天使の協力"
+ magical_discoveries_crisis.3.desc:0 "天使が我らの力になってくれるらしい。"
+
+ magical_discoveries_crisis.4.name:0 "天使の反撃"
+ magical_discoveries_crisis.4.desc:0 "天使を捕まえようとしたら我らに牙をむけた。"
+
+ magical_discoveries_crisis.1007.name:0 "天界からの門"
+ magical_discoveries_crisis.1007.desc:0 "時空構造の巨大な門が[heavens_system.GetName]星系内に現れた！  原因は定かではないが、 その門は別次元からの一方通行のポータルとして機能する。 そこから奇妙な船の艦隊が溢れ出てきて、 手当たり次第に周囲を攻撃している。 これは大規模な侵攻の始まりらしい！ \n\n我々は門の向こう側にやってきた艦船が発信する、 強力な信号を傍受した。 それは我々に罰を与えるつもりらしい。"
+ magical_discoveries_crisis.1007.a:0 "すばらしい……別次元の生命体とは。 "
+ magical_discoveries_crisis.1007.b:0 "彼らはよく組織されているようだ。"
+
+ magical_discoveries_crisis.1008.name:0 "天啓"
+ magical_discoveries_crisis.1008.desc:0 " [Root.GetName]のいたるところで様々な宗教の信者たちが、この銀河の創造主が襲ってくるといっている。しかも場所に関わらずどの惑星でもほぼ同時に起きた。しかもだ、それとほぼ同時刻に銀河のどこかで異常なエネルギーが発生したのが観測された。 科学者は、 この出来事を説明するのに苦慮している。 こんなことはこれまでに記録されたことがない。 \n\n突然のエネルギー急変動の正確な発信地点はまだ特定できていないが、 入手可能なデータを解析中だ。 "
+ magical_discoveries_crisis.1008.a:0 "続けてくれ。"
+
+ magical_discoveries_crisis.1009.desc:0 "以前に検出された巨大なエネルギー急変動の発生源が特定された。 [heavens_system.GetName]星系内にある、 巨大な白く輝く門だ。 奇妙な宇宙船の艦隊がこの門から溢れ出てきている。 第一報によると、 接触しようとする全ての相手を無差別に攻撃したようだ。 \n\n我々は門の向こう側にやってきた艦船が発信する、 強力な信号を傍受した。 それはまるで……狩りの合図のようだ。 "
+
+ magical_discoveries_crisis.1010.name:0 "天啓"
+ magical_discoveries_crisis.1010.desc:0 "貴様は禁忌を犯した…   \n\n神による神罰を受けよ…  "
+ magical_discoveries_crisis.1010.a:0 "ふざけるな！  我々が何をした！"
+
+ magical_discoveries_crisis.1013.name:0 "ヘブンズ・ゲートの破壊"
+ magical_discoveries_crisis.1013.desc:0 "[heavens_system.GetName]のヘブンズ・ゲートを破壊した！ 天界からの侵略者はもはや、 天界から増援を受けられないことを意味する。 \n\nこのヘブンズ・ゲートの破壊により、 裁きの終わりがついに見えてきた。 めざましい高揚感が銀河中を駆け巡った。 門にトドメを刺した艦である[gate_killer.GetName]は多くの賞賛を得た。 乗組員は世紀の英雄として称えられる。 "
+ magical_discoveries_crisis.1013.a:0 "神々をこの銀河から追い出せた。"
+
+ magical_discoveries_crisis.1050:0 "神々"
+ magical_discoveries_crisis.1050.desc:0 "神によるさばきを受けよ..."
+ magical_discoveries_crisis.1050.a:0 "我々の間に平和は無いのか？"
+ magical_discoveries_crisis.1050.a.response:0 "……平和……平和は無い……貴様らは禁忌を犯した……"
+ magical_discoveries_crisis.1050.b:0 "神を語るとはさぞつよいのだろうな"
+ magical_discoveries_crisis.1050.b.response:0 "……神にその態度が禁忌をおかしたのだろうな……"
+ magical_discoveries_crisis.1050.c:0 "お前達もよくいる嫌らしい異星種族にすぎないな。"
+ magical_discoveries_crisis.1050.c.response:0 "…貴様らの創造主であるぞ…"
+ magical_discoveries_crisis.1050.d:0 "お前達自身のことを話してくれ。 理解の助けになるはずだ。"
+ magical_discoveries_crisis.1050.d.response:0 "……理解した……これを……お前達は禁忌を犯した……"
+ magical_discoveries_crisis.1050.e:0 "お前達はより高い次元の存在なのか？"
+ magical_discoveries_crisis.1050.e.response:0 "……高いだと…そんなレベルではない……私達はこの銀河の創造主だ…"
+ magical_discoveries_crisis.1050.f:0 "お前はシュラウドから来たのか？"
+ magical_discoveries_crisis.1050.f.response:0 "……シュラウド……知っているのか……その存在も……我々が創造した……"
+
+ magical_discoveries_crisis.1271.name:0 "神罰の終わり"
+ magical_discoveries_crisis.1271.desc:0 "ついに、おわったのか…"
+
+ magical_discoveries_crisis.1250.name:0 "封印されしエクゾディア"
+ magical_discoveries_crisis.1250.desc:0 ""
+ magical_discoveries_crisis.1250a.name:0 ""
+
+
+#############################
+#####  イベントチェイン  ######
+#############################
+
+ heavenly_invasion_1_poi:0 "ヘブンズ・ゲート"
+ heavenly_invasion_1_poi_desc:0 "天界からの侵入者を吐き出しているヘブンズ・ゲートが[heavens_system.GetName]星系で検出された。 ヘブンズ・ゲートが破壊されるまで、 神の裁きは終わらないだろう "
+ heavenly_invasion_4_poi:0 "神の楔"
+ heavenly_invasion_4_poi_desc:0 "ニンフたちが建造している大型の宇宙ステーションは次元の「楔（アンカー）」、 つまりワームホールを用いた艦船移動能力を拡張する導管として機能するらしい。 起動中のアンカーが増えれば増えるほど、 彼らは自己の領域から多くの援軍を連れてくることが可能になる。 \n\nまた、 アンカーは次元ポータルの亜空間一体性を大幅に強める役目も果たしているようだ。 ひとつでも起動中のアンカーがある限り、 ヘブンズ・ゲートは事実上破壊不能なのだ！"
+ heavenly_invasion_chain_title:0 "天界からの侵入者"
+ heavenly_invasion_chain_desc:0 "わが銀河の時空基本構造に巨大な通路が生じ、 天界との通り道となっているようだ。ここから神々が侵入してきているようだ。"
+ heavenly_anchors_1:0 "神の停泊地"
+ heavenly_kills_us_1:0 "我が帝国が神を殺した数"
+ heavenly_kills_others_1:0 "他の帝国が神を殺した数"
+
+#######################
+#####    装甲    ######
+#######################
+
+ MITHRIL_ARMOR:0 "ミスリル装甲"
+ MITHRIL_ARMOR_desc:0 "美しいだけではなく実用性にも優れた装甲。"
+ SMALL_MITHRIL_ARMOR:0 "ミスリル装甲"
+ MEDIUM_MITHRIL_ARMOR:0 "ミスリル装甲"
+ LARGE_MITHRIL_ARMOR:0 "ミスリル装甲"
+
+ ORICHALCONE_ARMOR:0 "オリハルコン装甲"
+ ORICHALCONE_ARMOR_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
+ SMALL_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
+ MEDIUM_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
+ LARGE_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
+
+ ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
+ ADAMANTINE_ARMOR_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
+ SMALL_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
+ MEDIUM_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
+ LARGE_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
+
+ GODS_SHIELD:0 "八咫鏡"
+ GODS_SHIELD_desc:0 "八咫鏡"
+ SMALL_GODS_SHIELD:0 "八咫鏡"
+ MEDIUM_GODS_SHIELD:0 "八咫鏡"
+ LARGE_GODS_SHIELD:0 "八咫鏡"
+
+ GODS_BLESSINGS:0 "八尺瓊勾玉"
+ SMALL_GODS_BLESSINGS:0 "八尺瓊勾玉"
+ MEDIUM_GODS_BLESSINGS:0 "八尺瓊勾玉"
+ LARGE_GODS_BLESSINGS:0 "八尺瓊勾玉"
+
+#######################
+#####    武器    ######
+#######################
+
+ MYTHICALDECAY:0 "神話崩壊砲"
+ MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
+ MYTHICAL_DECRAY_WEAPON_desc:0 "神の知識を得て作りし神をも殺す兵器"
+ SMALL_MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
+ LARGE_MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
+
+ KUSANAGI_WEAPON:0 "クサナギツヨシ"
+
+ 
+#######################
+#####    布告    ######
+#######################
+
+ edict_philosophers_stone_campaign:0 "賢者の石による人体錬成"
+ edict_philosophers_stone_campaign_desc:0 ""
+
+ edict_white_magic_campaign:0 "魔法による障害物除去"
+ edict_white_magic_campaign_desc:0 ""
+
+ edict_mithril_building_materials_campaign:0 "ミスリルによる建材代用"
+ edict_mithril_building_materials_campaign_desc:0 ""
+
+
+ edict_adamantite_skyscraper_construction_campaign:0 "アダマンタイトによる超高層建設"
+ edict_adamantite_skyscraper_construction_campaign_desc:0 ""
+
+ edict_cheat_infinite_proliferation_campaign:0 "test"
+ edict_cheat_infinite_proliferation_campaign_desc:0 ""
+
+
+
+#######################
+#####    〇〇    ######
+#######################
+
+# :0 ""
+# _desc:0 ""

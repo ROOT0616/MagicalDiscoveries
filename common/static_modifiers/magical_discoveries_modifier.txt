@@ -1,0 +1,8 @@
+# #�ƍߗ}�~��-10���@����x5��	�G�l���M�[-5
+
+# patrolling_society = {
+# 	icon = "gfx/interface/icons/planet_modifiers/pm_colony_settlement.dds"
+# 	icon_frame = 1
+# 	planet_stability_add = 5
+# 	planet_crime_add = -10
+# }

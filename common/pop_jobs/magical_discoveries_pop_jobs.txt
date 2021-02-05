@@ -1,0 +1,531 @@
+#白魔道士   快適度+5 成長速度+5%
+white_magician = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_clinic
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 5
+		pop_growth_speed = 0.05
+	}
+
+	resources = {
+		category = planet_doctors
+		upkeep = {
+			energy = 1
+		}
+  }
+
+	weight = {
+		weight = @spawner_drone_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_robot_domestic_protocols
+				has_trait = trait_charismatic
+			}
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_repugnant
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_job = white_magician
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+	}
+}
+
+#ミスリル錬金術師   鉱物24 → ミスリル6
+mithril_refiner = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_mithril_refiner_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			mithrils = 3
+		}
+		upkeep = {
+			minerals = 12
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = forge_subsidies
+				}
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = mithril_refiner
+		}
+		modifier = {
+			factor = 15
+			has_job = mithril_refiner
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+		}
+	}
+}
+
+#ミスリル魔道具師   ミスリル6 → 消費財
+mithril_magic_tool_crafter = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_mithril_ｍagic_tool_crafter_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			consumer_goods = 3
+			unity = 3
+		}
+		upkeep = {
+			mithrils = 3
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = forge_subsidies
+				}
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = mithril_ｍagic_tool_crafter
+		}
+		modifier = {
+			factor = 15
+			has_job = mithril_ｍagic_tool_crafter
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+		}
+	}
+}
+
+#オリハルコン錬金術師		レアクリスタル3  ミスリル12  → オリハルコン6
+orichalcone_refiner = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_orichalcone_refiner_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			orichalcones = 6
+		}
+		upkeep = {
+      mithrils = 12
+      rare_crystals = 3
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = forge_subsidies
+				}
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = orichalcone_refiner
+		}
+		modifier = {
+			factor = 15
+			has_job = orichalcone_refiner
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+		}
+	}
+}
+
+#オリハルコン工芸士		オリハルコン5 → 影響力0.5
+orichalcone_crafter = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_orichalcone_refiner_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			planet_amenities_add = 10
+			influence = 0.5
+		}
+		upkeep = {
+			orichalcones = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = forge_subsidies
+				}
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = orichalcone_crafter
+		}
+		modifier = {
+			factor = 15
+			has_job = orichalcone_crafter
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+		}
+	}
+}
+
+#アダマンタイト錬金術師		オリハルコン6 賢者の石1 → アダマンタイト3
+adamantine_refiner = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_adamantine_refiner_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+			adamantines = 2
+		}
+		upkeep = {
+      orichalcones = 6
+      philosophers_stone = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = forge_subsidies
+				}
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = adamantine_refiner
+		}
+		modifier = {
+			factor = 15
+			has_job = adamantine_refiner
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+		}
+	}
+}
+
+#伝説の錬金術師				レアクリスタル2 ガス2 ズィロ2 鉱物20 →  賢者の石1
+the_legendary_alchemist = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = building_the_legendary_alchemist_1
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+	}
+
+	possible = {
+		specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_metallurgists
+		produces = {
+      philosophers_stone = 1
+		}
+		upkeep = {
+      exotic_gases = 2
+      rare_crystals = 2
+      sr_zro = 2
+			minerals = 20
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_edict = forge_subsidies
+				}
+			}
+			energy = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 0.1
+			can_take_servant_job = yes
+		}
+		modifier = {
+			factor = 2
+			species = {
+				has_species_flag = racket_species_flag
+			}
+		}
+		modifier = {
+			factor = 5
+			has_job = the_legendary_alchemist
+		}
+		modifier = {
+			factor = 15
+			has_job = the_legendary_alchemist
+			OR = {
+				has_trait = trait_robust
+				has_trait = trait_robot_efficient_processors
+			}
+		}
+		modifier = {
+			factor = 1.2
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_void_dweller_1
+		}
+	}
+}

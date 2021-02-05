@@ -1,0 +1,92 @@
+#賢者の石による人体錬成
+philosophers_stone_campaign = {
+	length = 3650
+	resources = {
+		category = campaigns
+		cost = {
+			philosophers_stone = 250
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.5
+	}
+
+	potential = {
+		has_technology = tech_philosophers_stone
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#魔法による障害物除去
+white_magic_campaign = {
+	length = 3650
+	resources = {
+		category = campaigns
+		cost = {
+			energy = 1500
+		}
+	}
+
+	modifier = {
+    planet_clear_blocker_time_mult = -0.5
+	}
+
+	potential = {
+		has_technology = tech_white_magic
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#ミスリルによる建材代用
+mithril_building_materials_campaign = {
+	length = 3650
+	resources = {
+		category = campaigns
+		cost = {
+			mithrils = 1500
+		}
+	}
+
+	modifier = {
+    planet_buildings_cost_mult = -0.5
+	}
+
+	potential = {
+		has_technology = tech_mithril_refinery
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+#アダマンタイトによる超高層建設
+adamantite_skyscraper_construction_campaign = {
+	length = 3650
+	resources = {
+		category = campaigns
+		cost = {
+      energy = 1000
+      adamantines = 500
+		}
+	}
+
+	modifier = {
+    planet_housing_mult = 0.25
+	}
+
+	potential = {
+		has_technology = tech_adamantine_refinery
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}

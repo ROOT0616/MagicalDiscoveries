@@ -1,0 +1,1543 @@
+#魔法科学		物理研究+2.5% 精神主義への魅力1%
+tech_magical_science = {
+	cost = @tier1cost1
+	area = physics
+	type = physics
+	tier = 1
+	category = { field_manipulation }
+	weight = @tier1weight1
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag01
+  }
+	modifier = {
+		country_physics_tech_research_speed = 0.025
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#発展魔法科学		物理研究+5% 精神主義への魅力1%
+tech_advanced_magical_science = {
+	cost = @tier2cost2
+	area = physics
+	type = physics
+	tier = 2
+	category = { field_manipulation }
+	weight = @tier2weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag02
+  }
+	prerequisites = { "tech_magical_science" }
+	modifier = {
+		country_physics_tech_research_speed = 0.05
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#究極魔法科学		物理研究+10% 精神主義への魅力1%
+tech_ultimate_magical_science = {
+	cost = @tier4cost3
+	area = physics
+	type = physics
+	tier = 4
+	category = { field_manipulation }
+	weight = @tier4weight3
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+  }
+	prerequisites = { "tech_advanced_magical_science" }
+	modifier = {
+		country_physics_tech_research_speed = 0.1
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#錬金術		工学研究+2.5% 合金生産+10%
+tech_alchemy = {
+	cost = @tier1cost1
+	area = engineering
+	type = engineering
+	tier = 1
+	category = { materials }
+	potential = {
+		has_country_flag = BuyAlchemyFlag01
+  }
+	weight = @tier1weight1
+	is_rare = no
+	is_reverse_engineerable = no
+	modifier = {
+		country_engineering_tech_research_speed = 0.025
+		planet_jobs_alloys_produces_mult = 0.1
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#発展錬金術		工学研究+5% 合金生産+10%
+tech_advanced_alchemy = {
+	cost = @tier2cost2
+	area = engineering
+	type = engineering
+	tier = 2
+	category = { materials }
+	potential = {
+		has_country_flag = BuyAlchemyFlag02
+  }
+	prerequisites = { "tech_alchemy" }
+	weight = @tier2weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	modifier = {
+		country_engineering_tech_research_speed = 0.05
+		planet_jobs_alloys_produces_mult = 0.1
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#究極錬金術		工学研究+10% 合金生産+10%
+tech_ultimate_alchemy = {
+	cost = @tier4cost3
+	area = engineering
+	type = engineering
+	tier = 4
+	category = { materials }
+	potential = {
+		has_country_flag = BuyAlchemyFlag03
+  }
+	prerequisites = { "tech_advanced_alchemy" }
+	weight = @tier4weight3
+	is_rare = yes
+	is_reverse_engineerable = no
+	modifier = {
+		country_engineering_tech_research_speed = 0.1
+		planet_jobs_alloys_produces_mult = 0.1
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#黒魔法		攻撃力+5%
+tech_black_magic = {
+	cost = @tier1cost2
+	area = society
+	type = society
+	tier = 1
+	category = { military_theory }
+	prerequisites = { "tech_magical_science" }
+	weight = @tier1weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag01
+  }
+	modifier = {
+		army_attack_damage_mult = 0.05
+		army_defense_damage_mult = 0.05
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+#攻撃魔法			Tire2  侵略軍攻撃力+10%
+tech_attac_magic = {
+	cost = @tier2cost2
+	area = society
+	type = society
+	tier = 2
+	category = { military_theory }
+	prerequisites = { "tech_black_magic" }
+	weight = @tier2weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag02
+  }
+	modifier = {
+		army_attack_damage_mult = 0.1
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+#発展攻撃魔法			Tire3  侵略軍攻撃力+20%
+tech_advanced_attac_magic = {
+	cost = @tier3cost2
+	area = society
+	type = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_attac_magic" "tech_advanced_magical_science" }
+	weight = @tier3weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+  }
+	modifier = {
+		army_attack_damage_mult = 0.2
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+#防衛魔法			Tire2  防衛軍攻撃力+10％
+tech_defensive_magic = {
+	cost = @tier2cost2
+	area = society
+	type = society
+	tier = 2
+	category = { military_theory }
+	prerequisites = { "tech_black_magic" }
+	weight = @tier2weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag02
+  }
+	modifier = {
+		army_defense_damage_mult = 0.1
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+#発展防衛魔法			Tire3  防衛軍攻撃力+20％
+tech_advanced_defensive_magic = {
+	cost = @tier3cost2
+	area = society
+	type = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_advanced_magical_science" "tech_defensive_magic" }
+	weight = @tier3weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+  }
+	modifier = {
+		army_defense_damage_mult = 0.2
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+#魔法部隊			Tire3
+tech_black_magic_army = {
+	cost = @tier3cost1
+	area = society
+	type = society
+	tier = 3
+	category = { military_theory }
+	prerequisites = { "tech_attac_magic" "tech_defensive_magic" }
+	weight = @tier3weight1
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+#精鋭魔法部隊	Tire5
+tech_elite_black_magic_army = {
+	cost = @tier5cost2
+	area = society
+	type = society
+	tier = 5
+	category = { military_theory }
+	prerequisites = { "tech_advanced_attac_magic" "tech_advanced_defensive_magic" }
+	weight = @tier5weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_military_theory"
+			}
+		}
+	}
+}
+
+# 死霊魔法	Tire5
+tech_necromancy = {
+	cost = @tier5cost1
+	area = society
+	type = society
+	tier = 5
+	category = { biology }
+	prerequisites = { "tech_ultimate_magical_science" }
+	weight = @tier5weight1
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyNecronomiconFlag
+  }
+	modifier = {
+		set_global_flag = LearnNecromancyFlag
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#白魔法		Tire1  士気，体力+10%
+tech_white_magic = {
+	cost = @tier1cost2
+	area = society
+	type = society
+	tier = 1
+	prerequisites = { "tech_magical_science" }
+	category = { biology }
+	weight = @tier1weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag01
+  }
+	modifier = {
+		army_attack_health_mult = 0.1
+		army_attack_morale_mult = 0.1
+		army_defense_health_mult = 0.1
+		army_defense_morale_mult = 0.1
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#白魔法院	Tire2  建築物Pop成長速度+25%
+tech_white_magic_court = {
+	cost = @tier2cost2
+	area = society
+	type = society
+	tier = 2
+	prerequisites = { "tech_magical_science" }
+	category = { biology }
+	weight = @tier2weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag01
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#発展白魔法		Tire3  耐久士気+20％
+tech_advanced_white_magic = {
+	cost = @tier3cost1
+	area = society
+	type = society
+	tier = 3
+	prerequisites = { "tech_advanced_magical_science" }
+	category = { biology }
+	weight = @tier3weight1
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag02
+  }
+	modifier = {
+		army_attack_health_mult = 0.2
+		army_attack_morale_mult = 0.2
+		army_defense_health_mult = 0.2
+		army_defense_morale_mult = 0.2
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#結界魔法 *2		Tire4  惑星シールド+10％
+tech_barrier_magic = {
+	cost = @tier4cost1
+	area = society
+	type = society
+	tier = 4
+	prerequisites = { "tech_magical_science" }
+	category = { biology }
+	weight = @tier4weight1
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag02
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#蘇生魔法 *2		Tire5  帝国のPop成長速度25%幸福度10%寿命20年
+tech_resuscitation_magic = {
+	cost = @tier5cost3
+	area = society
+	type = society
+	tier = 5
+	prerequisites = { "tech_necromancy" }
+	category = { biology }
+	weight = @tier5weight3
+	is_rare = yes
+	is_dangerous = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyNecronomiconFlag
+  }
+	modifier = {
+		pop_growth_speed = 0.25
+		pop_happiness = 0.1
+		leader_age = 20
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#賢者の石 *2	    Tire4  リーダーの寿命+20年  +2遺伝子特性
+tech_philosophers_stone = {
+	cost = @tier4cost3
+	area = society
+	type = society
+	tier = 5
+	prerequisites = { "tech_magical_science" }
+	category = { biology }
+	weight = @tier4weight3
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+		has_country_flag = BuyAlchemyFlag03
+  }
+	modifier = {
+		leader_age = 20
+		BIOLOGICAL_species_trait_points_add = 2
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+}
+
+#ミスリル			    Tire3
+tech_mithril_refinery = {
+	cost = @tier3cost1
+	area = engineering
+	type = engineering
+	tier = 3
+	category = { materials }
+	prerequisites = { "tech_alchemy"}
+	weight = @tier3weight1
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag01
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#ミスリル装甲	    Tire3  160  400  920
+#		cost  ミスリル 22 44 88  合金  11  22  44
+tech_mithril_armor = {
+	cost = @tier3cost2
+	area = engineering
+	type = engineering
+	tier = 3
+	category = { materials }
+	prerequisites = { "tech_mithril_refinery"}
+	weight = @tier3weight2
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag01
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#オリハルコン*2		    Tire4
+tech_orichalcone_refinery = {
+	cost = @tier4cost2
+	area = engineering
+	type = engineering
+	tier = 4
+	category = { materials }
+	prerequisites = { "tech_advanced_alchemy" }
+	weight = @tier4weight2
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag02
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#	オリハルコン装甲*2   Tire4	245  613  1410
+#			cost  オリハルコン 22 44 88  合金  22  44  88
+tech_orichalcone_armor = {
+	cost = @tier4cost3
+	area = engineering
+	type = engineering
+	tier = 4
+	category = { materials }
+	prerequisites = { "tech_orichalcone_refinery" }
+	weight = @tier4weight3
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag02
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#アダマンタイト*2		    Tire5
+tech_adamantine_refinery = {
+	cost = @tier5cost2
+	area = engineering
+	type = engineering
+	tier = 5
+	category = { materials }
+	prerequisites = { "tech_ultimate_alchemy" }
+	weight = @tier5weight2
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag03
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#	アダマンタイト装甲*2   Tire4	245  613  1410
+#			cost  アダマンタイト 22 44 88  合金  22  44  88
+tech_adamantine_armor = {
+	cost = @tier5cost3
+	area = engineering
+	type = engineering
+	tier = 5
+	category = { materials }
+	prerequisites = { "tech_adamantine_refinery" }
+	weight = @tier5weight3
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag03
+  }
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#	天界の肌	Tire5
+tech_gods_skin = {
+	cost = @tier5cost3
+	area = physics
+	type = physics
+	tier = 5
+	category = { field_manipulation }
+	prerequisites = { "tech_ultimate_magical_science" "tech_ultimate_alchemy" }
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+		has_country_flag = BuyAlchemyFlag03
+  }
+	weight = 0
+	is_rare = yes
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
+#	神話崩壊砲	mythical decay*2    Tire5	
+# S			60	120		2.5		95	80	12	120
+# M			150	300		2.5		95	60	36	160
+# L			375	750		2.5		95	40	72	200
+tech_mythical_decay = {
+	cost = @tier5cost3
+	area = engineering
+	type = engineering
+	tier = 5
+	category = { rocketry }
+	prerequisites = { "tech_gods_skin" }
+	potential = {
+		has_country_flag = BuyGrimoireFlag03
+		has_country_flag = BuyAlchemyFlag03
+  }
+	weight = @tier5weight3
+	is_rare = yes
+	modifier = {
+		hidden_effect = {
+			pop_ethic_spiritualist_attraction_mult = 0.01
+		}
+	}
+
+	weight_modifier = {
+		factor = 0
+	}
+}
+
