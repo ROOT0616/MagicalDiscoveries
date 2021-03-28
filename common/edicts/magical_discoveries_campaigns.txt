@@ -1,6 +1,7 @@
 #賢者の石による人体錬成
 philosophers_stone_campaign = {
 	length = 3650
+	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
 		cost = {
@@ -24,6 +25,7 @@ philosophers_stone_campaign = {
 #魔法による障害物除去
 white_magic_campaign = {
 	length = 3650
+	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
 		cost = {
@@ -47,6 +49,7 @@ white_magic_campaign = {
 #ミスリルによる建材代用
 mithril_building_materials_campaign = {
 	length = 3650
+	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
 		cost = {
@@ -70,6 +73,7 @@ mithril_building_materials_campaign = {
 #アダマンタイトによる超高層建設
 adamantite_skyscraper_construction_campaign = {
 	length = 3650
+	icon = "GFX_edict_type_time"
 	resources = {
 		category = campaigns
 		cost = {

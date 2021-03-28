@@ -22,7 +22,6 @@ weapon_component_template = {
 	hidden = yes
 	component_set = "GODSBREATH"
 	
-	cost = 40
 	power = -25
 	damage = { min = 180 max = 240 }
 	hull_damage = 3
@@ -73,7 +72,6 @@ weapon_component_template = {
 	hidden = yes
 	component_set = "GODSBREATH"
 
-	cost = 80
 	power = -50
 	damage = { min = 360 max = 420 }
 	hull_damage = 3
@@ -124,7 +122,6 @@ weapon_component_template = {
 	hidden = yes
 	component_set = "GODSBREATH"
 
-	cost = 160
 	power = -100
 	damage = { min = 810 max = 870 }
 	hull_damage = 3
@@ -179,7 +176,6 @@ weapon_component_template = {
 	
 	component_set = "KUSANAGI"
 
-	cost = 160
 	power = -100
 	damage = { min = 15000 max = 20000 }
 	hull_damage = 4
@@ -237,7 +233,6 @@ weapon_component_template = {
 	component_set = "MYTHICALDECAY"
 	prerequisites = { "tech_mythical_decay" }
 	
-	cost = 40
 	power = -25
 	damage = { min = 180 max = 240 }
 	hull_damage = 3
@@ -289,7 +284,6 @@ weapon_component_template = {
 	component_set = "MYTHICALDECAY"
 	prerequisites = { "tech_mythical_decay" }
 
-	cost = 80
 	power = -50
 	damage = { min = 360 max = 420 }
 	hull_damage = 3
@@ -341,7 +335,6 @@ weapon_component_template = {
 	component_set = "MYTHICALDECAY"
 	prerequisites = { "tech_mythical_decay" }
 
-	cost = 160
 	power = -100
 	damage = { min = 810 max = 870 }
 	hull_damage = 3

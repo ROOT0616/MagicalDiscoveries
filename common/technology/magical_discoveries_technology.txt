@@ -2,20 +2,19 @@
 tech_magical_science = {
 	cost = @tier1cost1
 	area = physics
-	type = physics
 	tier = 1
-	category = { field_manipulation }
+	category = {
+		field_manipulation
+	}
 	weight = @tier1weight1
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag01
-  }
+	}
 	modifier = {
 		country_physics_tech_research_speed = 0.025
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -34,7 +33,6 @@ tech_magical_science = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -58,21 +56,22 @@ tech_magical_science = {
 tech_advanced_magical_science = {
 	cost = @tier2cost2
 	area = physics
-	type = physics
 	tier = 2
-	category = { field_manipulation }
+	category = {
+		field_manipulation
+	}
 	weight = @tier2weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag02
-  }
-	prerequisites = { "tech_magical_science" }
+	}
+	prerequisites = {
+		"tech_magical_science"
+	}
 	modifier = {
 		country_physics_tech_research_speed = 0.05
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -91,7 +90,6 @@ tech_advanced_magical_science = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -115,21 +113,22 @@ tech_advanced_magical_science = {
 tech_ultimate_magical_science = {
 	cost = @tier4cost3
 	area = physics
-	type = physics
 	tier = 4
-	category = { field_manipulation }
+	category = {
+		field_manipulation
+	}
 	weight = @tier4weight3
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
-  }
-	prerequisites = { "tech_advanced_magical_science" }
+	}
+	prerequisites = {
+		"tech_advanced_magical_science"
+	}
 	modifier = {
 		country_physics_tech_research_speed = 0.1
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -148,7 +147,6 @@ tech_ultimate_magical_science = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -172,21 +170,20 @@ tech_ultimate_magical_science = {
 tech_alchemy = {
 	cost = @tier1cost1
 	area = engineering
-	type = engineering
 	tier = 1
-	category = { materials }
+	category = {
+		materials
+	}
 	potential = {
 		has_country_flag = BuyAlchemyFlag01
-  }
+	}
 	weight = @tier1weight1
 	is_rare = no
 	is_reverse_engineerable = no
 	modifier = {
 		country_engineering_tech_research_speed = 0.025
 		planet_jobs_alloys_produces_mult = 0.1
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -205,7 +202,6 @@ tech_alchemy = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -229,22 +225,23 @@ tech_alchemy = {
 tech_advanced_alchemy = {
 	cost = @tier2cost2
 	area = engineering
-	type = engineering
 	tier = 2
-	category = { materials }
+	category = {
+		materials
+	}
 	potential = {
 		has_country_flag = BuyAlchemyFlag02
-  }
-	prerequisites = { "tech_alchemy" }
+	}
+	prerequisites = {
+		"tech_alchemy"
+	}
 	weight = @tier2weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	modifier = {
 		country_engineering_tech_research_speed = 0.05
 		planet_jobs_alloys_produces_mult = 0.1
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -263,7 +260,6 @@ tech_advanced_alchemy = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -287,22 +283,23 @@ tech_advanced_alchemy = {
 tech_ultimate_alchemy = {
 	cost = @tier4cost3
 	area = engineering
-	type = engineering
 	tier = 4
-	category = { materials }
+	category = {
+		materials
+	}
 	potential = {
 		has_country_flag = BuyAlchemyFlag03
-  }
-	prerequisites = { "tech_advanced_alchemy" }
+	}
+	prerequisites = {
+		"tech_advanced_alchemy"
+	}
 	weight = @tier4weight3
 	is_rare = yes
 	is_reverse_engineerable = no
 	modifier = {
 		country_engineering_tech_research_speed = 0.1
 		planet_jobs_alloys_produces_mult = 0.1
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -321,7 +318,6 @@ tech_ultimate_alchemy = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -345,22 +341,23 @@ tech_ultimate_alchemy = {
 tech_black_magic = {
 	cost = @tier1cost2
 	area = society
-	type = society
 	tier = 1
-	category = { military_theory }
-	prerequisites = { "tech_magical_science" }
+	category = {
+		military_theory
+	}
+	prerequisites = {
+		"tech_magical_science"
+	}
 	weight = @tier1weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag01
-  }
+	}
 	modifier = {
 		army_attack_damage_mult = 0.05
 		army_defense_damage_mult = 0.05
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -379,7 +376,6 @@ tech_black_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -403,21 +399,22 @@ tech_black_magic = {
 tech_attac_magic = {
 	cost = @tier2cost2
 	area = society
-	type = society
 	tier = 2
-	category = { military_theory }
-	prerequisites = { "tech_black_magic" }
+	category = {
+		military_theory
+	}
+	prerequisites = {
+		"tech_black_magic"
+	}
 	weight = @tier2weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag02
-  }
+	}
 	modifier = {
 		army_attack_damage_mult = 0.1
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -436,7 +433,6 @@ tech_attac_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -460,21 +456,23 @@ tech_attac_magic = {
 tech_advanced_attac_magic = {
 	cost = @tier3cost2
 	area = society
-	type = society
 	tier = 3
-	category = { military_theory }
-	prerequisites = { "tech_attac_magic" "tech_advanced_magical_science" }
+	category = {
+		military_theory
+	}
+	prerequisites = {
+		"tech_attac_magic"
+		"tech_advanced_magical_science"
+	}
 	weight = @tier3weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
-  }
+	}
 	modifier = {
 		army_attack_damage_mult = 0.2
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -493,7 +491,6 @@ tech_advanced_attac_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -517,21 +514,22 @@ tech_advanced_attac_magic = {
 tech_defensive_magic = {
 	cost = @tier2cost2
 	area = society
-	type = society
 	tier = 2
-	category = { military_theory }
-	prerequisites = { "tech_black_magic" }
+	category = {
+		military_theory
+	}
+	prerequisites = {
+		"tech_black_magic"
+	}
 	weight = @tier2weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag02
-  }
+	}
 	modifier = {
 		army_defense_damage_mult = 0.1
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -550,7 +548,6 @@ tech_defensive_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -574,21 +571,23 @@ tech_defensive_magic = {
 tech_advanced_defensive_magic = {
 	cost = @tier3cost2
 	area = society
-	type = society
 	tier = 3
-	category = { military_theory }
-	prerequisites = { "tech_advanced_magical_science" "tech_defensive_magic" }
+	category = {
+		military_theory
+	}
+	prerequisites = {
+		"tech_advanced_magical_science"
+		"tech_defensive_magic"
+	}
 	weight = @tier3weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
-  }
+	}
 	modifier = {
 		army_defense_damage_mult = 0.2
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -607,7 +606,6 @@ tech_advanced_defensive_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -631,20 +629,22 @@ tech_advanced_defensive_magic = {
 tech_black_magic_army = {
 	cost = @tier3cost1
 	area = society
-	type = society
 	tier = 3
-	category = { military_theory }
-	prerequisites = { "tech_attac_magic" "tech_defensive_magic" }
+	category = {
+		military_theory
+	}
+	prerequisites = {
+		"tech_attac_magic"
+		"tech_defensive_magic"
+	}
 	weight = @tier3weight1
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
-  }
+	}
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -663,7 +663,6 @@ tech_black_magic_army = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -687,20 +686,22 @@ tech_black_magic_army = {
 tech_elite_black_magic_army = {
 	cost = @tier5cost2
 	area = society
-	type = society
 	tier = 5
-	category = { military_theory }
-	prerequisites = { "tech_advanced_attac_magic" "tech_advanced_defensive_magic" }
+	category = {
+		military_theory
+	}
+	prerequisites = {
+		"tech_advanced_attac_magic"
+		"tech_advanced_defensive_magic"
+	}
 	weight = @tier5weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
-  }
+	}
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -719,7 +720,6 @@ tech_elite_black_magic_army = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -743,22 +743,23 @@ tech_elite_black_magic_army = {
 tech_necromancy = {
 	cost = @tier5cost1
 	area = society
-	type = society
 	tier = 5
-	category = { biology }
-	prerequisites = { "tech_ultimate_magical_science" }
+	category = {
+		biology
+	}
+	prerequisites = {
+		"tech_ultimate_magical_science"
+	}
 	weight = @tier5weight1
 	is_rare = yes
 	is_dangerous = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyNecronomiconFlag
-  }
+	}
 	modifier = {
-		set_global_flag = LearnNecromancyFlag
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
+		# set_global_flag = LearnNecromancyFlag  イベントに回す
 	}
 	weight_modifier = {
 		modifier = {
@@ -777,7 +778,6 @@ tech_necromancy = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -801,24 +801,25 @@ tech_necromancy = {
 tech_white_magic = {
 	cost = @tier1cost2
 	area = society
-	type = society
 	tier = 1
-	prerequisites = { "tech_magical_science" }
-	category = { biology }
+	prerequisites = {
+		"tech_magical_science"
+	}
+	category = {
+		biology
+	}
 	weight = @tier1weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag01
-  }
+	}
 	modifier = {
 		army_attack_health_mult = 0.1
 		army_attack_morale_mult = 0.1
 		army_defense_health_mult = 0.1
 		army_defense_morale_mult = 0.1
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -837,7 +838,6 @@ tech_white_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -861,20 +861,21 @@ tech_white_magic = {
 tech_white_magic_court = {
 	cost = @tier2cost2
 	area = society
-	type = society
 	tier = 2
-	prerequisites = { "tech_magical_science" }
-	category = { biology }
+	prerequisites = {
+		"tech_magical_science"
+	}
+	category = {
+		biology
+	}
 	weight = @tier2weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag01
-  }
+	}
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -893,7 +894,6 @@ tech_white_magic_court = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -917,24 +917,25 @@ tech_white_magic_court = {
 tech_advanced_white_magic = {
 	cost = @tier3cost1
 	area = society
-	type = society
 	tier = 3
-	prerequisites = { "tech_advanced_magical_science" }
-	category = { biology }
+	prerequisites = {
+		"tech_advanced_magical_science"
+	}
+	category = {
+		biology
+	}
 	weight = @tier3weight1
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag02
-  }
+	}
 	modifier = {
 		army_attack_health_mult = 0.2
 		army_attack_morale_mult = 0.2
 		army_defense_health_mult = 0.2
 		army_defense_morale_mult = 0.2
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -953,7 +954,6 @@ tech_advanced_white_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -977,20 +977,21 @@ tech_advanced_white_magic = {
 tech_barrier_magic = {
 	cost = @tier4cost1
 	area = society
-	type = society
 	tier = 4
-	prerequisites = { "tech_magical_science" }
-	category = { biology }
+	prerequisites = {
+		"tech_magical_science"
+	}
+	category = {
+		biology
+	}
 	weight = @tier4weight1
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag02
-  }
+	}
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -1009,7 +1010,6 @@ tech_barrier_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -1033,24 +1033,25 @@ tech_barrier_magic = {
 tech_resuscitation_magic = {
 	cost = @tier5cost3
 	area = society
-	type = society
 	tier = 5
-	prerequisites = { "tech_necromancy" }
-	category = { biology }
+	prerequisites = {
+		"tech_necromancy"
+	}
+	category = {
+		biology
+	}
 	weight = @tier5weight3
 	is_rare = yes
 	is_dangerous = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyNecronomiconFlag
-  }
+	}
 	modifier = {
 		pop_growth_speed = 0.25
 		pop_happiness = 0.1
 		leader_age = 20
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -1069,7 +1070,6 @@ tech_resuscitation_magic = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -1093,23 +1093,24 @@ tech_resuscitation_magic = {
 tech_philosophers_stone = {
 	cost = @tier4cost3
 	area = society
-	type = society
 	tier = 5
-	prerequisites = { "tech_magical_science" }
-	category = { biology }
+	prerequisites = {
+		"tech_magical_science"
+	}
+	category = {
+		biology
+	}
 	weight = @tier4weight3
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
 		has_country_flag = BuyAlchemyFlag03
-  }
+	}
 	modifier = {
 		leader_age = 20
 		BIOLOGICAL_species_trait_points_add = 2
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -1128,7 +1129,6 @@ tech_philosophers_stone = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -1152,20 +1152,21 @@ tech_philosophers_stone = {
 tech_mithril_refinery = {
 	cost = @tier3cost1
 	area = engineering
-	type = engineering
 	tier = 3
-	category = { materials }
-	prerequisites = { "tech_alchemy"}
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_alchemy"
+	}
 	weight = @tier3weight1
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyAlchemyFlag01
-  }
+	}
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -1208,22 +1209,22 @@ tech_mithril_refinery = {
 tech_mithril_armor = {
 	cost = @tier3cost2
 	area = engineering
-	type = engineering
 	tier = 3
-	category = { materials }
-	prerequisites = { "tech_mithril_refinery"}
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_mithril_refinery"
+	}
 	weight = @tier3weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyAlchemyFlag01
-  }
-	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
 	}
-	
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -1241,7 +1242,6 @@ tech_mithril_armor = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -1265,22 +1265,22 @@ tech_mithril_armor = {
 tech_orichalcone_refinery = {
 	cost = @tier4cost2
 	area = engineering
-	type = engineering
 	tier = 4
-	category = { materials }
-	prerequisites = { "tech_advanced_alchemy" }
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_advanced_alchemy"
+	}
 	weight = @tier4weight2
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyAlchemyFlag02
-  }
-	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
 	}
-	
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -1298,7 +1298,6 @@ tech_orichalcone_refinery = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -1323,22 +1322,22 @@ tech_orichalcone_refinery = {
 tech_orichalcone_armor = {
 	cost = @tier4cost3
 	area = engineering
-	type = engineering
 	tier = 4
-	category = { materials }
-	prerequisites = { "tech_orichalcone_refinery" }
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_orichalcone_refinery"
+	}
 	weight = @tier4weight3
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyAlchemyFlag02
-  }
-	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
 	}
-	
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -1379,22 +1378,22 @@ tech_orichalcone_armor = {
 tech_adamantine_refinery = {
 	cost = @tier5cost2
 	area = engineering
-	type = engineering
 	tier = 5
-	category = { materials }
-	prerequisites = { "tech_ultimate_alchemy" }
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_ultimate_alchemy"
+	}
 	weight = @tier5weight2
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyAlchemyFlag03
-  }
-	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
 	}
-	
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
@@ -1412,7 +1411,6 @@ tech_adamantine_refinery = {
 			}
 		}
 	}
-	
 	ai_weight = {
 		modifier = {
 			factor = 1.25
@@ -1437,20 +1435,21 @@ tech_adamantine_refinery = {
 tech_adamantine_armor = {
 	cost = @tier5cost3
 	area = engineering
-	type = engineering
 	tier = 5
-	category = { materials }
-	prerequisites = { "tech_adamantine_refinery" }
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_adamantine_refinery"
+	}
 	weight = @tier5weight3
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyAlchemyFlag03
-  }
+	}
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
 		modifier = {
@@ -1492,22 +1491,23 @@ tech_adamantine_armor = {
 tech_gods_skin = {
 	cost = @tier5cost3
 	area = physics
-	type = physics
 	tier = 5
-	category = { field_manipulation }
-	prerequisites = { "tech_ultimate_magical_science" "tech_ultimate_alchemy" }
+	category = {
+		field_manipulation
+	}
+	prerequisites = {
+		"tech_ultimate_magical_science"
+		"tech_ultimate_alchemy"
+	}
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
 		has_country_flag = BuyAlchemyFlag03
-  }
+	}
 	weight = 0
 	is_rare = yes
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
-
 	weight_modifier = {
 		factor = 0
 	}
@@ -1520,24 +1520,23 @@ tech_gods_skin = {
 tech_mythical_decay = {
 	cost = @tier5cost3
 	area = engineering
-	type = engineering
 	tier = 5
-	category = { rocketry }
-	prerequisites = { "tech_gods_skin" }
+	category = {
+		propulsion
+	}
+	prerequisites = {
+		"tech_gods_skin"
+	}
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
 		has_country_flag = BuyAlchemyFlag03
-  }
+	}
 	weight = @tier5weight3
 	is_rare = yes
 	modifier = {
-		hidden_effect = {
-			pop_ethic_spiritualist_attraction_mult = 0.01
-		}
+		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
-
 	weight_modifier = {
 		factor = 0
 	}
 }
-

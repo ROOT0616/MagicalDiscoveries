@@ -1,0 +1,25 @@
+### ここで設定されているアイコンは、コンポーネントエディタのリストに表示されているものです。
+
+#	神の吐息
+component_set = {
+	key = "GODSBREATH"
+
+	icon = "GFX_ship_part_gods_breath"
+	icon_frame = 1
+}
+
+#	クサナギノツヨシ
+component_set = {
+	key = "KUSANAGI"
+
+	icon = "GFX_ship_part_kusanagi"
+	icon_frame = 1
+}
+
+#	神話崩壊砲	mythical decay*2  Tire5	
+component_set = {
+	key = "MYTHICALDECAY"
+
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+}

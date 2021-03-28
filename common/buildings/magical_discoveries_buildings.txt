@@ -1,222 +1,237 @@
 #白魔法院	   白魔道士x4 エネルギ200 鉱石400 ミスリル50
-building_white_magic_court = { 
-  base_buildtime = 360
-  base_cap_amount = 1
-  prerequisites = {
+building_white_magic_court = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	prerequisites = {
 		"tech_white_magic_court"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 400
-        mithrils = 50
-        energy = 200
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        modifier = {
-            job_white_magician_add = 6
-        }
-    } 
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			mithrils = 50
+			energy = 200
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_white_magician_add = 6
+		}
+	}
 }
 
 #結界魔法院	  エネルギ200 鉱石400 ミスリル100 オリハルコン50
-building_barrier_magic_court = { 
-  base_buildtime = 360
-  base_cap_amount = 1
-  prerequisites = {
+building_barrier_magic_court = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	prerequisites = {
 		"tech_barrier_magic"
-	}	
+	}
 	planet_modifier = {
 		planet_orbital_bombardment_damage = -0.75
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 400
-        mithrils = 100
-        orichalcones= 50
-        energy = 300
-      }
-      upkeep = {
-        energy = 4
-      }
-  }
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			mithrils = 100
+			orichalcones = 50
+			energy = 300
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
 }
 
 #ミスリル錬金所	   ミスリル錬金術師x6 エネルギ100 鉱石300
-building_mithril_refinery = { 
-  base_buildtime = 240
-  prerequisites = {
+building_mithril_refinery = {
+	base_buildtime = 240
+	prerequisites = {
 		"tech_mithril_refinery"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 300
-        energy = 100
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        modifier = {
-            job_mithril_refiner_add = 6
-        }
-    } 
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+			energy = 100
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_mithril_refiner_add = 6
+		}
+	}
 }
 
 #ミスリル魔道具工場	   ミスリル魔道具師x6 エネルギ100 鉱石300 ミスリル100
-building_mithril_magic_tool_factory = { 
-  base_buildtime = 240
-  prerequisites = {
+building_mithril_magic_tool_factory = {
+	base_buildtime = 240
+	prerequisites = {
 		"tech_mithril_refinery"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 300
-        mithrils = 100
-        energy = 100
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        modifier = {
-            job_mithril_magic_tool_crafter_add = 6
-        }
-    } 
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+			mithrils = 100
+			energy = 100
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_mithril_magic_tool_crafter_add = 6
+		}
+	}
 }
 
 #オリハルコン錬金所	エネルギー200 鉱石250 ミスリル150
-building_orichalcone_refinery = { 
-  base_buildtime = 300
-  prerequisites = {
+building_orichalcone_refinery = {
+	base_buildtime = 300
+	prerequisites = {
 		"tech_orichalcone_refinery"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 250
-        mithrils = 150
-        energy = 200
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        modifier = {
-            job_orichalcone_refiner_add = 6
-        }
-    } 
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 250
+			mithrils = 150
+			energy = 200
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_amenities_add = 15
+			job_orichalcone_refiner_add = 6
+		}
+	}
 }
 
 #オリハルコン工芸所	エネルギー200 鉱石250 ミスリル100 オリハルコン50
-building_orichalcone_workshop = { 
-  base_buildtime = 300
-  prerequisites = {
+building_orichalcone_workshop = {
+	base_buildtime = 300
+	prerequisites = {
 		"tech_orichalcone_refinery"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 250
-        mithrils = 100
-        orichalcones= 50
-        energy = 200
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        modifier = {
-            job_orichalcone_crafter_add = 2
-        }
-    } 
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 250
+			mithrils = 100
+			orichalcones = 50
+			energy = 200
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_orichalcone_crafter_add = 2
+		}
+	}
 }
 
 #アダマンタイト錬金所  エネルギ300 鉱石400 ミスリル200 オリハルコン50
-building_adamantine_refinery = { 
-  base_buildtime = 300
-  prerequisites = {
+building_adamantine_refinery = {
+	base_buildtime = 300
+	prerequisites = {
 		"tech_adamantine_refinery"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 400
-        mithrils = 200
-        orichalcones= 50
-        energy = 300
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        modifier = {
-            job_adamantine_refiner_add = 6
-        }
-    } 
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			mithrils = 200
+			orichalcones = 50
+			energy = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_adamantine_refiner_add = 6
+		}
+	}
 }
 
 #伝説の錬金術所 エネルギ300 鉱石300 ミスリル50 オリハルコン50
-building_the_legendary_alchem_house = { 
-  base_buildtime = 360
-  prerequisites = {
+building_the_legendary_alchem_house = {
+	base_buildtime = 360
+	prerequisites = {
 		"tech_philosophers_stone"
 	}
-  resources = {
-    category = planet_buildings
-      cost = {
-        minerals = 300
-        mithrils = 50
-        orichalcones= 50
-        energy = 300
-      }
-      upkeep = {
-        energy = 2
-      }
-  }
-    triggered_planet_modifier = {
-        potential = {
-            exists = owner
-            owner = { is_regular_empire = yes }
-        }
-        modifier = {
-            job_the_legendary_alchemist_add = 2
-        }
-    } 
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+			mithrils = 50
+			orichalcones = 50
+			energy = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_the_legendary_alchemist_add = 2
+		}
+	}
 }

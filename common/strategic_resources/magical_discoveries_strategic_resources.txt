@@ -5,8 +5,6 @@ mithrils = {
 	market_price = 30
 	max = 15000
 	
-	deficit_modifier = mithrils_deficit #found in static modifiers
-
 	ai_weight = {
 		weight = 10
 	}
@@ -14,10 +12,10 @@ mithrils = {
 	ai_wants = {
 		base = 1000
 	}
-  prerequisites {
+  prerequisites = {
     "tech_mithril_refinery"
   }
-  visibility_prerequisite{
+  visibility_prerequisite = {
     always = yes
   }
 }
@@ -29,8 +27,6 @@ orichalcones = {
 	market_price = 60
 	max = 15000
 	
-	deficit_modifier = orichalcones_deficit #found in static modifiers
-
 	ai_weight = {
 		weight = 1
 	}
@@ -38,10 +34,10 @@ orichalcones = {
 	ai_wants = {
 		base = 200
 	}
-  prerequisites {
+  prerequisites = {
     "tech_orichalcone_refinery"
   }
-  visibility_prerequisite{
+  visibility_prerequisite = {
     always = yes
   }
 }
@@ -53,8 +49,6 @@ adamantines = {
 	market_price = 90
 	max = 15000
 	
-	deficit_modifier = adamantines_deficit #found in static modifiers
-
 	ai_weight = {
 		weight = 10
 	}
@@ -62,10 +56,10 @@ adamantines = {
 	ai_wants = {
 		base = 100
 	}
-  prerequisites {
+  prerequisites = {
     "tech_adamantine_refinery"
   }
-  visibility_prerequisite{
+  visibility_prerequisite = {
     always = yes
   }
 }
@@ -77,8 +71,6 @@ philosophers_stone = {
 	market_price = 150
 	max = 15000
 	
-	deficit_modifier = philosophers_stone_deficit #found in static modifiers
-
 	ai_weight = {
 		weight = 1
 	}
@@ -86,10 +78,10 @@ philosophers_stone = {
 	ai_wants = {
 		base = 10
 	}
-  prerequisites {
+  prerequisites = {
     "tech_philosophers_stone"
   }
-  visibility_prerequisite{
+  visibility_prerequisite = {
     always = yes
   }
 }
