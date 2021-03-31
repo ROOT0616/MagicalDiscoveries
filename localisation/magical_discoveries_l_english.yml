@@ -268,6 +268,9 @@
  magical_discoveries_crisis.1010.desc:0 "貴様は禁忌を犯した…   \n\n神による神罰を受けよ…  "
  magical_discoveries_crisis.1010.a:0 "ふざけるな！  我々が何をした！"
 
+ magical_discoveries_crisis.1011.desc:0 ""
+ magical_discoveries_crisis.1011.a:0 ""
+
  magical_discoveries_crisis.1013.name:0 "ヘブンズ・ゲートの破壊"
  magical_discoveries_crisis.1013.desc:0 "[heavens_system.GetName]のヘブンズ・ゲートを破壊した！ 天界からの侵略者はもはや、 天界から増援を受けられないことを意味する。 \n\nこのヘブンズ・ゲートの破壊により、 裁きの終わりがついに見えてきた。 めざましい高揚感が銀河中を駆け巡った。 門にトドメを刺した艦である[gate_killer.GetName]は多くの賞賛を得た。 乗組員は世紀の英雄として称えられる。 "
  magical_discoveries_crisis.1013.a:0 "神々をこの銀河から追い出せた。"
@@ -289,11 +292,21 @@
 
  magical_discoveries_crisis.1271.name:0 "神罰の終わり"
  magical_discoveries_crisis.1271.desc:0 "ついに、おわったのか…"
+ magical_discoveries_crisis.1271.a:0 ""
+ magical_discoveries_crisis.1271.b:0 ""
+ magical_discoveries_crisis.1271.c:0 ""
+ magical_discoveries_crisis.1271.d:0 ""
+ magical_discoveries_crisis.1271.e:0 ""
+ magical_discoveries_crisis.1271.f:0 ""
+ magical_discoveries_crisis.1271.g:0 ""
+ magical_discoveries_crisis.1271.h:0 ""
 
  magical_discoveries_crisis.1250.name:0 "封印されしエクゾディア"
  magical_discoveries_crisis.1250.desc:0 ""
  magical_discoveries_crisis.1250a.name:0 ""
 
+ resolution_galactic_focus_crisis_heavenly:0 ""
+ resolution_galactic_focus_crisis_heavenly_desc:0 ""
 
 #############################
 #####  イベントチェイン  ######

@@ -1,9 +1,7 @@
 ###############################
 #####  クライシスイベント  ######
 ###############################
-
 namespace = magical_discoveries_crisis
-
 ## 	天使を目撃
 event = {
 	## イベントの基本情報
@@ -12,20 +10,21 @@ event = {
 	desc = magical_discoveries_crisis.1.desc
 	picture = GFX_evt_ship_in_orbit
 	hide_window = no
-	
 	## イベントの発生条件
 	is_triggered_only = no
 	fire_only_once = yes
-	mean_time_to_happen = { years = 1 }
-	trigger = { 
+	mean_time_to_happen = {
+		years = 1
+	}
+	trigger = {
 		is_regular_empire = yes
 		is_ai = no
 		has_global_flag = LearnNecromancyFlag
 	}
-		## イベントの効果
+	## イベントの効果
 	immediate = {
 		set_global_flag = AppearanceAngelFlag
- }
+	}
 }
 
 ## 	天使を発見
@@ -36,32 +35,39 @@ event = {
 	desc = magical_discoveries_crisis.2.desc
 	picture = GFX_evt_ship_in_orbit
 	hide_window = no
-	
 	## イベントの発生条件
 	is_triggered_only = no
-	mean_time_to_happen = { years = 15 }
-	trigger = { 
+	mean_time_to_happen = {
+		years = 15
+	}
+	trigger = {
 		is_regular_empire = yes
 		has_global_flag = AppearanceAngelFlag
-		NOT = { has_global_flag = ArrestingAngelFlag }
+		NOT = {
+			has_global_flag = ArrestingAngelFlag
+		}
 	}
-		## イベントの効果
+	## イベントの効果
 	option = {
 		name = magical_discoveries_crisis.2a.name
 		set_global_flag = ArrestingAngelFlag
-			hidden_effect = {
-				country_event = { id = magical_discoveries_crisis.3 }
+		hidden_effect = {
+			country_event = {
+				id = magical_discoveries_crisis.3
 			}
 		}
+	}
 	option = {
-		trigger = { 
+		trigger = {
 			is_ai = no
 		}
 		name = magical_discoveries_crisis.2b.name
 		set_global_flag = AttackAngelFlag
-			hidden_effect = {
-				country_event = { id = magical_discoveries_crisis.4 }
+		hidden_effect = {
+			country_event = {
+				id = magical_discoveries_crisis.4
 			}
+		}
 	}
 	option = {
 		name = magical_discoveries_crisis.2c.name
@@ -76,14 +82,13 @@ country_event = {
 	desc = magical_discoveries_crisis.3.desc
 	picture = GFX_evt_ship_in_orbit
 	hide_window = no
-	
 	## イベントの発生条件
 	is_triggered_only = yes
 	fire_only_once = no
-	trigger = { 
+	trigger = {
 		is_regular_empire = yes
 	}
-		## イベントの効果
+	## イベントの効果
 	immediate = {
 		create_fleet = {
 			effect = {
@@ -127,14 +132,14 @@ country_event = {
 	desc = magical_discoveries_crisis.4.desc
 	picture = GFX_evt_ship_in_orbit
 	location = root
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			solar_system = {
 				random_system_planet = {
-					limit = { is_star = yes }
+					limit = {
+						is_star = yes
+					}
 					save_event_target_as = local_star
 				}
 				create_country = {
@@ -142,28 +147,33 @@ country_event = {
 					type = faction
 					auto_delete = no
 					flag = {
-						icon= {
+						icon = {
 							category = "special"
 							file = "extradimensional_02.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
 							file = "circle.dds"
 						}
-						colors={
-							"black"
-							"white"
+						colors = {
+							"turquoise"
+							"light_blue"
 							"null"
 							"null"
 						}
 					}
 					effect = {
 						establish_communications_no_message = root.owner
-						establish_contact = { who = root.owner location = root }
+						establish_contact = {
+							who = root.owner
+							location = root
+						}
 						save_global_event_target_as = angel_enemy
 						create_fleet = {
 							name = "NAME_The_Fallen"
-							settings = { spawn_debris = yes }
+							settings = {
+								spawn_debris = yes
+							}
 							effect = {
 								set_owner = event_target:angel_enemy
 								create_ship = {
@@ -204,7 +214,10 @@ country_event = {
 					}
 				}
 			}
-		country_event = { id = magical_discoveries_crisis.1000 years = 50 }
+			country_event = {
+				id = magical_discoveries_crisis.1000
+				years = 50
+			}
 		}
 	}
 }
@@ -213,26 +226,31 @@ country_event = {
 country_event = {
 	id = magical_discoveries_crisis.10001
 	hide_window = yes
-	trigger = { always = no }
-  
+	trigger = {
+		always = no
+	}
 	immediate = {
 		if = {
-			limit = { NOT = { exists = event_target:gate_holder_1 } }
+			limit = {
+				NOT = {
+					exists = event_target:gate_holder_1
+				}
+			}
 			create_country = {
 				name = "NAME_Gate_Holder_1"
 				type = gate_holder
 				flag = {
-					icon= {
+					icon = {
 						category = "special"
 						file = "extradimensional_01.dds"
 					}
-					background= {
+					background = {
 						category = "backgrounds"
 						file = "circle.dds"
 					}
-					colors={
-						"white"
-						"white"
+					colors = {
+						"black"
+						"blue"
 						"null"
 						"null"
 					}
@@ -245,13 +263,19 @@ country_event = {
 				}
 			}
 		}
-			random_country = {
-				limit = { is_country_type = heavenly_realm }
-				set_country_flag = heavenly
-			}
 		random_country = {
-			limit = { is_country_type = gate_holder }
-			random_owned_ship = { set_ship_flag = heavenly_portal }
+			limit = {
+				is_country_type = heavenly_realm
+			}
+			set_country_flag = heavenly
+		}
+		random_country = {
+			limit = {
+				is_country_type = gate_holder
+			}
+			random_owned_ship = {
+				set_ship_flag = heavenly_portal
+			}
 		}
 	}
 }
@@ -259,13 +283,18 @@ country_event = {
 country_event = {
 	id = magical_discoveries_crisis.10002
 	hide_window = yes
-	trigger = { always = no }
-
+	trigger = {
+		always = no
+	}
 	immediate = {
 		random_country = {
-			limit = { is_country_type = gate_holder }
+			limit = {
+				is_country_type = gate_holder
+			}
 			random_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				set_ship_flag = heavenly_portal
 			}
 		}
@@ -278,23 +307,22 @@ country_event = {
 	hide_window = yes
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	immediate = {
 		create_country = {
 			name = "NAME_Gate_Holder_1"
 			type = gate_holder
 			flag = {
-				icon= {
+				icon = {
 					category = "special"
 					file = "extradimensional_01.dds"
 				}
-				background= {
+				background = {
 					category = "backgrounds"
 					file = "circle.dds"
 				}
-				colors={
-					"white"
-					"white"
+				colors = {
+					"turquoise"
+					"light_blue"
 					"null"
 					"null"
 				}
@@ -329,36 +357,46 @@ country_event = {
 					class = EXD
 					portrait = heavens1
 					traits = random
-					effect = { save_event_target_as = heavens_species }
+					effect = {
+						save_event_target_as = heavens_species
+					}
 				}
 				create_country = {
 					name = "NAME_Celestialbeing"
 					type = "heavenly_realm"
 					species = event_target:heavens_species
 					name_list = "Hevenlyname"
-					effect = { set_country_flag = heavenly }
+					effect = {
+						set_country_flag = heavenly
+					}
 					flag = {
-						icon= {
+						icon = {
 							category = "special"
 							file = "extradimensional_01.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
 							file = "circle.dds"
 						}
-						colors={
-							"white"
-							"white"
+						colors = {
+							"turquoise"
+							"light_blue"
 							"null"
 							"null"
 						}
 					}
 					effect = {
-						create_ship_design = { design = "NAME_Heavenly_Shaper" }
+						create_ship_design = {
+							design = "NAME_Heavenly_Shaper"
+						}
 						add_ship_design = last_created_design
-						create_ship_design = { design = "NAME_Heavenly_Anchor" }
+						create_ship_design = {
+							design = "NAME_Heavenly_Anchor"
+						}
 						add_ship_design = last_created_design
-						create_ship_design = { design = "NAME_Heavenly_Base" }
+						create_ship_design = {
+							design = "NAME_Heavenly_Base"
+						}
 						add_ship_design = last_created_design
 						save_global_event_target_as = heavenesgate
 						establish_communications_no_message = event_target:gate_holder_1
@@ -379,7 +417,9 @@ country_event = {
 								name = random
 								design = "NAME_Heavenly_Portal"
 								graphical_culture = "extra_dimensional_01"
-								effect = { set_ship_flag = heavenly_portal }
+								effect = {
+									set_ship_flag = heavenly_portal
+								}
 							}
 							set_location = {
 								target = PREVPREV
@@ -387,13 +427,43 @@ country_event = {
 								angle = random
 							}
 							save_event_target_as = heavenes_gate
-							fleet_event = { id = magical_discoveries_crisis.1003 days = 15 } # Second Fleet Arrives
-							fleet_event = { id = magical_discoveries_crisis.1003 days = 30 } # Third Fleet Arrives
-							fleet_event = { id = magical_discoveries_crisis.1003 days = 55 } # Fourth Fleet Arrives
-							fleet_event = { id = magical_discoveries_crisis.1003 days = 365 } # 5 Fleet Arrives
-							fleet_event = { id = magical_discoveries_crisis.1006 days = 20 } # First Constructor Arrives
-							fleet_event = { id = magical_discoveries_crisis.1006 days = 25 } # Second Constructor Arrives
-							event_target:heavenesgate = { country_event = { id = magical_discoveries_crisis.1260 days = 350 } } # Spawn Cycle starts
+							fleet_event = {
+								id = magical_discoveries_crisis.1003
+								days = 15
+							}
+							# Second Fleet Arrives
+							fleet_event = {
+								id = magical_discoveries_crisis.1003
+								days = 30
+							}
+							# Third Fleet Arrives
+							fleet_event = {
+								id = magical_discoveries_crisis.1003
+								days = 55
+							}
+							# Fourth Fleet Arrives
+							fleet_event = {
+								id = magical_discoveries_crisis.1003
+								days = 365
+							}
+							# 5 Fleet Arrives
+							fleet_event = {
+								id = magical_discoveries_crisis.1006
+								days = 20
+							}
+							# First Constructor Arrives
+							fleet_event = {
+								id = magical_discoveries_crisis.1006
+								days = 25
+							}
+							# Second Constructor Arrives
+							event_target:heavenesgate = {
+								country_event = {
+									id = magical_discoveries_crisis.1260
+									days = 350
+								}
+							}
+							# Spawn Cycle starts
 							#set_owner = event_target:gate_holder_1 #when first anchor built
 						}
 					}
@@ -452,8 +522,14 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { exists = starbase }
-				starbase = { fleet = { destroy_fleet = this } }
+				limit = {
+					exists = starbase
+				}
+				starbase = {
+					fleet = {
+						destroy_fleet = this
+					}
+				}
 			}
 			create_starbase = {
 				size = starbase_exd
@@ -462,7 +538,11 @@ country_event = {
 		}
 		# 扉を無敵にする
 		event_target:heavenesgate = {
-			random_owned_ship = { ship_event = { id = magical_discoveries_crisis.1280 } }
+			random_owned_ship = {
+				ship_event = {
+					id = magical_discoveries_crisis.1280
+				}
+			}
 		}
 		every_country = {
 			limit = {
@@ -476,7 +556,9 @@ country_event = {
 					system = event_target:heavens_system
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1007 }
+			country_event = {
+				id = magical_discoveries_crisis.1007
+			}
 		}
 		every_country = {
 			limit = {
@@ -492,7 +574,9 @@ country_event = {
 					}
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1008 }
+			country_event = {
+				id = magical_discoveries_crisis.1008
+			}
 		}
 	}
 }
@@ -501,9 +585,7 @@ country_event = {
 fleet_event = {
 	id = magical_discoveries_crisis.1003
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	immediate = {
 		event_target:heavenesgate = {
 			random_list = {
@@ -614,7 +696,6 @@ fleet_event = {
 	id = magical_discoveries_crisis.1006
 	hide_window = yes
 	is_triggered_only = yes
-
 	immediate = {
 		event_target:heavenesgate = {
 			create_fleet = {
@@ -644,9 +725,7 @@ country_event = {
 	picture = GFX_evt_wormhole
 	show_sound = event_ex_started
 	location = event_target:heavens_system
-
 	is_triggered_only = yes
-
 	after = {
 		begin_event_chain = {
 			event_chain = "heavenly_invasion_chain"
@@ -671,10 +750,11 @@ country_event = {
 				counter = "heavenly_anchors_1"
 				amount = 1
 			}
-			country_event = { id = magical_discoveries_crisis.1010 }
+			country_event = {
+				id = magical_discoveries_crisis.1010
+			}
 		}
 	}
-
 	option = {
 		name = magical_discoveries_crisis.1007.a
 	}
@@ -690,13 +770,14 @@ country_event = {
 	desc = "magical_discoveries_crisis.1008.desc"
 	picture = GFX_evt_physics_research
 	show_sound = event_alien_signal
-
 	is_triggered_only = yes
-
 	option = {
 		name = magical_discoveries_crisis.1008.a
 		hidden_effect = {
-			country_event = { id = magical_discoveries_crisis.1009 days = 30 }
+			country_event = {
+				id = magical_discoveries_crisis.1009
+				days = 30
+			}
 		}
 	}
 }
@@ -708,16 +789,15 @@ country_event = {
 	desc = "magical_discoveries_crisis.1009.desc"
 	picture = GFX_evt_wormhole
 	show_sound = event_ex_started
-
 	is_triggered_only = yes
-
 	immediate = {
 		random_system = {
-			limit = { has_star_flag = heavens_origin_system }
+			limit = {
+				has_star_flag = heavens_origin_system
+			}
 			save_event_target_as = heavens_system
 		}
 	}
-
 	after = {
 		begin_event_chain = {
 			event_chain = "heavenly_invasion_chain"
@@ -742,10 +822,11 @@ country_event = {
 				counter = "heavenly_anchors_1"
 				amount = 1
 			}
-			country_event = { id = magical_discoveries_crisis.1010 }
+			country_event = {
+				id = magical_discoveries_crisis.1010
+			}
 		}
 	}
-
 	option = {
 		name = magical_discoveries_crisis.1007.a
 		trigger = {
@@ -766,20 +847,15 @@ country_event = {
 	title = "magical_discoveries_crisis.1010.name"
 	diplomatic_title = BLANK_STRING
 	desc = "magical_discoveries_crisis.1010.desc"
-
 	diplomatic = yes
-
 	picture_event_data = {
-		portrait =  heavens1
+		portrait = heavens1
 		room = "heavens_room"
 	}
-
 	is_triggered_only = yes
-
 	immediate = {
 		establish_communications_no_message = event_target:heavenesgate
 	}
-
 	option = {
 		name = magical_discoveries_crisis.1010.a
 	}
@@ -792,18 +868,18 @@ planet_event = {
 	desc = "magical_discoveries_crisis.1011.desc"
 	picture = GFX_evt_city_ruins
 	show_sound = event_ghost_town
-
 	is_triggered_only = yes
-
 	trigger = {
 		planet_devastation >= 100
 		FROM = {
-				is_country_type = heavenly_realm
+			is_country_type = heavenly_realm
 		}
 	}
-
 	immediate = {
-		add_threat = { who = from amount = 2 }
+		add_threat = {
+			who = from
+			amount = 2
+		}
 		destroy_colony = yes
 		if = {
 			limit = {
@@ -813,8 +889,12 @@ planet_event = {
 				}
 			}
 			random_list = {
-				50 = { change_pc = pc_barren }
-				50 = { change_pc = pc_barren_cold }
+				50 = {
+					change_pc = pc_barren
+				}
+				50 = {
+					change_pc = pc_barren_cold
+				}
 			}
 			reset_planet = yes
 			add_modifier = {
@@ -823,18 +903,28 @@ planet_event = {
 			}
 		}
 		else_if = {
-			limit = { is_planet_class = pc_ringworld_habitable }
+			limit = {
+				is_planet_class = pc_ringworld_habitable
+			}
 			change_pc = pc_ringworld_habitable_damaged
 			reset_planet = yes
 		}
 		else_if = {
-			limit = { is_planet_class = pc_habitat }
+			limit = {
+				is_planet_class = pc_habitat
+			}
 			remove_planet = yes
 		}
 		if = {
-			limit = { FROM = { is_country_type = heavenly_realm } }
+			limit = {
+				FROM = {
+					is_country_type = heavenly_realm
+				}
+			}
 			every_country = {
-				limit = { has_event_chain = "heavenly_invasion_chain" }
+				limit = {
+					has_event_chain = "heavenly_invasion_chain"
+				}
 				add_event_chain_counter = {
 					event_chain = "heavenly_invasion_chain"
 					counter = "heavenly_planets_1"
@@ -843,7 +933,6 @@ planet_event = {
 			}
 		}
 	}
-
 	option = {
 		name = magical_discoveries_crisis.1011.a
 	}
@@ -853,27 +942,32 @@ planet_event = {
 country_event = {
 	id = magical_discoveries_crisis.1012
 	hide_window = yes
-
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	trigger = {
 		is_country_type = heavenly_realm
-		FROMFROM = { is_ship_size = dimensional_portal_ed }
+		FROMFROM = {
+			is_ship_size = dimensional_portal_ed
+		}
 	}
-
 	immediate = {
 		random_system = {
-			limit = { has_star_flag = heavens_origin_system }
+			limit = {
+				has_star_flag = heavens_origin_system
+			}
 			random_system_ambient_object = {
-				limit = { has_ambient_object_flag = heavens_system_effect_2 }
+				limit = {
+					has_ambient_object_flag = heavens_system_effect_2
+				}
 				destroy_ambient_object = this
 			}
 		}
 		if = {
 			limit = {
 				OR = {
-					NOT = { has_global_flag = extradimensional_second_portal }
+					NOT = {
+						has_global_flag = extradimensional_second_portal
+					}
 					AND = {
 						has_global_flag = extradimensional_second_portal_destroyed
 						has_global_flag = extradimensional_third_portal_destroyed
@@ -883,13 +977,21 @@ country_event = {
 			FROM = {
 				save_event_target_as = gate_killer
 				if = {
-					limit = { is_ai = no }
-					country_event = { id = magical_discoveries_crisis.1250 days = 10 random = 10 }
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = magical_discoveries_crisis.1250
+						days = 10
+						random = 10
+					}
 				}
 			}
 			every_playable_country = {
 				if = {
-					limit = { has_communications = FROM }
+					limit = {
+						has_communications = FROM
+					}
 					add_opinion_modifier = {
 						who = FROM
 						modifier = opinion_destroyed_portal
@@ -899,7 +1001,9 @@ country_event = {
 					modifier = "heavenesgate_defeated"
 					days = 360
 				}
-				country_event = { id = magical_discoveries_crisis.1013 }
+				country_event = {
+					id = magical_discoveries_crisis.1013
+				}
 			}
 		}
 		else_if = {
@@ -911,7 +1015,9 @@ country_event = {
 				}
 			}
 			every_playable_country = {
-				country_event = { id = magical_discoveries_crisis.1016 }
+				country_event = {
+					id = magical_discoveries_crisis.1016
+				}
 			}
 		}
 	}
@@ -924,18 +1030,17 @@ country_event = {
 	desc = "magical_discoveries_crisis.1013.desc"
 	picture = GFX_evt_wormhole
 	show_sound = event_super_explosion
-
 	is_triggered_only = yes
-
 	immediate = {
 		random_system = {
-			limit = { has_star_flag = heavens_origin_system }
+			limit = {
+				has_star_flag = heavens_origin_system
+			}
 			save_event_target_as = heavens_system
 		}
 		remove_point_of_interest = heavenly_invasion_poi.1
 		set_country_flag = heavenesgate_expunged
 	}
-
 	option = {
 		name = magical_discoveries_crisis.1013.a
 	}
@@ -945,27 +1050,21 @@ country_event = {
 country_event = {
 	id = magical_discoveries_crisis.1050
 	# title = "TRANSMISSION"
-
 	desc = {
 		text = magical_discoveries_crisis.1050.desc
 	}
-
 	diplomatic = yes
 	force_open = yes
-
 	picture_event_data = {
 		portrait = heavens1
 		room = "heavens_room"
 	}
-
 	is_triggered_only = yes
-
 	trigger = {
 		FROM = {
 			is_country_type = heavenly_realm
 		}
 	}
-
 	option = {
 		name = magical_discoveries_crisis.1050.a
 		trigger = {
@@ -1004,7 +1103,11 @@ country_event = {
 				has_ethic = "ethic_xenophile"
 				has_ethic = "ethic_fanatic_xenophile"
 			}
-			NOT = { owner_species = { has_trait = trait_mechanical } }
+			NOT = {
+				owner_species = {
+					has_trait = trait_mechanical
+				}
+			}
 		}
 		response_text = magical_discoveries_crisis.1050.d.response
 	}
@@ -1015,14 +1118,20 @@ country_event = {
 				has_ethic = "ethic_spiritualist"
 				has_ethic = "ethic_fanatic_spiritualist"
 			}
-			NOT = { owner_species = { has_trait = trait_psionic } }
+			NOT = {
+				owner_species = {
+					has_trait = trait_psionic
+				}
+			}
 		}
 		response_text = magical_discoveries_crisis.1050.e.response
 	}
 	option = {
 		name = magical_discoveries_crisis.1050.f
 		trigger = {
-			owner_species = { has_trait = trait_psionic }
+			owner_species = {
+				has_trait = trait_psionic
+			}
 		}
 		response_text = magical_discoveries_crisis.1050.f.response
 	}
@@ -1034,58 +1143,55 @@ country_event = {
 event = {
 	id = magical_discoveries_crisis.1254
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
 		any_country = {
-				is_country_type = heavenly_realm
+			is_country_type = heavenly_realm
 		}
 	}
-
 	immediate = {
 		if = {
 			limit = {
 				any_country = {
-						is_country_type = heavenly_realm
-							has_global_flag = heavenly_portal_destroyed
+					is_country_type = heavenly_realm
+					has_global_flag = heavenly_portal_destroyed
 					num_ships < 6
-
 					NOR = {
-						any_owned_ship = { is_ship_size = dimensional_portal_ed }
+						any_owned_ship = {
+							is_ship_size = dimensional_portal_ed
+						}
 						any_country = {
 							AND = {
 								is_country_type = gate_holder
-								any_owned_ship = { is_ship_size = dimensional_portal_ed }
-							}
-						}
-					}
-
-					NOT = {
-						any_system = {
-							any_system_planet = {
-								controller = {
-										is_country_type = heavenly_realm
+								any_owned_ship = {
+									is_ship_size = dimensional_portal_ed
 								}
 							}
 						}
 					}
-
+					NOT = {
+						any_system = {
+							any_system_planet = {
+								controller = {
+									is_country_type = heavenly_realm
+								}
+							}
+						}
+					}
 					NOT = {
 						any_system = {
 							any_system_planet = {
 								owner = {
-										is_country_type = heavenly_realm
+									is_country_type = heavenly_realm
 								}
 							}
 						}
 					}
 				}
 			}
-
 			every_country = {
 				limit = {
-						is_country_type = heavenly_realm
+					is_country_type = heavenly_realm
 				}
 				destroy_country = yes
 			}
@@ -1097,136 +1203,210 @@ event = {
 country_event = {
 	id = magical_discoveries_crisis.1260
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
-			is_country_type = heavenly_realm
+		is_country_type = heavenly_realm
 		OR = {
 			count_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				count > 0
 			}
 			any_country = {
 				is_country_type = gate_holder
 				count_owned_ship = {
-					limit = { is_ship_size = dimensional_portal_ed }
+					limit = {
+						is_ship_size = dimensional_portal_ed
+					}
 					count > 0
 				}
 			}
 		}
 	}
-
-
 	immediate = {
 		# Spawn Construction Ships if needed
-		country_event = { id = magical_discoveries_crisis.1266 days = 6 }
+		country_event = {
+			id = magical_discoveries_crisis.1266
+			days = 6
+		}
 		# If at fleet cap
 		if = {
 			limit = {
 				num_ships > 2000
 			}
-			country_event = { id = magical_discoveries_crisis.1260 days = 600 random = 200 } # Check again later
+			country_event = {
+				id = magical_discoveries_crisis.1260
+				days = 600
+				random = 200
+			}
+			# Check again later
 		}
 		# If no Anchors
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count < 1
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 1500 random = 200 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 1500
+				random = 200
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 1
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 1300 random = 200 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 1300
+				random = 200
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 2
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 1100 random = 200 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 1100
+				random = 200
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 3
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 900 random = 200 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 900
+				random = 200
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 4
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 600 random = 200 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 600
+				random = 200
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 5
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 400 random = 200 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 400
+				random = 200
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 6
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 400 random = 200 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 400
+				random = 200
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 7
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 300 random = 100 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 300
+				random = 100
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 8
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 250 random = 50 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 250
+				random = 50
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count = 9
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 200 random = 50 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 200
+				random = 50
+			}
 		}
 		else_if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count > 9
 				}
 			}
-			country_event = { id = magical_discoveries_crisis.1265 days = 150 random = 50 }
+			country_event = {
+				id = magical_discoveries_crisis.1265
+				days = 150
+				random = 50
+			}
 		}
 	}
 }
@@ -1235,47 +1415,59 @@ country_event = {
 country_event = {
 	id = magical_discoveries_crisis.1265
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
 		# Must only trigger if portal is still alive
 		OR = {
 			count_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				count > 0
 			}
 			any_country = {
 				AND = {
 					is_country_type = gate_holder
 					count_owned_ship = {
-						limit = { is_ship_size = dimensional_portal_ed }
+						limit = {
+							is_ship_size = dimensional_portal_ed
+						}
 						count > 0
 					}
 				}
 			}
 		}
 	}
-
 	immediate = {
 		random_country = {
-			limit = { is_country_type = gate_holder }
+			limit = {
+				is_country_type = gate_holder
+			}
 			random_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				save_event_target_as = heavenes_gate
 			}
 		}
 		random_owned_ship = {
-			limit = { is_ship_size = dimensional_portal_ed }
+			limit = {
+				is_ship_size = dimensional_portal_ed
+			}
 			save_event_target_as = heavenes_gate
 		}
-		owner_species = { save_event_target_as = heavens_species }
-		country_event = { id = magical_discoveries_crisis.1260 } # Restart spawn cycle
-
+		owner_species = {
+			save_event_target_as = heavens_species
+		}
+		country_event = {
+			id = magical_discoveries_crisis.1260
+		}
+		# Restart spawn cycle
 		# Extradimensionals 1
 		if = {
-			limit = { is_country_type = heavenly_realm }
-
+			limit = {
+				is_country_type = heavenly_realm
+			}
 			# Create Admiral
 			random_list = {
 				25 = {
@@ -1309,7 +1501,6 @@ country_event = {
 					}
 				}
 			}
-
 			# Create Fleet
 			create_fleet = {
 				effect = {
@@ -1362,48 +1553,58 @@ country_event = {
 country_event = {
 	id = magical_discoveries_crisis.1266
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
 		# Must only trigger if portal is still alive
 		OR = {
 			count_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				count > 0
 			}
 			any_country = {
 				AND = {
 					is_country_type = gate_holder
 					count_owned_ship = {
-						limit = { is_ship_size = dimensional_portal_ed }
+						limit = {
+							is_ship_size = dimensional_portal_ed
+						}
 						count > 0
 					}
 				}
 			}
 		}
-
 		count_owned_ship = {
-			limit = { is_ship_size = construction_ship_ed }
+			limit = {
+				is_ship_size = construction_ship_ed
+			}
 			count < 3
 		}
 	}
-
 	immediate = {
 		# Extradimensionals 1
 		random_country = {
-			limit = { is_country_type = gate_holder }
+			limit = {
+				is_country_type = gate_holder
+			}
 			random_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				save_event_target_as = heavenes_gate
 			}
 		}
 		random_owned_ship = {
-			limit = { is_ship_size = dimensional_portal_ed }
+			limit = {
+				is_ship_size = dimensional_portal_ed
+			}
 			save_event_target_as = heavenes_gate
 		}
 		if = {
-			limit = { is_country_type = heavenly_realm }
+			limit = {
+				is_country_type = heavenly_realm
+			}
 			while = {
 				count = 2
 				create_fleet = {
@@ -1430,52 +1631,65 @@ country_event = {
 ship_event = {
 	id = magical_discoveries_crisis.1267
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
 		owner = {
-				is_country_type = heavenly_realm
+			is_country_type = heavenly_realm
 			# ポータルがまだ生きている場合にのみ起動する必要があります。
 			OR = {
 				count_owned_ship = {
-					limit = { is_ship_size = dimensional_portal_ed }
+					limit = {
+						is_ship_size = dimensional_portal_ed
+					}
 					count > 0
 				}
 				any_country = {
 					AND = {
 						is_country_type = gate_holder
 						count_owned_ship = {
-							limit = { is_ship_size = dimensional_portal_ed }
+							limit = {
+								is_ship_size = dimensional_portal_ed
+							}
 							count > 0
 						}
 					}
 				}
 			}
-				is_country_type = heavenly_realm
+			is_country_type = heavenly_realm
 			num_ships < 2001
 		}
 	}
-
 	immediate = {
 		owner = {
-			country_event = { id = magical_discoveries_crisis.1266 days = 6 } # 必要に応じて建設船をスポーン
+			country_event = {
+				id = magical_discoveries_crisis.1266
+				days = 6
+			}
+			# 必要に応じて建設船をスポーン
 			random_country = {
-				limit = { is_country_type = gate_holder }
+				limit = {
+					is_country_type = gate_holder
+				}
 				random_owned_ship = {
-					limit = { is_ship_size = dimensional_portal_ed }
+					limit = {
+						is_ship_size = dimensional_portal_ed
+					}
 					save_event_target_as = heavenes_gate
 				}
 			}
 			random_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				save_event_target_as = heavenes_gate
 			}
-			owner_species = { save_event_target_as = heavens_species }
-
+			owner_species = {
+				save_event_target_as = heavens_species
+			}
 			if = {
-				limit = { is_country_type = heavenly_realm }
-
+				limit = {
+					is_country_type = heavenly_realm
+				}
 				# Create Admiral
 				random_list = {
 					25 = {
@@ -1509,7 +1723,6 @@ ship_event = {
 						}
 					}
 				}
-
 				# Create Fleet
 				create_fleet = {
 					effect = {
@@ -1563,25 +1776,28 @@ ship_event = {
 country_event = {
 	id = magical_discoveries_crisis.1270
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
-			is_country_type = heavenly_realm
+		is_country_type = heavenly_realm
 		NOT = {
 			any_country = {
 				AND = {
-					NOT = { is_same_value = ROOT }
-						is_country_type = heavenly_realm
+					NOT = {
+						is_same_value = ROOT
+					}
+					is_country_type = heavenly_realm
 				}
 			}
 		}
 	}
-
 	immediate = {
 		# 危機の報酬は、コミュニティが存在する場合は、銀河フォーカスを介して処理されます。
 		if = {
-			limit = { NOT = { has_global_flag = galactic_community_formed } }
+			limit = {
+				NOT = {
+					has_global_flag = galactic_community_formed
+				}
+			}
 			every_country = {
 				limit = {
 					OR = {
@@ -1589,10 +1805,11 @@ country_event = {
 						is_country_type = fallen_empire
 					}
 				}
-				country_event = { id = magical_discoveries_crisis.1271 }
+				country_event = {
+					id = magical_discoveries_crisis.1271
+				}
 			}
 		}
-
 		set_global_flag = heavenly_invasion_defeated
 	}
 }
@@ -1604,16 +1821,14 @@ country_event = {
 	desc = "magical_discoveries_crisis.1271.desc"
 	picture = GFX_evt_metropolis
 	show_sound = event_celebration
-
 	is_triggered_only = yes
-
 	immediate = {
 		end_event_chain = "heavenly_invasion_chain"
 		end_event_chain = "heavenly_invasion_chain_2"
 		end_event_chain = "heavenly_invasion_chain_3"
 	}
-
-	option = { # Spiritualist Response
+	option = {
+		# Spiritualist Response
 		name = magical_discoveries_crisis.1271.a
 		trigger = {
 			has_spiritualist_government = yes
@@ -1627,7 +1842,8 @@ country_event = {
 			value = @tier5unityreward
 		}
 	}
-	option = { # Militarist Response
+	option = {
+		# Militarist Response
 		name = magical_discoveries_crisis.1271.b
 		trigger = {
 			has_militarist_government = yes
@@ -1641,7 +1857,8 @@ country_event = {
 			value = @tier5unityreward
 		}
 	}
-	option = { # Materialist Response
+	option = {
+		# Materialist Response
 		name = magical_discoveries_crisis.1271.c
 		trigger = {
 			has_materialist_government = yes
@@ -1655,7 +1872,8 @@ country_event = {
 			value = @tier5unityreward
 		}
 	}
-	option = { # Pacifist Response
+	option = {
+		# Pacifist Response
 		name = magical_discoveries_crisis.1271.d
 		trigger = {
 			has_pacifist_government = yes
@@ -1669,7 +1887,8 @@ country_event = {
 			value = @tier5unityreward
 		}
 	}
-	option = { # Corporate Response
+	option = {
+		# Corporate Response
 		name = magical_discoveries_crisis.1271.e
 		trigger = {
 			has_government = gov_megacorporation
@@ -1683,8 +1902,9 @@ country_event = {
 			value = @tier5unityreward
 		}
 	}
-	option = { # Default Response
-		name = crisis.211.f
+	option = {
+		# Default Response
+		name = magical_discoveries_crisis.1271.f
 		trigger = {
 			OR = {
 				has_generic_government = yes
@@ -1703,7 +1923,8 @@ country_event = {
 			value = @tier5unityreward
 		}
 	}
-	option = { # Xenophobe Response
+	option = {
+		# Xenophobe Response
 		name = magical_discoveries_crisis.1271.g
 		trigger = {
 			has_ethic = "ethic_fanatic_xenophobe"
@@ -1713,7 +1934,8 @@ country_event = {
 			value = @tier5unityreward
 		}
 	}
-	option = { # Xenophile Response
+	option = {
+		# Xenophile Response
 		name = magical_discoveries_crisis.1271.h
 		trigger = {
 			has_ethic = "ethic_fanatic_xenophile"
@@ -1729,25 +1951,26 @@ country_event = {
 ship_event = {
 	id = magical_discoveries_crisis.1280
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
 		owner = {
-				is_country_type = heavenly_realm
+			is_country_type = heavenly_realm
 		}
 		#is_ship_size = starbase_exd # now implicit
 	}
-
 	immediate = {
 		owner = {
 			log = "anchor built and magical_discoveries_crisis.1280 executed, not yet reaching fleet owner switch"
 			random_country = {
-				limit = { is_country_type = gate_holder }
+				limit = {
+					is_country_type = gate_holder
+				}
 				save_event_target_as = gate_holder_1
 			}
 			random_owned_ship = {
-				limit = { is_ship_size = dimensional_portal_ed }
+				limit = {
+					is_ship_size = dimensional_portal_ed
+				}
 				fleet = {
 					set_event_locked = yes
 					set_owner = event_target:gate_holder_1
@@ -1756,9 +1979,15 @@ ship_event = {
 			}
 		}
 		if = {
-			limit = { owner = { is_country_type = heavenly_realm } }
+			limit = {
+				owner = {
+					is_country_type = heavenly_realm
+				}
+			}
 			every_country = {
-				limit = { has_event_chain = "heavenly_invasion_chain" }
+				limit = {
+					has_event_chain = "heavenly_invasion_chain"
+				}
 				add_event_chain_counter = {
 					event_chain = "heavenly_invasion_chain"
 					counter = "heavenly_anchors_1"
@@ -1773,19 +2002,20 @@ ship_event = {
 country_event = {
 	id = magical_discoveries_crisis.1281
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
-		FROMFROM = { is_ship_size = starbase_exd }
+		FROMFROM = {
+			is_ship_size = starbase_exd
+		}
 	}
-
 	immediate = {
 		log = "anchor destroyed event magical_discoveries_crisis.1281 triggered"
 		if = {
 			limit = {
 				count_owned_ship = {
-					limit = { is_ship_size = starbase_exd }
+					limit = {
+						is_ship_size = starbase_exd
+					}
 					count < 1
 				}
 			}
@@ -1801,8 +2031,12 @@ country_event = {
 								is_ship_size = dimensional_portal_ed
 								has_ship_flag = heavenly_portal
 							}
-							fleet = { set_owner = root }
-							fleet = { set_event_locked = no }
+							fleet = {
+								set_owner = root
+							}
+							fleet = {
+								set_event_locked = no
+							}
 						}
 					}
 				}
@@ -1816,8 +2050,12 @@ country_event = {
 								is_ship_size = dimensional_portal_ed
 								has_ship_flag = aberrant_portal
 							}
-							fleet = { set_owner = root }
-							fleet = { set_event_locked = no }
+							fleet = {
+								set_owner = root
+							}
+							fleet = {
+								set_event_locked = no
+							}
 						}
 					}
 				}
@@ -1831,17 +2069,25 @@ country_event = {
 								is_ship_size = dimensional_portal_ed
 								has_ship_flag = vehement_portal
 							}
-							fleet = { set_owner = root }
-							fleet = { set_event_locked = no }
+							fleet = {
+								set_owner = root
+							}
+							fleet = {
+								set_event_locked = no
+							}
 						}
 					}
 				}
 			}
 		}
 		if = {
-			limit = { is_country_type = heavenly_realm }
+			limit = {
+				is_country_type = heavenly_realm
+			}
 			every_country = {
-				limit = { has_event_chain = "heavenly_invasion_chain" }
+				limit = {
+					has_event_chain = "heavenly_invasion_chain"
+				}
 				add_event_chain_counter = {
 					event_chain = "heavenly_invasion_chain"
 					counter = "heavenly_anchors_1"
@@ -1856,18 +2102,17 @@ country_event = {
 country_event = {
 	id = magical_discoveries_crisis.1282
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
-			is_country_type = heavenly_realm
+		is_country_type = heavenly_realm
 	}
-
 	immediate = {
 		if = {
 			limit = {
 				is_country_type = heavenly_realm
-				FROM = { has_event_chain = "heavenly_invasion_chain" }
+				FROM = {
+					has_event_chain = "heavenly_invasion_chain"
+				}
 			}
 			FROM = {
 				add_event_chain_counter = {
@@ -1878,11 +2123,15 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { is_country_type = heavenly_realm }
+			limit = {
+				is_country_type = heavenly_realm
+			}
 			every_country = {
 				limit = {
 					has_event_chain = "heavenly_invasion_chain"
-					NOT = { is_same_value = FROM }
+					NOT = {
+						is_same_value = FROM
+					}
 				}
 				add_event_chain_counter = {
 					event_chain = "heavenly_invasion_chain"
@@ -1898,23 +2147,24 @@ country_event = {
 country_event = {
 	id = magical_discoveries_crisis.1283
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
-			is_country_type = heavenly_realm
+		is_country_type = heavenly_realm
 		FROM = {
 			NOR = {
 				is_country_type = heavenly_realm
 			}
 		}
 	}
-
 	immediate = {
 		if = {
-			limit = { is_country_type = heavenly_realm }
+			limit = {
+				is_country_type = heavenly_realm
+			}
 			every_country = {
-				limit = { has_event_chain = "heavenly_invasion_chain" }
+				limit = {
+					has_event_chain = "heavenly_invasion_chain"
+				}
 				add_event_chain_counter = {
 					event_chain = "heavenly_invasion_chain"
 					counter = "heavenly_victims_1"
@@ -1932,9 +2182,7 @@ country_event = {
 	desc = "magical_discoveries_crisis.1250.desc"
 	picture = GFX_evt_surreal_visions
 	show_sound = event_mystic_reveal
-
 	is_triggered_only = yes
-
 	option = {
 		name = magical_discoveries_crisis.1250a.name
 		add_relic = r_the_sealed_god
@@ -1945,9 +2193,7 @@ country_event = {
 ship_event = {
 	id = magical_discoveries_crisis.1300
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
 		owner = {
 			count_starbase_sizes = {
@@ -1956,7 +2202,6 @@ ship_event = {
 			}
 		}
 	}
-
 	immediate = {
 		if = {
 			limit = {
@@ -1967,7 +2212,11 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 } # スターベースがまだ存在しないため、このように行われました。
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
+			# スターベースがまだ存在しないため、このように行われました。
 		}
 		else_if = {
 			limit = {
@@ -1982,7 +2231,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 		else_if = {
 			limit = {
@@ -1997,7 +2249,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 		else_if = {
 			limit = {
@@ -2012,7 +2267,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 		else_if = {
 			limit = {
@@ -2027,7 +2285,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 		else_if = {
 			limit = {
@@ -2042,7 +2303,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 		else_if = {
 			limit = {
@@ -2057,7 +2321,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 		else_if = {
 			limit = {
@@ -2072,7 +2339,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 		else_if = {
 			limit = {
@@ -2087,7 +2357,10 @@ ship_event = {
 					}
 				}
 			}
-			ship_event = { id = magical_discoveries_crisis.1301 days = 1 }
+			ship_event = {
+				id = magical_discoveries_crisis.1301
+				days = 1
+			}
 		}
 	}
 }
@@ -2096,15 +2369,21 @@ ship_event = {
 ship_event = {
 	id = magical_discoveries_crisis.1301
 	hide_window = yes
-
 	is_triggered_only = yes
-	
 	immediate = {
 		solar_system = {
-			starbase = { set_starbase_size = starbase_exd }
+			starbase = {
+				set_starbase_size = starbase_exd
+			}
 		}
-		ship_event = { id = magical_discoveries_crisis.1267 } # アンカーを構築した後、増援部隊が到着
-		ship_event = { id = magical_discoveries_crisis.1280 } # Anchor Built
+		ship_event = {
+			id = magical_discoveries_crisis.1267
+		}
+		# アンカーを構築した後、増援部隊が到着
+		ship_event = {
+			id = magical_discoveries_crisis.1280
+		}
+		# Anchor Built
 	}
 }
 
@@ -2112,9 +2391,7 @@ ship_event = {
 ship_event = {
 	id = magical_discoveries_crisis.1310
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	immediate = {
 		solar_system = {
 			star = {
@@ -2139,24 +2416,23 @@ ship_event = {
 country_event = {
 	id = magical_discoveries_crisis.1311
 	hide_window = yes
-
 	is_triggered_only = yes
-
 	trigger = {
-			is_country_type = heavenly_realm
-		fromfrom = { 
+		is_country_type = heavenly_realm
+		fromfrom = {
 			OR = {
 				is_ship_size = starbase_exd_0
 				is_ship_size = starbase_exd
 			}
 		}
 	}
-
 	immediate = {
 		fromfrom = {
 			solar_system = {
 				random_system_ambient_object = {
-					limit = { has_ambient_object_flag = heavens_system_effect }
+					limit = {
+						has_ambient_object_flag = heavens_system_effect
+					}
 					destroy_ambient_object = this
 				}
 			}
