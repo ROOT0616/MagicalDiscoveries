@@ -240,6 +240,7 @@
 
  magical_discoveries_crisis.1.name:0 "天使の目撃"
  magical_discoveries_crisis.1.desc:0 "この銀河の各地で神話で語り継がれている天使ような生物の目撃が報告されている。"
+ magical_discoveries_crisis.1a.name:0 "馬鹿なことを言うな"
 
  magical_discoveries_crisis.2.name:0 "天使の発見"
  magical_discoveries_crisis.2.desc:0 "ついに我々は天使を見つけた。"
@@ -249,9 +250,11 @@
 
  magical_discoveries_crisis.3.name:0 "天使の協力"
  magical_discoveries_crisis.3.desc:0 "天使が我らの力になってくれるらしい。"
+magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
 
  magical_discoveries_crisis.4.name:0 "天使の反撃"
  magical_discoveries_crisis.4.desc:0 "天使を捕まえようとしたら我らに牙をむけた。"
+ magical_discoveries_crisis.4a.name:0 "間違いを犯したかもしれない"
 
  magical_discoveries_crisis.1007.name:0 "天界からの門"
  magical_discoveries_crisis.1007.desc:0 "時空構造の巨大な門が[heavens_system.GetName]星系内に現れた！  原因は定かではないが、 その門は別次元からの一方通行のポータルとして機能する。 そこから奇妙な船の艦隊が溢れ出てきて、 手当たり次第に周囲を攻撃している。 これは大規模な侵攻の始まりらしい！ \n\n我々は門の向こう側にやってきた艦船が発信する、 強力な信号を傍受した。 それは我々に罰を与えるつもりらしい。"

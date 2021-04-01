@@ -22,7 +22,8 @@ event = {
 		has_global_flag = LearnNecromancyFlag
 	}
 	## イベントの効果
-	immediate = {
+	option = {
+		name = magical_discoveries_crisis.1a.name
 		set_global_flag = AppearanceAngelFlag
 	}
 }
@@ -89,37 +90,40 @@ country_event = {
 		is_regular_empire = yes
 	}
 	## イベントの効果
-	immediate = {
-		create_fleet = {
-			effect = {
-				set_owner = root
-				create_fleet = {
-					effect = {
-						set_owner = PREV
-						create_ship = {
-							name = "NAME_Valkyrie"
-							design = "NAME_Valkyrie"
-							graphical_culture = "extra_dimensional_01"
-						}
-						assign_leader = last_created_leader
-						while = {
-							count = 10
+	option = {
+		name = magical_discoveries_crisis.3a.name
+		hidden_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = root
+					create_fleet = {
+						effect = {
+							set_owner = prevprev
 							create_ship = {
-								name = random
-								design = "NAME_soldier_of_the_gods"
+								name = "NAME_Valkyrie"
+								design = "NAME_Valkyrie"
 								graphical_culture = "extra_dimensional_01"
+							}
+							assign_leader = last_created_leader
+							while = {
+								count = 5
+								create_ship = {
+									name = random
+									design = "NAME_soldier_of_the_gods"
+									graphical_culture = "extra_dimensional_01"
+								}
 							}
 						}
 					}
+					assign_leader = last_created_leader
+					set_location = {
+						target = system_star
+						distance = 5
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range = 500
+					set_aggro_range_measure_from = self
 				}
-				assign_leader = last_created_leader
-				set_location = {
-					target = root
-					distance = 5
-				}
-				set_fleet_stance = aggressive
-				set_aggro_range = 500
-				set_aggro_range_measure_from = self
 			}
 		}
 	}
@@ -133,7 +137,9 @@ country_event = {
 	picture = GFX_evt_ship_in_orbit
 	location = root
 	is_triggered_only = yes
-	immediate = {
+	## イベントの効果
+	option = {
+		name = magical_discoveries_crisis.4a.name
 		hidden_effect = {
 			solar_system = {
 				random_system_planet = {
@@ -166,7 +172,7 @@ country_event = {
 						establish_communications_no_message = root.owner
 						establish_contact = {
 							who = root.owner
-							location = root
+							location = system_star
 						}
 						save_global_event_target_as = angel_enemy
 						create_fleet = {
@@ -216,7 +222,7 @@ country_event = {
 			}
 			country_event = {
 				id = magical_discoveries_crisis.1000
-				years = 50
+				days = 18250  #50年後
 			}
 		}
 	}
@@ -1006,20 +1012,6 @@ country_event = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				has_global_flag = extradimensional_second_portal
-				NOR = {
-					has_global_flag = extradimensional_second_portal_destroyed
-					has_global_flag = extradimensional_third_portal_destroyed
-				}
-			}
-			every_playable_country = {
-				country_event = {
-					id = magical_discoveries_crisis.1016
-				}
-			}
-		}
 	}
 }
 
@@ -1049,7 +1041,7 @@ country_event = {
 # 天界人との外交
 country_event = {
 	id = magical_discoveries_crisis.1050
-	# title = "TRANSMISSION"
+	title = "TRANSMISSION"
 	desc = {
 		text = magical_discoveries_crisis.1050.desc
 	}
