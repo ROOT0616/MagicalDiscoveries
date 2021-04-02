@@ -2,11 +2,11 @@
 mithrils = {
 	tradable = yes
 	market_amount = 10
-	market_price = 30
+	market_price = 100
 	max = 15000
 	
 	ai_weight = {
-		weight = 10
+		weight = 1
 	}
 
 	ai_wants = {
@@ -24,7 +24,7 @@ mithrils = {
 orichalcones = {
 	tradable = yes
 	market_amount = 10
-	market_price = 60
+	market_price = 100
 	max = 15000
 	
 	ai_weight = {
@@ -32,7 +32,7 @@ orichalcones = {
 	}
 
 	ai_wants = {
-		base = 200
+		base = 500
 	}
   prerequisites = {
     "tech_orichalcone_refinery"
@@ -45,8 +45,8 @@ orichalcones = {
 #アダマンタイト
 adamantines = {
 	tradable = yes
-	market_amount = 10
-	market_price = 90
+	market_amount = 5
+	market_price = 100
 	max = 15000
 	
 	ai_weight = {
@@ -54,7 +54,7 @@ adamantines = {
 	}
 
 	ai_wants = {
-		base = 100
+		base = 500	
 	}
   prerequisites = {
     "tech_adamantine_refinery"
@@ -68,15 +68,15 @@ adamantines = {
 philosophers_stone = {
 	tradable = yes
 	market_amount = 5
-	market_price = 150
-	max = 15000
+	market_price = 200
+	max = 10000
 	
 	ai_weight = {
 		weight = 1
 	}
 
 	ai_wants = {
-		base = 10
+		base = 250
 	}
   prerequisites = {
     "tech_philosophers_stone"

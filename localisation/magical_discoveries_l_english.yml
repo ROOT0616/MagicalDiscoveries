@@ -319,11 +319,14 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
  heavenly_invasion_1_poi_desc:0 "天界からの侵入者を吐き出しているヘブンズ・ゲートが[heavens_system.GetName]星系で検出された。 ヘブンズ・ゲートが破壊されるまで、 神の裁きは終わらないだろう "
  heavenly_invasion_4_poi:0 "神の楔"
  heavenly_invasion_4_poi_desc:0 "ニンフたちが建造している大型の宇宙ステーションは次元の「楔（アンカー）」、 つまりワームホールを用いた艦船移動能力を拡張する導管として機能するらしい。 起動中のアンカーが増えれば増えるほど、 彼らは自己の領域から多くの援軍を連れてくることが可能になる。 \n\nまた、 アンカーは次元ポータルの亜空間一体性を大幅に強める役目も果たしているようだ。 ひとつでも起動中のアンカーがある限り、 ヘブンズ・ゲートは事実上破壊不能なのだ！"
+ heavenly_invasion_chain:0 "§Y天界からの侵入者§!"
  heavenly_invasion_chain_title:0 "天界からの侵入者"
  heavenly_invasion_chain_desc:0 "わが銀河の時空基本構造に巨大な通路が生じ、 天界との通り道となっているようだ。ここから神々が侵入してきているようだ。"
- heavenly_anchors_1:0 "神の停泊地"
- heavenly_kills_us_1:0 "我が帝国が神を殺した数"
- heavenly_kills_others_1:0 "他の帝国が神を殺した数"
+ heavenly_anchors_1:0 "§Y神の停泊地§!"
+ heavenly_kills_us_1:0 "§G我が帝国が神を殺した数§!"
+ heavenly_kills_others_1:0 "§G他の帝国が神を殺した数§!"
+ heavenly_victims_1:0 "§R収奪された船§!"
+ heavenly_planets_1:0 "§R収奪された星§!"
 
 #######################
 #####    装甲    ######

@@ -1,0 +1,17 @@
+### Crisis Effects
+
+# 天界からの侵入者
+ambient_object = {
+	name = "heavens_1"
+	entity = "extra_dimensional_crisis_system_effect_entity"
+	selectable = no
+	show_name = no
+}
+
+# 天界からの侵入者 Portal
+ambient_object = {
+	name = "heavens_2"
+	entity = "extra_dimensional_crisis_core_system_effect_entity"
+	selectable = no
+	show_name = no
+}

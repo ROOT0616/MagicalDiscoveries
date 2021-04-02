@@ -222,7 +222,7 @@ country_event = {
 			}
 			country_event = {
 				id = magical_discoveries_crisis.1000
-				days = 18250  #50年後
+				days = 18250				#50年後
 			}
 		}
 	}
@@ -372,9 +372,6 @@ country_event = {
 					type = "heavenly_realm"
 					species = event_target:heavens_species
 					name_list = "Hevenlyname"
-					effect = {
-						set_country_flag = heavenly
-					}
 					flag = {
 						icon = {
 							category = "special"
@@ -392,6 +389,7 @@ country_event = {
 						}
 					}
 					effect = {
+						set_country_flag = heavenly
 						create_ship_design = {
 							design = "NAME_Heavenly_Shaper"
 						}
@@ -410,8 +408,8 @@ country_event = {
 							target = event_target:gate_holder_1
 							set_hostile = no
 						}
-						set_graphical_culture = extra_dimensional_01
 						save_event_target_as = heavenesgate
+						set_graphical_culture = extra_dimensional_01
 					}
 				}
 				event_target:heavenesgate = {
@@ -540,6 +538,20 @@ country_event = {
 			create_starbase = {
 				size = starbase_exd
 				owner = event_target:heavenesgate
+			}
+			star = {
+				create_ambient_object = {
+					type = "heavens_2"
+					location = this
+				}
+				last_created_ambient_object = {
+					set_ambient_object_flag = heavens_system_effect_2
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
 			}
 		}
 		# 扉を無敵にする
@@ -1032,6 +1044,7 @@ country_event = {
 		}
 		remove_point_of_interest = heavenly_invasion_poi.1
 		set_country_flag = heavenesgate_expunged
+		set_global_flag = heavenly_portal_destroyed
 	}
 	option = {
 		name = magical_discoveries_crisis.1013.a
@@ -1153,11 +1166,9 @@ event = {
 							is_ship_size = dimensional_portal_ed
 						}
 						any_country = {
-							AND = {
-								is_country_type = gate_holder
-								any_owned_ship = {
-									is_ship_size = dimensional_portal_ed
-								}
+							is_country_type = gate_holder
+							any_owned_ship = {
+								is_ship_size = dimensional_portal_ed
 							}
 						}
 					}
@@ -1816,8 +1827,6 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		end_event_chain = "heavenly_invasion_chain"
-		end_event_chain = "heavenly_invasion_chain_2"
-		end_event_chain = "heavenly_invasion_chain_3"
 	}
 	option = {
 		# Spiritualist Response
@@ -2177,7 +2186,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = magical_discoveries_crisis.1250a.name
-		add_relic = r_the_sealed_god
+		# add_relic = r_the_sealed_god
 	}
 }
 

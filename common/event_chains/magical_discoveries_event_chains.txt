@@ -8,9 +8,9 @@ heavenly_invasion_chain = {
 		}
 		heavenly_kills_others_1 = {
 		}
-		# heavenly_victims_1 = {
-		# }
-		# heavenly_planets_1 = {
-		# }
+		heavenly_victims_1 = {
+		}
+		heavenly_planets_1 = {
+		}
 	}
 }
