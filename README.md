@@ -1,2 +1,3 @@
 # MagicalDiscoveries
-ステラリスのMOD現在開発休止中
+ステラリスのMOD現在開発再開
+
