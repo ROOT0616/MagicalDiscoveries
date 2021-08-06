@@ -161,7 +161,7 @@ weapon_component_template = {
 # 	クサナギノツヨシ	mythical decay
 # ####################
 # key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
-#
+# KUSANAGI_WEAPON cost -100 15000 20000 4 2 1 2 1 150 300 150 300 0.98
 weapon_component_template = {
 	key = "KUSANAGI_WEAPON"
 
