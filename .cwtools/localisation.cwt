@@ -2,18 +2,18 @@ localisation_commands = {
             GetAdj = { country fleet galactic_object planet species }
             GetAdjective = country
             GetAllianceName = country
-            GetFleetName = { fleet ship }
+            GetFleetName = { fleet ship starbase }
             GetHomeWorldName = country
-            GetLeaderName = { fleet ship }
+            GetLeaderName = { fleet ship starbase }
             GetName = any
+            GetRealName = country
             GetRandomSpeciesSound = { country species }
             GetRegnalName = leader
-            GetRulerName = { country species }
-            GetRulerTitle = { country species }
+            GetRulerName = { country species leader army }
+            GetRulerTitle = { country species leader }
             GetSpeciesAdj = { country pop }
             GetSpeciesClass = country
             GetSpeciesClassPlural = country
-            GetSpeciesMouthName = country
             GetSpeciesName = { country pop }
             GetSpeciesNameCompliment = country
             GetSpeciesNameInsult = country
@@ -21,22 +21,30 @@ localisation_commands = {
             GetSpeciesNamePluralCompliment = country
             GetSpeciesNamePluralInsult = country
             GetSpeciesOrganName = country
+            GetSpeciesOrganNamePlural = country
             GetSpeciesMouthName = country
             GetSpeciesHandName = country
+            GetSpeciesHandNamePlural = country
+            GetSpeciesEarName = country
+            GetSpeciesEarNamePlural = country
+			GetSpeciesToothName = country
+			GetSpeciesToothNamePlural = country
+            GetSpeciesSpawnName = country
             GetSpeciesSpawnNamePlural = country
-            GetNebula = { planet ship galactic_object ambient_object }
-            GetStarName = { planet ship fleet ambient_object }
+            GetNebula = { planet ship starbase galactic_object ambient_object }
+            GetStarName = { planet ship starbase fleet ambient_object }
             GetHerHim = leader
             GetSheHe = leader
             GetSheHeCap = leader
+            GetHeShe = leader
+            GetHeSheCap = leader
             GetHerHis = leader
             GetHerHisCap = leader
             LastKilledCountryName = any
-            GetSpeciesSpawnName = country
             GetHeirTitle = country
             GetHeirName = country
             GetHimHer = leader
-            GetNumPlayerFleetsGoneMIA = any
+            GetNumPlayerFleetsGoneMIA = war
             GetNumPlayerWormholeStationsDestroyed = any
             GetTitle = leader
             GetHisHer = leader
@@ -51,10 +59,17 @@ localisation_commands = {
             GetPlanetMoonCap = planet
             GetClassName = { planet galactic_object }
             GetClassAdj = planet
+            GetLastLostRelic = country
             GetLastReceivedRelic = country
             GetMouthName = species
             GetOrganName = species
+            GetOrganNamePlural = species
             GetHandName = species
+            GetHandNamePlural = species
+            GetEarName = species
+            GetEarNamePlural = species
+ 			GetToothName = species
+ 			GetToothNamePlural = species
             GetClass = species
             GetClassPlural = species
             GetSpawnName = species
@@ -72,18 +87,23 @@ localisation_commands = {
             GetPossPronounCap = leader
             GetReflexivePronoun = leader
             GetFirstName = leader
+            GetFirstNameFull = leader
             GetSecondName = leader
             GetAge = leader
             GetHerselfHimself = leader
+            GetHimselfHerself = leader
             GetGovernmentName = country
-            GetShipSizeName = ship
-            GetShipSizeNamePlural = ship
-            GetDesignName = ship
+            GetShipSizeName = { ship starbase }
+            GetShipSizeNamePlural = { ship starbase }
+            GetDesignName = { ship starbase }
+			GetFocus = sector
+			GetType = sector
+			GetCountryType = country
 }
 
 localisation_links = {
     Planet = {
-        input_scopes = { archaeological_site army pop }
+        input_scopes = { archaeological_site army pop megastructure deposit }
         output_scope = planet
     }
     Capital = {
@@ -99,7 +119,7 @@ localisation_links = {
         output_scope = ambient_object
     }
     Fleet = {
-        input_scopes = { archaeological_site ship }
+        input_scopes = { archaeological_site ship starbase }
         output_scope = fleet
     }
     Ship = {
@@ -111,15 +131,19 @@ localisation_links = {
         output_scope = system
     }
     System = {
-        input_scopes = { fleet planet }
+        input_scopes = { fleet planet first_contact megastructure }
         output_scope = system
     }
     Owner = {
-        input_scopes = { army planet system leader pop_faction fleet ship }
+        input_scopes = { army planet system leader pop_faction fleet ship starbase first_contact sector megastructure spy_network espionage_operation }
+        output_scope = country
+    }
+    ContactCountry = {
+        input_scopes = { first_contact }
         output_scope = country
     }
     Leader = {
-        input_scopes = { army pop_faction fleet }
+        input_scopes = { army pop_faction fleet first_contact sector spy_network }
         output_scope = leader
     }
     Leader = {
@@ -146,6 +170,10 @@ localisation_links = {
         input_scopes = { pop }
         output_scope = pop_faction
     }
+	Sector = {
+		input_scopes = { planet system sector }
+		output_scope = sector
+	}
     MainDefender = {
         input_scopes = { war }
         output_scope = country
@@ -169,4 +197,12 @@ localisation_links = {
         input_scopes = { country }
         output_scope = country
     }
+	SpyNetwork = {
+        input_scopes = { espionage_operation }
+        output_scope = spy_network
+	}
+	Target = {
+        input_scopes = { espionage_operation spy_network }
+        output_scope = country #any, but good enough
+	}
 }

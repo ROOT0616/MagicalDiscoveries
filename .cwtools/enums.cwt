@@ -88,6 +88,7 @@ enums = {
 		first_contact
 		spy_network
 		espionage_operation
+		espionage_asset
 	}
 	enum[intel_level] = {
 		none
@@ -232,11 +233,56 @@ enums = {
 		harm_relations
 		federation
 		galactic_community
+		spy_network
+		first_contact
+		strengthen_imperial_authority
+		undermine_imperial_authority
 		none
 	}
 	enum[planet_resource_compare_types] = {
 		produces
 		upkeep
 		balance
+	}
+	enum[contact_rules] = {
+		always
+		never
+		on_action_only
+		does_first_contact_sites
+		auto
+	}
+	enum[maths] = {
+		add
+		subtract
+		multiply
+		divide
+		modulo
+	}
+	enum[crisis_types] = {
+		prethoryn
+		unbidden
+		contingency
+	}
+	enum[ship_owner_types] = {
+		country
+		federation
+		galactic_community
+		global_ship_design
+	}
+	enum[trade_types] = {
+		market_buy
+		market_sell
+		not_set
+	}
+	enum[espionage_operation_targets] = {
+		none
+		megastructure
+		country
+		fleet
+		army
+		pop_faction
+		federation
+		starbase
+		spynetwork
 	}
 }

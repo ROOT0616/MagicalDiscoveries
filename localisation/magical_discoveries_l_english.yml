@@ -172,12 +172,15 @@
  mod_job_the_legendary_alchemist_add:0 "伝説の錬金術師の職業枠"
 
  black_magic_army:0 "魔法部隊"
+ black_magic_army_plural:0 "魔法部隊"
  black_magic_army_desc:0 "体系的な魔法教育を受け、戦争へと駆り出された魔導士を見た魔法使いはどう思うだろうか？"
 
  elite_black_magic_army:0 "精鋭魔法部隊"
+ elite_black_magic_army_plural:0 "精鋭魔法部隊"
  elite_black_magic_army_desc:0 "彼らは言うだろう「やっちゃえ」"
 
  death_squad:0 "死霊部隊"
+ death_squad_plural:0 "死霊部隊"
  death_squad_desc:0 "死ねば味方も敵も関係なくその隊列に加わるだろう"
 
 #######################
@@ -271,6 +274,7 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
  magical_discoveries_crisis.1010.desc:0 "貴様は禁忌を犯した…   \n\n神による神罰を受けよ…  "
  magical_discoveries_crisis.1010.a:0 "ふざけるな！  我々が何をした！"
 
+ magical_discoveries_crisis.1011.name:0 "後で書く"
  magical_discoveries_crisis.1011.desc:0 ""
  magical_discoveries_crisis.1011.a:0 ""
 
@@ -333,30 +337,31 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
 #######################
 
  MITHRIL_ARMOR:0 "ミスリル装甲"
- MITHRIL_ARMOR_desc:0 "美しいだけではなく実用性にも優れた装甲。"
+ MITHRIL_ARMOR_DESC:0 "美しいだけではなく実用性にも優れた装甲。"
  SMALL_MITHRIL_ARMOR:0 "ミスリル装甲"
  MEDIUM_MITHRIL_ARMOR:0 "ミスリル装甲"
  LARGE_MITHRIL_ARMOR:0 "ミスリル装甲"
 
  ORICHALCONE_ARMOR:0 "オリハルコン装甲"
- ORICHALCONE_ARMOR_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
+ ORICHALCONE_ARMOR_DESC:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
  SMALL_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
  MEDIUM_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
  LARGE_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
 
  ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
- ADAMANTINE_ARMOR_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
+ ADAMANTINE_ARMOR_DESC:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
  SMALL_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
  MEDIUM_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
  LARGE_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
 
  GODS_SHIELD:0 "八咫鏡"
- GODS_SHIELD_desc:0 "八咫鏡"
+ GODS_SHIELD_DESC:0 "八咫鏡"
  SMALL_GODS_SHIELD:0 "八咫鏡"
  MEDIUM_GODS_SHIELD:0 "八咫鏡"
  LARGE_GODS_SHIELD:0 "八咫鏡"
 
  GODS_BLESSINGS:0 "八尺瓊勾玉"
+ GODS_BLESSINGS_DESC:0 "八尺瓊勾玉"
  SMALL_GODS_BLESSINGS:0 "八尺瓊勾玉"
  MEDIUM_GODS_BLESSINGS:0 "八尺瓊勾玉"
  LARGE_GODS_BLESSINGS:0 "八尺瓊勾玉"
@@ -367,13 +372,25 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
 
  MYTHICALDECAY:0 "神話崩壊砲"
  MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
- MYTHICAL_DECRAY_WEAPON_desc:0 "神の知識を得て作りし神をも殺す兵器"
+ MYTHICAL_DECRAY_WEAPON_DESC:0 "神の知識を得て作りし神をも殺す兵器"
  SMALL_MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
  MEDIUM_MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
  LARGE_MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
 
+ KUSANAGI:0 "クサナギツヨシ"
+ KUSANAGI_DESC:0 "クサナギツヨシ"
  KUSANAGI_WEAPON:0 "クサナギツヨシ"
 
+ GODS_SKIN:0 "????"
+ GODS_SKIN_DESC:0 "????"
+ GODSBREATH:0 "??????"
+ GODSBREATH_DESC:0 "???????"
+ SMALL_GODS_SKIN:0 "?????"
+ MEDIUM_GODS_SKIN:0 "?????"
+ LARGE_GODS_SKIN:0 "??????"
+ SMALL_GODS_BREATH_WEAPON:0 "??????"
+ MEDIUM_GODS_BREATH_WEAPON:0 "???????"
+ LARGE_GODS_BREATH_WEAPON:0 "???????"
  
 #######################
 #####    布告    ######
@@ -391,11 +408,6 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
 
  edict_adamantite_skyscraper_construction_campaign:0 "アダマンタイトによる超高層建設"
  edict_adamantite_skyscraper_construction_campaign_desc:0 ""
-
- edict_cheat_infinite_proliferation_campaign:0 "test"
- edict_cheat_infinite_proliferation_campaign_desc:0 ""
-
-
 
 #######################
 #####    〇〇    ######

@@ -1,0 +1,59 @@
+##########################################################
+###             MG budgeting : orichalcones            ###
+##########################################################
+
+orichalcones_expenditure_ships = {
+    resource = orichalcones
+	type = expenditure
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 1
+	}
+}
+
+orichalcones_expenditure_edicts = {
+	resource = orichalcones
+	type = expenditure
+	category = edicts
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.15
+	}
+}
+
+orichalcones_expenditure_ship_upgrades = {
+	resource = orichalcones
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.25
+	}
+}
+
+orichalcones_upkeep_ships = {
+	resource = orichalcones
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 1
+	}
+}

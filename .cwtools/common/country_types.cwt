@@ -127,6 +127,8 @@ country_type = {
 	## cardinality = 0..1
 	uses_origins = bool
 	## cardinality = 0..1
+	always_valid_target_aggressive = bool
+	## cardinality = 0..1
 	faction = {
 		## cardinality = 0..1
 		neutral = bool
@@ -154,6 +156,9 @@ country_type = {
 		pirate = bool
 		## cardinality = 0..1
 		space_creatures = bool
+		## cardinality = 0..1
+		###Determines whether their planets are surveyable by others (should be "yes" for e.g. primitives)
+		intel_effects_surveyed = bool
 	}
 
 	ai = {
@@ -287,7 +292,10 @@ country_type = {
 		## cardinality = 0..1
 		standard_leader_module = {}
 		## cardinality = 0..1
-		standard_diplomacy_module = {}
+		standard_diplomacy_module = {
+			## cardinality = 0..1
+			contact_rule = enum[contact_rules]
+		}
 		## cardinality = 0..1
 		standard_technology_module = {}
 		## cardinality = 0..1
@@ -301,9 +309,7 @@ country_type = {
 		## cardinality = 0..1
 		exclusive_diplomacy_module = {
 			## cardinality = 0..1
-			contact_rule = always
-			## cardinality = 0..1
-			contact_rule = script_only
+			contact_rule = enum[contact_rules]
 			## cardinality = 0..1
 			can_receive = {
 				## cardinality = 0..inf
@@ -353,5 +359,6 @@ enums = {
 			machine_interior_minister_module
 			machine_military_minister_module
 			berserk_military_minister_module
+			galactic_community_patrol_military_minister_module
 	}
 }

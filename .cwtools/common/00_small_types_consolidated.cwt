@@ -100,6 +100,10 @@ types = {
 #        name_from_file = yes
         type_per_file = yes
 	}
+	type[message_type] = {
+		name_field = key
+		path = "game/common/message_types"
+	}
 }
 
 ambient_object = {
@@ -306,7 +310,12 @@ sector_type = {
 
 
 sector_focus = {
+	## cardinality = 0..1
+	hidden = yes
+	## cardinality = 0..1
+	clear_blockers = bool
 	
+	## cardinality = 0..1
 	ai_weight = {
 		weight = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
@@ -324,6 +333,12 @@ sector_focus = {
 	## cardinality = 0..inf
 	building = {
 		key = <building>
+		## cardinality = 0..1
+		###only works on buildings and upgrades; puts them at the front of the list (otherwise it will pick a district first, then a building, then an upgrade)
+		priority = yes
+		## cardinality = 0..1
+		###gets built whether or not a pop would work the jobs
+		exempt_from_jobs_check = yes
 		weight = {
 			weight = float
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
@@ -346,6 +361,15 @@ map_mode = {
 
 	## cardinality = 1..inf
 	color = {
+		## cardinality = 0..1
+		type = country_and_borders
+		## cardinality = 0..1
+		type = country
+		## cardinality = 0..1
+		type = borders
+		## cardinality = 0..1
+		zoom = int
+
 		## cardinality = 1..1
         value = country
 		## cardinality = 1..1
@@ -367,6 +391,7 @@ enums = {
 	enum[hardcoded_map_mode_tooltip] = {
 		opinion
 		country
+		intel
 	}
 }
 
@@ -446,9 +471,15 @@ economic_plan = {
 			## cardinality = 1..inf
 			<resource> = int
 		}
+		## cardinality = 0..1
+		pops = int
+		## cardinality = 0..1
+		empire_size = float
 	}
 
+	## cardinality = 0..1
 	pops = int
+	## cardinality = 0..1
 	empire_size = float
 
 	## replace_scope = { this = country root = country }
@@ -488,4 +519,19 @@ diplomacy_economy = {
 			}
 		}
 	}
+}
+
+message_type = {
+	icon =	<sprite>
+	icon_frame = int
+	key = scalar
+	## cardinality = 0..1
+	name = localisation
+	## cardinality = 0..1
+	sound = <sound_effect>
+	## cardinality = 0..1
+	sound_is_advisor = bool
+	ping = <pingmap>
+	## cardinality = 0..1
+	auto_opens = scalar
 }

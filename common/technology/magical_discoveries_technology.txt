@@ -1272,7 +1272,7 @@ tech_orichalcone_refinery = {
 	prerequisites = {
 		"tech_advanced_alchemy"
 	}
-	weight = @tier4weight2
+	weight = @tier3weight2
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
@@ -1385,7 +1385,7 @@ tech_adamantine_refinery = {
 	prerequisites = {
 		"tech_ultimate_alchemy"
 	}
-	weight = @tier5weight2
+	weight = @tier4weight1
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {

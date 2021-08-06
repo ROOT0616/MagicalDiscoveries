@@ -61,6 +61,7 @@ megastructure = {
 	upgrade_desc = hide
 	## cardinality = 0..1
 	upgrade_from = {
+		## cardinality = 0..1
 		<megastructure>
 	}
   	## cardinality = 0..1
@@ -155,4 +156,7 @@ megastructure = {
 	hyperlane_range = int
 	## cardinality = 0..1
 	construction_blocked_by_others = bool
+	
+	## cardinality = 0..1
+	victory_score = int
 }

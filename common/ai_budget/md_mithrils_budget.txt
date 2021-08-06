@@ -1,0 +1,59 @@
+######################################################
+###             MG budgeting : mithrils            ###
+######################################################
+
+mithrils_expenditure_ships = {
+    resource = mithrils
+	type = expenditure
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 1
+	}
+}
+
+mithrils_expenditure_edicts = {
+	resource = mithrils
+	type = expenditure
+	category = edicts
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.15
+	}
+}
+
+mithrils_expenditure_ship_upgrades = {
+	resource = mithrils
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.25
+	}
+}
+
+mithrils_upkeep_ships = {
+	resource = mithrils
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 1
+	}
+}

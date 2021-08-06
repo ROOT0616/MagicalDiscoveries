@@ -37,6 +37,12 @@ types = {
 		## abbreviation = PE
 		subtype[planet] = {
 		}
+		## type_key_filter = first_contact_event
+		## push_scope = first_contact
+		## display_name = First contact event
+		## abbreviation = FCE
+		subtype[first_contact] = {
+		}
 		## type_key_filter = ship_event
 		## push_scope = ship
 		## display_name = Ship event
@@ -48,6 +54,30 @@ types = {
 		## display_name = Fleet event
 		## abbreviation = FE
 		subtype[fleet] = {
+		}
+		## type_key_filter = system_event
+		## push_scope = system
+		## display_name = System event
+		## abbreviation = SyE
+		subtype[system] = {
+		}
+		## type_key_filter = starbase_event
+		## push_scope = starbase
+		## display_name = Starbase event
+		## abbreviation = StE
+		subtype[starbase] = {
+		}
+		## type_key_filter = espionage_operation_event
+		## push_scope = espionage_operation
+		## display_name = Espionage event
+		## abbreviation = EOE
+		subtype[espionage_operation] = {
+		}
+		## type_key_filter = leader_event
+		## push_scope = leader
+		## display_name = Leader event
+		## abbreviation = LE
+		subtype[leader] = {
 		}
 		## type_key_filter = event
 		subtype[scopeless] = {
@@ -160,8 +190,15 @@ event = {
 			show_sound = <sound_effect>
 		}
 
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		show_sound = <sound_effect>
+		## cardinality = 0..inf
+		show_sound = {
+			sound = <sound_effect>
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+		}
 		## cardinality = 0..1
 		###Force a diplomatic event to be viewed
 		force_open = bool
@@ -205,6 +242,12 @@ event = {
 				exclusive_trigger = {
 					alias_name[trigger] = alias_match_left[trigger]
 				}
+				text = localisation
+			}
+
+			## cardinality = 0..1
+			icon = {
+				icon = <sprite>
 				text = localisation
 			}
 
@@ -427,6 +470,16 @@ event = {
 	subtype[fleet] = {
 		## cardinality = 0..1
 		archaeology = bool
+	}
+
+	subtype[first_contact] = {
+		## cardinality = 0..1
+		first_contact = bool
+	}
+
+	subtype[espionage_operation] = {
+		## cardinality = 0..1
+		espionage_operation = bool
 	}
 
 	## cardinality = 0..1

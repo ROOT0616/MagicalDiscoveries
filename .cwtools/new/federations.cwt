@@ -40,6 +40,8 @@ types = {
 
 federation_law_category = {
 	## cardinality = 0..1
+	show_succession_date = yes
+	## cardinality = 0..1
 	centralization = yes
 	laws = {
 		## cardinality = 1..inf
@@ -148,6 +150,7 @@ federation_perk = {
 
 federation_type = {
 	icon = <sprite>
+	base_intel = int
 	## replace_scopes = { this = country root = country }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]

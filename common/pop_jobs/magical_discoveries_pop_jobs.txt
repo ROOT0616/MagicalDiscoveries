@@ -61,7 +61,7 @@ white_magician = {
 	}
 }
 
-#ミスリル錬金術師   鉱物24 → ミスリル6
+#ミスリル錬金術師   鉱物12 → ミスリル3
 mithril_refiner = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -138,7 +138,7 @@ mithril_refiner = {
 	}
 }
 
-#ミスリル魔道具師   ミスリル6 → 消費財
+#ミスリル魔道具師   ミスリル3 → 消費財5 統合力10
 mithril_magic_tool_crafter = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -158,8 +158,8 @@ mithril_magic_tool_crafter = {
 	resources = {
 		category = planet_metallurgists
 		produces = {
-			consumer_goods = 3
-			unity = 3
+			consumer_goods = 5
+			unity = 10
 		}
 		upkeep = {
 			mithrils = 3
@@ -391,7 +391,7 @@ adamantine_refiner = {
 	resources = {
 		category = planet_metallurgists
 		produces = {
-			adamantines = 2
+			adamantines = 3
 		}
 		upkeep = {
       orichalcones = 6

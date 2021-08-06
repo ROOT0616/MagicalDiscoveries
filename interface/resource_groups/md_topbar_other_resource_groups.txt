@@ -12,7 +12,6 @@ tb_others_group = {
 	orichalcones
 	adamantines
 	philosophers_stone
-	
 	}
 	localization = {
 		"RESOURCE_GROUP_DEFAULT" = default	

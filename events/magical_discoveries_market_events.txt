@@ -1,0 +1,133 @@
+namespace = md_market
+
+## ##################################################### ##
+##    Enable ESC living crystal resource on the market   ##
+## ##################################################### ##
+
+event = {
+	id = md_market.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_market_founded
+		NOT = { is_on_market = mithrils }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_playable_country = {
+					has_technology = tech_mithril_refinery
+					OR = {
+						resource_stockpile_compare = {
+							resource = mithrils
+							value > 0
+						}
+						has_monthly_income = {
+							resource = mithrils
+							value > 0
+						}
+					}
+				}
+			}
+			enable_on_market = mithrils
+		}
+	}
+}
+
+event = {
+	id = md_market.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_market_founded
+		NOT = { is_on_market = orichalcones }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_playable_country = {
+					has_technology = tech_orichalcone_refinery
+					OR = {
+						resource_stockpile_compare = {
+							resource = orichalcones
+							value > 0
+						}
+						has_monthly_income = {
+							resource = orichalcones
+							value > 0
+						}
+					}
+				}
+			}
+			enable_on_market = orichalcones
+		}
+	}
+}
+
+event = {
+	id = md_market.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_market_founded
+		NOT = { is_on_market = adamantines }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_playable_country = {
+					has_technology = tech_adamantine_refinery
+					OR = {
+						resource_stockpile_compare = {
+							resource = adamantines
+							value > 0
+						}
+						has_monthly_income = {
+							resource = adamantines
+							value > 0
+						}
+					}
+				}
+			}
+			enable_on_market = adamantines
+		}
+	}
+}
+
+event = {
+	id = md_market.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_global_flag = galactic_market_founded
+		NOT = { is_on_market = philosophers_stone }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				any_playable_country = {
+					has_technology = tech_philosophers_stone
+					OR = {
+						resource_stockpile_compare = {
+							resource = philosophers_stone
+							value > 0
+						}
+						has_monthly_income = {
+							resource = philosophers_stone
+							value > 0
+						}
+					}
+				}
+			}
+			enable_on_market = philosophers_stone
+		}
+	}
+}

@@ -1,10 +1,18 @@
 # This = construction ship
 # Fires when construction is complete,
 # immediately before station is created
-
 on_building_starbase_exd_0 = {
 	events = {
 		magical_discoveries_crisis.1300
 		magical_discoveries_crisis.1310
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		md_market.1
+		md_market.2
+		md_market.3
+		md_market.4
 	}
 }

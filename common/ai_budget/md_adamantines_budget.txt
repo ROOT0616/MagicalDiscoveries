@@ -1,0 +1,59 @@
+######################################################
+###             MG budgeting : adamantines            ###
+######################################################
+
+adamantines_expenditure_ships = {
+    resource = adamantines
+	type = expenditure
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 1
+	}
+}
+
+adamantines_expenditure_edicts = {
+	resource = adamantines
+	type = expenditure
+	category = edicts
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.15
+	}
+}
+
+adamantines_expenditure_ship_upgrades = {
+	resource = adamantines
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 0.25
+	}
+}
+
+adamantines_upkeep_ships = {
+	resource = adamantines
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	fraction = {
+		weight = 1
+	}
+}

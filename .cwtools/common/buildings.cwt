@@ -62,6 +62,8 @@ building = {
 	branch_office_building = bool
 	## cardinality = 0..1
 	planetary_ftl_inhibitor = bool
+	## cardinality = 0..1
+	position_priority = int
 
 	## cardinality = 0..1
 	allow = {
@@ -138,7 +140,7 @@ building = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	ai_resource_production = {
 		## cardinality = 1..inf
 		<resource> = int
