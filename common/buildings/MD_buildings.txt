@@ -1,4 +1,4 @@
-#白魔法院	   白魔道士x4 エネルギ200 鉱石400 ミスリル50
+# 白魔法院	   白魔道士x4 エネルギ200 鉱石400 ミスリル50
 building_white_magic_court = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -29,7 +29,7 @@ building_white_magic_court = {
 	}
 }
 
-#結界魔法院	  エネルギ200 鉱石400 ミスリル100 オリハルコン50
+# 結界魔法院	  エネルギ200 鉱石400 ミスリル100 オリハルコン50
 building_barrier_magic_court = {
 	base_buildtime = 360
 	base_cap_amount = 1
@@ -53,7 +53,7 @@ building_barrier_magic_court = {
 	}
 }
 
-#ミスリル錬金所	   ミスリル錬金術師x6 エネルギ100 鉱石300
+# ミスリル錬金所	   ミスリル錬金術師x6 エネルギ100 鉱石300
 building_mithril_refinery = {
 	base_buildtime = 240
 	prerequisites = {
@@ -82,7 +82,7 @@ building_mithril_refinery = {
 	}
 }
 
-#ミスリル魔道具工場	   ミスリル魔道具師x6 エネルギ100 鉱石300 ミスリル100
+# ミスリル魔道具工場	   ミスリル魔道具師x6 エネルギ100 鉱石300 ミスリル100
 building_mithril_magic_tool_factory = {
 	base_buildtime = 240
 	prerequisites = {
@@ -112,7 +112,7 @@ building_mithril_magic_tool_factory = {
 	}
 }
 
-#オリハルコン錬金所	エネルギー200 鉱石250 ミスリル150
+# オリハルコン錬金所	オリハルコン錬金術師x6 快適度15 エネルギー200 鉱石250 ミスリル150 
 building_orichalcone_refinery = {
 	base_buildtime = 300
 	prerequisites = {
@@ -143,7 +143,7 @@ building_orichalcone_refinery = {
 	}
 }
 
-#オリハルコン工芸所	エネルギー200 鉱石250 ミスリル100 オリハルコン50
+# オリハルコン工芸所	オリハルコン工芸士x2 エネルギー200 鉱石250 ミスリル100 オリハルコン50
 building_orichalcone_workshop = {
 	base_buildtime = 300
 	prerequisites = {
@@ -174,7 +174,7 @@ building_orichalcone_workshop = {
 	}
 }
 
-#アダマンタイト錬金所  エネルギ300 鉱石400 ミスリル200 オリハルコン50
+# アダマンタイト錬金所 アダマンタイト錬金術師x6 エネルギ300 鉱石400 ミスリル200 オリハルコン50
 building_adamantine_refinery = {
 	base_buildtime = 300
 	prerequisites = {
@@ -205,7 +205,7 @@ building_adamantine_refinery = {
 	}
 }
 
-#伝説の錬金術所 エネルギ300 鉱石300 ミスリル50 オリハルコン50
+# 伝説の錬金術所 伝説の錬金術師x2 エネルギ300 鉱石300 ミスリル50 オリハルコン50
 building_the_legendary_alchem_house = {
 	base_buildtime = 360
 	prerequisites = {

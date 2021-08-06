@@ -1,4 +1,4 @@
-#魔法科学		物理研究+2.5% 精神主義への魅力1%
+# 魔法科学		物理研究+2.5% 精神主義への魅力1%
 tech_magical_science = {
 	cost = @tier1cost1
 	area = physics
@@ -52,7 +52,7 @@ tech_magical_science = {
 	}
 }
 
-#発展魔法科学		物理研究+5% 精神主義への魅力1%
+# 発展魔法科学		物理研究+5% 精神主義への魅力1%
 tech_advanced_magical_science = {
 	cost = @tier2cost2
 	area = physics
@@ -109,7 +109,7 @@ tech_advanced_magical_science = {
 	}
 }
 
-#究極魔法科学		物理研究+10% 精神主義への魅力1%
+# 究極魔法科学		物理研究+10% 精神主義への魅力1%
 tech_ultimate_magical_science = {
 	cost = @tier4cost3
 	area = physics
@@ -166,7 +166,7 @@ tech_ultimate_magical_science = {
 	}
 }
 
-#錬金術		工学研究+2.5% 合金生産+10%
+# 錬金術		工学研究+2.5% 合金生産+10%
 tech_alchemy = {
 	cost = @tier1cost1
 	area = engineering
@@ -221,7 +221,7 @@ tech_alchemy = {
 	}
 }
 
-#発展錬金術		工学研究+5% 合金生産+10%
+# 発展錬金術		工学研究+5% 合金生産+10%
 tech_advanced_alchemy = {
 	cost = @tier2cost2
 	area = engineering
@@ -279,7 +279,7 @@ tech_advanced_alchemy = {
 	}
 }
 
-#究極錬金術		工学研究+10% 合金生産+10%
+# 究極錬金術		工学研究+10% 合金生産+10%
 tech_ultimate_alchemy = {
 	cost = @tier4cost3
 	area = engineering
@@ -337,7 +337,7 @@ tech_ultimate_alchemy = {
 	}
 }
 
-#黒魔法		攻撃力+5%
+# 黒魔法		攻撃力+5%
 tech_black_magic = {
 	cost = @tier1cost2
 	area = society
@@ -395,7 +395,7 @@ tech_black_magic = {
 	}
 }
 
-#攻撃魔法			Tire2  侵略軍攻撃力+10%
+# 攻撃魔法			Tire2  侵略軍攻撃力+10%
 tech_attac_magic = {
 	cost = @tier2cost2
 	area = society
@@ -452,7 +452,7 @@ tech_attac_magic = {
 	}
 }
 
-#発展攻撃魔法			Tire3  侵略軍攻撃力+20%
+# 発展攻撃魔法			Tire3  侵略軍攻撃力+20%
 tech_advanced_attac_magic = {
 	cost = @tier3cost2
 	area = society
@@ -510,7 +510,7 @@ tech_advanced_attac_magic = {
 	}
 }
 
-#防衛魔法			Tire2  防衛軍攻撃力+10％
+# 防衛魔法			Tire2  防衛軍攻撃力+10％
 tech_defensive_magic = {
 	cost = @tier2cost2
 	area = society
@@ -567,7 +567,7 @@ tech_defensive_magic = {
 	}
 }
 
-#発展防衛魔法			Tire3  防衛軍攻撃力+20％
+# 発展防衛魔法			Tire3  防衛軍攻撃力+20％
 tech_advanced_defensive_magic = {
 	cost = @tier3cost2
 	area = society
@@ -625,7 +625,7 @@ tech_advanced_defensive_magic = {
 	}
 }
 
-#魔法部隊			Tire3
+# 魔法部隊			Tire3
 tech_black_magic_army = {
 	cost = @tier3cost1
 	area = society
@@ -682,7 +682,7 @@ tech_black_magic_army = {
 	}
 }
 
-#精鋭魔法部隊	Tire5
+# 精鋭魔法部隊	Tire5
 tech_elite_black_magic_army = {
 	cost = @tier5cost2
 	area = society
@@ -797,7 +797,7 @@ tech_necromancy = {
 	}
 }
 
-#白魔法		Tire1  士気，体力+10%
+# 白魔法		Tire1  士気，体力+10%
 tech_white_magic = {
 	cost = @tier1cost2
 	area = society
@@ -857,7 +857,7 @@ tech_white_magic = {
 	}
 }
 
-#白魔法院	Tire2  建築物Pop成長速度+25%
+# 白魔法院	Tire2  建築物Pop成長速度+25%
 tech_white_magic_court = {
 	cost = @tier2cost2
 	area = society
@@ -913,7 +913,7 @@ tech_white_magic_court = {
 	}
 }
 
-#発展白魔法		Tire3  耐久士気+20％
+# 発展白魔法		Tire3  耐久士気+20％
 tech_advanced_white_magic = {
 	cost = @tier3cost1
 	area = society
@@ -973,7 +973,7 @@ tech_advanced_white_magic = {
 	}
 }
 
-#結界魔法 *2		Tire4  惑星シールド+10％
+# 結界魔法 *2		Tire4  惑星シールド+10％
 tech_barrier_magic = {
 	cost = @tier4cost1
 	area = society
@@ -1029,7 +1029,7 @@ tech_barrier_magic = {
 	}
 }
 
-#蘇生魔法 *2		Tire5  帝国のPop成長速度25%幸福度10%寿命20年
+# 蘇生魔法 *2		Tire5  帝国のPop成長速度25%幸福度10%寿命20年
 tech_resuscitation_magic = {
 	cost = @tier5cost3
 	area = society
@@ -1089,7 +1089,7 @@ tech_resuscitation_magic = {
 	}
 }
 
-#賢者の石 *2	    Tire4  リーダーの寿命+20年  +2遺伝子特性
+# 賢者の石 *2	    Tire4  リーダーの寿命+20年  +2遺伝子特性
 tech_philosophers_stone = {
 	cost = @tier4cost3
 	area = society
@@ -1148,7 +1148,7 @@ tech_philosophers_stone = {
 	}
 }
 
-#ミスリル			    Tire3
+# ミスリル			    Tire3
 tech_mithril_refinery = {
 	cost = @tier3cost1
 	area = engineering
@@ -1204,7 +1204,7 @@ tech_mithril_refinery = {
 	}
 }
 
-#ミスリル装甲	    Tire3  160  400  920
+# ミスリル装甲	    Tire3  160  400  920
 #		cost  ミスリル 22 44 88  合金  11  22  44
 tech_mithril_armor = {
 	cost = @tier3cost2
@@ -1261,7 +1261,7 @@ tech_mithril_armor = {
 	}
 }
 
-#オリハルコン*2		    Tire4
+# オリハルコン*2		    Tire4
 tech_orichalcone_refinery = {
 	cost = @tier4cost2
 	area = engineering
@@ -1374,7 +1374,7 @@ tech_orichalcone_armor = {
 	}
 }
 
-#アダマンタイト*2		    Tire5
+# アダマンタイト*2		    Tire5
 tech_adamantine_refinery = {
 	cost = @tier5cost2
 	area = engineering

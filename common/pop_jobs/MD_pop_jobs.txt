@@ -1,4 +1,4 @@
-#白魔道士   快適度+5 成長速度+5%
+# 白魔道士   快適度+5 成長速度+5%
 white_magician = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -61,7 +61,7 @@ white_magician = {
 	}
 }
 
-#ミスリル錬金術師   鉱物12 → ミスリル3
+# ミスリル錬金術師   鉱物12 → ミスリル3
 mithril_refiner = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -138,7 +138,7 @@ mithril_refiner = {
 	}
 }
 
-#ミスリル魔道具師   ミスリル3 → 消費財5 統合力10
+# ミスリル魔道具師   ミスリル3 → 消費財5 統合力10
 mithril_magic_tool_crafter = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -216,7 +216,7 @@ mithril_magic_tool_crafter = {
 	}
 }
 
-#オリハルコン錬金術師		レアクリスタル3  ミスリル12  → オリハルコン6
+# オリハルコン錬金術師		レアクリスタル3  ミスリル12  → オリハルコン6
 orichalcone_refiner = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -294,7 +294,7 @@ orichalcone_refiner = {
 	}
 }
 
-#オリハルコン工芸士		オリハルコン5 → 影響力0.5
+# オリハルコン工芸士		オリハルコン5 → 影響力0.5
 orichalcone_crafter = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -371,7 +371,7 @@ orichalcone_crafter = {
 	}
 }
 
-#アダマンタイト錬金術師		オリハルコン6 賢者の石1 → アダマンタイト3
+# アダマンタイト錬金術師		オリハルコン6 賢者の石1 → アダマンタイト3
 adamantine_refiner = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
@@ -449,7 +449,7 @@ adamantine_refiner = {
 	}
 }
 
-#伝説の錬金術師				レアクリスタル2 ガス2 ズィロ2 鉱物20 →  賢者の石1
+# 伝説の錬金術師				レアクリスタル2 ガス2 ズィロ2 鉱物20 →  賢者の石1
 the_legendary_alchemist = {
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
