@@ -1,5 +1,5 @@
 # ミスリル装甲	 	Tire3 160 400 920
-# 			cost ミスリル 22 44 88 合金 11 22 44
+# cost ミスリル 22 44 88 合金 11 22 44
 # 装甲HP +160 +400 +920	装甲回復/日 +1 +1 +1
 utility_component_template = {
 	key = "SMALL_MITHRIL_ARMOR"

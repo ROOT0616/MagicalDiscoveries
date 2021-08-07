@@ -253,7 +253,7 @@
 
  magical_discoveries_crisis.3.name:0 "天使の協力"
  magical_discoveries_crisis.3.desc:0 "天使が我らの力になってくれるらしい。"
-magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
+ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
 
  magical_discoveries_crisis.4.name:0 "天使の反撃"
  magical_discoveries_crisis.4.desc:0 "天使を捕まえようとしたら我らに牙をむけた。"
@@ -338,21 +338,21 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
 
  MITHRIL_ARMOR:0 "ミスリル装甲"
  MITHRIL_ARMOR_DESC:0 "美しいだけではなく実用性にも優れた装甲。"
- SMALL_MITHRIL_ARMOR:0 "ミスリル装甲"
- MEDIUM_MITHRIL_ARMOR:0 "ミスリル装甲"
- LARGE_MITHRIL_ARMOR:0 "ミスリル装甲"
+ SMALL_MITHRIL_ARMOR:0 "小型ミスリル装甲"
+ MEDIUM_MITHRIL_ARMOR:0 "中型ミスリル装甲"
+ LARGE_MITHRIL_ARMOR:0 "大型ミスリル装甲"
 
  ORICHALCONE_ARMOR:0 "オリハルコン装甲"
  ORICHALCONE_ARMOR_DESC:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
- SMALL_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
- MEDIUM_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
- LARGE_ORICHALCONE_ARMOR:0 "オリハルコン装甲"
+ SMALL_ORICHALCONE_ARMOR:0 "小型オリハルコン装甲"
+ MEDIUM_ORICHALCONE_ARMOR:0 "中型オリハルコン装甲"
+ LARGE_ORICHALCONE_ARMOR:0 "大型オリハルコン装甲"
 
  ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
  ADAMANTINE_ARMOR_DESC:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
- SMALL_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
- MEDIUM_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
- LARGE_ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
+ SMALL_ADAMANTINE_ARMOR:0 "小型アダマンタイト装甲"
+ MEDIUM_ADAMANTINE_ARMOR:0 "中型アダマンタイト装甲"
+ LARGE_ADAMANTINE_ARMOR:0 "大型アダマンタイト装甲"
 
  GODS_SHIELD:0 "八咫鏡"
  GODS_SHIELD_DESC:0 "八咫鏡"
@@ -391,7 +391,7 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
  SMALL_GODS_BREATH_WEAPON:0 "??????"
  MEDIUM_GODS_BREATH_WEAPON:0 "???????"
  LARGE_GODS_BREATH_WEAPON:0 "???????"
- 
+
 #######################
 #####    布告    ######
 #######################
@@ -410,8 +410,34 @@ magical_discoveries_crisis.3a.name:0 "ありがたいことだ"
  edict_adamantite_skyscraper_construction_campaign_desc:0 ""
 
 #######################
+#####    特性    ######
+#######################
+
+ heavenesgate_defeated:0 ""
+ heavenesgate_defeated_desc:0 ""
+
+##########################
+#####    tooltip    ######
+##########################
+
+ resolution_galactic_focus_crisis_heavenly_effect_success:0 ""
+
+#######################
 #####    〇〇    ######
 #######################
+
+ MYTHICALDECAY_DESC:0 ""
+ angel_large_warship_key:0 ""
+ angel_large_warship1_key:0 ""
+ angel_large_warship2_key:0 ""
+ angel_medium_warship_key:0 ""
+ angel_warship_small_key:0 ""
+ angel_constructor_section:0 ""
+ angel_dimensional_portal_key_blue:0 ""
+ angel_starbase_key:0 ""
+ angel_dimensional_anchor_key_blue:0 ""
+ name_list_Hevenlyname:0 ""
+ NAME_The_Fallen:0 ""
 
 # :0 ""
 # _desc:0 ""
