@@ -122,6 +122,6 @@ Cwtools › Cwtools: Rules_folder	にModフォルダにある.cwtoolsの絶対�
 
 | 兵装 | power | min<br>damage | max<br>damage | 船体<br>ダメージ<br>hull<br>damage | シールド<br>ダメージ<br>shield<br>damage | シールド<br>貫通性<br>shield<br>penetration | 装甲<br>ダメージ<br>armor<br>damage | 装甲<br>貫通性<br>armor<br>penetration | min<br>windup | max<br>windup | cooldown | range | accuracy | tracking | cost | upkeep |
 |:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|
-| 小型神話崩壊砲 | -25 | 60 | 120 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 120 | 0.96 | 0.8 | adamantines 29 philosophers_stone 0.2 | energy 0.29 philosophers_stone 0.058 |
-| 中型神話崩壊砲 | -50 | 150 | 300 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 160 | 0.96 | 0.6 | adamantines 57 philosophers_stone 0.4 | energy 0.57 philosophers_stone 0.104 |
-| 大型神話崩壊砲 | -100 | 200 | 750 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 200 | 0.96 | 0.4 | adamantines 114 philosophers_stone 0.6 | energy 1.14 philosophers_stone 0.228 |
+| 小型神話崩壊砲 | -25 | 60 | 120 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 120 | 0.96 | 0.8 | adamantines 29<br>philosophers_stone 0.2 | energy 0.29<br>philosophers_stone 0.058 |
+| 中型神話崩壊砲 | -50 | 150 | 300 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 160 | 0.96 | 0.6 | adamantines 57<br>philosophers_stone 0.4 | energy 0.57<br>philosophers_stone 0.104 |
+| 大型神話崩壊砲 | -100 | 200 | 750 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 200 | 0.96 | 0.4 | adamantines 114<br>philosophers_stone 0.6 | energy 1.14<br>philosophers_stone 0.228 |
