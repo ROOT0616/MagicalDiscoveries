@@ -111,17 +111,17 @@ Cwtools › Cwtools: Rules_folder	にModフォルダにある.cwtoolsの絶対�
 | 小型ミスリル装甲 | alloys 11 mithrils 22 |  | +160 | +1 |
 | 中型ミスリル装甲 | alloys 22 mithrils 44 |  | +400 | +1 |
 | 大型ミスリル装甲 | alloys 44 mithrils 88 |  | +920 | +1 |
-| 小型オリハルコン装甲 |  alloys 22 orichalcones 11 |  | +280 | +1.5 |
-| 中型オリハルコン装甲 | alloys 44 orichalcones 22 |  | +700 | +1.5 |
-| 大型オリハルコン装甲 | alloys 88 orichalcones 44 |  | +1500 | +1.5 |
-| 小型アダマンタイト装甲 | alloys 22 adamantines 22 |  | +400 | 0 |
-| 中型アダマンタイト装甲 | alloys 44 adamantines 44 |  | +900 | 0 |
-| 大型アダマンタイト装甲 | alloys 88 adamantines 88 |  | +2000 | 0 |
+| 小型オリハルコン装甲 |  alloys 22 orichalcones 15 |  | +280 | +1.5 |
+| 中型オリハルコン装甲 | alloys 44 orichalcones 30 |  | +700 | +1.5 |
+| 大型オリハルコン装甲 | alloys 88 orichalcones 60 |  | +1700 | +1.5 |
+| 小型アダマンタイト装甲 | alloys 22 adamantines 22 |  | +400 | +2.5 |
+| 中型アダマンタイト装甲 | alloys 44 adamantines 44 |  | +1000 | +2.5 |
+| 大型アダマンタイト装甲 | alloys 88 adamantines 88 |  | +2200 | +2.5 |
 
 ## __☆ 兵装__
 
 | 兵装 | power | min<br>damage | max<br>damage | 船体<br>ダメージ<br>hull<br>damage | シールド<br>ダメージ<br>shield<br>damage | シールド<br>貫通性<br>shield<br>penetration | 装甲<br>ダメージ<br>armor<br>damage | 装甲<br>貫通性<br>armor<br>penetration | min<br>windup | max<br>windup | cooldown | range | accuracy | tracking | cost | upkeep |
 |:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|:------|
-| 小型神話崩壊砲 | -25 | 60 | 120 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 120 | 0.96 | 0.8 | adamantines 29<br>philosophers_stone 0.2 | energy 0.29<br>philosophers_stone 0.058 |
-| 中型神話崩壊砲 | -50 | 150 | 300 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 160 | 0.96 | 0.6 | adamantines 57<br>philosophers_stone 0.4 | energy 0.57<br>philosophers_stone 0.104 |
-| 大型神話崩壊砲 | -100 | 200 | 750 | 3 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 20 | 200 | 0.96 | 0.4 | adamantines 114<br>philosophers_stone 0.6 | energy 1.14<br>philosophers_stone 0.228 |
+| 小型神話崩壊砲 | -25 | 60 | 120 | 1 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 30 | 60 | 0.96 | 0.6 | adamantines 29<br>philosophers_stone 0.2 | energy 0.29<br>philosophers_stone 0.058 |
+| 中型神話崩壊砲 | -50 | 150 | 300 | 1 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 30 | 90 | 0.96 | 0.4 | adamantines 57<br>philosophers_stone 0.4 | energy 0.57<br>philosophers_stone 0.104 |
+| 大型神話崩壊砲 | -100 | 200 | 750 | 1 | 2 | 0.5 | 2 | 0.5 | 2 | 18 | 30 | 120 | 0.96 | 0.2 | adamantines 114<br>philosophers_stone 0.6 | energy 1.14<br>philosophers_stone 0.228 |

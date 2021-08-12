@@ -1496,8 +1496,8 @@ tech_gods_skin = {
 		field_manipulation
 	}
 	prerequisites = {
-		"tech_ultimate_magical_science"
-		"tech_ultimate_alchemy"
+		# "tech_ultimate_magical_science"
+		# "tech_ultimate_alchemy"
 	}
 	potential = {
 		has_country_flag = BuyGrimoireFlag03
@@ -1525,7 +1525,8 @@ tech_mythical_decay = {
 		propulsion
 	}
 	prerequisites = {
-		"tech_gods_skin"
+		# "tech_ultimate_magical_science"
+		# "tech_ultimate_alchemy"
 	}
 	potential = {
 		has_country_flag = BuyGrimoireFlag03

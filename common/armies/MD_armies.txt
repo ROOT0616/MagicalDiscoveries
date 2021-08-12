@@ -119,7 +119,7 @@ death_squad = {
 			philosophers_stone = 2
 		}
 		upkeep = {
-			energy = 1
+			energy = 0.01
 		}
 	}
 	show_tech_unlock_if = {

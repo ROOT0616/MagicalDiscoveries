@@ -4,9 +4,9 @@
 # 	神の吐息	Gods breath
 # ####################
 # key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
-# SMALL_GODS_BREATH_WEAPON	40	-25	60	120	3	2	0.5	2	0.5	2	18	20	120	0.96	0.8
-# MEDIUM_GODS_BREATH_WEAPON	80	-50	150	300	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
-# LARGE_GODS_BREATH_WEAPON	160	-100	200	750	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+# SMALL_GODS_BREATH_WEAPON	40	-25	180	240	3	2	0.5	2	0.5	2	18	20	120	0.96	0.8
+# MEDIUM_GODS_BREATH_WEAPON	80	-50	360	420	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
+# LARGE_GODS_BREATH_WEAPON	160	-100	810	870	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
 
 weapon_component_template = {
 	key = "SMALL_GODS_BREATH_WEAPON"
@@ -24,16 +24,16 @@ weapon_component_template = {
 	
 	power = -25
 	damage = { min = 180 max = 240 }
-	hull_damage = 3
-	shield_damage = 2
-	shield_penetration = 1
-	armor_damage = 2
-	armor_penetration = 1
+	hull_damage = 1
+	shield_damage = 1
+	shield_penetration = 0.5
+	armor_damage = 1
+	armor_penetration = 0.5
 	windup = { min = 2 max = 18 }
-	total_fire_time = 20
-	range = 120
+	total_fire_time = 30
+	range = 60
 	accuracy = 0.96
-	tracking = 0.8
+	tracking = 0.6
 	
 	resources = {
 		category = ship_components
@@ -74,16 +74,16 @@ weapon_component_template = {
 
 	power = -50
 	damage = { min = 360 max = 420 }
-	hull_damage = 3
-	shield_damage = 2
-	shield_penetration = 1
-	armor_damage = 2
-	armor_penetration = 1
+	hull_damage = 1
+	shield_damage = 1
+	shield_penetration = 0.5
+	armor_damage = 1
+	armor_penetration = 0.5
 	windup = { min = 2 max = 18 }
-	total_fire_time = 20
-	range = 160
+	total_fire_time = 30
+	range = 90
 	accuracy = 0.96
-	tracking = 0.6
+	tracking = 0.5
 
 	resources = {
 		category = ship_components
@@ -123,15 +123,15 @@ weapon_component_template = {
 	component_set = "GODSBREATH"
 
 	power = -100
-	damage = { min = 810 max = 870 }
-	hull_damage = 3
-	shield_damage = 2
-	shield_penetration = 1
-	armor_damage = 2
-	armor_penetration = 1
+	damage = { min = 400 max = 870 }
+	hull_damage = 1
+	shield_damage = 1
+	shield_penetration = 0.5
+	armor_damage = 1
+	armor_penetration = 0.5
 	windup = { min = 2 max = 18 }
-	total_fire_time = 20
-	range = 200
+	total_fire_time = 30
+	range = 120
 	accuracy = 0.96
 	tracking = 0.4
 
@@ -178,14 +178,14 @@ weapon_component_template = {
 
 	power = -100
 	damage = { min = 15000 max = 20000 }
-	hull_damage = 4
+	hull_damage = 1
 	shield_damage = 2
 	shield_penetration = 1
 	armor_damage = 2
 	armor_penetration = 1
 	windup = { min = 150 max = 300 }
-	total_fire_time = 150
-	range = 300
+	total_fire_time = 300
+	range = 120
 	accuracy = 0.98
 
 	resources = {
@@ -214,9 +214,9 @@ weapon_component_template = {
 # 	神話崩壊砲	mythical decay
 # ####################
 # key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
-# SMALL_MYTHICAL_DECRAY_WEAPON	40	-25	60	120	3	2	0.5	2	0.5	2	18	20	120	0.96	0.8
-# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
-# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+# SMALL_MYTHICAL_DECRAY_WEAPON	40	-25	60	120	1	2	0.5	2	0.5	2	18	30	60	0.96	0.6
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	1	2	0.5	2	0.5	2	18	30	90	0.96	0.4
+# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	1	2	0.5	2	0.5	2	18	30	120	0.96	0.2
 
 weapon_component_template = {
 	key = "SMALL_MYTHICAL_DECRAY_WEAPON"
@@ -235,16 +235,16 @@ weapon_component_template = {
 	
 	power = -25
 	damage = { min = 180 max = 240 }
-	hull_damage = 3
+	hull_damage = 1
 	shield_damage = 2
 	shield_penetration = 0.5
 	armor_damage = 2
 	armor_penetration = 0.5
 	windup = { min = 2 max = 18 }
-	total_fire_time = 20
-	range = 120
+	total_fire_time = 30
+	range = 60
 	accuracy = 0.96
-	tracking = 0.8
+	tracking = 0.6
 	
 	resources = {
 		category = ship_components
@@ -268,7 +268,7 @@ weapon_component_template = {
 	}
 }
 
-# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	1	2	0.5	2	0.5	2	18	30	90	0.96	0.4
 weapon_component_template = {
 	key = "MEDIUM_MYTHICAL_DECRAY_WEAPON"
 
@@ -286,16 +286,16 @@ weapon_component_template = {
 
 	power = -50
 	damage = { min = 360 max = 420 }
-	hull_damage = 3
+	hull_damage = 1
 	shield_damage = 2
 	shield_penetration = 0.5
 	armor_damage = 2
 	armor_penetration = 0.5
 	windup = { min = 2 max = 18 }
-	total_fire_time = 20
-	range = 160
+	total_fire_time = 30
+	range = 90
 	accuracy = 0.96
-	tracking = 0.6
+	tracking = 0.4
 
 	resources = {
 		category = ship_components
@@ -319,7 +319,7 @@ weapon_component_template = {
 	}
 }
 
-# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	1	2	0.5	2	0.5	2	18	30	120	0.96	0.2
 weapon_component_template = {
 	key = "LARGE_MYTHICAL_DECRAY_WEAPON"
 
@@ -337,16 +337,16 @@ weapon_component_template = {
 
 	power = -100
 	damage = { min = 810 max = 870 }
-	hull_damage = 3
+	hull_damage = 1
 	shield_damage = 2
 	shield_penetration = 0.5
 	armor_damage = 2
 	armor_penetration = 0.5
 	windup = { min = 2 max = 18 }
-	total_fire_time = 20
-	range = 200
+	total_fire_time = 30
+	range = 120
 	accuracy = 0.96
-	tracking = 0.4
+	tracking = 0.2
 
 	resources = {
 		category = ship_components

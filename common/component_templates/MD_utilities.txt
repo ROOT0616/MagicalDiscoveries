@@ -79,8 +79,8 @@ utility_component_template = {
 	}
 }
 
-# オリハルコン装甲*2   Tire4	280  700  1500
-# cost  オリハルコン 11 22 44  合金  22  44  88
+# オリハルコン装甲*2   Tire4	280  700  1700
+# cost  オリハルコン 15 30 60  合金  22  44  88
 # 装甲HP +280 +700 +1500	装甲回復/日 +1.5 +1.5 +1.5
 utility_component_template = {
 	key = "SMALL_ORICHALCONE_ARMOR"
@@ -98,8 +98,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 30
-			orichalcones = 12
+			alloys = 22
+			orichalcones = 15
 		}		
 		upkeep = {
 			energy = @s_t6_upkeep_energy
@@ -124,8 +124,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 60
-			orichalcones = 24
+			alloys = 44
+			orichalcones = 30
 		}		
 		upkeep = {
 			energy = @m_t6_upkeep_energy
@@ -141,7 +141,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1500
+		ship_armor_add = 1700
 		ship_armor_regen_add_static = 1.5
 	}
 	
@@ -150,8 +150,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 120
-			orichalcones = 48
+			alloys = 88
+			orichalcones = 60
 		}		
 		upkeep = {
 			energy = @l_t6_upkeep_energy
@@ -160,7 +160,7 @@ utility_component_template = {
 	}
 }
 
-# アダマンタイト装甲*2 Tire5	400  900  2000
+# アダマンタイト装甲*2 Tire5	400  1000  2200
 # cost  アダマンタイト 22 44 88  合金  22  44  88
 # 装甲HP +400 +900 +2000
 utility_component_template = {
@@ -171,6 +171,7 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = 400
+		ship_armor_regen_add_static = 2.5
 	}
 
 	prerequisites = { "tech_adamantine_armor" }
@@ -178,8 +179,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 30
-			adamantines = 10
+			alloys = 22
+			adamantines = 11
 		}		
 		upkeep = {
 			energy = @s_t6_upkeep_energy
@@ -195,7 +196,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 900
+		ship_armor_add = 1000
+		ship_armor_regen_add_static = 2.5
 	}
 	
 	prerequisites = { "tech_adamantine_armor" }
@@ -203,8 +205,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 90
-			adamantines = 20
+			alloys = 44
+			adamantines = 22
 		}		
 		upkeep = {
 			energy = @m_t6_upkeep_energy
@@ -220,7 +222,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 2000
+		ship_armor_add = 2200
+		ship_armor_regen_add_static = 2.5
 	}
 	
 	prerequisites = { "tech_adamantine_armor" }
@@ -228,8 +231,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 170
-			adamantines = 30
+			alloys = 88
+			adamantines = 44
 		}		
 		upkeep = {
 			energy = @l_t6_upkeep_energy
@@ -241,7 +244,7 @@ utility_component_template = {
 
 # 神の盾*2 Tire5	600 1500 2400
 # cost	アダマンタイト	30	60	90 賢者の石	1	2	3
-# 装甲HP +600 +1500 +2000	装甲回復/日 +60 +150 +200
+# シールドHP +600 +1500 +2000	シールド回復/日 +60 +150 +200
 utility_component_template = {
 	key = "SMALL_GODS_SHIELD"
 	size = small
@@ -321,7 +324,7 @@ utility_component_template = {
 }
 
 # 神の御加護
-# 回避 x3 x3 x3 船体値 3000 6000 9000 FTL速度 x6 x4 x3.5 装甲回復/日 20 60 90
+#  船体値 3000 6000 9000 FTL速度 x6 x4 x3.5 装甲回復/日 20 60 90
 utility_component_template = {
 	key = "SMALL_GODS_BLESSINGS"
 	size = small
@@ -330,7 +333,6 @@ utility_component_template = {
 	hidden = yes
 	power = 150
 	modifier = {
-		ship_evasion_mult = 3
 		ship_hull_add	= 3000
 		ship_interstellar_speed_mult = 6
 		ship_armor_regen_add_static = 20
@@ -358,7 +360,6 @@ utility_component_template = {
 	hidden = yes
 	power = 200
 	modifier = {
-		ship_evasion_mult = 3
 		ship_hull_add	= 6000
 		ship_interstellar_speed_mult = 4
 		ship_armor_regen_add_static = 60
@@ -386,7 +387,6 @@ utility_component_template = {
 	hidden = yes
 	power = 0
 	modifier = {
-		ship_evasion_mult = 3
 		ship_hull_add	= 9000
 		ship_interstellar_speed_mult = 3.5
 		ship_armor_regen_add_static = 90
@@ -407,7 +407,7 @@ utility_component_template = {
 }
 
 #	天界の肌
-# 船体値 400 900 2000 装甲回復/日 40 90 200
+# 装甲HP 400 900 2000 装甲回復/日 40 90 200
 utility_component_template = {
 	key = "SMALL_GODS_SKIN"
 	size = small
