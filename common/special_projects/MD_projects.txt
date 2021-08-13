@@ -1,0 +1,52 @@
+# 神話崩壊砲 神をも殺す兵器
+special_project = {
+	key = "GOD_SKIN_PROJECT"
+	cost = {
+		base = 2000
+	}
+	tech_department = society_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+	
+	on_success = {
+		owner = { country_event = { id = magical_discoveries_crisis.6 } }
+		add_research_option = tech_gods_skin
+		add_tech_progress = {
+			tech = tech_gods_skin
+			progress = 0.1
+		}
+	}
+	
+	on_fail = {
+	}
+}
+
+# 神話崩壊砲 神をも殺す兵器
+special_project = {
+	key = "MYTHICAL_DECAY_PROJECT"
+	cost = {
+		base = 2000
+	}
+	tech_department = engineering_technology
+	picture = GFX_evt_sapient_AI
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+	
+	on_success = {
+		add_research_option = tech_mythical_decay
+		add_tech_progress = {
+			tech = tech_mythical_decay
+			progress = 0.1
+		}
+	}
+	
+	on_fail = {
+	}
+}

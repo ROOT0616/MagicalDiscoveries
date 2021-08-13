@@ -228,6 +228,55 @@ country_event = {
 	}
 }
 
+# 天使を撃退
+country_event = {
+	id = magical_discoveries_crisis.5
+	title = magical_discoveries_crisis.5.name
+	desc = magical_discoveries_crisis.5.desc
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+	location = root
+	is_triggered_only = yes
+	trigger = {
+		exists = event_target:angel_enemy
+		from = {
+			is_same_value = event_target:angel_enemy
+		}
+	}
+	immediate = {
+		event_target:angel_enemy = {
+			destroy_country = yes
+		}
+	}
+	option = {
+		name = magical_discoveries_crisis.5.a
+		enable_special_project = {
+			name = "GOD_SKIN_PROJECT"
+			location = capital_scope
+			owner = root
+		}
+	}
+}
+
+# 神をどうやって効率的に殺そうか
+country_event = {
+	id = magical_discoveries_crisis.6
+	title = magical_discoveries_crisis.6.name
+	desc = magical_discoveries_crisis.6.desc
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+	location = root
+	is_triggered_only = yes
+	option = {
+		name = magical_discoveries_crisis.6.a
+		enable_special_project = {
+			name = "MYTHICAL_DECAY_PROJECT"
+			location = capital_scope
+			owner = root
+		}
+	}
+}
+
 # 神撃
 country_event = {
 	id = magical_discoveries_crisis.10001

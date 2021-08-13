@@ -16,3 +16,14 @@ on_monthly_pulse = {
 		md_market.4
 	}
 }
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		# 天使を撃退
+		magical_discoveries_crisis.5
+	}
+}

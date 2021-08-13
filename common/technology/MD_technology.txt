@@ -1495,17 +1495,11 @@ tech_gods_skin = {
 	category = {
 		field_manipulation
 	}
-	prerequisites = {
-		# "tech_ultimate_magical_science"
-		# "tech_ultimate_alchemy"
-	}
-	potential = {
-		has_country_flag = BuyGrimoireFlag03
-		has_country_flag = BuyAlchemyFlag03
-	}
 	weight = 0
 	is_rare = yes
 	modifier = {
+		ship_armor_mult = 0.1
+		ship_shield_mult = 0.1
 		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
@@ -1518,21 +1512,13 @@ tech_gods_skin = {
 # M			150	300		2.5		95	60	36	160
 # L			375	750		2.5		95	40	72	200
 tech_mythical_decay = {
-	cost = @tier5cost3
+	cost = @tier5cost1
 	area = engineering
-	tier = 5
+	tier = 4
 	category = {
 		propulsion
 	}
-	prerequisites = {
-		# "tech_ultimate_magical_science"
-		# "tech_ultimate_alchemy"
-	}
-	potential = {
-		has_country_flag = BuyGrimoireFlag03
-		has_country_flag = BuyAlchemyFlag03
-	}
-	weight = @tier5weight3
+	weight = 0
 	is_rare = yes
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01

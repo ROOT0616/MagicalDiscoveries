@@ -4,9 +4,9 @@
 # 	神の吐息	Gods breath
 # ####################
 # key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
-# SMALL_GODS_BREATH_WEAPON	40	-25	180	240	3	2	0.5	2	0.5	2	18	20	120	0.96	0.8
-# MEDIUM_GODS_BREATH_WEAPON	80	-50	360	420	3	2	0.5	2	0.5	2	18	20	160	0.96	0.6
-# LARGE_GODS_BREATH_WEAPON	160	-100	810	870	3	2	0.5	2	0.5	2	18	20	200	0.96	0.4
+# SMALL_GODS_BREATH_WEAPON	40	-25	180	1	2	0.5	2	0.5	2	18	30	120	0.96	0.2
+# MEDIUM_GODS_BREATH_WEAPON	80	-50	360	420	1	2	0.5	2	0.5	2	18	30	120	0.96	0.2
+# LARGE_GODS_BREATH_WEAPON	160	-100	810	870	1	2	0.5	2	0.5	2	18	30	120	0.96	0.2
 
 weapon_component_template = {
 	key = "SMALL_GODS_BREATH_WEAPON"
@@ -161,7 +161,7 @@ weapon_component_template = {
 # 	クサナギノツヨシ	mythical decay
 # ####################
 # key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
-# KUSANAGI_WEAPON cost -100 15000 20000 4 2 1 2 1 150 300 150 300 0.98
+# KUSANAGI_WEAPON cost -100 15000 20000 1 2 1 2 1 150 300 300 120 0.98
 weapon_component_template = {
 	key = "KUSANAGI_WEAPON"
 
