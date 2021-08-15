@@ -5,22 +5,42 @@ namespace = magical_discoveries_crisis
 ## 	天使を目撃
 event = {
 	## イベントの基本情報
+	id = magical_discoveries_crisis.0
+	hide_window = yes
+	## イベントの発生条件
+	# is_triggered_only = yes
+	# fire_only_once = yes
+	trigger = {
+		has_global_flag = LearnNecromancyFlag
+		NOT = {
+			has_global_flag = AppearanceAngelFlag
+		}
+	}
+	## イベントの効果
+	immediate = {
+		every_country = {
+			country_event = {
+				id = magical_discoveries_crisis.1
+			}
+			country_event = {
+				id = magical_discoveries_crisis.2
+				days = 360
+			}
+		}
+	}
+}
+
+## 	天使を目撃
+country_event = {
+	## イベントの基本情報
 	id = magical_discoveries_crisis.1
 	title = magical_discoveries_crisis.1.name
 	desc = magical_discoveries_crisis.1.desc
 	picture = GFX_evt_ship_in_orbit
 	hide_window = no
 	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = yes
-	mean_time_to_happen = {
-		years = 1
-	}
-	trigger = {
-		is_regular_empire = yes
-		is_ai = no
-		has_global_flag = LearnNecromancyFlag
-	}
+	is_triggered_only = yes
+	# fire_only_once = yes
 	## イベントの効果
 	option = {
 		name = magical_discoveries_crisis.1a.name
@@ -29,7 +49,7 @@ event = {
 }
 
 ## 	天使を発見
-event = {
+country_event = {
 	## イベントの基本情報
 	id = magical_discoveries_crisis.2
 	title = magical_discoveries_crisis.2.name
@@ -37,12 +57,8 @@ event = {
 	picture = GFX_evt_ship_in_orbit
 	hide_window = no
 	## イベントの発生条件
-	is_triggered_only = no
-	mean_time_to_happen = {
-		years = 15
-	}
+	is_triggered_only = yes
 	trigger = {
-		is_regular_empire = yes
 		has_global_flag = AppearanceAngelFlag
 		NOT = {
 			has_global_flag = ArrestingAngelFlag
@@ -50,6 +66,9 @@ event = {
 	}
 	## イベントの効果
 	option = {
+		trigger = {
+			is_ai = no
+		}
 		name = magical_discoveries_crisis.2a.name
 		set_global_flag = ArrestingAngelFlag
 		hidden_effect = {
@@ -222,7 +241,8 @@ country_event = {
 			}
 			country_event = {
 				id = magical_discoveries_crisis.1000
-				days = 18250				#50年後
+				days = 10				#50年後
+				# days = 18250				#50年後
 			}
 		}
 	}
@@ -250,11 +270,17 @@ country_event = {
 	}
 	option = {
 		name = magical_discoveries_crisis.5.a
+		trigger = {
+			has_country_flag = MeetMagicFlag
+		}
 		enable_special_project = {
 			name = "GOD_SKIN_PROJECT"
 			location = capital_scope
 			owner = root
 		}
+	}
+	option = {
+		name = magical_discoveries_crisis.5.b
 	}
 }
 
@@ -269,11 +295,66 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = magical_discoveries_crisis.6.a
+		add_research_option = tech_gods_skin
+		add_tech_progress = {
+			tech = tech_gods_skin
+			progress = 0.1
+		}
 		enable_special_project = {
 			name = "MYTHICAL_DECAY_PROJECT"
 			location = capital_scope
 			owner = root
 		}
+	}
+}
+
+# 神をどうやって効率的に殺そうか
+country_event = {
+	id = magical_discoveries_crisis.7
+	title = magical_discoveries_crisis.7.name
+	desc = magical_discoveries_crisis.7.desc
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+	location = root
+	is_triggered_only = yes
+	option = {
+		name = magical_discoveries_crisis.7.a
+		add_research_option = tech_mythical_decay
+		add_tech_progress = {
+			tech = tech_mythical_decay
+			progress = 0.1
+		}
+	}
+}
+
+# 天使を撃退
+country_event = {
+	id = magical_discoveries_crisis.8
+	title = magical_discoveries_crisis.8.name
+	desc = magical_discoveries_crisis.8.desc
+	picture = GFX_evt_crisis_defeated
+	show_sound = event_celebration
+	location = root
+	is_triggered_only = yes
+	trigger = {
+		exists = event_target:heavenesgate
+		from = {
+			is_same_value = event_target:heavenesgate
+		}
+	}
+	option = {
+		name = magical_discoveries_crisis.5.8
+		trigger = {
+			has_country_flag = MeetMagicFlag
+		}
+		enable_special_project = {
+			name = "GOD_SKIN_PROJECT"
+			location = capital_scope
+			owner = root
+		}
+	}
+	option = {
+		name = magical_discoveries_crisis.8.b
 	}
 }
 
@@ -675,6 +756,24 @@ fleet_event = {
 							trait = leader_trait_ethereal
 						}
 					}
+					create_leader = {
+						class = admiral
+						species = event_target:heavens_species
+						name = random
+						skill = 3
+						traits = {
+							trait = leader_trait_ethereal
+						}
+					}
+					create_leader = {
+						class = admiral
+						species = event_target:heavens_species
+						name = random
+						skill = 3
+						traits = {
+							trait = leader_trait_ethereal
+						}
+					}
 				}
 				25 = {
 					create_leader = {
@@ -695,6 +794,24 @@ fleet_event = {
 							trait = leader_trait_dimensional_stutter
 						}
 					}
+					create_leader = {
+						class = admiral
+						species = event_target:heavens_species
+						name = random
+						skill = 3
+						traits = {
+							trait = leader_trait_dimensional_stutter
+						}
+					}
+					create_leader = {
+						class = admiral
+						species = event_target:heavens_species
+						name = random
+						skill = 3
+						traits = {
+							trait = leader_trait_dimensional_stutter
+						}
+					}
 				}
 				50 = {
 					create_leader = {
@@ -702,6 +819,18 @@ fleet_event = {
 						species = event_target:heavens_species
 						name = random
 						skill = 5
+					}
+					create_leader = {
+						class = admiral
+						species = event_target:heavens_species
+						name = random
+						skill = 3
+					}
+					create_leader = {
+						class = admiral
+						species = event_target:heavens_species
+						name = random
+						skill = 3
 					}
 					create_leader = {
 						class = admiral

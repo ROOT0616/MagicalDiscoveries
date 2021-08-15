@@ -15,6 +15,17 @@ on_monthly_pulse = {
 		md_market.3
 		md_market.4
 	}
+	random_events = {
+		10 = magical_discoveries_crisis.0
+		40 = 0
+	}
+}
+
+No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		magical_discoveries_crisis.1254
+	}
 }
 
 # This = owner of fleet 1 (combatant)
@@ -25,5 +36,41 @@ on_fleet_destroyed_perp = {
 	events = {
 		# 天使を撃退
 		magical_discoveries_crisis.5
+		magical_discoveries_crisis.8
+	}
+}
+
+on_building_starbase_exd_0 = {
+	events = {
+		magical_discoveries_crisis.1300
+		magical_discoveries_crisis.1310
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		magical_discoveries_crisis.1311 # Remove Extradimensional System Effect
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		magical_discoveries_crisis.1011
+	}
+}
+
+
+#This = destroyed country
+#From = optional, destroyer (country)
+on_country_destroyed = {
+	events = {
+		magical_discoveries_crisis.1270
 	}
 }

@@ -85,12 +85,30 @@ adamantite_skyscraper_construction_campaign = {
 	modifier = {
     planet_housing_mult = 0.25
 	}
-
 	potential = {
 		has_technology = tech_adamantine_refinery
 	}
 
 	ai_weight = {
 		weight = 1
+	}
+}
+
+# アダマンタイトによる超高層建設
+MD_test_campaign = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+	}
+
+	effect = {
+		remove_global_flag = AppearanceAngelFlag
+		remove_global_flag = ArrestingAngelFlag
+		remove_global_flag = AttackAngelFlag
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }

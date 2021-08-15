@@ -1495,6 +1495,10 @@ tech_gods_skin = {
 	category = {
 		field_manipulation
 	}
+	prerequisites = {
+		"tech_alchemy"
+		"tech_magical_science"
+	}
 	weight = 0
 	is_rare = yes
 	modifier = {
@@ -1517,6 +1521,10 @@ tech_mythical_decay = {
 	tier = 4
 	category = {
 		propulsion
+	}
+	prerequisites = {
+		"tech_alchemy"
+		"tech_magical_science"
 	}
 	weight = 0
 	is_rare = yes
