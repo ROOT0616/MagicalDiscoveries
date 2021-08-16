@@ -21,10 +21,23 @@ on_monthly_pulse = {
 	}
 }
 
-No scope, like on_game_start
+# No scope, like on_game_start
 on_yearly_pulse = {
 	events = {
 		magical_discoveries_crisis.1254
+	}
+}
+
+# This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+on_ship_destroyed_victim = {
+	events = {
+		magical_discoveries_crisis.1281
+		magical_discoveries_crisis.1282
+		magical_discoveries_crisis.1012
+		magical_discoveries_crisis.1311
 	}
 }
 
@@ -37,27 +50,19 @@ on_fleet_destroyed_perp = {
 		# 天使を撃退
 		magical_discoveries_crisis.5
 		magical_discoveries_crisis.8
+		magical_discoveries_crisis.1283
 	}
 }
 
-on_building_starbase_exd_0 = {
+# This = starbase being destroyed
+# From = fleet that destroyed the starbase
+on_starbase_destroyed = {
 	events = {
-		magical_discoveries_crisis.1300
-		magical_discoveries_crisis.1310
+		magical_discoveries_crisis.1320
 	}
 }
 
-# This = owner of ship 1 (destroyed)
-# From = owner of ship 2 (combatant)
-# FromFrom = ship 1
-# FromFromFrom = ship 2
-on_ship_destroyed_victim = {
-	events = {
-		magical_discoveries_crisis.1311 # Remove Extradimensional System Effect
-	}
-}
-
-# Planet has taken damage from orbital bombardment - Damage is applied daily
+# 惑星が軌道爆撃のダメージを受けた - ダメージは毎日適用される
 # This = Planet
 # From = Bombarder
 on_planet_bombarded = {
@@ -66,11 +71,20 @@ on_planet_bombarded = {
 	}
 }
 
-
 #This = destroyed country
 #From = optional, destroyer (country)
 on_country_destroyed = {
 	events = {
 		magical_discoveries_crisis.1270
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		magical_discoveries_crisis.1050
 	}
 }

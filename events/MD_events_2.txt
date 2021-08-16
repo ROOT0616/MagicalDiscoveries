@@ -221,9 +221,24 @@ country_event = {
 									design = "NAME_Fallen_angel"
 									graphical_culture = "extra_dimensional_01"
 								}
+								create_ship = {
+									name = "NAME_Fallen_angel_4"
+									design = "NAME_Fallen_angel"
+									graphical_culture = "extra_dimensional_01"
+								}
+								create_ship = {
+									name = "NAME_Fallen_angel_5"
+									design = "NAME_Fallen_angel"
+									graphical_culture = "extra_dimensional_01"
+								}
+								create_ship = {
+									name = "NAME_Fallen_angel_6"
+									design = "NAME_Fallen_angel"
+									graphical_culture = "extra_dimensional_01"
+								}
 								assign_leader = last_created_leader
 								while = {
-									count = 10
+									count = 25
 									create_ship = {
 										name = random
 										design = "NAME_soldier_of_the_gods"
@@ -241,8 +256,8 @@ country_event = {
 			}
 			country_event = {
 				id = magical_discoveries_crisis.1000
-				days = 10				#50年後
-				# days = 18250				#50年後
+				# days = 10				#50年後
+				days = 18000				#50年後
 			}
 		}
 	}
@@ -620,7 +635,7 @@ country_event = {
 							}
 							assign_leader = last_created_leader
 							while = {
-								count = 9
+								count = 15
 								create_ship = {
 									name = random
 									design = "NAME_Gods"
@@ -628,7 +643,7 @@ country_event = {
 								}
 							}
 							while = {
-								count = 15
+								count = 20
 								create_ship = {
 									name = random
 									design = "NAME_Goddess"
@@ -636,7 +651,7 @@ country_event = {
 								}
 							}
 							while = {
-								count = 20
+								count = 25
 								create_ship = {
 									name = random
 									design = "NAME_soldier_of_the_gods"
@@ -850,7 +865,7 @@ fleet_event = {
 					}
 					assign_leader = last_created_leader
 					while = {
-						count = 4
+						count = 10
 						create_ship = {
 							name = random
 							design = "NAME_Gods"
@@ -858,7 +873,7 @@ fleet_event = {
 						}
 					}
 					while = {
-						count = 10
+						count = 15
 						create_ship = {
 							name = random
 							design = "NAME_Goddess"
@@ -866,7 +881,7 @@ fleet_event = {
 						}
 					}
 					while = {
-						count = 15
+						count = 20
 						create_ship = {
 							name = random
 							design = "NAME_soldier_of_the_gods"
@@ -1066,7 +1081,7 @@ planet_event = {
 	show_sound = event_ghost_town
 	is_triggered_only = yes
 	trigger = {
-		planet_devastation >= 100
+		planet_devastation >= 90
 		FROM = {
 			is_country_type = heavenly_realm
 		}
@@ -1111,20 +1126,48 @@ planet_event = {
 			}
 			remove_planet = yes
 		}
-		if = {
+		every_country = {
 			limit = {
-				FROM = {
-					is_country_type = heavenly_realm
-				}
+				has_event_chain = "heavenly_invasion_chain"
 			}
-			every_country = {
+			add_event_chain_counter = {
+				event_chain = "heavenly_invasion_chain"
+				counter = "heavenly_planets_1"
+				amount = 1
+			}
+		}
+		solar_system = {
+			if = {
+				# 他のコロニーが残っていなければスターベースを建設する
 				limit = {
-					has_event_chain = "heavenly_invasion_chain"
+					NOT = {
+						exists = starbase
+						any_system_planet = {
+							has_owner = yes
+							owner = {
+								NOT = {
+									is_same_value = from
+								}
+							}
+						}
+					}
 				}
-				add_event_chain_counter = {
-					event_chain = "heavenly_invasion_chain"
-					counter = "heavenly_planets_1"
-					amount = 1
+				create_starbase = {
+					size = starbase_exd_0
+					owner = from
+				}
+				random_ship_in_system = {
+					limit = {
+						owner = {
+							is_same_value = from
+						}
+					}
+					ship_event = {
+						id = magical_discoveries_crisis.1300
+					}					# Check if starbase should be Anchor
+					ship_event = {
+						id = magical_discoveries_crisis.1310
+					}					# Create system effect
 				}
 			}
 		}
@@ -2591,7 +2634,7 @@ ship_event = {
 	}
 }
 
-# Remove System Effect
+# システムエフェクトの削除
 country_event = {
 	id = magical_discoveries_crisis.1311
 	hide_window = yes
@@ -2613,6 +2656,82 @@ country_event = {
 						has_ambient_object_flag = heavens_system_effect
 					}
 					destroy_ambient_object = this
+				}
+			}
+		}
+	}
+}
+
+# 宇宙基地を破壊した次元外生物
+starbase_event = {
+	id = magical_discoveries_crisis.1320
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from.owner = {
+			is_country_type = heavenly_realm
+		}
+		NOT = {
+			solar_system = {
+				any_system_planet = {
+					is_colony = yes
+				}				# 人口の多いシステムでは、コロニーを破壊する必要があります。
+			}
+		}
+	}
+	immediate = {
+		solar_system = {
+			save_event_target_as = heavenes_starbase_system
+		}
+		from.owner = {
+			country_event = {
+				id = magical_discoveries_crisis.1321
+				days = 5
+			}			# 破壊されたスターベースを適切に撤去するための遅延
+		}
+	}
+}
+
+# 宇宙人が新しいスターベースを作る
+country_event = {
+	id = magical_discoveries_crisis.1321
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:heavenes_starbase_system = {
+			solar_system = {
+				create_starbase = {
+					size = starbase_exd_0
+					owner = root
+				}
+				every_system_planet = {
+					limit = {
+						has_orbital_station = yes
+					}
+					orbital_station = {
+						dismantle = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = fromfrom
+			}
+			fromfrom = {
+				if = {
+					limit = {
+						#理論的には、ジャンプした可能性もあります。
+						exists = solar_system
+					}
+					random_owned_ship = {
+						ship_event = {
+							id = magical_discoveries_crisis.1300
+						}						# スターベースをアンカーにするかどうかのチェック
+						ship_event = {
+							id = magical_discoveries_crisis.1310
+						}						# システム効果の創出
+					}
 				}
 			}
 		}

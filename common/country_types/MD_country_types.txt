@@ -107,87 +107,86 @@ gate_holder = {
 	}
 }
 
-# heavenly_realm = {
-# 	attack_unarmed_orbital_stations = yes
-# 	scaled_difficulty_bonuses = 1.0	# scales to setting
-# 	# end_game_crisis = yes
-# 	destroys_starbases = yes
-# 	can_own_empty_planets = yes
-# 	# counts_for_victory = yes
-# 	share_survey_data = no
-# 	enforces_borders = no
-# 	has_capital = no
-# 	needs_survey = no
-# 	has_complete_sensor = yes
-# 	can_planets_be_attacked = yes
-# 	can_have_their_comms_shared = yes
-# 	home_system = heavens_origin_system
-# 	custom_starbase = starbase_exd_0
-# 	observable = yes
-# 	ai = {
-# 		enabled = yes
-# 		colonizer = yes
-# 		construction = yes
-# 		modules = {
-# 			horde_interior_minister_module
-# 			horde_military_minister_module
-# 		}
-# 	}
-# 	faction = {
-# 		hostile = yes
-# 		needs_border_access = no
-# 		generate_borders = yes
-# 		needs_colony = no
-# 	}
-# 	custom_diplomacy = yes
-# 	modules = {
-# 		standard_event_module = {}
-# 		standard_leader_module = {}
-# 		all_technology_module = {}
-# 		exclusive_diplomacy_module = {
-# 			contact_rule = always
-# 		}
-# 	}
-# }
 heavenly_realm = {
 	attack_unarmed_orbital_stations = yes
-	scaled_difficulty_bonuses = 3	# scales to setting
+	scaled_difficulty_bonuses = 4.0	# scales to setting
 	# end_game_crisis = yes
 	destroys_starbases = yes
+	can_own_empty_planets = yes
+	share_survey_data = no
+	enforces_borders = no
+	has_capital = no
 	needs_survey = no
 	has_complete_sensor = yes
 	can_planets_be_attacked = yes
-	has_capital = no
-	enforces_borders = no
+	can_have_their_comms_shared = yes
 	home_system = heavens_origin_system
 	custom_starbase = starbase_exd_0
 	observable = yes
-	uses_origins = no
-	government = no
 	ai = {
 		enabled = yes
 		colonizer = yes
 		construction = yes
 		modules = {
-			invaders_military_minister_module
-			invaders_interior_minister_module
+			horde_interior_minister_module
+			horde_military_minister_module
 		}
 	}
 	faction = {
-		needs_colony = no
 		hostile = yes
 		needs_border_access = no
+		generate_borders = yes
+		needs_colony = no
 	}
 	custom_diplomacy = yes
 	modules = {
-		standard_event_module = {
-		}
-		standard_leader_module = {
-		}
-		all_technology_module = {
-		}
+		standard_event_module = {}
+		standard_leader_module = {}
+		all_technology_module = {}
 		exclusive_diplomacy_module = {
 			contact_rule = always
 		}
 	}
 }
+# heavenly_realm = {
+# 	attack_unarmed_orbital_stations = yes
+# 	scaled_difficulty_bonuses = 3	# scales to setting
+# 	# end_game_crisis = yes
+# 	destroys_starbases = yes
+# 	needs_survey = no
+# 	has_complete_sensor = yes
+# 	can_planets_be_attacked = yes
+# 	has_capital = no
+# 	enforces_borders = no
+# 	home_system = heavens_origin_system
+# 	custom_starbase = starbase_exd_0
+# 	observable = yes
+# 	uses_origins = no
+# 	government = no
+# 	ai = {
+# 		enabled = yes
+# 		colonizer = yes
+# 		construction = yes
+# 		modules = {
+# 			invaders_military_minister_module
+# 			invaders_interior_minister_module
+# 		}
+# 	}
+# 	faction = {
+# 		needs_colony = no
+# 		hostile = yes
+# 		needs_border_access = no
+# 	}
+# 	custom_diplomacy = yes
+# 	modules = {
+# 		standard_event_module = {
+# 		}
+# 		standard_leader_module = {
+# 		}
+# 		all_technology_module = {
+# 		}
+# 		exclusive_diplomacy_module = {
+# 			contact_rule = always
+# 		}
+# 	}
+# }
