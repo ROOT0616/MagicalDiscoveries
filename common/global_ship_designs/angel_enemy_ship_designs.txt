@@ -3,7 +3,7 @@
 # 神 NAME_Gods
 ship_design = {
 	name = "NAME_Gods"
-	ship_size = large_ship_ed
+	ship_size = large_ship_heavenly
 	is_event_design = yes
 
 	section = {
@@ -107,7 +107,7 @@ ship_design = {
 # 天使（バルキリー） NAME_Valkyrie
 ship_design = {
 	name = "NAME_Valkyrie"
-	ship_size = large_ship_ed
+	ship_size = large_ship_heavenly
 	is_event_design = yes
 
 	section = {
@@ -187,7 +187,7 @@ ship_design = {
 # 堕天使 NAME_Fallen_angel
 ship_design = {
 	name = "NAME_Fallen_angel"
-	ship_size = large_ship_ed
+	ship_size = large_ship_heavenly
 	is_event_design = yes
 
 	section = {
@@ -263,7 +263,7 @@ ship_design = {
 # 女神 NAME_Goddess
 ship_design = {
 	name = "NAME_Goddess"
-	ship_size = medium_ship_ed
+	ship_size = medium_ship_heavenly
 	is_event_design = yes
 
 	section = {
@@ -331,7 +331,7 @@ ship_design = {
 # 神兵 NAME_soldier_of_the_gods
 ship_design = {
 	name = "NAME_soldier_of_the_gods"
-	ship_size = small_ship_ed
+	ship_size = small_ship_heavenly
 	is_event_design = yes
 
 	section = {
@@ -379,7 +379,7 @@ ship_design = {
 # ニンフ	NAME_Heavenly_Shaper
 ship_design = {
 	name = "NAME_Heavenly_Shaper"
-	ship_size = construction_ship_ed
+	ship_size = construction_ship_heavenly
 	
 	section = {
 		template = "angel_constructor_section"
@@ -409,7 +409,7 @@ ship_design = {
 # Heavenly Portal NAME_Heavenly_Portal
 ship_design = {
 	name = "NAME_Heavenly_Portal"
-	ship_size = dimensional_portal_ed
+	ship_size = dimensional_portal_heavenly
 	
 	section = {
 		template = "angel_dimensional_portal_key_blue"

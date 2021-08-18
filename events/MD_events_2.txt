@@ -8,7 +8,7 @@ event = {
 	id = magical_discoveries_crisis.0
 	hide_window = yes
 	## イベントの発生条件
-	# is_triggered_only = yes
+	is_triggered_only = yes
 	# fire_only_once = yes
 	trigger = {
 		has_global_flag = LearnNecromancyFlag
@@ -358,7 +358,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = magical_discoveries_crisis.5.8
+		name = magical_discoveries_crisis.8.a
 		trigger = {
 			has_country_flag = MeetMagicFlag
 		}
@@ -444,7 +444,7 @@ country_event = {
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				set_ship_flag = heavenly_portal
 			}
@@ -1186,7 +1186,7 @@ country_event = {
 	trigger = {
 		is_country_type = heavenly_realm
 		FROMFROM = {
-			is_ship_size = dimensional_portal_ed
+			is_ship_size = dimensional_portal_heavenly
 		}
 	}
 	immediate = {
@@ -1384,12 +1384,12 @@ event = {
 					num_ships < 6
 					NOR = {
 						any_owned_ship = {
-							is_ship_size = dimensional_portal_ed
+							is_ship_size = dimensional_portal_heavenly
 						}
 						any_country = {
 							is_country_type = gate_holder
 							any_owned_ship = {
-								is_ship_size = dimensional_portal_ed
+								is_ship_size = dimensional_portal_heavenly
 							}
 						}
 					}
@@ -1433,7 +1433,7 @@ country_event = {
 		OR = {
 			count_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				count > 0
 			}
@@ -1441,7 +1441,7 @@ country_event = {
 				is_country_type = gate_holder
 				count_owned_ship = {
 					limit = {
-						is_ship_size = dimensional_portal_ed
+						is_ship_size = dimensional_portal_heavenly
 					}
 					count > 0
 				}
@@ -1645,7 +1645,7 @@ country_event = {
 		OR = {
 			count_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				count > 0
 			}
@@ -1654,7 +1654,7 @@ country_event = {
 					is_country_type = gate_holder
 					count_owned_ship = {
 						limit = {
-							is_ship_size = dimensional_portal_ed
+							is_ship_size = dimensional_portal_heavenly
 						}
 						count > 0
 					}
@@ -1669,14 +1669,14 @@ country_event = {
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				save_event_target_as = heavenes_gate
 			}
 		}
 		random_owned_ship = {
 			limit = {
-				is_ship_size = dimensional_portal_ed
+				is_ship_size = dimensional_portal_heavenly
 			}
 			save_event_target_as = heavenes_gate
 		}
@@ -1783,7 +1783,7 @@ country_event = {
 		OR = {
 			count_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				count > 0
 			}
@@ -1792,7 +1792,7 @@ country_event = {
 					is_country_type = gate_holder
 					count_owned_ship = {
 						limit = {
-							is_ship_size = dimensional_portal_ed
+							is_ship_size = dimensional_portal_heavenly
 						}
 						count > 0
 					}
@@ -1801,7 +1801,7 @@ country_event = {
 		}
 		count_owned_ship = {
 			limit = {
-				is_ship_size = construction_ship_ed
+				is_ship_size = construction_ship_heavenly
 			}
 			count < 3
 		}
@@ -1814,14 +1814,14 @@ country_event = {
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				save_event_target_as = heavenes_gate
 			}
 		}
 		random_owned_ship = {
 			limit = {
-				is_ship_size = dimensional_portal_ed
+				is_ship_size = dimensional_portal_heavenly
 			}
 			save_event_target_as = heavenes_gate
 		}
@@ -1863,7 +1863,7 @@ ship_event = {
 			OR = {
 				count_owned_ship = {
 					limit = {
-						is_ship_size = dimensional_portal_ed
+						is_ship_size = dimensional_portal_heavenly
 					}
 					count > 0
 				}
@@ -1872,7 +1872,7 @@ ship_event = {
 						is_country_type = gate_holder
 						count_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_ed
+								is_ship_size = dimensional_portal_heavenly
 							}
 							count > 0
 						}
@@ -1896,14 +1896,14 @@ ship_event = {
 				}
 				random_owned_ship = {
 					limit = {
-						is_ship_size = dimensional_portal_ed
+						is_ship_size = dimensional_portal_heavenly
 					}
 					save_event_target_as = heavenes_gate
 				}
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				save_event_target_as = heavenes_gate
 			}
@@ -2191,7 +2191,7 @@ ship_event = {
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_ed
+					is_ship_size = dimensional_portal_heavenly
 				}
 				fleet = {
 					set_event_locked = yes
@@ -2250,7 +2250,7 @@ country_event = {
 						}
 						random_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_ed
+								is_ship_size = dimensional_portal_heavenly
 								has_ship_flag = heavenly_portal
 							}
 							fleet = {
@@ -2269,7 +2269,7 @@ country_event = {
 						}
 						random_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_ed
+								is_ship_size = dimensional_portal_heavenly
 								has_ship_flag = aberrant_portal
 							}
 							fleet = {
@@ -2288,7 +2288,7 @@ country_event = {
 						}
 						random_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_ed
+								is_ship_size = dimensional_portal_heavenly
 								has_ship_flag = vehement_portal
 							}
 							fleet = {
@@ -2407,7 +2407,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = magical_discoveries_crisis.1250a.name
-		# add_relic = r_the_sealed_god
+		# add_relic = r_outer_beacon
 	}
 }
 

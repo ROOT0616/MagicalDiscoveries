@@ -1,6 +1,13 @@
-# Overwritten to add sphere
+#ツールチップは、これらのルールが失敗したときに生成されます。custom_tooltipの使用を推奨します。
+#これらのルールに加えて、ハードコードされた複数のルールが適用されます。
+#ここで評価されたルールがtrueの場合, アクションを利用できないルールが他にもあるかもしれません.
+#ここでのルールがfalseと評価された場合、アクションは利用できなくなります。
+# 上書き
+#このルールは、惑星を爆撃するための条件です。
+#Root = fleet, potential attacker
+#From = planet, potential target
 can_orbital_bombard = {
-	exists = from.owner
+	exists = FROM.OWNER
 	NOT = {
 		any_owned_ship = {
 			is_ship_size = colossus
@@ -41,12 +48,12 @@ can_orbital_bombard = {
 				is_country_type = swarm
 				is_country_type = ai_empire
 				is_country_type = cybrex_empire
-				is_country_type = compound_empire
-				is_country_type = original_empire
-				is_country_type = void_lifeforms_1
-				is_country_type = void_lifeforms_2
-				is_country_type = katzenartig_imperium
-				is_country_type = mem_ancestor_guardian
+				AND = {
+					is_country_type = awakened_marauders
+					ROOT.OWNER = {
+						is_hostile = prev
+					}
+				}
 			}
 		}
 		ROOT.OWNER = {
@@ -62,23 +69,11 @@ can_orbital_bombard = {
 				is_country_type = ruined_marauders
 				is_country_type = gray_goo
 				is_country_type = vol
-				is_country_type = compound_empire
-				is_country_type = original_empire
-				is_country_type = void_lifeforms_1
-				is_country_type = void_lifeforms_2
-				is_country_type = acot_crazed_stellarite
-				is_country_type = katzenartig_imperium
-				is_country_type = mem_ancestor_guardian
 				is_country_type = heavenly_realm
 				AND = {
 					is_country_type = awakened_marauders
 					FROM.CONTROLLER = {
-						NAND = {
-							is_subject_type = satrapy
-							NOT = {
-								has_country_flag = rebelling_satrapy
-							}
-						}
+						is_hostile = prev
 					}
 				}
 			}

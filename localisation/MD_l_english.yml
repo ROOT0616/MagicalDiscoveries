@@ -272,6 +272,11 @@
  magical_discoveries_crisis.7.desc:0 "神をどうやって効率的に殺そうか"
  magical_discoveries_crisis.7.a:0 "天界の肌をより研究しよう"
 
+ magical_discoveries_crisis.8.name:0 ""
+ magical_discoveries_crisis.8.desc:0 ""
+ magical_discoveries_crisis.8.a:0 ""
+ magical_discoveries_crisis.8.b:0 ""
+
  magical_discoveries_crisis.1007.name:0 "天界からの門"
  magical_discoveries_crisis.1007.desc:0 "時空構造の巨大な門が[heavens_system.GetName]星系内に現れた！  原因は定かではないが、 その門は別次元からの一方通行のポータルとして機能する。 そこから奇妙な船の艦隊が溢れ出てきて、 手当たり次第に周囲を攻撃している。 これは大規模な侵攻の始まりらしい！ \n\n我々は門の向こう側にやってきた艦船が発信する、 強力な信号を傍受した。 それは我々に罰を与えるつもりらしい。"
  magical_discoveries_crisis.1007.a:0 "すばらしい……別次元の生命体とは。 "

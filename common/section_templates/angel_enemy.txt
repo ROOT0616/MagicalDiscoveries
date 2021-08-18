@@ -1,7 +1,7 @@
 # 神
 ship_section_template = {
 	key = "angel_large_warship_key"
-	ship_size = large_ship_ed
+	ship_size = large_ship_heavenly
 	fits_on_slot = mid
 	entity = "extra_dimensional_01_warship_large_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -91,7 +91,7 @@ ship_section_template = {
 # 天使（バルキリー）
 ship_section_template = {
 	key = "angel_large_warship1_key"
-	ship_size = large_ship_ed
+	ship_size = large_ship_heavenly
 	fits_on_slot = mid
 	entity = "extra_dimensional_01_warship_large_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -157,7 +157,7 @@ ship_section_template = {
 # 堕天使（バルキリー）
 ship_section_template = {
 	key = "angel_large_warship2_key"
-	ship_size = large_ship_ed
+	ship_size = large_ship_heavenly
 	fits_on_slot = mid
 	entity = "extra_dimensional_01_warship_large_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -223,7 +223,7 @@ ship_section_template = {
 # 女神
 ship_section_template = {
 	key = "angel_medium_warship_key"
-	ship_size = medium_ship_ed
+	ship_size = medium_ship_heavenly
 	fits_on_slot = mid
 	entity = "extra_dimensional_01_warship_medium_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -265,7 +265,7 @@ ship_section_template = {
 # 神兵
 ship_section_template = {
 	key = "angel_warship_small_key"
-	ship_size = small_ship_ed
+	ship_size = small_ship_heavenly
 	fits_on_slot = mid
 	entity = "extra_dimensional_01_warship_small_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -295,7 +295,7 @@ ship_section_template = {
 # ニンフ
 ship_section_template = {
 	key = "angel_constructor_section"
-	ship_size = construction_ship_ed
+	ship_size = construction_ship_heavenly
 	fits_on_slot = mid
 	entity = "extra_dimensional_01_constructor_ed_entity"
 	icon = "GFX_ship_part_core_mid"
@@ -307,7 +307,7 @@ ship_section_template = {
 # Dimensional Portal
 ship_section_template = {
 	key = "angel_dimensional_portal_key_blue"
-	ship_size = dimensional_portal_ed
+	ship_size = dimensional_portal_heavenly
 	fits_on_slot = mid
 	entity = "extra_dimensional_01_dimensional_portal_core_entity"
 	icon = "GFX_ship_part_core_mid"

@@ -26,8 +26,8 @@
 ####################
 
 # Extradimensional Large Ship  
-large_ship_ed = {
-	graphical_culture = { "extra_dimensional_01" "extra_dimensional_02" "extra_dimensional_03" }
+large_ship_heavenly = {
+	graphical_culture = { "extra_dimensional_01"}
 	max_speed = @speed_slow
 	acceleration = 0.2
 	rotation_speed = 0.15
@@ -49,8 +49,8 @@ large_ship_ed = {
 }
 
 # Extradimensional Medium Ship
-medium_ship_ed = {
-	graphical_culture = { "extra_dimensional_01" "extra_dimensional_02" "extra_dimensional_03" }
+medium_ship_heavenly = {
+	graphical_culture = { "extra_dimensional_01" }
 	max_speed = @speed_default
 	acceleration = 0.25
 	rotation_speed = 0.175
@@ -72,8 +72,8 @@ medium_ship_ed = {
 }
 
 # Extradimensional Small Ship
-small_ship_ed = {
-	graphical_culture = { "extra_dimensional_01" "extra_dimensional_02" "extra_dimensional_03" }
+small_ship_heavenly = {
+	graphical_culture = { "extra_dimensional_01"}
 	max_speed = @speed_fast
 	acceleration = 0.3
 	rotation_speed = 0.2
@@ -95,8 +95,8 @@ small_ship_ed = {
 }
 
 # Dimensional Portal
-dimensional_portal_ed = {
-	graphical_culture = { "extra_dimensional_01" "extra_dimensional_02" "extra_dimensional_03" }
+dimensional_portal_heavenly = {
+	graphical_culture = { "extra_dimensional_01"}
 	max_speed = 0.0
 	acceleration = 0.0
 	rotation_speed = 0.0
@@ -120,8 +120,8 @@ dimensional_portal_ed = {
 }
 
 # Extradimensional Constructor
-construction_ship_ed = {
-	graphical_culture = { "extra_dimensional_01" "extra_dimensional_02" "extra_dimensional_03" }
+construction_ship_heavenly = {
+	graphical_culture = { "extra_dimensional_01"}
 	is_space_object = yes
 	max_speed = @speed_slow
 	acceleration = 0.3
