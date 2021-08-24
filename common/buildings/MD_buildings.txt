@@ -264,8 +264,8 @@ building_magical_furnace = {
 		}
 	}
 	prerequisites = {
-		"tech_ultimate_magical_science"
-		"tech_ultimate_alchemy"
+		"tech_magical_science"
+		"tech_alchemy"
 	}
 	resources = {
 		category = planet_buildings
@@ -299,8 +299,7 @@ building_magical_furnace = {
 		}
 		cost = {
 			minerals = 300
-			mithrils = 50
-			orichalcones = 50
+			minerals = 300
 		}
 		upkeep = {
 			energy = 2
