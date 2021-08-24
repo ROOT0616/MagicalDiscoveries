@@ -575,3 +575,207 @@ country_event = {
 		set_country_flag = DenyNecronomiconFlag
 	}
 }
+
+## 魔晄炉長期使用による星の不安定化
+event = {
+	id = magical_discoveries.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_galaxy_planet = {
+			limit = {
+				has_planet_flag = building_magical_furnace_fase_3
+				NAND = {
+					has_planet_flag = building_magical_furnace_fase_4
+					has_modifier = star_depletion_1_modifier
+				}
+			}
+			planet_event = {
+				id = magical_discoveries.102
+			}
+		}
+	}
+}
+
+## 魔晄炉長期使用による星の不安定化1
+planet_event = {
+	id = magical_discoveries.102
+	title = magical_discoveries.102.name
+	desc = magical_discoveries.102.desc
+	picture = GFX_evt_atmospheric_entry
+	show_sound = event_air_raid_siren
+	hide_window = no
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "star_depletion_1_modifier"
+			days = 1800
+		}
+		planet_event = {
+			id = magical_discoveries.103
+			days = 1800
+		}
+	}
+}
+
+## 魔晄炉長期使用による星の不安定化2
+planet_event = {
+	id = magical_discoveries.103
+	title = magical_discoveries.103.name
+	desc = magical_discoveries.103.desc
+	picture = GFX_evt_atmospheric_entry
+	show_sound = event_air_raid_siren
+	hide_window = no
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "star_depletion_2_modifier"
+			days = 1800
+		}
+		planet_event = {
+			id = magical_discoveries.104
+			days = 1800
+		}
+	}
+}
+
+## 魔晄炉長期使用による星の不安定化3
+planet_event = {
+	id = magical_discoveries.104
+	title = magical_discoveries.104.name
+	desc = magical_discoveries.104.desc
+	picture = GFX_evt_atmospheric_entry
+	show_sound = event_air_raid_siren
+	hide_window = no
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "star_depletion_3_modifier"
+			days = 1800
+		}
+		planet_event = {
+			id = magical_discoveries.105
+			days = 1800
+		}
+	}
+}
+
+## 魔晄炉長期使用による星の不安定化4
+planet_event = {
+	id = magical_discoveries.105
+	title = magical_discoveries.105.name
+	desc = magical_discoveries.105.desc
+	picture = GFX_evt_atmospheric_entry
+	show_sound = event_air_raid_siren
+	hide_window = no
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "star_depletion_4_modifier"
+			days = 1800
+		}
+		planet_event = {
+			id = magical_discoveries.106
+			days = 1800
+		}
+	}
+}
+
+## 魔晄炉長期使用による星の不安定化5
+planet_event = {
+	id = magical_discoveries.106
+	title = magical_discoveries.106.name
+	desc = magical_discoveries.106.desc
+	picture = GFX_evt_atmospheric_entry
+	show_sound = event_air_raid_siren
+	hide_window = no
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+	immediate = {
+		add_modifier = {
+			modifier = "star_depletion_5_modifier"
+			days = 1800
+		}
+		planet_event = {
+			id = magical_discoveries.107
+			days = 1800
+		}
+	}
+}
+
+## 魔晄炉長期使用による星の不安定化6
+planet_event = {
+	id = magical_discoveries.107
+	title = magical_discoveries.107.name
+	desc = magical_discoveries.107.desc
+	picture = GFX_evt_city_ruins
+	show_sound = event_ghost_town
+	hide_window = no
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+	immediate = {
+		destroy_colony = yes
+		if = {
+			limit = {
+				NOR = {
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_habitat
+				}
+			}
+			random_list = {
+				50 = {
+					change_pc = pc_barren
+				}
+				50 = {
+					change_pc = pc_barren_cold
+				}
+			}
+			reset_planet = yes
+			add_modifier = {
+				modifier = "terraforming_candidate"
+				days = -1
+			}
+		}
+		else_if = {
+			limit = {
+				is_planet_class = pc_ringworld_habitable
+			}
+			change_pc = pc_ringworld_habitable_damaged
+			reset_planet = yes
+		}
+		else_if = {
+			limit = {
+				is_planet_class = pc_habitat
+			}
+			remove_planet = yes
+		}
+	}
+}

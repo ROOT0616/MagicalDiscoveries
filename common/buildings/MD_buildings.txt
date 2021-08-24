@@ -243,3 +243,52 @@ building_the_legendary_alchem_house = {
 		}
 	}
 }
+
+# 魔導炉 鉱石300 ミスリル50 オリハルコン50
+building_magical_furnace = {
+	base_buildtime = 360
+	category = manufacturing
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	base_cap_amount = 1
+	prerequisites = {
+		"tech_ultimate_magical_science"
+		"tech_ultimate_alchemy"
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 5
+		}
+		produces = {
+			trigger = {
+				has_planet_flag = building_magical_furnace_fase_0
+			}
+			energy = 5
+		}
+		produces = {
+			trigger = {
+				has_planet_flag = building_magical_furnace_fase_1
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				has_planet_flag = building_magical_furnace_fase_2
+			}
+			energy = 10
+		}
+		cost = {
+			minerals = 300
+			mithrils = 50
+			orichalcones = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+	on_built = {
+		set_planet_flag = building_magical_furnace_fase_0
+	}
+}

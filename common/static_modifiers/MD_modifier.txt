@@ -1,3 +1,48 @@
 heavenesgate_defeated = {
 	pop_happiness = 0.2
 }
+
+## 魔晄炉長期使用による星の不安定化1
+star_depletion_1_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	important = yes			# if present on a planet, show the planet's nameplate
+	pop_environment_tolerance = -0.1
+	planet_jobs_food_produces_mult = -0.1
+}
+
+## 魔晄炉長期使用による星の不安定化2
+star_depletion_2_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	important = yes			# if present on a planet, show the planet's nameplate
+	pop_environment_tolerance = -0.2
+	planet_jobs_food_produces_mult = -0.2
+}
+
+## 魔晄炉長期使用による星の不安定化3
+star_depletion_3_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	important = yes			# if present on a planet, show the planet's nameplate
+	pop_environment_tolerance = -0.3
+	planet_jobs_food_produces_mult = -0.3
+}
+
+## 魔晄炉長期使用による星の不安定化4
+star_depletion_4_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	important = yes			# if present on a planet, show the planet's nameplate
+	pop_environment_tolerance = -0.4
+	planet_jobs_food_produces_mult = -0.4
+}
+
+## 魔晄炉長期使用による星の不安定化5
+star_depletion_5_modifier = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+	important = yes			# if present on a planet, show the planet's nameplate
+	pop_environment_tolerance = -0.5
+	planet_jobs_food_produces_mult = -0.5
+}

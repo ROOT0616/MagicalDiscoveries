@@ -1,0 +1,70 @@
+# 魔導炉のフェーズを進める
+decision_magical_furnace = {
+	owned_planets_only = yes
+	enactment_time = 1800
+	potential = {
+		has_planet_flag = building_magical_furnace_fase_0
+	}
+	allow = {
+		NOT = {
+			has_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+	resources = {
+		category = decisions
+		cost = {
+			mithrils = 500
+			energy = 2000
+		}
+	}
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_planet_flag = building_magical_furnace_fase_0
+					NOT = {
+						has_planet_flag = building_magical_furnace_fase_1
+					}
+				}
+				set_planet_flag = building_magical_furnace_fase_1
+			}
+			else_if = {
+				limit = {
+					has_planet_flag = building_magical_furnace_fase_1
+					NOT = {
+						has_planet_flag = building_magical_furnace_fase_2
+					}
+				}
+				set_planet_flag = building_magical_furnace_fase_2
+			}
+			else_if = {
+				limit = {
+					has_planet_flag = building_magical_furnace_fase_2
+					NOT = {
+						has_planet_flag = building_magical_furnace_fase_3
+					}
+				}
+				set_planet_flag = building_magical_furnace_fase_3
+			}
+		}
+	}
+}
+
+decision_magical_furnace_end = {
+	owned_planets_only = yes
+	enactment_time = 1800
+	potential = {
+		has_planet_flag = building_magical_furnace_fase_0
+	}
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	effect = {
+		hidden_effect = {
+			set_planet_flag = building_magical_furnace_fase_4
+		}
+	}
+}

@@ -132,6 +132,9 @@
  building_the_legendary_alchem_house:0 "賢者の石錬金所"
  building_the_legendary_alchem_house_desc:0 "賢者の石を錬成し、加工可能な状態へと変化させる施設。"
 
+ building_magical_furnace:0 "魔導炉"
+ building_magical_furnace_desc:0 ""
+
 #######################
 #####    仕事    ######
 #######################
@@ -276,6 +279,19 @@
  magical_discoveries_crisis.8.desc:0 ""
  magical_discoveries_crisis.8.a:0 ""
  magical_discoveries_crisis.8.b:0 ""
+
+ magical_discoveries.102.name:0 "魔晄炉長期使用による星の不安定化1"
+ magical_discoveries.102.desc:0 "魔晄炉長期使用による星の不安定化1"
+ magical_discoveries.103.name:0 "魔晄炉長期使用による星の不安定化2"
+ magical_discoveries.103.desc:0 "魔晄炉長期使用による星の不安定化2"
+ magical_discoveries.104.name:0 "魔晄炉長期使用による星の不安定化3"
+ magical_discoveries.104.desc:0 "魔晄炉長期使用による星の不安定化3"
+ magical_discoveries.105.name:0 "魔晄炉長期使用による星の不安定化4"
+ magical_discoveries.105.desc:0 "魔晄炉長期使用による星の不安定化4"
+ magical_discoveries.106.name:0 "魔晄炉長期使用による星の不安定化5"
+ magical_discoveries.106.desc:0 "魔晄炉長期使用による星の不安定化5"
+ magical_discoveries.107.name:0 "魔晄炉長期使用による星の不安定化6"
+ magical_discoveries.107.desc:0 "魔晄炉長期使用による星の不安定化6"
 
  magical_discoveries_crisis.1007.name:0 "天界からの門"
  magical_discoveries_crisis.1007.desc:0 "時空構造の巨大な門が[heavens_system.GetName]星系内に現れた！  原因は定かではないが、 その門は別次元からの一方通行のポータルとして機能する。 そこから奇妙な船の艦隊が溢れ出てきて、 手当たり次第に周囲を攻撃している。 これは大規模な侵攻の始まりらしい！ \n\n我々は門の向こう側にやってきた艦船が発信する、 強力な信号を傍受した。 それは我々に罰を与えるつもりらしい。"
@@ -423,9 +439,21 @@
  edict_mithril_building_materials_campaign:0 "ミスリルによる建材代用"
  edict_mithril_building_materials_campaign_desc:0 ""
 
-
  edict_adamantite_skyscraper_construction_campaign:0 "アダマンタイトによる超高層建設"
  edict_adamantite_skyscraper_construction_campaign_desc:0 ""
+
+ edict_MD_test_campaign:0 "MDクライシスイベントテスト用"
+ edict_MD_test_campaign_desc:0 "マジックディスカバリーのクライシスイベントの初期化"
+
+############################
+#####    デシジョン    ######
+############################
+
+ decision_magical_furnace:0 "魔導炉のフェーズを進める"
+ decision_magical_furnace_desc:0 ""
+
+ decision_magical_furnace_end:0 "魔導炉を廃炉する"
+ decision_magical_furnace_end_desc:0 ""
 
 #######################
 #####    特性    ######
@@ -433,6 +461,12 @@
 
  heavenesgate_defeated:0 ""
  heavenesgate_defeated_desc:0 ""
+
+ star_depletion_1_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_2_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_3_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_4_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_5_modifier:0 "魔導炉の長期使用による星の不安定化"
 
 #######################################
 #####    スペシャルプロジェクト    ######
@@ -453,7 +487,6 @@
 #######################
 #####    〇〇    ######
 #######################
-
 
  MYTHICALDECAY_DESC:0 ""
  angel_large_warship_key:0 ""
