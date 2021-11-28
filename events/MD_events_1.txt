@@ -585,9 +585,13 @@ event = {
 		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = building_magical_furnace_fase_3
-				NAND = {
+				NOR = {
 					has_planet_flag = building_magical_furnace_fase_4
 					has_modifier = star_depletion_1_modifier
+					has_modifier = star_depletion_2_modifier
+					has_modifier = star_depletion_3_modifier
+					has_modifier = star_depletion_4_modifier
+					has_modifier = star_depletion_5_modifier
 				}
 			}
 			planet_event = {
@@ -743,6 +747,9 @@ planet_event = {
 	}
 	immediate = {
 		destroy_colony = yes
+		remove_planet_flag = building_magical_furnace_fase_0
+		remove_planet_flag = building_magical_furnace_fase_1
+		remove_planet_flag = building_magical_furnace_fase_2
 		if = {
 			limit = {
 				NOR = {

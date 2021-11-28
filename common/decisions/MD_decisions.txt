@@ -6,7 +6,8 @@ decision_magical_furnace = {
 		has_planet_flag = building_magical_furnace_fase_0
 	}
 	allow = {
-		NOT = {
+		NOR = {
+			has_planet_flag = building_magical_furnace_fase_3
 			has_planet_flag = building_magical_furnace_fase_4
 		}
 	}

@@ -11,9 +11,7 @@ white_magician = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		specialist_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_specialist_job
 
 	planet_modifier = {
 		planet_amenities_add = 5
@@ -74,12 +72,10 @@ mithril_refiner = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		specialist_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_specialist_job
 
 	resources = {
-		category = planet_metallurgists
+		category = planet_mithril_refiner
 		produces = {
 			mithrils = 3
 		}
@@ -151,12 +147,10 @@ mithril_magic_tool_crafter = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		specialist_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_specialist_job
 
 	resources = {
-		category = planet_metallurgists
+		category = planet_mithril_magic_tool_crafter
 		produces = {
 			consumer_goods = 5
 			unity = 10
@@ -229,12 +223,10 @@ orichalcone_refiner = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		specialist_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_specialist_job
 
 	resources = {
-		category = planet_metallurgists
+		category = planet_orichalcone_refiner
 		produces = {
 			orichalcones = 6
 		}
@@ -307,12 +299,10 @@ orichalcone_crafter = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		specialist_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_specialist_job
 
 	resources = {
-		category = planet_metallurgists
+		category = planet_orichalcone_crafter
 		produces = {
 			influence = 0.5
 		}
@@ -384,12 +374,10 @@ adamantine_refiner = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		specialist_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_specialist_job
 
 	resources = {
-		category = planet_metallurgists
+		category = planet_adamantine_refiner
 		produces = {
 			adamantines = 3
 		}
@@ -462,12 +450,10 @@ the_legendary_alchemist = {
 		is_being_assimilated = no
 	}
 
-	possible = {
-		specialist_job_check_trigger = yes
-	}
+	possible_precalc = can_fill_specialist_job
 
 	resources = {
-		category = planet_metallurgists
+		category = planet_the_legendary_alchemist
 		produces = {
       philosophers_stone = 1
 		}

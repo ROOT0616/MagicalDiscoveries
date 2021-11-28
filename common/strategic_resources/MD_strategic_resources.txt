@@ -13,6 +13,7 @@ mithrils = {
 	prerequisites = {
 		"tech_mithril_refinery"
 	}
+	deficit_modifier = mithrils_deficit
 	visibility_prerequisite = {
 		always = yes
 	}
@@ -33,6 +34,7 @@ orichalcones = {
 	prerequisites = {
 		"tech_orichalcone_refinery"
 	}
+	deficit_modifier = orichalcones_deficit
 	visibility_prerequisite = {
 		always = yes
 	}
@@ -53,6 +55,7 @@ adamantines = {
 	prerequisites = {
 		"tech_adamantine_refinery"
 	}
+	deficit_modifier = adamantines_deficit
 	visibility_prerequisite = {
 		always = yes
 	}
@@ -73,6 +76,7 @@ philosophers_stone = {
 	prerequisites = {
 		"tech_philosophers_stone"
 	}
+	deficit_modifier = philosophers_deficit
 	visibility_prerequisite = {
 		always = yes
 	}

@@ -272,18 +272,19 @@ building_magical_furnace = {
 		produces = {
 			energy = 25
 			minerals = 25
-		}
-		produces = {
-			trigger = {
-				has_planet_flag = building_magical_furnace_fase_0
-			}
-			energy = 10
-			minerals = 5
-			alloys = 5
+			alloys = 10
 		}
 		produces = {
 			trigger = {
 				has_planet_flag = building_magical_furnace_fase_1
+			}
+			energy = 10
+			minerals = 10
+			alloys = 5
+		}
+		produces = {
+			trigger = {
+				has_planet_flag = building_magical_furnace_fase_2
 			}
 			energy = 15
 			minerals = 5
@@ -291,18 +292,15 @@ building_magical_furnace = {
 		}
 		produces = {
 			trigger = {
-				has_planet_flag = building_magical_furnace_fase_2
+				has_planet_flag = building_magical_furnace_fase_3
 			}
 			energy = 20
-			minerals = 5
-			alloys = 5
+			minerals = 20
+			alloys = 20
 		}
 		cost = {
 			minerals = 300
 			minerals = 300
-		}
-		upkeep = {
-			energy = 2
 		}
 	}
 	on_built = {

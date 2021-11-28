@@ -1,4 +1,4 @@
-# 神話崩壊砲 神をも殺す兵器
+# 神の弱点研究
 special_project = {
 	key = "GOD_SKIN_PROJECT"
 	cost = {

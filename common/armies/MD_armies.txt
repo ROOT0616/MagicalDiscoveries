@@ -9,7 +9,7 @@ black_magic_army = {
 	collateral_damage = 0.75
 	war_exhaustion = 1
 	time = 60
-	icon_frame = 2
+	icon = GFX_army_type_assault
 	prerequisites = {
 		"tech_black_magic_army"
 	}
@@ -60,7 +60,7 @@ elite_black_magic_army = {
 	collateral_damage = 0.4
 	war_exhaustion = 1
 	time = 180
-	icon_frame = 2
+	icon = GFX_army_type_assault
 	prerequisites = {
 		"tech_elite_black_magic_army"
 	}
@@ -109,7 +109,7 @@ death_squad = {
 	collateral_damage = 2
 	war_exhaustion = 1
 	time = 30
-	icon_frame = 2
+	icon = GFX_army_type_assault
 	prerequisites = {
 		"tech_necromancy"
 	}

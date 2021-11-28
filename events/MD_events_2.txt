@@ -299,7 +299,7 @@ country_event = {
 	}
 }
 
-# 神をどうやって効率的に殺そうか
+# 天界の肌の研究
 country_event = {
 	id = magical_discoveries_crisis.6
 	title = magical_discoveries_crisis.6.name
@@ -334,10 +334,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = magical_discoveries_crisis.7.a
-		add_research_option = tech_mythical_decay
-		add_tech_progress = {
+		give_technology = {
 			tech = tech_mythical_decay
-			progress = 0.1
 		}
 	}
 }
@@ -355,6 +353,10 @@ country_event = {
 		exists = event_target:heavenesgate
 		from = {
 			is_same_value = event_target:heavenesgate
+		}
+		NOR = {
+			has_technology = tech_gods_skin
+			has_special_project = "GOD_SKIN_PROJECT"
 		}
 	}
 	option = {

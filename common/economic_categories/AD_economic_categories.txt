@@ -1,0 +1,83 @@
+# ミスリル錬金術師
+planet_mithril_refiner = {
+	icon = "job_mithril_refiner"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+# ミスリル魔道具師
+planet_mithril_magic_tool_crafter = {
+	icon = "job_mithril_magic_tool_crafter"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+# オリハルコン錬金術師
+planet_orichalcone_refiner = {
+	icon = "job_orichalcone_refiner"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+# オリハルコン工芸士
+planet_orichalcone_crafter = {
+	icon = "job_orichalcone_crafter"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+# アダマンタイト錬金術師
+planet_adamantine_refiner = {
+	icon = "job_adamantine_refiner"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+# 伝説の錬金術師
+planet_the_legendary_alchemist = {
+	icon = "job_the_legendary_alchemist"
+	parent = planet_jobs_productive
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
