@@ -534,6 +534,7 @@ country_event = {
 		years = 15
 	}
 	trigger = {
+		years_passed = 100
 		is_regular_empire = yes
 		has_country_flag = BuyGrimoireFlag03
 		has_country_flag = BuyAlchemyFlag03

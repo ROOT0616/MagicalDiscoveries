@@ -256,8 +256,7 @@ country_event = {
 			}
 			country_event = {
 				id = magical_discoveries_crisis.1000
-				# days = 10				#50年後
-				days = 18000				#50年後
+				days = 9000				#25年後
 			}
 		}
 	}
