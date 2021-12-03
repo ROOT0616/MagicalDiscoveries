@@ -1,47 +1,25 @@
-@resolution_weight_hated = 3
-@resolution_weight_disliked = 4
-@resolution_weight_unpopular = 5
-@resolution_weight_normal = 6
-@resolution_weight_popular = 6.5
-@resolution_weight_loved = 7
-
-@resolution_cost_t1 = 100
-@resolution_cost_t2 = 150
-@resolution_cost_t3 = 200
-@resolution_cost_t4 = 250
-@resolution_cost_t5 = 300
-@resolution_cost_denounce = 25
-
-@resolution_flag_timer = 360
-
 resolution_galactic_focus_crisis_heavenly = {
 	icon = "GFX_resolution_emergency_measure"
 
 	resources = {
 		category = resolutions
 		cost = {
-			influence = @resolution_cost_t1
+			influence = 100
 		}
 	}
 	target = no
-
-	modifier = {}
 
 	effect = {
 		custom_tooltip = resolution_galactic_focus_crisis_heavenly_effect_success
 
 		hidden_effect = {
+			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_crisis_heavenly
 			set_global_flag = galactic_community_crisis_fighting
 
-			remove_global_flag = galactic_focus_crisis_prethoryn
-			remove_global_flag = galactic_focus_crisis_contingency
-			remove_global_flag = galactic_focus_crisis_greatkhan
-			remove_global_flag = galactic_focus_crisis_nanites
-
 			set_global_flag = galactic_community_resolution_passed
 
-			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = 360 }
 			add_modifier = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
@@ -51,7 +29,7 @@ resolution_galactic_focus_crisis_heavenly = {
 
 	fail_effects = {
 		hidden_effect = {
-			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = 360 }
 			add_modifier = {
 				modifier = resolution_failed_diplomatic_weight
 				days = 2200
@@ -67,21 +45,18 @@ resolution_galactic_focus_crisis_heavenly = {
 		}
 	}
 
-	allow = {
-	}
-
 	active = { # Resolution only in effect while this trigger is met
 		NOT = { has_global_flag = heavenly_invasion_defeated }
 	}
 
 	ai_weight = {
-		base = @resolution_weight_normal
+		base = 6
 
 		modifier = {
-			factor = 2
+			factor = 4
 
 			any_neighbor_country = {
-					is_country_type = heavenly_realm
+				is_country_type = heavenly_realm
 			}
 		}
 
@@ -90,7 +65,7 @@ resolution_galactic_focus_crisis_heavenly = {
 
 			NOT = {
 				any_neighbor_country = {
-						is_country_type = heavenly_realm
+					is_country_type = heavenly_realm
 				}
 			}
 		}
@@ -140,7 +115,7 @@ resolution_galactic_focus_crisis_heavenly = {
 
 			NOT = {
 				any_neighbor_country = {
-						is_country_type = heavenly_realm
+					is_country_type = heavenly_realm
 				}
 			}
 		}
