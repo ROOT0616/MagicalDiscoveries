@@ -456,6 +456,14 @@
  decision_magical_furnace_end_desc:0 ""
 
 #######################
+#####    連邦    ######
+#######################
+
+ resolution_galactic_focus_crisis_heavenly:0 "関心事項：神々"
+ resolution_galactic_focus_crisis_heavenly_desc:0 "神々は銀河のあらゆる生物にとっての脅威だ。 協力して奴らを食い止めなければ、 我々は食い尽くされてしまうだろう。 我々はこの危機を銀河的関心事項として対処すべきだ。 "
+ resolution_galactic_focus_crisis_heavenly_effect_success:0 "[global_event_country.GetGalCommunityOrGalImperium]の全ての構成国が相互に国境を開放し、 戦争のために軍を動員する。"
+
+#######################
 #####    特性    ######
 #######################
 
