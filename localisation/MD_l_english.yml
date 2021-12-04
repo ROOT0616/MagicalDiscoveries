@@ -66,27 +66,48 @@
  
  tech_mithril_refinery:0 "ミスリル"
  tech_mithril_refinery_desc:0 "白銀色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
- 
+
  tech_mithril_armor:0 "ミスリル装甲"
  tech_mithril_armor_desc:0 "美しいだけではなく実用性にも優れた装甲。"
- 
+
+ tech_cheap_type_mithril_armor:0 "廉価型ミスリル装甲"
+ tech_cheap_type_mithril_armor_desc:0 "美しいだけではなく実用性にも優れた装甲。"
+
+ tech_specialized_type_mithril_armor:0 "特化型ミスリル装甲"
+ tech_specialized_type_mithril_armor_desc:0 "美しいだけではなく実用性にも優れた装甲。"
+
  tech_orichalcone_refinery:0 "オリハルコン"
  tech_orichalcone_refinery_desc:0 "赤金色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
- 
+
  tech_orichalcone_armor:0 "オリハルコン装甲"
  tech_orichalcone_armor_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
 
+ tech_cheap_type_orichalcone_armor:0 "廉価型オリハルコン装甲"
+ tech_cheap_type_orichalcone_armor_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
+
+ tech_specialized_type_orichalcone_armor:0 "特化型オリハルコン装甲"
+ tech_specialized_type_orichalcone_armor_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
+
  tech_adamantine_refinery:0 "アダマンタイト"
  tech_adamantine_refinery_desc:0 "非常に硬く、加工すら難しいこの金属は様々な重要部品として活用される。特に軍需品においてこの金属は革命的な存在となるだろう。"
- 
+
  tech_adamantine_armor:0 "アダマンタイト装甲"
  tech_adamantine_armor_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
+
+ tech_cheap_type_adamantine_armor:0 "廉価型アダマンタイト装甲"
+ tech_cheap_type_adamantine_armor_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
+
+ tech_specialized_type_adamantine_armor:0 "特化型アダマンタイト装甲"
+ tech_specialized_type_adamantine_armor_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
 
  tech_mythical_decay:0 "神話崩壊砲"
  tech_mythical_decay_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
 
  tech_gods_skin:0 "天界の肌"
  tech_gods_skin_desc:0 "我々の研究者の一部は天界人と呼ぶ存在の表層部分はシールドや装甲にも似たような性質を有している。これらを研究することにより美しく、実用性の高い艦船等を作ることができるだろう。"
+
+ tech_gods_shield:0 "本格 神の盾"
+ tech_gods_shield_desc:0 ""
 
 #######################
 #####    資源    ######
@@ -103,7 +124,7 @@
 
  philosophers_stone:0 "賢者の石"
  philosophers_stone_desc:0 "賢者の石-既知の化学組成を超えた物質-をかつての物理学者は定義した。\n通常存在しえない物質-安定的で、物質の酸化を抑え、金属の性質を根本から変化させるもの-を我々は作ることに成功したのである。"
- 
+
 #######################
 #####    建物    ######
 #######################
@@ -376,17 +397,65 @@
  MEDIUM_MITHRIL_ARMOR:0 "中型ミスリル装甲"
  LARGE_MITHRIL_ARMOR:0 "大型ミスリル装甲"
 
+ CHEAP_TYPE_MITHRIL_ARMOR:0 "廉価型ミスリル装甲"
+ CHEAP_TYPE_MITHRIL_ARMOR_DESC:0 "美しいだけではなく実用性にも優れた装甲。"
+ SMALL_CHEAP_TYPE_MITHRIL_ARMOR:0 "小型廉価型ミスリル装甲"
+ MEDIUM_CHEAP_TYPE_MITHRIL_ARMOR:0 "中型廉価型ミスリル装甲"
+ LARGE_CHEAP_TYPE_MITHRIL_ARMOR:0 "大型廉価型ミスリル装甲"
+
+ SPPECIALIZED_TYPE_MITHRIL_ARMOR:0 "特化型ミスリル装甲"
+ SPPECIALIZED_TYPE_MITHRIL_ARMOR_DESC:0 "美しいだけではなく実用性にも優れた装甲。"
+ SMALL_SPPECIALIZED_TYPE_MITHRIL_ARMOR:0 "小型特化型ミスリル装甲"
+ MEDIUM_SPPECIALIZED_TYPE_MITHRIL_ARMOR:0 "中型特化型ミスリル装甲"
+ LARGE_SPPECIALIZED_TYPE_MITHRIL_ARMOR:0 "大型特化型ミスリル装甲"
+
  ORICHALCONE_ARMOR:0 "オリハルコン装甲"
  ORICHALCONE_ARMOR_DESC:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
  SMALL_ORICHALCONE_ARMOR:0 "小型オリハルコン装甲"
  MEDIUM_ORICHALCONE_ARMOR:0 "中型オリハルコン装甲"
  LARGE_ORICHALCONE_ARMOR:0 "大型オリハルコン装甲"
 
+ CHEAP_TYPE_ORICHALCONE_ARMOR:0 "廉価型オリハルコン装甲"
+ CHEAP_TYPE_ORICHALCONE_ARMOR_DESC:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
+ SMALL_CHEAP_TYPE_ORICHALCONE_ARMOR:0 "小型廉価型オリハルコン装甲"
+ MEDIUM_CHEAP_TYPE_ORICHALCONE_ARMOR:0 "中型廉価型オリハルコン装甲"
+ LARGE_CHEAP_TYPE_ORICHALCONE_ARMOR:0 "大型廉価型オリハルコン装甲"
+
+ SPPECIALIZED_TYPE_ORICHALCONE_ARMOR:0 "特化型オリハルコン装甲"
+ SPPECIALIZED_TYPE_ORICHALCONE_ARMOR_DESC:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
+ SMALL_SPPECIALIZED_TYPE_ORICHALCONE_ARMOR:0 "小型特化型オリハルコン装甲"
+ MEDIUM_SPPECIALIZED_TYPE_ORICHALCONE_ARMOR:0 "中型特化型オリハルコン装甲"
+ LARGE_SPPECIALIZED_TYPE_ORICHALCONE_ARMOR:0 "大型特化型オリハルコン装甲"
+
  ADAMANTINE_ARMOR:0 "アダマンタイト装甲"
  ADAMANTINE_ARMOR_DESC:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
  SMALL_ADAMANTINE_ARMOR:0 "小型アダマンタイト装甲"
  MEDIUM_ADAMANTINE_ARMOR:0 "中型アダマンタイト装甲"
  LARGE_ADAMANTINE_ARMOR:0 "大型アダマンタイト装甲"
+
+ CHEAP_TYPE_ADAMANTINE_ARMOR:0 "廉価型アダマンタイト装甲"
+ CHEAP_TYPE_ADAMANTINE_ARMOR_DESC:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
+ SMALL_CHEAP_TYPE_ADAMANTINE_ARMOR:0 "小型廉価型アダマンタイト装甲"
+ MEDIUM_CHEAP_TYPE_ADAMANTINE_ARMOR:0 "中型廉価型アダマンタイト装甲"
+ LARGE_CHEAP_TYPE_ADAMANTINE_ARMOR:0 "大型廉価型アダマンタイト装甲"
+
+ SPPECIALIZED_TYPE_ADAMANTINE_ARMOR:0 "特化型アダマンタイト装甲"
+ SPPECIALIZED_TYPE_ADAMANTINE_ARMOR_DESC:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
+ SMALL_SPPECIALIZED_TYPE_ADAMANTINE_ARMOR:0 "小型特化型アダマンタイト装甲"
+ MEDIUM_SPPECIALIZED_TYPE_ADAMANTINE_ARMOR:0 "中型特化型アダマンタイト装甲"
+ LARGE_SPPECIALIZED_TYPE_ADAMANTINE_ARMOR:0 "大型特化型アダマンタイト装甲"
+
+ FAKE_GODS_SHIELD:0 "擬似 神の盾"
+ FAKE_GODS_SHIELD_DESC:0 "擬似 神の盾"
+ SMALL_FAKE_GODS_SHIELD:0 "擬似 神の盾"
+ MEDIUM_FAKE_GODS_SHIELD:0 "擬似 神の盾"
+ LARGE_FAKE_GODS_SHIELD:0 "擬似 神の盾"
+
+ SIN_GODS_SHIELD:0 "本格 神の盾"
+ SIN_GODS_SHIELD_DESC:0 "本格 神の盾"
+ SMALL_SIN_GODS_SHIELD:0 "本格 神の盾"
+ MEDIUM_SIN_GODS_SHIELD:0 "本格 神の盾"
+ LARGE_SIN_GODS_SHIELD:0 "本格 神の盾"
 
  GODS_SHIELD:0 "八咫鏡"
  GODS_SHIELD_DESC:0 "八咫鏡"
@@ -467,14 +536,24 @@
 #####    特性    ######
 #######################
 
- heavenesgate_defeated:0 ""
+ heavenesgate_defeated:0 "神罰を退けた"
  heavenesgate_defeated_desc:0 ""
 
  star_depletion_1_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_1_modifier_desc:0 ""
  star_depletion_2_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_2_modifier_desc:0 ""
  star_depletion_3_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_3_modifier_desc:0 ""
  star_depletion_4_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_4_modifier_desc:0 ""
  star_depletion_5_modifier:0 "魔導炉の長期使用による星の不安定化"
+ star_depletion_5_modifier_desc:0 ""
+
+ mithrils_deficit:0 "ミスリスの不足"
+ orichalcones_deficit:0 "オリハルコンの不足"
+ adamantines_deficit:0 "アダマンタイトの不足"
+ philosophers_deficit:0 "賢者の石の不足"
 
 #######################################
 #####    スペシャルプロジェクト    ######

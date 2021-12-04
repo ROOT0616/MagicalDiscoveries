@@ -79,6 +79,168 @@ utility_component_template = {
 	}
 }
 
+# 廉価型ミスリル装甲	 	Tire3 160 400 920
+# cost ミスリル 17.6 35.2 70.4 合金 8.8 17.6 35.2
+# 装甲HP +96 +240 +552	装甲回復/日 +0.6 +0.6 +0.6
+utility_component_template = {
+	key = "SMALL_CHEAP_TYPE_MITHRIL_ARMOR"
+	size = small
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 160
+		ship_armor_regen_add_static = 1
+	}
+
+	prerequisites = { "tech_cheap_type_mithril_armor" }
+	component_set = "CHEAP_TYPE_MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 11
+			mithrils = 22
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_CHEAP_TYPE_MITHRIL_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 400
+		ship_armor_regen_add_static = 1
+	}
+	
+	prerequisites = { "tech_cheap_type_mithril_armor" }
+	component_set = "CHEAP_TYPE_MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 22
+			mithrils = 44
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_CHEAP_TYPE_MITHRIL_ARMOR"
+	size = large
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 920
+		ship_armor_regen_add_static = 1
+	}
+	
+	prerequisites = { "tech_cheap_type_mithril_armor" }
+	component_set = "CHEAP_TYPE_MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+			mithrils = 88
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# 特化型ミスリル装甲	 	Tire3 240 600 1380
+# cost ミスリル 26.4 52.8 105.6 合金 13.2 26.4 52.8
+# 装甲HP +240 +600 +1380	装甲回復/日 +1.5 +1.5 +1.5
+utility_component_template = {
+	key = "SMALL_SPPECIALIZED_TYPE_MITHRIL_ARMOR"
+	size = small
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 160
+		ship_armor_regen_add_static = 1
+	}
+
+	prerequisites = { "tech_specialized_type_mithril_armor" }
+	component_set = "SPPECIALIZED_TYPE_MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 11
+			mithrils = 22
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SPPECIALIZED_TYPE_MITHRIL_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 400
+		ship_armor_regen_add_static = 1
+	}
+	
+	prerequisites = { "tech_specialized_type_mithril_armor" }
+	component_set = "SPPECIALIZED_TYPE_MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 22
+			mithrils = 44
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SPPECIALIZED_TYPE_MITHRIL_ARMOR"
+	size = large
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 920
+		ship_armor_regen_add_static = 1
+	}
+	
+	prerequisites = { "tech_specialized_type_mithril_armor" }
+	component_set = "SPPECIALIZED_TYPE_MITHRIL_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+			mithrils = 88
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
 # オリハルコン装甲*2   Tire4	280  700  1700
 # cost  オリハルコン 15 30 60  合金  22  44  88
 # 装甲HP +280 +700 +1500	装甲回復/日 +1.5 +1.5 +1.5
@@ -147,6 +309,168 @@ utility_component_template = {
 	
 	prerequisites = { "tech_orichalcone_armor" }
 	component_set = "ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 88
+			orichalcones = 60
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# 廉価型オリハルコン装甲*2   Tire4	168  420  1020
+# cost  オリハルコン 12 24 48  合金  17.6  35.2  70.4
+# 装甲HP +280 +700 +1500	装甲回復/日 +0.9 +0.9 +0.9
+utility_component_template = {
+	key = "SMALL_CHEAP_TYPE_ORICHALCONE_ARMOR"
+	size = small
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 280
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_cheap_type_orichalcone_armor" }
+	component_set = "CHEAP_TYPE_ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 22
+			orichalcones = 15
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_CHEAP_TYPE_ORICHALCONE_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 700
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_cheap_type_orichalcone_armor" }
+	component_set = "CHEAP_TYPE_ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+			orichalcones = 30
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_CHEAP_TYPE_ORICHALCONE_ARMOR"
+	size = large
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 1700
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_cheap_type_orichalcone_armor" }
+	component_set = "CHEAP_TYPE_ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 88
+			orichalcones = 60
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# 特化型オリハルコン装甲*2   Tire4	280  700  1700
+# cost  オリハルコン 18 36 72  合金  26.4  52.8  105.6
+# 装甲HP +420 +1050 +2550	装甲回復/日 +2.25 +2.25 +2.25
+utility_component_template = {
+	key = "SMALL_SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
+	size = small
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 280
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_specialized_type_orichalcone_armor" }
+	component_set = "SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 22
+			orichalcones = 15
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 700
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_specialized_type_orichalcone_armor" }
+	component_set = "SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+			orichalcones = 30
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
+	size = large
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 1700
+		ship_armor_regen_add_static = 1.5
+	}
+	
+	prerequisites = { "tech_specialized_type_orichalcone_armor" }
+	component_set = "SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
 	resources = {
 		category = ship_components
 		cost = {
@@ -241,6 +565,328 @@ utility_component_template = {
 	}
 }
 
+# 廉価型アダマンタイト装甲*2 Tire5	240  600  1320
+# cost  アダマンタイト 8.8 17.6 35.2  合金  17.6  35.2  70.4
+# 装甲HP +400 +900 +2000
+utility_component_template = {
+	key = "SMALL_CHEAP_TYPE_ADAMANTINE_ARMOR"
+	size = small
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 400
+		ship_armor_regen_add_static = 2.5
+	}
+
+	prerequisites = { "tech_cheap_type_adamantine_armor" }
+	component_set = "CHEAP_TYPE_ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 22
+			adamantines = 11
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_CHEAP_TYPE_ADAMANTINE_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 1000
+		ship_armor_regen_add_static = 2.5
+	}
+	
+	prerequisites = { "tech_cheap_type_adamantine_armor" }
+	component_set = "CHEAP_TYPE_ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+			adamantines = 22
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_CHEAP_TYPE_ADAMANTINE_ARMOR"
+	size = large
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 2200
+		ship_armor_regen_add_static = 2.5
+	}
+	
+	prerequisites = { "tech_cheap_type_adamantine_armor" }
+	component_set = "CHEAP_TYPE_ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 88
+			adamantines = 44
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# 特化型アダマンタイト装甲*2 Tire5	600  1500  3300
+# cost  アダマンタイト 13.2 26.4 52.8  合金  26.4  52.8  105.6
+# 装甲HP +400 +900 +2000
+utility_component_template = {
+	key = "SMALL_SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
+	size = small
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 400
+		ship_armor_regen_add_static = 2.5
+	}
+
+	prerequisites = { "tech_specialized_type_adamantine_armor" }
+	component_set = "SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 22
+			adamantines = 11
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			alloys = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
+	size = medium
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 1000
+		ship_armor_regen_add_static = 2.5
+	}
+	
+	prerequisites = { "tech_specialized_type_adamantine_armor" }
+	component_set = "SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 44
+			adamantines = 22
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			alloys = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
+	size = large
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+	power = 0
+	modifier = {
+		ship_armor_add = 2200
+		ship_armor_regen_add_static = 2.5
+	}
+	
+	prerequisites = { "tech_specialized_type_adamantine_armor" }
+	component_set = "SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 88
+			adamantines = 44
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			alloys = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# 擬似神の盾*2 Tire5	400 800 2400
+# cost	アダマンタイト	4	8	12 賢者の石	0.1	0.2	0.3
+# シールドHP 400 800 2400	シールド回復/日 +10 +25 +60
+utility_component_template = {
+	key = "SMALL_FAKE_GODS_SHIELD"
+	size = small
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	power = 40
+	modifier = {
+		ship_shield_add = 400
+		ship_shield_regen_add_static = 10
+	}
+	upgrades_to =	"SMALL_SIN_GODS_SHIELD"
+	prerequisites = { "tech_gods_skin" }
+	component_set = "FAKE_GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 4
+			philosophers_stone = 0.1
+		}		
+		upkeep = {
+			philosophers_stone = @s_t6_upkeep_energy
+			adamantines = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_FAKE_GODS_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	power = 80
+	modifier = {
+		ship_shield_add = 800
+		ship_shield_regen_add_static = 25
+	}
+	upgrades_to =	"MEDIUM_SIN_GODS_SHIELD"
+	prerequisites = { "tech_gods_skin" }
+	component_set = "FAKE_GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 8
+			philosophers_stone = 0.2
+		}		
+		upkeep = {
+			philosophers_stone = @m_t6_upkeep_energy
+			adamantines = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_FAKE_GODS_SHIELD"
+	size = large
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	power = 160
+	modifier = {
+		ship_shield_add = 2400
+		ship_shield_regen_add_static = 60
+	}
+	upgrades_to =	"LARGE_SIN_GODS_SHIELD"
+	prerequisites = { "tech_gods_skin" }
+	component_set = "FAKE_GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 12
+			philosophers_stone = 0.3
+		}		
+		upkeep = {
+			philosophers_stone = @l_t6_upkeep_energy
+			adamantines = @l_t6_upkeep_alloys
+		}
+	}
+}
+
+# 本格神の盾*2 Tire5	800 2000 4800
+# cost	アダマンタイト	8	16	24 賢者の石	0.2	0.4	0.6
+# シールドHP 800 2000 4800	シールド回復/日 +20 +50 +120
+utility_component_template = {
+	key = "SMALL_SIN_GODS_SHIELD"
+	size = small
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	power = 80
+	modifier = {
+		ship_shield_add = 800
+		ship_shield_regen_add_static = 20
+	}
+
+	prerequisites = { "tech_gods_shield" }
+	component_set = "SIN_GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 8
+			philosophers_stone = 0.2
+		}		
+		upkeep = {
+			philosophers_stone = @s_t6_upkeep_energy
+			adamantines = @s_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "MEDIUM_SIN_GODS_SHIELD"
+	size = medium
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	power = 160
+	modifier = {
+		ship_shield_add = 2000
+		ship_shield_regen_add_static = 50
+	}
+	prerequisites = { "tech_gods_shield" }
+	component_set = "SIN_GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 16
+			philosophers_stone = 0.4
+		}		
+		upkeep = {
+			philosophers_stone = @m_t6_upkeep_energy
+			adamantines = @m_t6_upkeep_alloys
+		}
+	}
+}
+
+utility_component_template = {
+	key = "LARGE_SIN_GODS_SHIELD"
+	size = large
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+	power = 320
+	modifier = {
+		ship_shield_add = 4800
+		ship_shield_regen_add_static = 120
+	}
+	
+	prerequisites = { "tech_gods_shield" }
+	component_set = "SIN_GODS_SHIELD"
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = 24
+			philosophers_stone = 0.6
+		}		
+		upkeep = {
+			philosophers_stone = @l_t6_upkeep_energy
+			adamantines = @l_t6_upkeep_alloys
+		}
+	}
+}
 
 # 神の盾*2 Tire5	600 1500 2400
 # cost	アダマンタイト	30	60	90 賢者の石	1	2	3
@@ -251,7 +897,7 @@ utility_component_template = {
 	icon = "GFX_ship_part_gods_shield"
 	icon_frame = 1
 	hidden = yes
-	power = 150
+	power = 0
 	modifier = {
 		ship_shield_add = 600
 		ship_shield_regen_add_static = 60
@@ -264,10 +910,6 @@ utility_component_template = {
 			adamantines = 30
 			philosophers_stone = 1
 		}		
-		upkeep = {
-			energy = @s_t6_upkeep_energy
-			adamantines = @s_t6_upkeep_alloys
-		}
 	}
 }
 
@@ -277,7 +919,7 @@ utility_component_template = {
 	icon = "GFX_ship_part_gods_shield"
 	icon_frame = 1
 	hidden = yes
-	power = 200
+	power = 0
 	modifier = {
 		ship_shield_add = 1500
 		ship_shield_regen_add_static = 150
@@ -290,10 +932,6 @@ utility_component_template = {
 			adamantines = 60
 			philosophers_stone = 2
 		}		
-		upkeep = {
-			energy = @m_t6_upkeep_energy
-			alloys = @m_t6_upkeep_alloys
-		}
 	}
 }
 
@@ -303,7 +941,7 @@ utility_component_template = {
 	icon = "GFX_ship_part_gods_shield"
 	icon_frame = 1
 	hidden = yes
-	power = 350
+	power = 0
 	modifier = {
 		ship_shield_add = 2000
 		ship_shield_regen_add_static = 200
@@ -316,10 +954,6 @@ utility_component_template = {
 			adamantines = 90
 			philosophers_stone = 3
 		}		
-		upkeep = {
-			energy = @l_t6_upkeep_energy
-			alloys = @l_t6_upkeep_alloys
-		}
 	}
 }
 
