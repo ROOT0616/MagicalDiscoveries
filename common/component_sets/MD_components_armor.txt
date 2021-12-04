@@ -8,9 +8,41 @@ component_set = {
 	icon_frame = 1
 }
 
+# 廉価型ミスリル装甲	 	Tire3 160 400 920
+component_set = {
+	key = "CHEAP_TYPE_MITHRIL_ARMOR"
+
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+}
+
+# 特化型ミスリル装甲	 	Tire3 160 400 920
+component_set = {
+	key = "SPPECIALIZED_TYPE_MITHRIL_ARMOR"
+
+	icon = "GFX_ship_part_mithril_armor"
+	icon_frame = 1
+}
+
 # オリハルコン装甲*2  Tire4	245 613 1410
 component_set = {
 	key = "ORICHALCONE_ARMOR"
+
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+}
+
+# 廉価型オリハルコン装甲*2  Tire4	245 613 1410
+component_set = {
+	key = "CHEAP_TYPE_ORICHALCONE_ARMOR"
+
+	icon = "GFX_ship_part_orichalcone_armor"
+	icon_frame = 1
+}
+
+# 特化型オリハルコン装甲*2  Tire4	245 613 1410
+component_set = {
+	key = "SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
 
 	icon = "GFX_ship_part_orichalcone_armor"
 	icon_frame = 1
@@ -21,6 +53,38 @@ component_set = {
 	key = "ADAMANTINE_ARMOR"
 
 	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+}
+
+# 廉価型アダマンタイト装甲*2 Tire5	300 750 1725
+component_set = {
+	key = "CHEAP_TYPE_ADAMANTINE_ARMOR"
+
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+}
+
+# 特化型アダマンタイト装甲*2 Tire5	300 750 1725
+component_set = {
+	key = "SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
+
+	icon = "GFX_ship_part_adamantine_armor"
+	icon_frame = 1
+}
+
+#擬似神の盾
+component_set = {
+	key = "FAKE_GODS_SHIELD"
+
+	icon = "GFX_ship_part_gods_shield"
+	icon_frame = 1
+}
+
+#本格神の盾
+component_set = {
+	key = "SIN_GODS_SHIELD"
+
+	icon = "GFX_ship_part_gods_shield"
 	icon_frame = 1
 }
 
