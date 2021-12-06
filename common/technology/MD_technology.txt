@@ -1882,7 +1882,7 @@ tech_gods_shield = {
 	prerequisites = {
 		"tech_gods_skin"
 	}
-	weight = 20
+	weight = @tier5weight3
 	is_rare = yes
 	modifier = {
 		ship_armor_mult = 0.1
@@ -1901,7 +1901,7 @@ tech_gods_shield = {
 tech_mythical_decay = {
 	cost = @tier5cost1
 	area = engineering
-	tier = 4
+	tier = 5
 	category = {
 		propulsion
 	}
@@ -1916,5 +1916,68 @@ tech_mythical_decay = {
 	}
 	weight_modifier = {
 		factor = 0
+	}
+}
+
+#	試作型ロンギヌスの槍    Tire5	
+tech_longinus_spear_1 = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = {
+		propulsion
+	}
+	prerequisites = {
+		"tech_gods_skin"
+	}
+	weight = @tier5weight1
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
+	}
+}
+
+#	ロンギヌスの槍    Tire5	
+tech_longinus_spear_2 = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = {
+		propulsion
+	}
+	prerequisites = {
+		"tech_longinus_spear_1"
+	}
+	weight = @tier5weight2
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
+	}
+}
+
+#	零式ロンギヌスの槍    Tire5	
+tech_longinus_spear_3 = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = {
+		propulsion
+	}
+	prerequisites = {
+		"tech_longinus_spear_2"
+	}
+	weight = @tier5weight3
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
 	}
 }
