@@ -103,6 +103,12 @@
  tech_mythical_decay:0 "神話崩壊砲"
  tech_mythical_decay_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
 
+ tech_mythical_decay_2:0 "神話崩壊砲"
+ tech_mythical_decay_2_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
+
+ tech_mythical_decay_3:0 "神話崩壊砲"
+ tech_mythical_decay_3_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
+
  tech_gods_skin:0 "天界の肌"
  tech_gods_skin_desc:0 "我々の研究者の一部は天界人と呼ぶ存在の表層部分はシールドや装甲にも似たような性質を有している。これらを研究することにより美しく、実用性の高い艦船等を作ることができるだろう。"
 
@@ -473,12 +479,30 @@
 #####    武器    ######
 #######################
 
- MYTHICALDECAY:0 "神話崩壊砲"
- MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
+ MYTHICALDECAY:0 "試作神話崩壊砲"
+ MYTHICALDECAY_DESC:0 ""
+ MYTHICAL_DECRAY_WEAPON:0 "試作神話崩壊砲"
  MYTHICAL_DECRAY_WEAPON_DESC:0 "神の知識を得て作りし神をも殺す兵器"
- SMALL_MYTHICAL_DECRAY_WEAPON:0 "小型神話崩壊砲"
- MEDIUM_MYTHICAL_DECRAY_WEAPON:0 "中型神話崩壊砲"
- LARGE_MYTHICAL_DECRAY_WEAPON:0 "大型神話崩壊砲"
+ SMALL_MYTHICAL_DECRAY_WEAPON:0 "小型試作神話崩壊砲"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON:0 "中型試作神話崩壊砲"
+ LARGE_MYTHICAL_DECRAY_WEAPON:0 "大型試作神話崩壊砲"
+
+ MYTHICALDECAY_2:0 "神話崩壊砲"
+ MYTHICALDECAY_2_DESC:0 ""
+
+ MYTHICAL_DECRAY_WEAPON_2:0 "神話崩壊砲"
+ MYTHICAL_DECRAY_WEAPON_2_DESC:0 "神の知識を得て作りし神をも殺す兵器"
+ SMALL_MYTHICAL_DECRAY_WEAPON_2:0 "小型神話崩壊砲"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON_2:0 "中型神話崩壊砲"
+ LARGE_MYTHICAL_DECRAY_WEAPON_2:0 "大型神話崩壊砲"
+
+ MYTHICALDECAY_3:0 "零式神話崩壊砲"
+ MYTHICALDECAY_3_DESC:0 ""
+ MYTHICAL_DECRAY_WEAPON_3:0 "零式神話崩壊砲"
+ MYTHICAL_DECRAY_WEAPON_3_DESC:0 "神の知識を得て作りし神をも殺す兵器"
+ SMALL_MYTHICAL_DECRAY_WEAPON_3:0 "小型零式神話崩壊砲"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON_3:0 "中型零式神話崩壊砲"
+ LARGE_MYTHICAL_DECRAY_WEAPON_3:0 "大型零式神話崩壊砲"
 
  KUSANAGI:0 "クサナギツヨシ"
  KUSANAGI_DESC:0 "クサナギツヨシ"
@@ -575,7 +599,6 @@
 #####    〇〇    ######
 #######################
 
- MYTHICALDECAY_DESC:0 ""
  angel_large_warship_key:0 ""
  angel_large_warship1_key:0 ""
  angel_large_warship2_key:0 ""
