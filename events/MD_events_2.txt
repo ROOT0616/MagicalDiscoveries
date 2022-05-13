@@ -1361,11 +1361,26 @@ country_event = {
 	option = {
 		name = magical_discoveries_crisis.1050.f
 		trigger = {
+			OR = {
+				has_ethic = "ethic_materialist"
+				has_ethic = "ethic_fanatic_materialist"
+			}
+			NOT = {
+				owner_species = {
+					has_trait = trait_psionic
+				}
+			}
+		}
+		response_text = magical_discoveries_crisis.1050.e.response
+	}
+	option = {
+		name = magical_discoveries_crisis.1050.g
+		trigger = {
 			owner_species = {
 				has_trait = trait_psionic
 			}
 		}
-		response_text = magical_discoveries_crisis.1050.f.response
+		response_text = magical_discoveries_crisis.1050.g.response
 	}
 }
 
