@@ -164,12 +164,12 @@ weapon_component_template = {
 }
 
 # ####################
-# 	神話崩壊砲	mythical decay
+# 	試作神話崩壊砲	mythical decay
 # ####################
 # key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
-# SMALL_MYTHICAL_DECRAY_WEAPON	40	-25	60	120	1	2	0.5	2	0.5	2	18	30	60	0.96	0.6
-# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	1	2	0.5	2	0.5	2	18	30	90	0.96	0.4
-# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	1	2	0.5	2	0.5	2	18	30	120	0.96	0.2
+# SMALL_MYTHICAL_DECRAY_WEAPON	-37.50	30.00	60.00	1.00	1.00	0.50	1.00	0.50	4.00	27.00	60.00	40.00	0.80	0.50
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	-75.00	90.00	180.00	1.00	1.00	0.50	1.00	0.50	4.00	27.00	60.00	60.00	0.80	0.30
+# LARGE_MYTHICAL_DECRAY_WEAPON	-150.00	270.00	540.00	1.00	1.00	0.50	1.00	0.50	4.00	27.00	60.00	80.00	0.80	0.20
 
 weapon_component_template = {
 	key = "SMALL_MYTHICAL_DECRAY_WEAPON"
@@ -186,17 +186,179 @@ weapon_component_template = {
 	component_set = "MYTHICALDECAY"
 	prerequisites = { "tech_mythical_decay" }
 	
-	power = -25
-	damage = { min = 180 max = 240 }
+	power = -37.5
+	damage = { min = 30 max = 60 }
 	hull_damage = 1
-	shield_damage = 2
+	shield_damage = 1
 	shield_penetration = 0.5
-	armor_damage = 2
+	armor_damage = 1
 	armor_penetration = 0.5
-	windup = { min = 2 max = 18 }
-	total_fire_time = 30
+	windup = { min = 4 max = 27 }
+	total_fire_time = 60
+	range = 40
+	accuracy = 0.8
+	tracking = 0.5
+	
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @s_t6_cost
+			philosophers_stone = 0.2
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			philosophers_stone = @s_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	-75.00	90.00	180.00	1.00	1.00	0.50	1.00	0.50	4.00	27.00	60.00	60.00	0.80	0.30
+weapon_component_template = {
+	key = "MEDIUM_MYTHICAL_DECRAY_WEAPON"
+
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY"
+	prerequisites = { "tech_mythical_decay" }
+
+	power = -75
+	damage = { min = 90 max = 180 }
+	hull_damage = 1
+	shield_damage = 1
+	shield_penetration = 0.5
+	armor_damage = 1
+	armor_penetration = 0.5
+	windup = { min = 4 max = 27 }
+	total_fire_time = 60
 	range = 60
-	accuracy = 0.96
+	accuracy = 0.8
+	tracking = 0.3
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @m_t6_cost
+			philosophers_stone = 0.4
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			philosophers_stone = @m_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# LARGE_MYTHICAL_DECRAY_WEAPON	-150.00	270.00	540.00	1.00	1.00	0.50	1.00	0.50	4.00	27.00	60.00	80.00	0.80	0.20
+weapon_component_template = {
+	key = "LARGE_MYTHICAL_DECRAY_WEAPON"
+
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY"
+	prerequisites = { "tech_mythical_decay" }
+
+	power = -150
+	damage = { min = 270 max = 540 }
+	hull_damage = 1
+	shield_damage = 1
+	shield_penetration = 0.5
+	armor_damage = 1
+	armor_penetration = 0.5
+	windup = { min = 4 max = 27 }
+	total_fire_time = 60
+	range = 80
+	accuracy = 0.8
+	tracking = 0.2
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @l_t6_cost
+			philosophers_stone = 0.6
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			philosophers_stone = @l_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+
+
+# ####################
+# 	神話崩壊砲	mythical decay
+# ####################
+# key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
+# SMALL_MYTHICAL_DECRAY_WEAPON	-25.00	50.00	100.00	1.00	1.50	0.50	1.50	0.50	3.00	22.00	40.00	60.00	0.90	0.60
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	-50.00	150.00	300.00	1.00	1.50	0.50	1.50	0.50	3.00	22.00	40.00	80.00	0.90	0.40
+# LARGE_MYTHICAL_DECRAY_WEAPON	-100.00	450.00	900.00	1.00	1.50	0.50	1.50	0.50	3.00	22.00	40.00	100.00	0.90	0.20
+
+weapon_component_template = {
+	key = "SMALL_MYTHICAL_DECRAY_WEAPON_2"
+
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY_2"
+	prerequisites = { "tech_mythical_decay_2" }
+	
+	power = -25
+	damage = { min = 50 max = 100 }
+	hull_damage = 1
+	shield_damage = 1.5
+	shield_penetration = 0.5
+	armor_damage = 1.5
+	armor_penetration = 0.5
+	windup = { min = 3 max = 22 }
+	total_fire_time = 40
+	range = 60
+	accuracy = 0.9
 	tracking = 0.6
 	
 	resources = {
@@ -221,9 +383,9 @@ weapon_component_template = {
 	}
 }
 
-# MEDIUM_MYTHICAL_DECRAY_WEAPON	80	-50	150	300	1	2	0.5	2	0.5	2	18	30	90	0.96	0.4
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	-50.00	150.00	300.00	1.00	1.50	0.50	1.50	0.50	3.00	22.00	40.00	80.00	0.90	0.40
 weapon_component_template = {
-	key = "MEDIUM_MYTHICAL_DECRAY_WEAPON"
+	key = "MEDIUM_MYTHICAL_DECRAY_WEAPON_2"
 
 	size = medium
 	entity = "medium_kinetic_gun_entity"
@@ -234,20 +396,20 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 	
-	component_set = "MYTHICALDECAY"
-	prerequisites = { "tech_mythical_decay" }
+	component_set = "MYTHICALDECAY_2"
+	prerequisites = { "tech_mythical_decay_2" }
 
 	power = -50
-	damage = { min = 360 max = 420 }
+	damage = { min = 150 max = 300 }
 	hull_damage = 1
-	shield_damage = 2
+	shield_damage = 1.5
 	shield_penetration = 0.5
-	armor_damage = 2
+	armor_damage = 1.5
 	armor_penetration = 0.5
-	windup = { min = 2 max = 18 }
-	total_fire_time = 30
-	range = 90
-	accuracy = 0.96
+	windup = { min = 3 max = 22 }
+	total_fire_time = 40
+	range = 80
+	accuracy = 0.9
 	tracking = 0.4
 
 	resources = {
@@ -272,9 +434,9 @@ weapon_component_template = {
 	}
 }
 
-# LARGE_MYTHICAL_DECRAY_WEAPON	160	-100	200	750	1	2	0.5	2	0.5	2	18	30	120	0.96	0.2
+# LARGE_MYTHICAL_DECRAY_WEAPON	-100.00	450.00	900.00	1.00	1.50	0.50	1.50	0.50	3.00	22.00	40.00	100.00	0.90	0.20
 weapon_component_template = {
-	key = "LARGE_MYTHICAL_DECRAY_WEAPON"
+	key = "LARGE_MYTHICAL_DECRAY_WEAPON_2"
 
 	size = large
 	entity = "large_kinetic_gun_entity"
@@ -285,11 +447,173 @@ weapon_component_template = {
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
 	
-	component_set = "MYTHICALDECAY"
-	prerequisites = { "tech_mythical_decay" }
+	component_set = "MYTHICALDECAY_2"
+	prerequisites = { "tech_mythical_decay_2" }
 
 	power = -100
-	damage = { min = 810 max = 870 }
+	damage = { min = 450 max = 900 }
+	hull_damage = 1
+	shield_damage = 1.5
+	shield_penetration = 0.5
+	armor_damage = 1.5
+	armor_penetration = 0.5
+	windup = { min = 3 max = 22 }
+	total_fire_time = 40
+	range = 100
+	accuracy = 0.9
+	tracking = 0.2
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @l_t6_cost
+			philosophers_stone = 0.6
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			philosophers_stone = @l_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+
+
+# ####################
+# 	零式神話崩壊砲	mythical decay
+# ####################
+# key	cost	power	min_damage	max_damage	hull_damage	shield_damage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown	range	accuracy	tracking
+# SMALL_MYTHICAL_DECRAY_WEAPON	-75.00	60.00	120.00	1.00	2.00	0.50	2.00	0.50	2.00	18.00	30.00	80.00	0.96	0.70
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	-150.00	180.00	360.00	1.00	2.00	0.50	2.00	0.50	2.00	18.00	30.00	100.00	0.96	0.50
+# LARGE_MYTHICAL_DECRAY_WEAPON	-300	540.00	1080.00	1.00	2.00	0.50	2.00	0.50	2.00	18.00	30.00	120.00	0.96	0.30
+
+weapon_component_template = {
+	key = "SMALL_MYTHICAL_DECRAY_WEAPON_3"
+
+	size = small
+	entity = "small_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY_3"
+	prerequisites = { "tech_mythical_decay_3" }
+	
+	power = -75
+	damage = { min = 60 max = 120 }
+	hull_damage = 1
+	shield_damage = 2
+	shield_penetration = 0.5
+	armor_damage = 2
+	armor_penetration = 0.5
+	windup = { min = 2 max = 18 }
+	total_fire_time = 30
+	range = 80
+	accuracy = 0.96
+	tracking = 0.7
+	
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @s_t6_cost
+			philosophers_stone = 0.2
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			philosophers_stone = @s_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# MEDIUM_MYTHICAL_DECRAY_WEAPON	-150.00	180.00	360.00	1.00	2.00	0.50	2.00	0.50	2.00	18.00	30.00	100.00	0.96	0.50
+weapon_component_template = {
+	key = "MEDIUM_MYTHICAL_DECRAY_WEAPON_3"
+
+	size = medium
+	entity = "medium_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY_3"
+	prerequisites = { "tech_mythical_decay_3" }
+
+	power = -150
+	damage = { min = 180 max = 360 }
+	hull_damage = 1
+	shield_damage = 2
+	shield_penetration = 0.5
+	armor_damage = 2
+	armor_penetration = 0.5
+	windup = { min = 2 max = 18 }
+	total_fire_time = 30
+	range = 100
+	accuracy = 0.96
+	tracking = 0.5
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @m_t6_cost
+			philosophers_stone = 0.4
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			philosophers_stone = @m_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = philosophers_stone value <= 0 }
+		}
+	}
+}
+
+# LARGE_MYTHICAL_DECRAY_WEAPON	-112.50	540.00	1080.00	1.00	2.00	0.50	2.00	0.50	2.00	18.00	30.00	120.00	0.96	0.30
+weapon_component_template = {
+	key = "LARGE_MYTHICAL_DECRAY_WEAPON_3"
+
+	size = large
+	entity = "large_kinetic_gun_entity"
+	type = instant
+	icon = "GFX_ship_part_mythical_decay"
+	icon_frame = 1
+	projectile_gfx = "space_whale_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_hull }
+	
+	component_set = "MYTHICALDECAY_3"
+	prerequisites = { "tech_mythical_decay_3" }
+
+	power = -300
+	damage = { min = 540 max = 1080 }
 	hull_damage = 1
 	shield_damage = 2
 	shield_penetration = 0.5
@@ -299,7 +623,7 @@ weapon_component_template = {
 	total_fire_time = 30
 	range = 120
 	accuracy = 0.96
-	tracking = 0.2
+	tracking = 0.3
 
 	resources = {
 		category = ship_components
