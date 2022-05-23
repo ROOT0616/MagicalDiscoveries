@@ -100,8 +100,14 @@
  tech_specialized_type_adamantine_armor:0 "特化型アダマンタイト装甲"
  tech_specialized_type_adamantine_armor_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
 
- tech_mythical_decay:0 "神話崩壊砲"
+ tech_mythical_decay:0 "試作神話崩壊砲"
  tech_mythical_decay_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
+
+ tech_mythical_decay_2:0 "神話崩壊砲"
+ tech_mythical_decay_2_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
+
+ tech_mythical_decay_3:0 "零式神話崩壊砲"
+ tech_mythical_decay_3_desc:0 "各世界の神話には総じて破壊的な力を記した存在がある。/nだが、この砲はそれらの伝説すらかすむほどの破壊力と恐怖を与えるものである。"
 
  tech_gods_skin:0 "天界の肌"
  tech_gods_skin_desc:0 "我々の研究者の一部は天界人と呼ぶ存在の表層部分はシールドや装甲にも似たような性質を有している。これらを研究することにより美しく、実用性の高い艦船等を作ることができるだろう。"
@@ -296,10 +302,10 @@
  magical_discoveries_crisis.7.desc:0 "神々を殺す兵器が完成した"
  magical_discoveries_crisis.7.a:0 "我々は勝つことができるかもしれない"
 
- magical_discoveries_crisis.8.name:0 ""
+ magical_discoveries_crisis.8.name:0 "神を殺した時のイベント"
  magical_discoveries_crisis.8.desc:0 ""
- magical_discoveries_crisis.8.a:0 ""
- magical_discoveries_crisis.8.b:0 ""
+ magical_discoveries_crisis.8.a:0 "神の肌のスペシャルプロジェクト"
+ magical_discoveries_crisis.8.b:0 "なにもなし"
 
  magical_discoveries.102.name:0 "魔晄炉長期使用による星の不安定化1"
  magical_discoveries.102.desc:0 "魔晄炉長期使用による星の不安定化1"
@@ -339,29 +345,31 @@
 
  magical_discoveries_crisis.1050:0 "神々"
  magical_discoveries_crisis.1050.desc:0 "神によるさばきを受けよ..."
- magical_discoveries_crisis.1050.a:0 "我々の間に平和は無いのか？"
+ magical_discoveries_crisis.1050.a:0 "平和　主義我々の間に平和は無いのか？"
  magical_discoveries_crisis.1050.a.response:0 "……平和……平和は無い……貴様らは禁忌を犯した……"
- magical_discoveries_crisis.1050.b:0 "神を語るとはさぞつよいのだろうな"
+ magical_discoveries_crisis.1050.b:0 "軍国　神を語るとはさぞつよいのだろうな"
  magical_discoveries_crisis.1050.b.response:0 "……神にその態度が禁忌をおかしたのだろうな……"
- magical_discoveries_crisis.1050.c:0 "お前達もよくいる嫌らしい異星種族にすぎないな。"
+ magical_discoveries_crisis.1050.c:0 "排他　お前達もよくいる嫌らしい異星種族にすぎないな。"
  magical_discoveries_crisis.1050.c.response:0 "…貴様らの創造主であるぞ…"
- magical_discoveries_crisis.1050.d:0 "お前達自身のことを話してくれ。 理解の助けになるはずだ。"
+ magical_discoveries_crisis.1050.d:0 "受容　お前達自身のことを話してくれ。 理解の助けになるはずだ。"
  magical_discoveries_crisis.1050.d.response:0 "……理解した……これを……お前達は禁忌を犯した……"
- magical_discoveries_crisis.1050.e:0 "お前達はより高い次元の存在なのか？"
+ magical_discoveries_crisis.1050.e:0 "精神　お前達はより高い次元の存在なのか？"
  magical_discoveries_crisis.1050.e.response:0 "……高いだと…そんなレベルではない……私達はこの銀河の創造主だ…"
- magical_discoveries_crisis.1050.f:0 "お前はシュラウドから来たのか？"
- magical_discoveries_crisis.1050.f.response:0 "……シュラウド……知っているのか……その存在も……我々が創造した……"
+ magical_discoveries_crisis.1050.f:0 "物質主義"
+ magical_discoveries_crisis.1050.f.response:0 "物質主義"
+ magical_discoveries_crisis.1050.g:0 "お前はシュラウドから来たのか？"
+ magical_discoveries_crisis.1050.g.response:0 "……シュラウド……知っているのか……その存在も……我々が創造した……"
 
  magical_discoveries_crisis.1271.name:0 "神罰の終わり"
  magical_discoveries_crisis.1271.desc:0 "ついに、おわったのか…"
- magical_discoveries_crisis.1271.a:0 "我らが精神的防具は、 またも嵐を乗り越えたわけだ。"
- magical_discoveries_crisis.1271.b:0 "いつの日か、 連中の領域を侵攻してやろう。"
- magical_discoveries_crisis.1271.c:0 "残念だが、 我々は彼らの次元を研究する機会に恵まれなかった。"
- magical_discoveries_crisis.1271.d:0 "彼らと共存する術さえあればなあ。 "
- magical_discoveries_crisis.1271.e:0 "銀河経済はすぐに回復するだろう。"
- magical_discoveries_crisis.1271.f:0 ""
- magical_discoveries_crisis.1271.g:0 "我々の次元に侵入したのが間違いだったな。"
- magical_discoveries_crisis.1271.h:0 "よしんば彼らが危険だったとしても、 彼らは魅力的だった。"
+ magical_discoveries_crisis.1271.a:0 "精神　我らが精神的防具は、 またも嵐を乗り越えたわけだ。"
+ magical_discoveries_crisis.1271.b:0 "軍国　いつの日か、 連中の領域を侵攻してやろう。"
+ magical_discoveries_crisis.1271.c:0 "物質　残念だが、 我々は彼らの次元を研究する機会に恵まれなかった。"
+ magical_discoveries_crisis.1271.d:0 "平和　彼らと共存する術さえあればなあ。 "
+ magical_discoveries_crisis.1271.e:0 "企業　銀河経済はすぐに回復するだろう。"
+ magical_discoveries_crisis.1271.f:0 "通常国家"
+ magical_discoveries_crisis.1271.g:0 "排他　我々の次元に侵入したのが間違いだったな。"
+ magical_discoveries_crisis.1271.h:0 "需要　よしんば彼らが危険だったとしても、 彼らは魅力的だった。"
 
  magical_discoveries_crisis.1250.name:0 "封印されしエクゾディア"
  magical_discoveries_crisis.1250.desc:0 ""
@@ -473,12 +481,29 @@
 #####    武器    ######
 #######################
 
- MYTHICALDECAY:0 "神話崩壊砲"
- MYTHICAL_DECRAY_WEAPON:0 "神話崩壊砲"
+ MYTHICALDECAY:0 "試作神話崩壊砲"
+ MYTHICALDECAY_DESC:0 ""
+ MYTHICAL_DECRAY_WEAPON:0 "試作神話崩壊砲"
  MYTHICAL_DECRAY_WEAPON_DESC:0 "神の知識を得て作りし神をも殺す兵器"
- SMALL_MYTHICAL_DECRAY_WEAPON:0 "小型神話崩壊砲"
- MEDIUM_MYTHICAL_DECRAY_WEAPON:0 "中型神話崩壊砲"
- LARGE_MYTHICAL_DECRAY_WEAPON:0 "大型神話崩壊砲"
+ SMALL_MYTHICAL_DECRAY_WEAPON:0 "小型試作神話崩壊砲"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON:0 "中型試作神話崩壊砲"
+ LARGE_MYTHICAL_DECRAY_WEAPON:0 "大型試作神話崩壊砲"
+
+ MYTHICALDECAY_2:0 "神話崩壊砲"
+ MYTHICALDECAY_2_DESC:0 ""
+ MYTHICAL_DECRAY_WEAPON_2:0 "神話崩壊砲"
+ MYTHICAL_DECRAY_WEAPON_2_DESC:0 "神の知識を得て作りし神をも殺す兵器"
+ SMALL_MYTHICAL_DECRAY_WEAPON_2:0 "小型神話崩壊砲"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON_2:0 "中型神話崩壊砲"
+ LARGE_MYTHICAL_DECRAY_WEAPON_2:0 "大型神話崩壊砲"
+
+ MYTHICALDECAY_3:0 "零式神話崩壊砲"
+ MYTHICALDECAY_3_DESC:0 ""
+ MYTHICAL_DECRAY_WEAPON_3:0 "零式神話崩壊砲"
+ MYTHICAL_DECRAY_WEAPON_3_DESC:0 "神の知識を得て作りし神をも殺す兵器"
+ SMALL_MYTHICAL_DECRAY_WEAPON_3:0 "小型零式神話崩壊砲"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON_3:0 "中型零式神話崩壊砲"
+ LARGE_MYTHICAL_DECRAY_WEAPON_3:0 "大型零式神話崩壊砲"
 
  KUSANAGI:0 "クサナギツヨシ"
  KUSANAGI_DESC:0 "クサナギツヨシ"
@@ -559,10 +584,10 @@
 #####    スペシャルプロジェクト    ######
 #######################################
 
- GOD_SKIN_PROJECT:0 "REPLACE_ME"
+ GOD_SKIN_PROJECT:0 "擬似神の盾を得るためのスペシャルプロジェクト"
  GOD_SKIN_PROJECT_DESC:0 "REPLACE_ME"
 
- MYTHICAL_DECAY_PROJECT:0 "REPLACE_ME"
+ MYTHICAL_DECAY_PROJECT:0 "試作神話崩壊砲を得るためのスペシャルプロジェクト"
  MYTHICAL_DECAY_PROJECT_DESC:0 "REPLACE_ME"
 
 ##########################
@@ -575,7 +600,6 @@
 #####    〇〇    ######
 #######################
 
- MYTHICALDECAY_DESC:0 ""
  angel_large_warship_key:0 ""
  angel_large_warship1_key:0 ""
  angel_large_warship2_key:0 ""

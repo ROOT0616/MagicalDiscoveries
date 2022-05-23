@@ -1871,7 +1871,7 @@ tech_gods_skin = {
 	}
 }
 
-#	天界の肌	Tire5
+#	本格神の盾	Tire5
 tech_gods_shield = {
 	cost = @tier5cost3
 	area = physics
@@ -1894,16 +1894,13 @@ tech_gods_shield = {
 	}
 }
 
-#	神話崩壊砲	mythical decay*2    Tire5	
-# S			60	120		2.5		95	80	12	120
-# M			150	300		2.5		95	60	36	160
-# L			375	750		2.5		95	40	72	200
+#	試作神話崩壊砲	mythical decay*2    Tire4
 tech_mythical_decay = {
-	cost = @tier5cost1
-	area = engineering
-	tier = 5
+	cost = @tier4cost2
+	area = physics
+	tier = 4
 	category = {
-		propulsion
+		particles
 	}
 	prerequisites = {
 		"tech_alchemy"
@@ -1915,9 +1912,53 @@ tech_mythical_decay = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
+		factor = 1
+	}
+}
+
+#	神話崩壊砲	mythical decay*2    Tire4
+tech_mythical_decay_2 = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	category = {
+		particles
+	}
+	prerequisites = {
+		"tech_mythical_decay_2"
+	}
+	weight = @tier4weight3
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
 		factor = 0
 	}
 }
+
+
+#	零式神話崩壊砲	mythical decay*2    Tire5
+tech_mythical_decay_3 = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = {
+		particles
+	}
+	prerequisites = {
+		"tech_mythical_decay_3"
+	}
+	weight = @tier5weight3
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
+	}
+}
+
 
 #	試作型ロンギヌスの槍    Tire5	
 tech_longinus_spear_1 = {
@@ -1971,6 +2012,7 @@ tech_longinus_spear_3 = {
 	}
 	prerequisites = {
 		"tech_longinus_spear_2"
+
 	}
 	weight = @tier5weight3
 	is_rare = yes
