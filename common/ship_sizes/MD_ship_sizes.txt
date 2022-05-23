@@ -41,8 +41,7 @@ large_ship_heavenly = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon_frame = 5
-	text_icon = military_size_8
+	icon = ship_size_military_8
 	
 	class = shipclass_military
 	is_designable = no
@@ -64,8 +63,7 @@ medium_ship_heavenly = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon_frame = 4
-	text_icon = military_size_4
+	icon = ship_size_military_4
 	
 	class = shipclass_military
 	is_designable = no
@@ -86,9 +84,8 @@ small_ship_heavenly = {
 	fleet_slot_size = 2
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
-	icon_frame = 3
-	text_icon = military_size_2
 	is_space_station = no
+	icon = ship_size_military_2
 	
 	class = shipclass_military
 	is_designable = no
@@ -112,8 +109,7 @@ dimensional_portal_heavenly = {
 	is_space_station = yes
 	build_block_radius = @build_block_radius_none
 	
-	icon_frame = 12
-	text_icon = military_size_station
+	icon = ship_size_space_monster
 	
 	class = shipclass_military_station
 	is_designable = no
@@ -135,8 +131,7 @@ construction_ship_heavenly = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon_frame = 9
-	text_icon = military_size_constructor
+	icon = ship_size_constructor
 	
 	is_civilian = yes
 	is_designable = no

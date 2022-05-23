@@ -109,14 +109,17 @@ death_squad = {
 	collateral_damage = 2
 	war_exhaustion = 1
 	time = 30
-	icon = GFX_army_type_assault
+	icon = GFX_army_type_undead
+	pop_limited = no
+	disband_if_species_lacks_rights = no #つまり、敵を復活させれば、浄化師であってもその軍勢を維持することができるのです。
+
 	prerequisites = {
 		"tech_necromancy"
 	}
 	resources = {
 		category = armies
 		cost = {
-			philosophers_stone = 2
+			philosophers_stone = 1
 		}
 		upkeep = {
 			energy = 0.01
@@ -136,14 +139,6 @@ death_squad = {
 				has_trait = "trait_mechanical"
 				has_trait = "trait_machine_unit"
 				is_sapient = no
-			}
-		}
-		owner = {
-			OR = {
-				NOT = {
-					has_authority = auth_machine_intelligence
-				}
-				has_valid_civic = civic_machine_assimilator
 			}
 		}
 	}
