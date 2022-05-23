@@ -3,7 +3,7 @@
 ######################################################
 
 adamantines_expenditure_ships = {
-    resource = adamantines
+  resource = adamantines
 	type = expenditure
 	category = ships
 
