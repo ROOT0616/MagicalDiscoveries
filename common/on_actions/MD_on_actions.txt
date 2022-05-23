@@ -14,7 +14,7 @@ on_monthly_pulse = {
 		md_market.2
 		md_market.3
 		md_market.4
-		magical_discoveries.101
+		# magical_discoveries.101
 	}
 	random_events = {
 		10 = magical_discoveries_crisis.0
