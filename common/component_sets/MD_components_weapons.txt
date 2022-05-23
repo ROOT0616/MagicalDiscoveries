@@ -37,5 +37,30 @@ component_set = {
 	key = "MYTHICALDECAY_3"
 
 	icon = "GFX_ship_part_mythical_decay"
+
+	icon_frame = 1
+}
+
+#	試作型ロンギヌスの槍	
+component_set = {
+	key = "LONGINUS_SPEAR_1"
+
+	icon = "GFX_ship_part_longinus_spear_1"
+	icon_frame = 1
+}
+
+#	ロンギヌスの槍	
+component_set = {
+	key = "LONGINUS_SPEAR_2"
+
+	icon = "GFX_ship_part_longinus_spear_2"
+	icon_frame = 1
+}
+
+#	零式ロンギヌスの槍	
+component_set = {
+	key = "LONGINUS_SPEAR_3"
+
+	icon = "GFX_ship_part_longinus_spear_3"
 	icon_frame = 1
 }

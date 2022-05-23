@@ -646,3 +646,173 @@ weapon_component_template = {
 		}
 	}
 }
+
+# ####################
+# 	試作型ロンギヌスの槍 LONGINUS_SPEAR_1
+# ####################
+# power	min_damage	max_damage	hull_damage	shielddamage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown range	accuracy	tracking	missile_speed	missile_evasion	missile_shield	missile_armor	missile_health	missile_retarget_range
+# -31.20	215.00	228.00	1.50	1.00	1.25	1.50	0.00	1.00	15.00	100.00	100.00	1.00	0.40	800.00	0.30	5.00	5.00	20.00	150.00
+weapon_component_template = {
+	key = "LONGINUS_SPEAR_1"
+	size = torpedo
+
+	icon = "GFX_ship_part_longinus_spear_1"
+	icon_frame = 1
+	type = missile
+
+	upgrades_to = "LONGINUS_SPEAR_2"
+	prerequisites = { "tech_longinus_spear_1" }
+	component_set = "LONGINUS_SPEAR_1"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+
+	power = -31.2
+	damage = { min = 215 max = 228 }
+	hull_damage = 1.5
+	shield_damage = 1
+	shield_penetration = 1.25
+	armor_damage = 1.5
+	armor_penetration = 0
+	windup = { min = 1 max = 15 }
+	total_fire_time = 100
+	range = 100
+	accuracy = 1
+	tracking = 0.4
+	missile_speed = 800
+	missile_evasion = 0.3
+	missile_shield = 5
+	missile_armor = 5
+	missile_health = 20
+	missile_retarget_range = 150
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @s_t6_cost
+			philosophers_stone = 0.2
+		}		
+		upkeep = {
+			energy = @s_t6_upkeep_energy
+			philosophers_stone = @s_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# ####################
+# 	ロンギヌスの槍 LONGINUS_SPEAR_2
+# ####################
+# power	min_damage	max_damage	hull_damage	shielddamage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown range	accuracy	tracking	missile_speed	missile_evasion	missile_shield	missile_armor	missile_health	missile_retarget_range
+# -37.44	430.00	456.00	1.80	1.00	1.25	1.80	0.00	1.00	15.00	80.00	120.00	1.00	0.60	1200.00	0.45	7.50	7.50	30.00	225.00
+weapon_component_template = {
+	key = "LONGINUS_SPEAR_2"
+	size = torpedo
+
+	icon = "GFX_ship_part_longinus_spear_3"
+	icon_frame = 1
+	type = missile
+
+	upgrades_to = "LONGINUS_SPEAR_3"
+	prerequisites = { "tech_longinus_spear_2" }
+	component_set = "LONGINUS_SPEAR_2"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+
+	power = -37.44
+	damage = { min = 430 max = 456 }
+	hull_damage = 1.8
+	shield_damage = 1
+	shield_penetration = 1.25
+	armor_damage = 1.8
+	armor_penetration = 0
+	windup = { min = 1 max = 15 }
+	total_fire_time = 80
+	range = 12
+	accuracy = 1
+	tracking = 0.6
+	missile_speed = 1200
+	missile_evasion = 0.45
+	missile_shield = 7.5
+	missile_armor = 7.5
+	missile_health = 30
+	missile_retarget_range = 225
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @m_t6_cost
+			philosophers_stone = 0.4
+		}		
+		upkeep = {
+			energy = @m_t6_upkeep_energy
+			philosophers_stone = @m_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# ####################
+# 	零式ロンギヌスの槍 LONGINUS_SPEAR_3
+# ####################
+# power	min_damage	max_damage	hull_damage	shielddamage	shield_penetration	armor_damage	armor_penetration	min_windup	max_windup	cooldown range	accuracy	tracking	missile_speed	missile_evasion	missile_shield	missile_armor	missile_health	missile_retarget_range
+# -44.93	860.00	912.00	2.00	1.00	1.88	2.00	0.00	1.00	15.00	60.00	144.00	1.00	0.80	1800.00	0.68	11.25	11.25	45.00	337.50
+weapon_component_template = {
+	key = "LONGINUS_SPEAR_3"
+	size = torpedo
+
+	icon = "GFX_ship_part_longinus_spear_2"
+	icon_frame = 1
+	type = missile
+
+	prerequisites = { "tech_longinus_spear_3" }
+	component_set = "LONGINUS_SPEAR_3"
+	projectile_gfx = "small_missile"
+	tags = { weapon_type_explosive }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+
+	power = -44.93
+	damage = { min = 860 max = 912 }
+	hull_damage = 2
+	shield_damage = 1
+	shield_penetration = 1.88
+	armor_damage = 2
+	armor_penetration = 0
+	windup = { min = 1 max = 15 }
+	total_fire_time = 60
+	range = 144
+	accuracy = 1
+	tracking = 0.8
+	missile_speed = 1600
+	missile_evasion = 0.68
+	missile_shield = 11.25
+	missile_armor = 11.25
+	missile_health = 45
+	missile_retarget_range = 300
+
+	resources = {
+		category = ship_components
+		cost = {
+			adamantines = @l_t6_cost
+			philosophers_stone = 0.6
+		}		
+		upkeep = {
+			energy = @l_t6_upkeep_energy
+			philosophers_stone = @l_t6_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
