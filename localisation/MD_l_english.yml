@@ -1,0 +1,403 @@
+﻿l_english:
+
+#######################
+#####    技術    ######
+#######################
+
+ tech_magical_science:0 "Magical Science"
+ tech_magical_science_desc:0 "The science of the 'why' is going beyond that.\nIs it a science at all? But it is still science."
+
+ tech_advanced_magical_science:0 "Developmental Magical Science"
+ tech_advanced_magical_science_desc:0 "Why?Before you think about it, you should think about it this way, This is how I want it to be.\nBy taking a step forward, science has returned to the primitive and classical ideas."
+
+ tech_ultimate_magical_science:0 "Ultimate Magical Science"
+ tech_ultimate_magical_science_desc:0 "Imagination is now becoming creation. I'm not talking about engineering. We are talking about physics."
+ 
+ tech_alchemy:0 "Alchemy"
+ tech_alchemy_desc:0 "Metallurgy gave birth to a material that gave rise to works and objects that were said to be the result of a theoretical leap forward.\nWith this research, the "engineering impossibility" is becoming a thing of the past."
+
+ tech_advanced_alchemy:0 "Developmental Alchemy"
+ tech_advanced_alchemy_desc:0 "The difficulty of making all kinds of alloys has fallen sharply, and all kinds of alloys abound in the country. Military power will increase inexorably."
+
+ tech_ultimate_alchemy:0 "Ultimate Alchemy"
+ tech_ultimate_alchemy_desc:0 "It is rumoured that the increase in engineering and alloy production capacity has fundamentally changed the military strength and architecture of the entire Empire, and that the majority of industrial engineers are now manufacturing alloys with a pot in front of them... in reality, only the parties involved know."
+
+ tech_black_magic:0 "Black Magic"
+ tech_black_magic_desc:0 "By manipulating the magic power, we will be able to perform various abilities. We should focus on 'power'."
+
+ tech_attac_magic:0 "Attack Magic"
+ tech_attac_magic_desc:0 "Specialising in destroying things and attacking others, this magic caught the attention of the army and the police, who invested a lot of resources in its research and development. The result would be a formidable 'weapon'."
+ 
+ tech_advanced_attac_magic:0 "Developmental Attack Magic"
+ tech_advanced_attac_magic_desc:0 "The best combination in the world is power and mercy, the worst combination is weakness and strife."
+
+ tech_defensive_magic:0 "Defence Magic"
+ tech_defensive_magic_desc:0 "It is harder to protect others than it is to hurt them. This magic seeks to make such discourses a thing of the past (at least in the physical sense)."
+ 
+ tech_advanced_defensive_magic:0 "Developmental Defence Magic"
+ tech_advanced_defensive_magic_desc:0 "If you cannot protect yourself, you cannot protect others. But if you have magic, you will be able to protect those you love."
+ 
+ tech_black_magic_army:0 "Magical Forces"
+ tech_black_magic_army_desc:0 "What would a wizard think of a mage who had received a systematic magical education and had been sent off to war?"
+ 
+ tech_elite_black_magic_army:0 "Elite Magic Force"
+ tech_elite_black_magic_army_desc:0 "They'll say, 'Do it!'"
+ 
+ tech_necromancy:0 "Spirit of Death Magic"
+ tech_necromancy_desc:0 "Aunty saied 'Life says one per person, can I buy one if I come back to the shop?'"
+ 
+ tech_white_magic:0 "White Magic"
+ tech_white_magic_desc:0 "This magic, which specialises in repairing objects and restoring the body, has attracted the attention of the medical and biological communities, which have invested considerable resources in its development. As a result, a great 'strategic technology' was born."
+ 
+ tech_white_magic_court:0 "White Magic Court"
+ tech_white_magic_court_desc:0 "A research and educational institution that studies White Magic and returns the results to society."
+ 
+ tech_advanced_white_magic:0 "Advanced White Magic"
+ tech_advanced_white_magic_desc:0 "Restoration and repair complemented creation and simplified all maintenance work."
+ 
+ tech_barrier_magic:0 "Warding Magic"
+ tech_barrier_magic_desc:0 "Ils ne passeront pas!"
+
+ tech_resuscitation_magic:0 "Su Sheng Magic"
+ tech_resuscitation_magic_desc:0 "Hey."
+ 
+ tech_philosophers_stone:0 "The Philosopher's Stone"
+ tech_philosophers_stone_desc:0 "The physicists of old defined the Philosopher's Stone - a substance beyond the known chemical composition. \nWe have succeeded in creating a substance that cannot normally exist - a substance that is stable, that prevents the oxidation of matter and that radically changes the properties of metals."
+ 
+ tech_mithril_refinery:0 "Mithril"
+ tech_mithril_refinery_desc:0 "This beautiful, silvery-white metal is a substance that should not exist. It can be worked by magic and is difficult to work in any other way. This metal will lead to a great development of many civilian and military goods."
+ 
+ tech_mithril_armor:0 "Mithril Armour"
+ tech_mithril_armor_desc:0 "Armour that is as practical as it is beautiful."
+ 
+ tech_orichalcone_refinery:0 "Orichalcum"
+ tech_orichalcone_refinery_desc:0 "This beautiful red-gold metal is a substance that should not exist. It can be worked by magic and is difficult to work in any other way. This metal will lead to a great development of many civilian and military goods."
+ 
+ tech_orichalcone_armor:0 "Orichalcon Armour"
+ tech_orichalcone_armor_desc:0 "This is a very hard armour that is automatically repaired by magic. There are few institutions and jobs that can process it and it is very rare."
+
+ tech_adamantine_refinery:0 "Adamantite"
+ tech_adamantine_refinery_desc:0 "This metal, which is extremely hard and even difficult to work, will be used in a variety of important components. Especially in military applications, this metal will be revolutionary."
+ 
+ tech_adamantine_armor:0 "Adamantite Armour"
+ tech_adamantine_armor_desc:0 "It's just plain hard. Is there any better way to describe this armour?"
+
+ tech_mythical_decay:0 "Mythical Decay"
+ tech_mythical_decay_desc:0 "In the myths of each world, there is a being that describes a generally destructive power./nBut this gun is so destructive and terrifying that even those legends fade away."
+
+ tech_gods_skin:0 "Gods Skin"
+ tech_gods_skin_desc:0 "The surface layer of the beings, which some of our researchers call celestial beings, has properties similar to those of shields and armour. By studying them, we will be able to build beautiful and practical ships and other structures."
+
+#######################
+#####    資源    ######
+#######################
+ 
+ mithrils:0 "Mithril"
+ mithrils_desc:0 "This beautiful, silvery-white metal is a substance that should not exist. It can be worked by magic and is difficult to work in any other way. This metal will lead to a great development of many civilian and military goods."
+
+ orichalcones:0 "Orichalcum"
+ orichalcones_desc:0 "This beautiful red-gold metal is a substance that should not exist. It can be worked by magic and is difficult to work in any other way. This metal will lead to a great development of many civilian and military goods."
+
+ adamantines:0 "Adamantite"
+ adamantines_desc:0 "This metal, which is extremely hard and even difficult to work, will be used in a variety of important components. Especially in military applications, this metal will be revolutionary."
+
+ philosophers_stone:0 "The Philosopher's Stone"
+ philosophers_stone_desc:0 "The physicists of old defined the Philosopher's Stone - a substance beyond the known chemical composition. \nWe have succeeded in creating a substance that cannot normally exist - a substance that is stable, that prevents the oxidation of matter and that radically changes the properties of metals."
+ 
+#######################
+#####    建物    ######
+#######################
+
+ building_white_magic_court:0 "White Magic Court"
+ building_white_magic_court_desc:0 "A research and educational institution that studies White Magic and returns the results to society."
+
+ building_barrier_magic_court:0 "Barrier Magic Court"
+ building_barrier_magic_court_desc:0 "Ils ne passeront pas!"
+
+ building_mithril_refinery:0 "Mithril Refinery"
+ building_mithril_refinery_desc:0 "A facility for smelting mithril and transforming it into a workable state."
+
+ building_mithril_magic_tool_factory:0 "Mithril tool Factory"
+ building_mithril_magic_tool_factory_desc:0 "A factory that processes beautiful and practical tools made of mithril."
+
+ building_orichalcone_refinery:0 "Orichalcone Refinery"
+ building_orichalcone_refinery_desc:0 "A facility for smelting orichalcon and transforming it into a workable state."
+
+ building_orichalcone_workshop:0 "Orihalkon Workshop"
+ building_orichalcone_workshop_desc:0 "A place for crafting with orichalcon. Too hard to be of much practical use."
+
+ building_adamantine_refinery:0 "Adamantine Refinery"
+ building_adamantine_refinery_desc:0 "A facility for smelting adamantite and transforming it into a workable state."
+
+ building_the_legendary_alchem_house:0 "The Legendary Alchem House"
+ building_the_legendary_alchem_house_desc:0 "A facility for smelting the Philosopher's Stone and transforming it into a workable state."
+
+#######################
+#####    仕事    ######
+#######################
+ 
+ job_white_magician:0 "The White Magician"
+ job_white_magician_desc:0 "An expert in restoration and repair, and the embodiment of a terrible power."
+ job_white_magician_plural:0 "The White Magician"
+ mod_job_white_magician_add:0 "The White Magician add"
+
+ job_mithril_refiner:0 "Mithril Alchemist"
+ job_mithril_refiner_desc:0 "Expert in the synthesis of mithril from minerals and other substances by magic."
+ job_mithril_refiner_plural:0 "Mithril Alchemist"
+ mod_job_mithril_refiner_add:0 "Mithril Alchemist add"
+
+ job_mithril_magic_tool_crafter:0 "Mithril Mage "
+ job_mithril_magic_tool_crafter_desc:0 "Artisans who turn mithril into a variety of magical tools"
+ job_mithril_magic_tool_crafter_plural:0 "Mithril Mage "
+ mod_job_mithril_magic_tool_crafter_add:0 "Mithril Mage add"
+
+ job_orichalcone_refiner:0 "Orihalkon Alchemist"
+ job_orichalcone_refiner_desc:0 "Expert in the synthesis of orichalcone from mithril and other substances by magic."
+ job_orichalcone_refiner_plural:0 "Orihalkon Alchemist"
+ mod_job_orichalcone_refiner_add:0 "Orihalkon Alchemist add"
+ 
+ job_orichalcone_crafter:0 "Orichalcone Craftsman"
+ job_orichalcone_crafter_desc:0 "Metallurgical magnate who uses orichalcon in his craft"
+ job_orichalcone_crafter_plural:0 "Orichalcone Craftsman"
+ mod_job_orichalcone_crafter_add:0 "Orichalcone Craftsman add"
+
+ job_adamantine_refiner:0 "Adamantite Alchemist"
+ job_adamantine_refiner_desc:0 "Expert in the synthesis of adamantite from orichalcone and other materials by magic."
+ job_adamantine_refiner_plural:0 "Adamantite Alchemist"
+ mod_job_adamantine_refiner_add:0 "Adamantite Alchemist add"
+
+ job_the_legendary_alchemist:0 "The legendary alchemist"
+ job_the_legendary_alchemist_desc:0 "One of the nation's foremost experts in alchemy"
+ job_the_legendary_alchemist_plural:0 "The legendary alchemist"
+ mod_job_the_legendary_alchemist_add:0 "The legendary alchemist add"
+
+ black_magic_army:0 "Magical Forces"
+ black_magic_army_desc:0 "What would a wizard think of a mage who had received a systematic magical education and had been sent off to war?"
+
+ elite_black_magic_army:0 "Elite Magic Force"
+ elite_black_magic_army_desc:0 "They'll say, 'Do it!'"
+
+ death_squad:0 "The Corps of the Dead"
+ death_squad_desc:0 "If you die, friend or foe, you will join its ranks."
+
+#######################
+#####  イベント  ######
+#######################
+
+ magical_discoveries.1.name:0 "Encounter with a Wizard"
+ magical_discoveries.1.desc:0 "There was a strange visitor at the Head of State's residence in the capital. Despite the fact that there was no security problem at all, the visitor walked directly into the head of state's office.\nHe calls himself §YMagician§! and wants to teach §Y magic beings§! and wants to teach it to others. His power is so great that he can increase the power of the kingdom. But he must not provoke the wrath of the Great Being. He disappeared, saying that he had to make sure that he did not incur the wrath of the Great Being. As if he had never appeared at all.\nAnd a strange silence fell over the place."
+ magical_discoveries.1a.name:0 "Do wizards exist? ......"
+ magical_discoveries.1b.name:0 "What kind of technology is this? ......"
+ magical_discoveries.1c.name:0 "Oh ...... This is just what we've been looking for!"
+ magical_discoveries.1d.name:0 "This is ridiculous! Tighten security!"
+
+ magical_discoveries.2.name:0 "Buy Grimoire"
+ magical_discoveries.2.desc:0 "Once again, there was a strange visitor at the Head of State's residence in the capital. Despite the fact that there is no security problem at all, the visitor came directly into the Head of State's office, but he seems to be different from the last time.\nThis time he was short of money for his trip and asked for a loan to pay for it.The wizard offered a huge sum of money, but in return he would give you the §GGrimoire§! in return.\nThey say that if you study this book, you can get a glimpse of their techniques.\nThe decision was left to the Head of State."
+ magical_discoveries.2a.name:0 "Very well. Get it ready now."
+ magical_discoveries.2b.name:0 "We should reach out to our neighbours in need."
+ magical_discoveries.2c.name:0 "I'm sorry, but we don't have that kind of capacity in our country."
+ magical_discoveries.2d.name:0 "Get this outsider out of here now!"
+
+ magical_discoveries.3.name:0 "Buy Ultimate Grimoire"
+ magical_discoveries.3.desc:0 "Once again, there was a strange visitor at the Head of State's residence in the capital. Despite the fact that there is no security problem at all, the visitor came directly into the Head of State's office, but he seems to be different from the last time.\nThis time he was short of money for his trip and asked for a loan to pay for it.The wizard offered a huge sum of money, but in return, he would give you §GUltimate Grimoire§! in return.\nThey say that if you study this book, you can get a glimpse of their techniques.\nThe decision was left to the Head of State."
+ magical_discoveries.3a.name:0 "Very well. Get it ready now."
+ magical_discoveries.3b.name:0 "We should reach out to our neighbours in need."
+ magical_discoveries.3c.name:0 "I'm sorry, but we don't have that kind of capacity in our country."
+ magical_discoveries.3d.name:0 "Get this outsider out of here now!"
+
+ magical_discoveries.4.name:0 "Buy Legendary Grimoires"
+ magical_discoveries.4.desc:0 "Once again, there was a strange visitor at the Head of State's residence in the capital. Despite the fact that there is no security problem at all, the visitor came directly into the Head of State's office, but he seems to be different from the last time.\nThis time he was short of money for his trip and asked for a loan to pay for it.The wizard offers a huge sum of money, but in return he will give you the §GLegendary Grimoire§! in return.\nThey say that if you study this book, you can get a glimpse of their techniques.\nThe decision was left to the Head of State."
+ magical_discoveries.4a.name:0 "Very well. Get it ready now."
+ magical_discoveries.4b.name:0 "We should reach out to our neighbours in need."
+ magical_discoveries.4c.name:0 "I'm sorry, but we don't have that kind of capacity in our country."
+ magical_discoveries.4d.name:0 "Get this outsider out of here now!"
+
+ magical_discoveries.5.name:0 "Buy Alchemy Book"
+ magical_discoveries.5.desc:0 "Once again, there was a strange visitor at the Head of State's residence in the capital. Despite the fact that there is no security problem at all, the visitor came directly into the Head of State's office, but he seems to be different from the last time.\nThis time he was short of money for his journey and asked for a loan to pay for it. The wizard offered him a huge sum of money, but in return he would give him §GAlchemy Book§! in return.\nHe said that if we study this book we can get a glimpse of their technology. \nThe decision was left to the head of state."
+ magical_discoveries.5a.name:0 "Very well. Get it ready now."
+ magical_discoveries.5b.name:0 "We should reach out to our neighbours in need."
+ magical_discoveries.5c.name:0 "I'm sorry, but we don't have that kind of capacity in our country."
+ magical_discoveries.5d.name:0 "Get this outsider out of here now!"
+
+ magical_discoveries.6.name:0 "Buy The Ultimate Alchemy Book"
+ magical_discoveries.6.desc:0 "Once again, there was a strange visitor at the Head of State's residence in the capital. Despite the fact that there is no security problem at all, the visitor came directly into the Head of State's office, but he seems to be different from the last time.\n今One time he was short of money for a trip and asked for a loan to pay for it.The wizard offered a huge sum of money, but in return he said he would give up §GUltimate Alchemy§! in return.\nHe said that if we study this book we can get a glimpse of their technology. \nThe decision was left to the head of state."
+ magical_discoveries.6a.name:0 "Very well. Get it ready now."
+ magical_discoveries.6b.name:0 "We should reach out to our neighbours in need."
+ magical_discoveries.6c.name:0 "I'm sorry, but we don't have that kind of capacity in our country."
+ magical_discoveries.6d.name:0 "Get this outsider out of here now!"
+
+ magical_discoveries.7.name:0 "Buy The Legendary Alchemy Book"
+ magical_discoveries.7.desc:0 "Once again, there was a strange visitor at the Head of State's residence in the capital. Despite the fact that there is no security problem at all, the visitor came directly into the Head of State's office, but he seems to be different from the last time.\n今One time he was short of money for a trip and asked for a loan to pay for it.The wizard offered him a huge sum of money, but in return he would give him §GLegendary Book of Alchemy§! in return.\nHe said that if we study this book we can get a glimpse of their technology. \nThe decision was left to the head of state."
+ magical_discoveries.7a.name:0 "Very well. Get it ready now."
+ magical_discoveries.7b.name:0 "We should reach out to our neighbours in need."
+ magical_discoveries.7c.name:0 "I'm sorry, but we don't have that kind of capacity in our country."
+ magical_discoveries.7d.name:0 "Get this outsider out of here now!"
+
+ magical_discoveries.8.name:0 "Buy Necronomicon"
+ magical_discoveries.8.desc:0 "We are back with the wizard who sold us the wonderful book. This time he's selling me the Necronomicon."
+ magical_discoveries.8a.name:0 "Buy the Necronomicon"
+ magical_discoveries.8b.name:0 "It's the Necronomicon, don't bring that horrible thing!"
+
+ magical_discoveries_crisis.1.name:0 "Angel Sightings"
+ magical_discoveries_crisis.1.desc:0 "Sightings of mythical angelic creatures have been reported across the galaxy."
+ magical_discoveries_crisis.1a.name:0 "Don't be silly."
+
+ magical_discoveries_crisis.2.name:0 "Discover The Angels"
+ magical_discoveries_crisis.2.desc:0 "At last we have found our angel."
+ magical_discoveries_crisis.2a.name:0 "Talking peacefully with angels"
+ magical_discoveries_crisis.2b.name:0 "Capture an angel"
+ magical_discoveries_crisis.2c.name:0 "Let's leave it alone."
+
+ magical_discoveries_crisis.3.name:0 "Cooperation of Angels"
+ magical_discoveries_crisis.3.desc:0 "They say that angels will help us."
+magical_discoveries_crisis.3a.name:0 "Thank goodness."
+
+ magical_discoveries_crisis.4.name:0 "Angelic Counterattack"
+ magical_discoveries_crisis.4.desc:0 "When we tried to catch the angel, he turned on us."
+ magical_discoveries_crisis.4a.name:0 "I may have made a mistake."
+
+ magical_discoveries_crisis.1007.name:0 "Gate From TheHheavens"
+ magical_discoveries_crisis.1007.desc:0 "A huge portal in the space-time structure has appeared in the [heavens_system.GetName] system!  The cause is unknown, but the gate acts as a one-way portal from another dimension. A strange fleet of ships is pouring out of it, attacking the surrounding area at random. This could be the beginning of a major invasion! \n\nWe've intercepted a powerful signal from a ship that's come through the gate. It's going to punish us."
+ magical_discoveries_crisis.1007.a:0 "What a wonderful ...... life form in another dimension. "
+ magical_discoveries_crisis.1007.b:0 "They seem to be well organised."
+
+ magical_discoveries_crisis.1008.name:0 "Divine Inspiration"
+ magical_discoveries_crisis.1008.desc:0 " All over [Root.GetName], believers of various religions are saying that the Creator of this galaxy is going to attack. And it happened almost simultaneously on all planets, regardless of their location. Moreover, at about the same time, an unusual energy outbreak was observed somewhere in the galaxy. Scientists are struggling to explain the event. Nothing like this has ever been recorded before. \n\nThe exact point of origin of the sudden energy surge has not yet been determined, but the available data is being analysed. "
+ magical_discoveries_crisis.1008.a:0 "Keep going."
+
+ magical_discoveries_crisis.1009.desc:0 "The source of the huge energy spikes previously detected has been identified.It's a huge shining white gate in the [heavens_system.GetName] system. A strange fleet of starships is pouring out of this gate. According to first reports, they've attacked indiscriminately all those who try to contact them. \n\nWe have intercepted a powerful signal from a ship that has come to the other side of the gate. It was like a signal for a ...... hunt. "
+
+ magical_discoveries_crisis.1010.name:0 "Divine Inspiration"
+ magical_discoveries_crisis.1010.desc:0 "You have committed an abomination...   \n\nPunishment by God...  "
+ magical_discoveries_crisis.1010.a:0 "Don't be silly!  What have we done!"
+
+ magical_discoveries_crisis.1011.desc:0 ""
+ magical_discoveries_crisis.1011.a:0 ""
+
+ magical_discoveries_crisis.1013.name:0 "The destruction of Heaven's Gate"
+ magical_discoveries_crisis.1013.desc:0 "[heavens_system.GetName]'s Heaven's Gate has been destroyed! This means that the invaders from the Heavens can no longer receive reinforcements from the Heavens. \n\nWith the destruction of Heaven's Gate, the end of justice was finally in sight. A dizzying sense of elation swept the galaxy. The [gate_killer.GetName], the ship that had put the finishing touches to the gate, received much praise. The crew are hailed as the heroes of the century. "
+ magical_discoveries_crisis.1013.a:0 "We have driven the gods out of this galaxy."
+
+ magical_discoveries_crisis.1050:0 "Gods"
+ magical_discoveries_crisis.1050.desc:0 "Receive the judgement of God..."
+ magical_discoveries_crisis.1050.a:0 "Is there no peace between us?"
+ magical_discoveries_crisis.1050.a.response:0 "...... peace...... there is no peace...... you have broken the ban......"
+ magical_discoveries_crisis.1050.b:0 "It must be very hard to talk about God."
+ magical_discoveries_crisis.1050.b.response:0 "...... I guess that attitude to God has made him forbid ......"
+ magical_discoveries_crisis.1050.c:0 "You're just another one of those disgusting alien species that are so common."
+ magical_discoveries_crisis.1050.c.response:0 "...Arrogance..."
+ magical_discoveries_crisis.1050.d:0 "Tell us about yourselves. It will help us to understand."
+ magical_discoveries_crisis.1050.d.response:0 "I ...... understand ...... this ...... you have committed a forbidden ......"
+ magical_discoveries_crisis.1050.e:0 "Are you beings of a higher order?"
+ magical_discoveries_crisis.1050.e.response:0 "...... high... not at that level. ...... We are the creators of this galaxy..."
+ magical_discoveries_crisis.1050.f:0 "Are you from the shroud?"
+ magical_discoveries_crisis.1050.f.response:0 "...... shroud...... do you know...... even exist...... we created it ......"
+
+ magical_discoveries_crisis.1271.name:0 "The end of God's punishment"
+ magical_discoveries_crisis.1271.desc:0 "At last, it's over..."
+ magical_discoveries_crisis.1271.a:0 ""
+ magical_discoveries_crisis.1271.b:0 ""
+ magical_discoveries_crisis.1271.c:0 ""
+ magical_discoveries_crisis.1271.d:0 ""
+ magical_discoveries_crisis.1271.e:0 ""
+ magical_discoveries_crisis.1271.f:0 ""
+ magical_discoveries_crisis.1271.g:0 ""
+ magical_discoveries_crisis.1271.h:0 ""
+
+ magical_discoveries_crisis.1250.name:0 "Sealed Exodia"
+ magical_discoveries_crisis.1250.desc:0 ""
+ magical_discoveries_crisis.1250a.name:0 ""
+
+ resolution_galactic_focus_crisis_heavenly:0 ""
+ resolution_galactic_focus_crisis_heavenly_desc:0 ""
+
+#############################
+#####  イベントチェイン  ######
+#############################
+
+ heavenly_invasion_1_poi:0 "Heaven's Gate"
+ heavenly_invasion_1_poi_desc:0 "Heaven's Gate, which is spitting out intruders from the heavens, has been detected in the [heavens_system.GetName] system. Until Heaven's Gate is destroyed, God's judgment will not be complete. "
+ heavenly_invasion_4_poi:0 "God's wedge"
+ heavenly_invasion_4_poi_desc:0 "The large space stations that the nymphs are building are supposed to act as dimensional 'anchors', conduits that extend their ability to move ships through wormholes. The more anchors they activate, the more reinforcements they can bring with them from their own realm. \n\nThe anchors also seem to serve to greatly enhance the subspace unity of the dimensional portals. As long as there is even one active anchor, Heaven's Gate is virtually indestructible!"
+ heavenly_invasion_chain:0 "§YIntruders from the Heavens§!"
+ heavenly_invasion_chain_title:0 "Intruders from the Heavens"
+ heavenly_invasion_chain_desc:0 "It seems that a huge passage has been created in the basic structure of our galaxy's space-time, providing a pathway to the heavens. It seems that this is where the gods are invading."
+ heavenly_anchors_1:0 "§YGod's anchorage§!"
+ heavenly_kills_us_1:0 "§GThe number of gods our empire has killed§!"
+ heavenly_kills_others_1:0 "§GNumber of gods killed by other empires§!"
+ heavenly_victims_1:0 "§RDeprived Ships§!"
+ heavenly_planets_1:0 "§RDeprived Planet§!"
+
+#######################
+#####    装甲    ######
+#######################
+
+ MITHRIL_ARMOR:0 "Mithril Armour"
+ MITHRIL_ARMOR_desc:0 "Armour that is as practical as it is beautiful."
+ SMALL_MITHRIL_ARMOR:0 "Mithril Armour"
+ MEDIUM_MITHRIL_ARMOR:0 "Mithril Armour"
+ LARGE_MITHRIL_ARMOR:0 "Mithril Armour"
+
+ ORICHALCONE_ARMOR:0 "Orichalcon Armour"
+ ORICHALCONE_ARMOR_desc:0 "This is a very hard armour that is automatically repaired by magic. There are few institutions and jobs that can process it and it is very rare."
+ SMALL_ORICHALCONE_ARMOR:0 "Orichalcon Armour"
+ MEDIUM_ORICHALCONE_ARMOR:0 "Orichalcon Armour"
+ LARGE_ORICHALCONE_ARMOR:0 "Orichalcon Armour"
+
+ ADAMANTINE_ARMOR:0 "Adamantite Armour"
+ ADAMANTINE_ARMOR_desc:0 "It's just plain hard. Is there any better way to describe this armour?"
+ SMALL_ADAMANTINE_ARMOR:0 "Adamantite Armour"
+ MEDIUM_ADAMANTINE_ARMOR:0 "Adamantite Armour"
+ LARGE_ADAMANTINE_ARMOR:0 "Adamantite Armour"
+
+ GODS_SHIELD:0 "Gods Shield"
+ GODS_SHIELD_desc:0 ""
+ SMALL_GODS_SHIELD:0 "Gods Shield"
+ MEDIUM_GODS_SHIELD:0 "Gods Shield"
+ LARGE_GODS_SHIELD:0 "Gods Shield"
+
+ GODS_BLESSINGS:0 "Gods Blessings"
+ GODS_BLESSINGS_desc:0 ""
+ SMALL_GODS_BLESSINGS:0 "Gods Blessings"
+ MEDIUM_GODS_BLESSINGS:0 "Gods Blessings"
+ LARGE_GODS_BLESSINGS:0 "Gods Blessings"
+
+#######################
+#####    武器    ######
+#######################
+
+ MYTHICALDECAY:0 "Mythical Decay"
+ MYTHICALDECAY_desc:0 "A weapon that kills even the gods, created with the knowledge of the gods"
+ MYTHICAL_DECRAY_WEAPON:0 "Mythical Decay"
+ MYTHICAL_DECRAY_WEAPON_desc:0 "A weapon that kills even the gods, created with the knowledge of the gods"
+ SMALL_MYTHICAL_DECRAY_WEAPON:0 "Mythical Decay"
+ MEDIUM_MYTHICAL_DECRAY_WEAPON:0 "Mythical Decay"
+ LARGE_MYTHICAL_DECRAY_WEAPON:0 "Mythical Decay"
+
+ KUSANAGI_WEAPON:0 "Kusanagi"
+
+ 
+#######################
+#####    布告    ######
+#######################
+
+ edict_philosophers_stone_campaign:0 "Refining the human body with the Philosopher's Stone"
+ edict_philosophers_stone_campaign_desc:0 ""
+
+ edict_white_magic_campaign:0 "Removal of obstacles by magic"
+ edict_white_magic_campaign_desc:0 ""
+
+ edict_mithril_building_materials_campaign:0 "Building material substitution with mithril"
+ edict_mithril_building_materials_campaign_desc:0 ""
+
+
+ edict_adamantite_skyscraper_construction_campaign:0 "Skyscraper Construction with Adamantite"
+ edict_adamantite_skyscraper_construction_campaign_desc:0 ""
+
+
+#######################
+#####    〇〇    ######
+#######################
+
+# :0 ""
+# _desc:0 ""
