@@ -1261,6 +1261,126 @@ tech_mithril_armor = {
 	}
 }
 
+# 廉価型ミスリル装甲	    Tire3  160  400  920
+#		cost  ミスリル 22 44 88  合金  11  22  44
+tech_cheap_type_mithril_armor = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_mithril_armor"
+	}
+	weight = 100
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag01
+		NOT = {
+			has_technology = tech_specialized_type_mithril_armor
+		}
+	}
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# 特化型ミスリル装甲	    Tire3  160  400  920
+#		cost  ミスリル 22 44 88  合金  11  22  44
+tech_specialized_type_mithril_armor = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_mithril_armor"
+	}
+	weight = 100
+	is_rare = no
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag01
+		NOT = {
+			has_technology = tech_cheap_type_mithril_armor
+		}
+	}
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
 # オリハルコン*2		    Tire4
 tech_orichalcone_refinery = {
 	cost = @tier4cost2
@@ -1334,6 +1454,126 @@ tech_orichalcone_armor = {
 	is_reverse_engineerable = no
 	potential = {
 		has_country_flag = BuyAlchemyFlag02
+	}
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#	廉価型オリハルコン装甲*2   Tire4	245  613  1410
+#			cost  オリハルコン 22 44 88  合金  22  44  88
+tech_cheap_type_orichalcone_armor = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_orichalcone_armor"
+	}
+	weight = 100
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag02
+		NOT = {
+			has_technology = tech_specialized_type_orichalcone_armor
+		}
+	}
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#	特化型オリハルコン装甲*2   Tire4	245  613  1410
+#			cost  オリハルコン 22 44 88  合金  22  44  88
+tech_specialized_type_orichalcone_armor = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_orichalcone_armor"
+	}
+	weight = 100
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag02
+		NOT = {
+			has_technology = tech_cheap_type_orichalcone_armor
+		}
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -1487,6 +1727,126 @@ tech_adamantine_armor = {
 	}
 }
 
+#	廉価型アダマンタイト装甲*2   Tire4	245  613  1410
+#			cost  アダマンタイト 22 44 88  合金  22  44  88
+tech_cheap_type_adamantine_armor = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_adamantine_armor"
+	}
+	weight = 100
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag03
+		NOT = {
+			has_technology = tech_specialized_type_adamantine_armor
+		}
+	}
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+#	特化型アダマンタイト装甲*2   Tire4	245  613  1410
+#			cost  アダマンタイト 22 44 88  合金  22  44  88
+tech_specialized_type_adamantine_armor = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = {
+		materials
+	}
+	prerequisites = {
+		"tech_adamantine_armor"
+	}
+	weight = 100
+	is_rare = yes
+	is_reverse_engineerable = no
+	potential = {
+		has_country_flag = BuyAlchemyFlag03
+		NOT = {
+			has_technology = tech_cheap_type_adamantine_armor
+		}
+	}
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
 #	天界の肌	Tire5
 tech_gods_skin = {
 	cost = @tier5cost3
@@ -1511,16 +1871,36 @@ tech_gods_skin = {
 	}
 }
 
-#	神話崩壊砲	mythical decay*2    Tire5	
-# S			60	120		2.5		95	80	12	120
-# M			150	300		2.5		95	60	36	160
-# L			375	750		2.5		95	40	72	200
+#	本格神の盾	Tire5
+tech_gods_shield = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = {
+		field_manipulation
+	}
+	prerequisites = {
+		"tech_gods_skin"
+	}
+	weight = @tier5weight3
+	is_rare = yes
+	modifier = {
+		ship_armor_mult = 0.1
+		ship_shield_mult = 0.1
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
+	}
+}
+
+#	試作神話崩壊砲	mythical decay*2    Tire4
 tech_mythical_decay = {
-	cost = @tier5cost1
-	area = engineering
+	cost = @tier4cost2
+	area = physics
 	tier = 4
 	category = {
-		propulsion
+		particles
 	}
 	prerequisites = {
 		"tech_alchemy"
@@ -1532,6 +1912,114 @@ tech_mythical_decay = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
+		factor = 1
+	}
+}
+
+#	神話崩壊砲	mythical decay*2    Tire4
+tech_mythical_decay_2 = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	category = {
+		particles
+	}
+	prerequisites = {
+		"tech_mythical_decay_2"
+	}
+	weight = @tier4weight3
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
 		factor = 0
+	}
+}
+
+
+#	零式神話崩壊砲	mythical decay*2    Tire5
+tech_mythical_decay_3 = {
+	cost = @tier5cost3
+	area = physics
+	tier = 5
+	category = {
+		particles
+	}
+	prerequisites = {
+		"tech_mythical_decay_3"
+	}
+	weight = @tier5weight3
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
+	}
+}
+
+
+#	試作型ロンギヌスの槍    Tire5	
+tech_longinus_spear_1 = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	category = {
+		propulsion
+	}
+	prerequisites = {
+		"tech_gods_skin"
+	}
+	weight = @tier5weight1
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
+	}
+}
+
+#	ロンギヌスの槍    Tire5	
+tech_longinus_spear_2 = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = {
+		propulsion
+	}
+	prerequisites = {
+		"tech_longinus_spear_1"
+	}
+	weight = @tier5weight2
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
+	}
+}
+
+#	零式ロンギヌスの槍    Tire5	
+tech_longinus_spear_3 = {
+	cost = @tier5cost3
+	area = engineering
+	tier = 5
+	category = {
+		propulsion
+	}
+	prerequisites = {
+		"tech_longinus_spear_2"
+
+	}
+	weight = @tier5weight3
+	is_rare = yes
+	modifier = {
+		pop_ethic_spiritualist_attraction_mult = 0.01
+	}
+	weight_modifier = {
+		factor = 1
 	}
 }
