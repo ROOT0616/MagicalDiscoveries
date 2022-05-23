@@ -276,6 +276,10 @@ country_event = {
 		from = {
 			is_same_value = event_target:angel_enemy
 		}
+		NOR = {
+			has_technology = tech_gods_skin
+			has_special_project = "GOD_SKIN_PROJECT"
+		}
 	}
 	immediate = {
 		event_target:angel_enemy = {

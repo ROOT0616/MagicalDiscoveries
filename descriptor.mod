@@ -1,8 +1,8 @@
-version="1.13.7"
+version="1.14.1"
 tags={
 	"Events"
 	"Gameplay"
 }
-name="Magical Discoveries [JP]"
+name="Magical Discoveries"
 supported_version="3.4.*"
 remote_file_id="2193916998"

@@ -103,7 +103,7 @@
 
  philosophers_stone:0 "The Philosopher's Stone"
  philosophers_stone_desc:0 "The physicists of old defined the Philosopher's Stone - a substance beyond the known chemical composition. \nWe have succeeded in creating a substance that cannot normally exist - a substance that is stable, that prevents the oxidation of matter and that radically changes the properties of metals."
- 
+
 #######################
 #####    建物    ######
 #######################
@@ -250,7 +250,7 @@
 
  magical_discoveries_crisis.3.name:0 "Cooperation of Angels"
  magical_discoveries_crisis.3.desc:0 "They say that angels will help us."
-magical_discoveries_crisis.3a.name:0 "Thank goodness."
+ magical_discoveries_crisis.3a.name:0 "Thank goodness."
 
  magical_discoveries_crisis.4.name:0 "Angelic Counterattack"
  magical_discoveries_crisis.4.desc:0 "When we tried to catch the angel, he turned on us."
@@ -376,7 +376,6 @@ magical_discoveries_crisis.3a.name:0 "Thank goodness."
 
  KUSANAGI_WEAPON:0 "Kusanagi"
 
- 
 #######################
 #####    布告    ######
 #######################
@@ -394,6 +393,25 @@ magical_discoveries_crisis.3a.name:0 "Thank goodness."
  edict_adamantite_skyscraper_construction_campaign:0 "Skyscraper Construction with Adamantite"
  edict_adamantite_skyscraper_construction_campaign_desc:0 ""
 
+#######################
+#####    名前    ######
+#######################
+
+ NAME_Gate_Holder_1:0 "Heaven's Gate"
+ NAME_Celestialbeing:0 "Heaven"
+ NAME_Heavenly_Portal:0 "Heaven's Gate"
+ NAME_Fallen_angel:0 "Lucifer"
+ NAME_Fallen_angel_1:0 "Belphegor"
+ NAME_Fallen_angel_2:0 "Belzebub"
+ NAME_Fallen_angel_3:0 "Leviathan"
+ NAME_Valkyrie:0 "War Maiden"
+ NAME_fallen:0 "The Angry War Maiden"
+ NAME_Gods:0 "The Gods"
+ NAME_Goddess:0 "Goddesses"
+ NAME_soldier_of_the_gods:0 "Divine Soldiers"
+ NAME_Heavenly_Shaper:0 "Nymphs"
+ NAME_Heavenly_Anchor:0 "Wedge"
+ NAME_Heavenly_Base:0 "Churches"
 
 #######################
 #####    〇〇    ######

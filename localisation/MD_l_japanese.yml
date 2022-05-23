@@ -289,23 +289,23 @@
  magical_discoveries_crisis.4.desc:0 "天使を捕まえようとしたら我らに牙をむけた。"
  magical_discoveries_crisis.4a.name:0 "間違いを犯したかもしれない"
 
- magical_discoveries_crisis.5.name:0 "天使の撃退"
- magical_discoveries_crisis.5.desc:0 "天使を何とか撃退することができた"
- magical_discoveries_crisis.5.a:0 "天使の素材は何かに使えるかもしれない"
+ magical_discoveries_crisis.5.name:0 "やってしまった"
+ magical_discoveries_crisis.5.desc:0 "天使と自称する集団の最後の艦艇を屠った後、政府首脳部の頭の中に、怒りととらえることができる感情が襲い掛かってきた。我々は、してはならないことをしてしまったのだ。そして、創造主による天罰が間もなく下ることになるだろう。"
+ magical_discoveries_crisis.5.a:0 "我々は前に進むしかないのだ。"
  magical_discoveries_crisis.5.b:0 "恐ろしいものだ"
 
  magical_discoveries_crisis.6.name:0 "天界の肌"
- magical_discoveries_crisis.6.desc:0 "天界の肌については理解した。あとは神をどうやって効率的に殺そうか"
+ magical_discoveries_crisis.6.desc:0 "天界の肌と名付けられたこのシールドは比類ない防御力を生み出すことができた。しかし、神々の怒りは守るだけでは超えることはできないだろう。"
  magical_discoveries_crisis.6.a:0 "天界の肌をより研究しよう"
 
- magical_discoveries_crisis.7.name:0 "神をも殺す兵器"
- magical_discoveries_crisis.7.desc:0 "神々を殺す兵器が完成した"
+ magical_discoveries_crisis.7.name:0 "神は死んだ"
+ magical_discoveries_crisis.7.desc:0 "神を殺すことすらできる力が手に入った。いや、手に入ってしまった。もう後戻りはできない。"
  magical_discoveries_crisis.7.a:0 "我々は勝つことができるかもしれない"
 
- magical_discoveries_crisis.8.name:0 "神を殺した時のイベント"
- magical_discoveries_crisis.8.desc:0 ""
- magical_discoveries_crisis.8.a:0 "神の肌のスペシャルプロジェクト"
- magical_discoveries_crisis.8.b:0 "なにもなし"
+ magical_discoveries_crisis.8.name:0 "やってしまった"
+ magical_discoveries_crisis.8.desc:0 "天使と自称する集団の最後の艦艇を屠った後、政府首脳部の頭の中に、怒りととらえることができる感情が襲い掛かってきた。我々は、してはならないことをしてしまったのだ。そして、創造主による天罰が間もなく下ることになるだろう。"
+ magical_discoveries_crisis.8.a:0 "我々は前に進むしかないのだ。"
+ magical_discoveries_crisis.8.b:0 "神よ！  我をお許しください！"
 
  magical_discoveries.102.name:0 "魔晄炉長期使用による星の不安定化1"
  magical_discoveries.102.desc:0 "魔晄炉長期使用による星の不安定化1"
@@ -535,7 +535,7 @@
  edict_adamantite_skyscraper_construction_campaign:0 "アダマンタイトによる超高層建設"
  edict_adamantite_skyscraper_construction_campaign_desc:0 ""
 
- edict_MD_test_campaign:0 "MDクライシスイベントテスト用"
+ edict_MD_test_campaign:0 "MDクライシスイベントテスト用(デバック用)"
  edict_MD_test_campaign_desc:0 "マジックディスカバリーのクライシスイベントの初期化"
 
 ############################
@@ -583,17 +583,40 @@
 #####    スペシャルプロジェクト    ######
 #######################################
 
- GOD_SKIN_PROJECT:0 "擬似神の盾を得るためのスペシャルプロジェクト"
- GOD_SKIN_PROJECT_DESC:0 "REPLACE_ME"
+ GOD_SKIN_PROJECT:0 "もう、戻ることはできない"
+ GOD_SKIN_PROJECT_DESC:0 "通常考えうる科学的常識を超えた事象と物質を研究することにより、我々はついに創造の域へと昇ることができるのであろうか。反発も多いが、未来へと向かうためにはこうするしかないのだ......"
 
- MYTHICAL_DECAY_PROJECT:0 "試作神話崩壊砲を得るためのスペシャルプロジェクト"
- MYTHICAL_DECAY_PROJECT_DESC:0 "REPLACE_ME"
+ MYTHICAL_DECAY_PROJECT:0 "後戻りは、できない"
+ MYTHICAL_DECAY_PROJECT_DESC:0 "創造主の力の一部を解明することに成功した我々は、もしいるのであれば神の怒りを買うのであろう。我々自身を守るためには、戦うしかないのだ。"
 
 ##########################
 #####    tooltip    ######
 ##########################
 
  resolution_galactic_focus_crisis_heavenly_effect_success:0 ""
+
+#######################
+#####    名前    ######
+#######################
+
+ NAME_Gate_Holder_1:0 "ヘブンズ・ゲート"
+ NAME_Celestialbeing:0 "天界"
+ NAME_Heavenly_Portal:0 "ヘブンズゲート"
+ NAME_Fallen_angel:0 "ルシファー"
+ NAME_Fallen_angel_1:0 "ベルフェゴール"
+ NAME_Fallen_angel_2:0 "ベルゼブブ"
+ NAME_Fallen_angel_3:0 "レヴィアタン"
+ NAME_Fallen_angel_4:0 "マモン"
+ NAME_Fallen_angel_5:0 "ベルゼブブ"
+ NAME_Fallen_angel_6:0 "アスモデウス"
+ NAME_Valkyrie:0 "戦乙女"
+ NAME_fallen:0 "怒り狂った戦乙女"
+ NAME_Gods:0 "神々"
+ NAME_Goddess:0 "女神"
+ NAME_soldier_of_the_gods:0 "神兵"
+ NAME_Heavenly_Shaper:0 "ニンフ"
+ NAME_Heavenly_Anchor:0 "楔"
+ NAME_Heavenly_Base:0 "社"
 
 #######################
 #####    〇〇    ######
