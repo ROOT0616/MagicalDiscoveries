@@ -1,0 +1,59 @@
+#
+# これらは、ゲーム内に存在するバイパスの種類を定義するものです。これは、システム間の論理的な接続に過ぎません。
+# これらは、メガストラクチャーに追加することができます。
+#
+# bypass_type = {
+#	name = GATEWAY_GALACTIC		# のトリガーとエフェクトで使用されるローカライズキーです。
+#	is_pathfind = yes			# この型が自動的に経路探索に使用されるかどうか（そうでない場合は、その型を含むオブジェクトを右クリックする必要があります）。
+#	requires_exploration = no	# このバイパスタイプは、使用する前に「確認」する必要があるかどうか。
+#	uses_action = no			# この型がアクションを必要とするか、それとも自動で使用されるか。
+#	always_active = no			# これらのタイプのバイパスは、作成時に自動的にアクティブになるか、またはアクティブにするために研究/アップグレードが必要であるかどうか。
+#	windup_time = 0.0			# 旅行前に準備する日数は、積み荷の刻みに換算されます。
+#	winddown_time = 0.0			# 旅行後に準備する日数は、ロードの刻みに変換されます。
+#	ftl_multiplier = 0			# 0はインスタントであることを意味するはずですが、警告：正しく実装されていません。
+#	extends_sensors = yes		# バイパスを "見通す "ことができ、センサーの範囲を反対側に広げることができるかどうか
+#	icon_frame = 25
+#	remember_instances = no	# そのタイプの特定のインスタンスに出会ったことを覚えているか、それとも一般的にそのタイプを見たことを覚えているか。
+#	galactic_map_tooltip_header=GATEWAY_GALACTIC
+#	galactic_map_tooltip_desc=GATEWAY_GALACTIC_DESC
+#	connection_type = any_other
+#	ftl_ship_effect	= "gateway_ftl_ship_effect_entity"		# バイパスを飛び越えたとき、船にどのようなエフェクトを発生させるか
+#	ftl_bypass_effect	= "gateway_ftl_bypass_effect_entity"	# 船がジャンプスルーしたときにバイパスにどのようなエフェクトを発生させるか
+#	bypass_effect		= ""
+#	animation_time = 3				# ジャンプアニメーションの再生待ち日数
+#	prerequisites = {
+#		tech_gateway_activation
+#	}
+#	on_pre_explore = {					# 艦隊の右クリックによる "探索 "アクションのジャンプ直前に呼び出されるエフェクト。
+#
+#	}
+#	country_can_use = {					# this: country, from: (オプション) system owner; default: { always = yes } このタイプのバイパスを国が使用できるかどうかを評価するトリガー。
+#	}
+#	on_action = "on_entering_bypass"	# FTLに入るときに発生するオンアクションイベントの名前（設定されている場合）
+#										# THIS = Fleet
+#										# FROM = System jumping to
+#										# FROMFROM = System jumped from
+# }
+
+# md_heavenes_hole = {
+# 	name = MD_HEAVENES_HOLE
+# 	is_pathfind = yes
+# 	uses_action = yes
+# 	requires_exploration = no
+# 	always_active = yes
+# 	windup_time = 0
+# 	winddown_time = 0
+# 	ftl_multiplier = 0
+# 	extends_sensors = yes
+# 	icon_frame = 12
+# 	remember_instances = yes
+# 	animation_time = 1
+# 	galactic_map_tooltip_header = NATURAL_WORMHOLE_GALACTIC
+# 	galactic_map_tooltip_desc = NATURAL_WORMHOLE_DESC
+# 	connection_type = any_other
+# 	ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
+# 	ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
+# 	country_can_use = {
+# 		is_country_type = heavenly_realm
+# 	}
+# }

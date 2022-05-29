@@ -144,6 +144,10 @@ country_event = {
 					set_aggro_range_measure_from = self
 				}
 			}
+			country_event = {
+				id = magical_discoveries_crisis.1000
+				days = 9000				#25年後
+			}
 		}
 	}
 }
@@ -256,7 +260,7 @@ country_event = {
 			}
 			country_event = {
 				id = magical_discoveries_crisis.1000
-				days = 9000				#25年後
+				days = 7200				#20年後
 			}
 		}
 	}
@@ -378,85 +382,6 @@ country_event = {
 	}
 }
 
-# 神撃
-country_event = {
-	id = magical_discoveries_crisis.10001
-	hide_window = yes
-	trigger = {
-		always = no
-	}
-	immediate = {
-		if = {
-			limit = {
-				NOT = {
-					exists = event_target:gate_holder_1
-				}
-			}
-			create_country = {
-				name = "NAME_Gate_Holder_1"
-				type = gate_holder
-				flag = {
-					icon = {
-						category = "special"
-						file = "extradimensional_01.dds"
-					}
-					background = {
-						category = "backgrounds"
-						file = "circle.dds"
-					}
-					colors = {
-						"black"
-						"blue"
-						"null"
-						"null"
-					}
-				}
-				effect = {
-					save_global_event_target_as = gate_holder_1
-					every_playable_country = {
-						establish_communications_no_message = event_target:gate_holder_1
-					}
-				}
-			}
-		}
-		random_country = {
-			limit = {
-				is_country_type = heavenly_realm
-			}
-			set_country_flag = heavenly
-		}
-		random_country = {
-			limit = {
-				is_country_type = gate_holder
-			}
-			random_owned_ship = {
-				set_ship_flag = heavenly_portal
-			}
-		}
-	}
-}
-
-country_event = {
-	id = magical_discoveries_crisis.10002
-	hide_window = yes
-	trigger = {
-		always = no
-	}
-	immediate = {
-		random_country = {
-			limit = {
-				is_country_type = gate_holder
-			}
-			random_owned_ship = {
-				limit = {
-					is_ship_size = dimensional_portal_heavenly
-				}
-				set_ship_flag = heavenly_portal
-			}
-		}
-	}
-}
-
 # 神罰の始まり (HIDDEN)
 country_event = {
 	id = magical_discoveries_crisis.1000
@@ -493,9 +418,10 @@ country_event = {
 			}
 		}
 		awaken_guardians_of_the_galaxy = yes
-		# set_global_flag = galactic_crisis_happened
 		set_global_flag = heavenly_invasion_happened
+		# クライシス国を作成
 		random_system = {
+			# 没落帝国、覚醒帝国以外の星系
 			limit = {
 				NOT = {
 					any_country = {
@@ -511,6 +437,7 @@ country_event = {
 			}
 			set_star_flag = heavens_origin_system
 			save_event_target_as = heavens_system
+			# 星系に国を作成
 			random_system_planet = {
 				create_species = {
 					name = "NAME_Celestialbeing"
@@ -679,6 +606,7 @@ country_event = {
 					}
 				}
 			}
+			# 星系基地があれば削除
 			if = {
 				limit = {
 					exists = starbase
@@ -689,13 +617,15 @@ country_event = {
 					}
 				}
 			}
+			# 星系基地を作成
 			create_starbase = {
 				size = starbase_exd
 				owner = event_target:heavenesgate
 			}
+			# ポータルを作成
 			star = {
 				create_ambient_object = {
-					type = "heavens_2"
+					type = "md_heavens_2"
 					location = this
 				}
 				last_created_ambient_object = {

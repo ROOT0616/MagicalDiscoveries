@@ -9,13 +9,13 @@
 can_orbital_bombard = {
 	exists = FROM.OWNER
 	NOT = {
-		any_owned_ship = {
+		any_controlled_ship = {
 			is_ship_size = colossus
 		}
 	}
 	OR = {
 		AND = {
-			ROOT.OWNER = {
+			ROOT.CONTROLLER = {
 				NOT = {
 					has_communications = FROM.OWNER
 				}
@@ -27,7 +27,7 @@ can_orbital_bombard = {
 			}
 		}
 		AND = {
-			ROOT.OWNER = {
+			ROOT.CONTROLLER = {
 				NOR = {
 					has_policy_flag = interference_passive
 					has_policy_flag = interference_active
@@ -37,7 +37,7 @@ can_orbital_bombard = {
 				is_country_type = primitive
 			}
 		}
-		ROOT.OWNER = {
+		ROOT.CONTROLLER = {
 			is_at_war_with = FROM.CONTROLLER
 		}
 		FROM = {
@@ -55,13 +55,13 @@ can_orbital_bombard = {
 				is_country_type = katzenartig_imperium
 				AND = {
 					is_country_type = awakened_marauders
-					ROOT.OWNER = {
+					ROOT.CONTROLLER = {
 						is_hostile = prev
 					}
 				}
 			}
 		}
-		ROOT.OWNER = {
+		ROOT.CONTROLLER = {
 			OR = {
 				is_country_type = extradimensional
 				is_country_type = extradimensional_2
@@ -81,6 +81,7 @@ can_orbital_bombard = {
 				is_country_type = void_lifeforms_2
 				is_country_type = acot_crazed_stellarite
 				is_country_type = katzenartig_imperium
+				has_country_flag = mem_severance_harvesting_country
 				AND = {
 					is_country_type = awakened_marauders
 					FROM.CONTROLLER = {
@@ -92,12 +93,23 @@ can_orbital_bombard = {
 		AND = {
 			from.controller = {
 				is_country_type = faction
-				NOT = {
-					is_same_value = root.owner
-				}
+				NOT = { is_same_value = ROOT.CONTROLLER }
 			}
 			from.owner = {
-				is_same_value = root.owner
+				is_same_value = ROOT.CONTROLLER
+			}
+		}
+		AND = {
+			exists = ROOT.CONTROLLER
+			exists = FROM.CONTROLLER
+			ROOT.CONTROLLER = {
+				OR = {
+					is_country_type = mem_surveyor_country_red
+					is_country_type = mem_vazurans
+				}
+			}
+			FROM.CONTROLLER = {
+				is_country_type = default
 			}
 		}
 	}
