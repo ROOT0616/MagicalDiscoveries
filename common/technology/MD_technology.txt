@@ -1911,9 +1911,6 @@ tech_mythical_decay = {
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
-	weight_modifier = {
-		factor = 1
-	}
 }
 
 #	神話崩壊砲	mythical decay*2    Tire4
@@ -1925,7 +1922,7 @@ tech_mythical_decay_2 = {
 		particles
 	}
 	prerequisites = {
-		"tech_mythical_decay_2"
+		"tech_mythical_decay"
 	}
 	weight = @tier4weight3
 	is_rare = yes
@@ -1937,7 +1934,6 @@ tech_mythical_decay_2 = {
 	}
 }
 
-
 #	零式神話崩壊砲	mythical decay*2    Tire5
 tech_mythical_decay_3 = {
 	cost = @tier5cost3
@@ -1947,7 +1943,7 @@ tech_mythical_decay_3 = {
 		particles
 	}
 	prerequisites = {
-		"tech_mythical_decay_3"
+		"tech_mythical_decay_2"
 	}
 	weight = @tier5weight3
 	is_rare = yes
@@ -1958,7 +1954,6 @@ tech_mythical_decay_3 = {
 		factor = 1
 	}
 }
-
 
 #	試作型ロンギヌスの槍    Tire5	
 tech_longinus_spear_1 = {

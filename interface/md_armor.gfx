@@ -1,72 +1,79 @@
-
-# ミスリル装甲	 	Tire3 160 400 920
 spriteTypes = {
+	# ミスリル装甲	 	Tire3 160 400 920
 	spriteType = {
 		name = "GFX_ship_part_mithril_armor"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_mithril_armor.dds"
 	}
-}
-
-# オリハルコン装甲*2　 Tire4	245　613　1410
-spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_cheap_type_mithril_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_cheap_type_mithril_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_specialized_type_mithril_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_specialized_type_mithril_armor.dds"
+	}
+	# オリハルコン装甲*2   Tire4	245  613  1410
 	spriteType = {
 		name = "GFX_ship_part_orichalcone_armor"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_orichalcone_armor.dds"
 	}
-}
-
-# アダマンタイト装甲*2 Tire5	300　750　1725
-spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_cheap_type_orichalcone_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_cheap_type_orichalcone_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_specialized_type_orichalcone_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_specialized_type_orichalcone_armor.dds"
+	}
+	# アダマンタイト装甲*2 Tire5	300  750  1725
 	spriteType = {
 		name = "GFX_ship_part_adamantine_armor"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_adamantine_armor.dds"
 	}
-}
-
-# 神の吐息	Gods breath
-spriteTypes = {
+	spriteType = {
+		name = "GFX_ship_part_cheap_type_adamantine_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_cheap_type_adamantine_armor.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_specialized_type_adamantine_armor"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_specialized_type_adamantine_armor.dds"
+	}
+	# 神の吐息	Gods breath
 	spriteType = {
 		name = "GFX_ship_part_gods_breath"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_gods_breath.dds"
 	}
-}
-
-#天界の肌
-spriteTypes = {
+	#天界の肌
 	spriteType = {
 		name = "GFX_ship_part_gods_skin"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_gods_skin.dds"
 	}
-}
-
-#八咫鏡
-spriteTypes = {
+	#八咫鏡
 	spriteType = {
 		name = "GFX_ship_part_gods_shield"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_gods_shield.dds"
 	}
-}
-
-#八尺瓊勾玉
-spriteTypes = {
+	#八尺瓊勾玉
 	spriteType = {
 		name = "GFX_ship_part_gods_blessing"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_gods_blessing.dds"
 	}
-}
-
-#草薙剣
-spriteTypes = {
+	#草薙剣
 	spriteType = {
 		name = "GFX_ship_part_kusanagi"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_kusanagi.dds"
 	}
-}
-
-#	神話崩壊砲	mythical decay*2　 Tire5	
-spriteTypes = {
+	#	神話崩壊砲	mythical decay*2   Tire5	
 	spriteType = {
 		name = "GFX_ship_part_mythical_decay"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mythical_decay_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_mythical_decay_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay_2.dds"
 	}
 }
