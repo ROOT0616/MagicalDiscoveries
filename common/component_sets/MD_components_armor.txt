@@ -1,6 +1,6 @@
 ### ここで設定されているアイコンは、コンポーネントエディタのリストに表示されているものです。
 
-# ミスリル装甲	 	Tire3 160 400 920
+# ミスリル装甲
 component_set = {
 	key = "MITHRIL_ARMOR"
 
@@ -8,7 +8,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# 廉価型ミスリル装甲	 	Tire3 160 400 920
+# 廉価型ミスリル装甲
 component_set = {
 	key = "CHEAP_TYPE_MITHRIL_ARMOR"
 
@@ -16,7 +16,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# 特化型ミスリル装甲	 	Tire3 160 400 920
+# 特化型ミスリル装甲
 component_set = {
 	key = "SPPECIALIZED_TYPE_MITHRIL_ARMOR"
 
@@ -24,7 +24,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# オリハルコン装甲*2  Tire4	245 613 1410
+# オリハルコン装甲*2
 component_set = {
 	key = "ORICHALCONE_ARMOR"
 
@@ -32,7 +32,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# 廉価型オリハルコン装甲*2  Tire4	245 613 1410
+# 廉価型オリハルコン装甲*2
 component_set = {
 	key = "CHEAP_TYPE_ORICHALCONE_ARMOR"
 
@@ -40,7 +40,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# 特化型オリハルコン装甲*2  Tire4	245 613 1410
+# 特化型オリハルコン装甲*2
 component_set = {
 	key = "SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
 
@@ -48,7 +48,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# アダマンタイト装甲*2 Tire5	300 750 1725
+# アダマンタイト装甲*2 Tire5
 component_set = {
 	key = "ADAMANTINE_ARMOR"
 
@@ -56,7 +56,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# 廉価型アダマンタイト装甲*2 Tire5	300 750 1725
+# 廉価型アダマンタイト装甲*2 Tire5
 component_set = {
 	key = "CHEAP_TYPE_ADAMANTINE_ARMOR"
 
@@ -64,7 +64,7 @@ component_set = {
 	icon_frame = 1
 }
 
-# 特化型アダマンタイト装甲*2 Tire5	300 750 1725
+# 特化型アダマンタイト装甲*2 Tire5
 component_set = {
 	key = "SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
 

@@ -486,7 +486,7 @@ utility_component_template = {
 
 # アダマンタイト装甲*2 Tire5
 # cost  アダマンタイト 22 44 88  合金  22  44  88
-# 装甲HP +400  +1000  +2200	装甲回復/日 +2.5 +2.5 +2.5
+# 装甲HP +1000  +2500  +6000	装甲回復/日 +2.5 +2.5 +2.5
 utility_component_template = {
 	key = "SMALL_ADAMANTINE_ARMOR"
 	size = small
@@ -494,7 +494,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 400
+		ship_armor_add = 1000
 		ship_armor_regen_add_static = 2.5
 	}
 
@@ -520,7 +520,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1000
+		ship_armor_add = 2500
 		ship_armor_regen_add_static = 2.5
 	}
 	
@@ -546,7 +546,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 2200
+		ship_armor_add = 6000
 		ship_armor_regen_add_static = 2.5
 	}
 	
@@ -575,7 +575,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 240
+		ship_armor_add = 700
 		ship_armor_regen_add_static = 1.75
 	}
 
@@ -601,7 +601,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 600
+		ship_armor_add = 1750
 		ship_armor_regen_add_static = 1.75
 	}
 	
@@ -627,7 +627,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1320
+		ship_armor_add = 4200
 		ship_armor_regen_add_static = 1.75
 	}
 	

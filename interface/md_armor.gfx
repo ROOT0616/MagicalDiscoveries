@@ -70,10 +70,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ship_part_mythical_decay_1"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay_1.dds"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay_2.dds"
 	}
 	spriteType = {
 		name = "GFX_ship_part_mythical_decay_2"
-		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay_2.dds"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay_3.dds"
 	}
 }
