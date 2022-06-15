@@ -12,7 +12,7 @@ component_set = {
 component_set = {
 	key = "CHEAP_TYPE_MITHRIL_ARMOR"
 
-	icon = "GFX_ship_part_mithril_armor"
+	icon = "GFX_ship_part_cheap_type_mithril_armor"
 	icon_frame = 1
 }
 
@@ -20,7 +20,7 @@ component_set = {
 component_set = {
 	key = "SPPECIALIZED_TYPE_MITHRIL_ARMOR"
 
-	icon = "GFX_ship_part_mithril_armor"
+	icon = "GFX_ship_part_specialized_type_mithril_armor"
 	icon_frame = 1
 }
 
@@ -36,7 +36,7 @@ component_set = {
 component_set = {
 	key = "CHEAP_TYPE_ORICHALCONE_ARMOR"
 
-	icon = "GFX_ship_part_orichalcone_armor"
+	icon = "GFX_ship_part_cheap_type_orichalcone_armor"
 	icon_frame = 1
 }
 
@@ -44,7 +44,7 @@ component_set = {
 component_set = {
 	key = "SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
 
-	icon = "GFX_ship_part_orichalcone_armor"
+	icon = "GFX_ship_part_specialized_type_orichalcone_armor"
 	icon_frame = 1
 }
 
@@ -60,7 +60,7 @@ component_set = {
 component_set = {
 	key = "CHEAP_TYPE_ADAMANTINE_ARMOR"
 
-	icon = "GFX_ship_part_adamantine_armor"
+	icon = "GFX_ship_part_cheap_type_adamantine_armor"
 	icon_frame = 1
 }
 
@@ -68,7 +68,7 @@ component_set = {
 component_set = {
 	key = "SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
 
-	icon = "GFX_ship_part_adamantine_armor"
+	icon = "GFX_ship_part_specialized_type_adamantine_armor"
 	icon_frame = 1
 }
 

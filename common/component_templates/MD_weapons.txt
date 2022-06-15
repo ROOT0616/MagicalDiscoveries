@@ -185,7 +185,7 @@ weapon_component_template = {
 	
 	component_set = "MYTHICALDECAY"
 	prerequisites = { "tech_mythical_decay" }
-	
+	upgrades_to =	"SMALL_MYTHICAL_DECRAY_WEAPON_2"
 	power = -37.5
 	damage = { min = 30 max = 60 }
 	hull_damage = 1
@@ -236,7 +236,7 @@ weapon_component_template = {
 	
 	component_set = "MYTHICALDECAY"
 	prerequisites = { "tech_mythical_decay" }
-
+	upgrades_to =	"MEDIUM_MYTHICAL_DECRAY_WEAPON_2"
 	power = -75
 	damage = { min = 90 max = 180 }
 	hull_damage = 1
@@ -287,7 +287,7 @@ weapon_component_template = {
 	
 	component_set = "MYTHICALDECAY"
 	prerequisites = { "tech_mythical_decay" }
-
+	upgrades_to =	"LARGE_MYTHICAL_DECRAY_WEAPON_2"
 	power = -150
 	damage = { min = 270 max = 540 }
 	hull_damage = 1
@@ -347,6 +347,7 @@ weapon_component_template = {
 	
 	component_set = "MYTHICALDECAY_2"
 	prerequisites = { "tech_mythical_decay_2" }
+	upgrades_to =	"SMALL_MYTHICAL_DECRAY_WEAPON_3"
 	
 	power = -25
 	damage = { min = 50 max = 100 }
@@ -398,6 +399,7 @@ weapon_component_template = {
 	
 	component_set = "MYTHICALDECAY_2"
 	prerequisites = { "tech_mythical_decay_2" }
+	upgrades_to =	"MEDIUM_MYTHICAL_DECRAY_WEAPON_3"
 
 	power = -50
 	damage = { min = 150 max = 300 }
@@ -449,6 +451,7 @@ weapon_component_template = {
 	
 	component_set = "MYTHICALDECAY_2"
 	prerequisites = { "tech_mythical_decay_2" }
+	upgrades_to =	"LARGE_MYTHICAL_DECRAY_WEAPON_3"
 
 	power = -100
 	damage = { min = 450 max = 900 }

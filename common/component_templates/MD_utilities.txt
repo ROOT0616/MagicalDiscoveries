@@ -1,6 +1,6 @@
-# ミスリル装甲	 	Tire3 160 400 920
+# ミスリル装甲	 	Tire3
 # cost ミスリル 22 44 88 合金 11 22 44
-# 装甲HP +160 +400 +920	装甲回復/日 +1 +1 +1
+# 装甲HP +160 +400 +960	装甲回復/日 +1 +1 +1
 utility_component_template = {
 	key = "SMALL_MITHRIL_ARMOR"
 	size = small
@@ -60,7 +60,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 920
+		ship_armor_add = 960
 		ship_armor_regen_add_static = 1
 	}
 	
@@ -79,9 +79,9 @@ utility_component_template = {
 	}
 }
 
-# 廉価型ミスリル装甲	 	Tire3 160 400 920
+# 廉価型ミスリル装甲	 	Tire3
 # cost ミスリル 17.6 35.2 70.4 合金 8.8 17.6 35.2
-# 装甲HP +96 +240 +552	装甲回復/日 +0.6 +0.6 +0.6
+# 装甲HP +112 +280 +672	装甲回復/日 +0.7 +0.7 +0.7
 utility_component_template = {
 	key = "SMALL_CHEAP_TYPE_MITHRIL_ARMOR"
 	size = small
@@ -89,8 +89,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 160
-		ship_armor_regen_add_static = 1
+		ship_armor_add = 112
+		ship_armor_regen_add_static = 0.7
 	}
 
 	prerequisites = { "tech_cheap_type_mithril_armor" }
@@ -115,8 +115,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 400
-		ship_armor_regen_add_static = 1
+		ship_armor_add = 280
+		ship_armor_regen_add_static = 0.7
 	}
 	
 	prerequisites = { "tech_cheap_type_mithril_armor" }
@@ -141,8 +141,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 920
-		ship_armor_regen_add_static = 1
+		ship_armor_add = 672
+		ship_armor_regen_add_static = 0.7
 	}
 	
 	prerequisites = { "tech_cheap_type_mithril_armor" }
@@ -160,9 +160,9 @@ utility_component_template = {
 	}
 }
 
-# 特化型ミスリル装甲	 	Tire3 240 600 1380
+# 特化型ミスリル装甲	 	Tire3
 # cost ミスリル 26.4 52.8 105.6 合金 13.2 26.4 52.8
-# 装甲HP +240 +600 +1380	装甲回復/日 +1.5 +1.5 +1.5
+# 装甲HP +240 +600 +1440	装甲回復/日 +1.5 +1.5 +1.5
 utility_component_template = {
 	key = "SMALL_SPPECIALIZED_TYPE_MITHRIL_ARMOR"
 	size = small
@@ -170,8 +170,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 160
-		ship_armor_regen_add_static = 1
+		ship_armor_add = 240
+		ship_armor_regen_add_static = 1.5
 	}
 
 	prerequisites = { "tech_specialized_type_mithril_armor" }
@@ -196,8 +196,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 400
-		ship_armor_regen_add_static = 1
+		ship_armor_add = 600
+		ship_armor_regen_add_static = 1.5
 	}
 	
 	prerequisites = { "tech_specialized_type_mithril_armor" }
@@ -222,8 +222,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 920
-		ship_armor_regen_add_static = 1
+		ship_armor_add = 1440
+		ship_armor_regen_add_static = 1.5
 	}
 	
 	prerequisites = { "tech_specialized_type_mithril_armor" }
@@ -241,9 +241,9 @@ utility_component_template = {
 	}
 }
 
-# オリハルコン装甲*2   Tire4	280  700  1700
+# オリハルコン装甲*2   Tire4
 # cost  オリハルコン 15 30 60  合金  22  44  88
-# 装甲HP +280 +700 +1500	装甲回復/日 +1.5 +1.5 +1.5
+# 装甲HP +400 +1000 +2400	装甲回復/日 +1.5 +1.5 +1.5
 utility_component_template = {
 	key = "SMALL_ORICHALCONE_ARMOR"
 	size = small
@@ -251,7 +251,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 280
+		ship_armor_add = 400
 		ship_armor_regen_add_static = 1.5
 	}
 	
@@ -277,7 +277,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 700
+		ship_armor_add = 1000
 		ship_armor_regen_add_static = 1.5
 	}
 	
@@ -303,7 +303,7 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1700
+		ship_armor_add = 2400
 		ship_armor_regen_add_static = 1.5
 	}
 	
@@ -322,9 +322,9 @@ utility_component_template = {
 	}
 }
 
-# 廉価型オリハルコン装甲*2   Tire4	168  420  1020
+# 廉価型オリハルコン装甲*2   Tire4
 # cost  オリハルコン 12 24 48  合金  17.6  35.2  70.4
-# 装甲HP +280 +700 +1500	装甲回復/日 +0.9 +0.9 +0.9
+# 装甲HP +280 +700 +1680	装甲回復/日 +1.05 +1.05 +1.05
 utility_component_template = {
 	key = "SMALL_CHEAP_TYPE_ORICHALCONE_ARMOR"
 	size = small
@@ -333,7 +333,7 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = 280
-		ship_armor_regen_add_static = 1.5
+		ship_armor_regen_add_static = 1.05
 	}
 	
 	prerequisites = { "tech_cheap_type_orichalcone_armor" }
@@ -359,7 +359,7 @@ utility_component_template = {
 	power = 0
 	modifier = {
 		ship_armor_add = 700
-		ship_armor_regen_add_static = 1.5
+		ship_armor_regen_add_static = 1.05
 	}
 	
 	prerequisites = { "tech_cheap_type_orichalcone_armor" }
@@ -384,8 +384,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1700
-		ship_armor_regen_add_static = 1.5
+		ship_armor_add = 1680
+		ship_armor_regen_add_static = 1.05
 	}
 	
 	prerequisites = { "tech_cheap_type_orichalcone_armor" }
@@ -403,9 +403,9 @@ utility_component_template = {
 	}
 }
 
-# 特化型オリハルコン装甲*2   Tire4	280  700  1700
+# 特化型オリハルコン装甲*2   Tire4
 # cost  オリハルコン 18 36 72  合金  26.4  52.8  105.6
-# 装甲HP +420 +1050 +2550	装甲回復/日 +2.25 +2.25 +2.25
+# 装甲HP +600 +1500 +3600	装甲回復/日 +2.25 +2.25 +2.25
 utility_component_template = {
 	key = "SMALL_SPPECIALIZED_TYPE_ORICHALCONE_ARMOR"
 	size = small
@@ -413,8 +413,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 280
-		ship_armor_regen_add_static = 1.5
+		ship_armor_add = 600
+		ship_armor_regen_add_static = 2.25
 	}
 	
 	prerequisites = { "tech_specialized_type_orichalcone_armor" }
@@ -439,8 +439,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 700
-		ship_armor_regen_add_static = 1.5
+		ship_armor_add = 1500
+		ship_armor_regen_add_static = 2.25
 	}
 	
 	prerequisites = { "tech_specialized_type_orichalcone_armor" }
@@ -465,8 +465,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1700
-		ship_armor_regen_add_static = 1.5
+		ship_armor_add = 3600
+		ship_armor_regen_add_static = 2.25
 	}
 	
 	prerequisites = { "tech_specialized_type_orichalcone_armor" }
@@ -484,9 +484,9 @@ utility_component_template = {
 	}
 }
 
-# アダマンタイト装甲*2 Tire5	400  1000  2200
+# アダマンタイト装甲*2 Tire5
 # cost  アダマンタイト 22 44 88  合金  22  44  88
-# 装甲HP +400 +900 +2000
+# 装甲HP +400  +1000  +2200	装甲回復/日 +2.5 +2.5 +2.5
 utility_component_template = {
 	key = "SMALL_ADAMANTINE_ARMOR"
 	size = small
@@ -565,9 +565,9 @@ utility_component_template = {
 	}
 }
 
-# 廉価型アダマンタイト装甲*2 Tire5	240  600  1320
+# 廉価型アダマンタイト装甲*2 Tire5
 # cost  アダマンタイト 8.8 17.6 35.2  合金  17.6  35.2  70.4
-# 装甲HP +400 +900 +2000
+# 装甲HP +700  +1750  +4200	装甲回復/日 +1.75 +1.75 +1.75
 utility_component_template = {
 	key = "SMALL_CHEAP_TYPE_ADAMANTINE_ARMOR"
 	size = small
@@ -575,8 +575,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 400
-		ship_armor_regen_add_static = 2.5
+		ship_armor_add = 240
+		ship_armor_regen_add_static = 1.75
 	}
 
 	prerequisites = { "tech_cheap_type_adamantine_armor" }
@@ -584,8 +584,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 22
-			adamantines = 11
+			alloys = 17.6
+			adamantines = 8.8
 		}		
 		upkeep = {
 			energy = @s_t6_upkeep_energy
@@ -601,8 +601,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1000
-		ship_armor_regen_add_static = 2.5
+		ship_armor_add = 600
+		ship_armor_regen_add_static = 1.75
 	}
 	
 	prerequisites = { "tech_cheap_type_adamantine_armor" }
@@ -610,8 +610,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 44
-			adamantines = 22
+			alloys = 35.2
+			adamantines = 17.6
 		}		
 		upkeep = {
 			energy = @m_t6_upkeep_energy
@@ -627,8 +627,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 2200
-		ship_armor_regen_add_static = 2.5
+		ship_armor_add = 1320
+		ship_armor_regen_add_static = 1.75
 	}
 	
 	prerequisites = { "tech_cheap_type_adamantine_armor" }
@@ -636,8 +636,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 88
-			adamantines = 44
+			alloys = 70.4
+			adamantines = 35.2
 		}		
 		upkeep = {
 			energy = @l_t6_upkeep_energy
@@ -646,9 +646,9 @@ utility_component_template = {
 	}
 }
 
-# 特化型アダマンタイト装甲*2 Tire5	600  1500  3300
-# cost  アダマンタイト 13.2 26.4 52.8  合金  26.4  52.8  105.6
-# 装甲HP +400 +900 +2000
+# 特化型アダマンタイト装甲*2 Tire5
+# cost  アダマンタイト 14.4 28.8 57.6  合金  30  60  120
+# 装甲HP +1500  +3750  +9000	装甲回復/日 +3.75 +3.75 +3.75
 utility_component_template = {
 	key = "SMALL_SPPECIALIZED_TYPE_ADAMANTINE_ARMOR"
 	size = small
@@ -656,8 +656,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 400
-		ship_armor_regen_add_static = 2.5
+		ship_armor_add = 1500
+		ship_armor_regen_add_static = 3.75
 	}
 
 	prerequisites = { "tech_specialized_type_adamantine_armor" }
@@ -665,8 +665,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 22
-			adamantines = 11
+			alloys = 30
+			adamantines = 14.4
 		}		
 		upkeep = {
 			energy = @s_t6_upkeep_energy
@@ -682,8 +682,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 1000
-		ship_armor_regen_add_static = 2.5
+		ship_armor_add = 3750
+		ship_armor_regen_add_static = 3.75
 	}
 	
 	prerequisites = { "tech_specialized_type_adamantine_armor" }
@@ -691,8 +691,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 44
-			adamantines = 22
+			alloys = 60
+			adamantines = 28.8
 		}		
 		upkeep = {
 			energy = @m_t6_upkeep_energy
@@ -708,8 +708,8 @@ utility_component_template = {
 	icon_frame = 1
 	power = 0
 	modifier = {
-		ship_armor_add = 2200
-		ship_armor_regen_add_static = 2.5
+		ship_armor_add = 9000
+		ship_armor_regen_add_static = 3.75
 	}
 	
 	prerequisites = { "tech_specialized_type_adamantine_armor" }
@@ -717,8 +717,8 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			alloys = 88
-			adamantines = 44
+			alloys = 120
+			adamantines = 57.6
 		}		
 		upkeep = {
 			energy = @l_t6_upkeep_energy
@@ -727,7 +727,7 @@ utility_component_template = {
 	}
 }
 
-# 擬似神の盾*2 Tire5	400 800 2400
+# 試作型神の盾*2 Tire5
 # cost	アダマンタイト	4	8	12 賢者の石	0.1	0.2	0.3
 # シールドHP 400 800 2400	シールド回復/日 +10 +25 +60
 utility_component_template = {
@@ -808,7 +808,7 @@ utility_component_template = {
 	}
 }
 
-# 本格神の盾*2 Tire5	800 2000 4800
+# 神の盾*2 Tire5
 # cost	アダマンタイト	8	16	24 賢者の石	0.2	0.4	0.6
 # シールドHP 800 2000 4800	シールド回復/日 +20 +50 +120
 utility_component_template = {
@@ -888,7 +888,7 @@ utility_component_template = {
 	}
 }
 
-# 神の盾*2 Tire5	600 1500 2400
+# 零式神の盾*2 Tire5
 # cost	アダマンタイト	30	60	90 賢者の石	1	2	3
 # シールドHP +600 +1500 +2000	シールド回復/日 +60 +150 +200
 utility_component_template = {
