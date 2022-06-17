@@ -1,0 +1,97 @@
+namespace = md_deficit
+#Alloys Deficit
+situation_event = {
+	id = md_deficit.1
+	title = md_deficit.1.name
+	desc = {
+		text = md_deficit.1.desc
+		trigger = {
+			owner = {
+				is_machine_empire = no
+			}
+		}
+	}
+	desc = {
+		text = md_deficit.1.desc.machine
+		trigger = {
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+	}
+	picture = GFX_evt_decryption
+	show_sound = event_bad_omen
+	is_triggered_only = yes
+	situation = this
+	abort_trigger = {
+		situation_progress >= 100
+	}
+	immediate = {
+		owner = {
+			ordered_pop_faction = {
+				limit = {
+					is_owner_ethic_pop_faction = yes
+					NOT = {
+						has_modifier = faction_loan_taken
+					}
+				}
+				order_by = trigger:num_pops
+				position = 0
+				save_event_target_as = ruler_pop_faction
+			}
+		}
+	}
+	option = {
+		name = deficit.100.A
+		trigger = {
+			exists = event_target:ruler_pop_faction
+		}
+		owner = {
+			add_resource = {
+				mithrils = 25
+				mult = event_target:ruler_pop_faction.trigger:num_pops
+			}
+			event_target:ruler_pop_faction = {
+				add_modifier = {
+					modifier = faction_loan_taken
+					years = 10
+				}
+			}
+		}
+	}
+	option = {
+		name = md_deficit.155.A
+		owner = {
+			add_modifier = {
+				modifier = mithrils_rationing
+				years = 10
+			}
+		}
+	}
+	option = {
+		name = deficit.100.C
+	}
+}
+
+situation_event = {
+	id = md_deficit.2
+	title = BANKRUPTCY
+	desc = md_deficit.2.desc
+	picture = GFX_evt_news_room
+	show_sound = event_life_support_fail
+	is_triggered_only = yes
+	situation = this
+	option = {
+		name = UNFORTUNATE
+		owner = {
+			add_resource = {
+				mithrils = @bailout_alloys_base_amount
+				mult = value:bailout_scaling_factor
+			}
+			country_defaulted_effect = yes
+		}
+	}
+	after = {
+		destroy_situation = this
+	}
+}

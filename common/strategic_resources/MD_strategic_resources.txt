@@ -13,7 +13,8 @@ mithrils = {
 	prerequisites = {
 		"tech_mithril_refinery"
 	}
-	deficit_modifier = mithrils_deficit
+	deficit_situation = situation_mithrils_deficit
+	# deficit_modifier = mithrils_deficit
 	visibility_prerequisite = {
 		always = yes
 	}
