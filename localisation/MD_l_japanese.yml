@@ -377,11 +377,29 @@
  resolution_galactic_focus_crisis_heavenly:0 ""
  resolution_galactic_focus_crisis_heavenly_desc:0 ""
 
- md_deficit.1.name:1 "$deficit.100.name$"
- md_deficit.1.desc:1 "わが国が直面しているミスリル不足に、 [Owner.GetFinancialAdvisorAgencyCap]はますます危機感を募らせている。 支出の埋め合わせに失敗すれば、 産業界の広範囲に混乱が生じることになるだろう。"
- md_deficit.1.desc.machine:1 "予算警告：ミスリル不足が数ヵ月も続いている。 この不足を解消しなければ、 産業界の広範囲に混乱が生じることになるだろう。"
+ md_deficit.1.name:0 "$deficit.100.name$"
+ md_deficit.1.desc:0 "わが国が直面しているミスリル不足に、 [Owner.GetFinancialAdvisorAgencyCap]はますます危機感を募らせている。 支出の埋め合わせに失敗すれば、 産業界の広範囲に混乱が生じることになるだろう。"
+ md_deficit.1.desc.machine:0 "予算警告：ミスリル不足が数ヵ月も続いている。 この不足を解消しなければ、 産業界の広範囲に混乱が生じることになるだろう。"
 
- md_deficit.2.desc:1 "ミスリル不足を解消できなかったことで、 我々は破産宣告と債務不履行を余儀なくされた。 このような事態を二度と起こさないために、 [Owner.GetFinancialAdvisorAgencyCap]は支出削減のための新たな緊縮財政計画を立案している。"
+ md_deficit.2.desc:0 "ミスリル不足を解消できなかったことで、 我々は破産宣告と債務不履行を余儀なくされた。 このような事態を二度と起こさないために、 [Owner.GetFinancialAdvisorAgencyCap]は支出削減のための新たな緊縮財政計画を立案している。"
+
+ md_deficit.3.name:0 "$deficit.100.name$"
+ md_deficit.3.desc:0 "わが国が直面しているオリハルコン不足に、 [Owner.GetFinancialAdvisorAgencyCap]はますます危機感を募らせている。 支出の埋め合わせに失敗すれば、 産業界の広範囲に混乱が生じることになるだろう。"
+ md_deficit.3.desc.machine:0 "予算警告：オリハルコン不足が数ヵ月も続いている。 この不足を解消しなければ、 産業界の広範囲に混乱が生じることになるだろう。"
+
+ md_deficit.4.desc:0 "オリハルコン不足を解消できなかったことで、 我々は破産宣告と債務不履行を余儀なくされた。 このような事態を二度と起こさないために、 [Owner.GetFinancialAdvisorAgencyCap]は支出削減のための新たな緊縮財政計画を立案している。"
+
+ md_deficit.5.name:0 "$deficit.100.name$"
+ md_deficit.5.desc:0 "わが国が直面しているアダマンタイト不足に、 [Owner.GetFinancialAdvisorAgencyCap]はますます危機感を募らせている。 支出の埋め合わせに失敗すれば、 産業界の広範囲に混乱が生じることになるだろう。"
+ md_deficit.5.desc.machine:0 "予算警告：アダマンタイト不足が数ヵ月も続いている。 この不足を解消しなければ、 産業界の広範囲に混乱が生じることになるだろう。"
+
+ md_deficit.6.desc:0 "アダマンタイト不足を解消できなかったことで、 我々は破産宣告と債務不履行を余儀なくされた。 このような事態を二度と起こさないために、 [Owner.GetFinancialAdvisorAgencyCap]は支出削減のための新たな緊縮財政計画を立案している。"
+
+ md_deficit.7.name:0 "$deficit.100.name$"
+ md_deficit.7.desc:0 "わが国が直面している賢者の石不足に、 [Owner.GetFinancialAdvisorAgencyCap]はますます危機感を募らせている。 支出の埋め合わせに失敗すれば、 産業界の広範囲に混乱が生じることになるだろう。"
+ md_deficit.7.desc.machine:0 "予算警告：賢者の石不足が数ヵ月も続いている。 この不足を解消しなければ、 産業界の広範囲に混乱が生じることになるだろう。"
+
+ md_deficit.8.desc:0 "賢者の石不足を解消できなかったことで、 我々は破産宣告と債務不履行を余儀なくされた。 このような事態を二度と起こさないために、 [Owner.GetFinancialAdvisorAgencyCap]は支出削減のための新たな緊縮財政計画を立案している。"
 
 #############################
 #####  イベントチェイン  ######
@@ -407,6 +425,18 @@
  situation_mithrils_deficit:0 "ミスリル不足"
  situation_mithrils_deficit_type:0 "$situation_alloys_deficit$"
  situation_mithrils_deficit_desc:0 "手に負えないほどミスリルが不足している！  $situation_deficit_desc_base$"
+
+ situation_orichalcones_deficit:0 "オリハルコン不足"
+ situation_orichalcones_deficit_type:0 "$situation_alloys_deficit$"
+ situation_orichalcones_deficit_desc:0 "手に負えないほどオリハルコンが不足している！  $situation_deficit_desc_base$"
+
+ situation_adamantines_deficit:0 "アダマンタイト不足"
+ situation_adamantines_deficit_type:0 "$situation_alloys_deficit$"
+ situation_adamantines_deficit_desc:0 "手に負えないほどアダマンタイトが不足している！  $situation_deficit_desc_base$"
+
+ situation_philosophers_deficit:0 "賢者の石不足"
+ situation_philosophers_deficit_type:0 "$situation_alloys_deficit$"
+ situation_philosophers_deficit_desc:0 "手に負えないほど賢者の石が不足している！  $situation_deficit_desc_base$"
 
 #######################
 #####    装甲    ######
@@ -587,11 +617,6 @@
  star_depletion_4_modifier_desc:0 ""
  star_depletion_5_modifier:0 "魔導炉の長期使用による星の不安定化"
  star_depletion_5_modifier_desc:0 ""
-
- mithrils_deficit:0 "ミスリスの不足"
- orichalcones_deficit:0 "オリハルコンの不足"
- adamantines_deficit:0 "アダマンタイトの不足"
- philosophers_deficit:0 "賢者の石の不足"
 
 #######################################
 #####    スペシャルプロジェクト    ######

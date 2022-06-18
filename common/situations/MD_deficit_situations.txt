@@ -28,7 +28,6 @@ situation_mithrils_deficit = {
 			modifier = {
 				planet_mithril_magic_tool_crafter_produces_mult = -0.2
 				planet_orichalcone_refiner_produces_mult = -0.2
-				planet_orichalcone_crafter_produces_mult = -0.2
 				habitat_stability_add = -10
 			}
 		}
@@ -39,9 +38,7 @@ situation_mithrils_deficit = {
 			modifier = {
 				planet_mithril_magic_tool_crafter_produces_mult = -0.4
 				planet_orichalcone_refiner_produces_mult = -0.4
-				planet_orichalcone_crafter_produces_mult = -0.4
 				ship_armor_mult = -0.11
-				ship_shield_mult = -0.11
 				habitat_stability_add = -15
 			}
 		}
@@ -52,9 +49,7 @@ situation_mithrils_deficit = {
 			modifier = {
 				planet_mithril_magic_tool_crafter_produces_mult = -0.5
 				planet_orichalcone_refiner_produces_mult = -0.6
-				planet_orichalcone_crafter_produces_mult = -0.6
 				ship_armor_mult = -0.22
-				ship_shield_mult = -0.22
 				habitat_stability_add = -20
 			}
 		}
@@ -68,9 +63,7 @@ situation_mithrils_deficit = {
 			modifier = {
 				planet_mithril_magic_tool_crafter_produces_mult = -0.8
 				planet_orichalcone_refiner_produces_mult = -0.8
-				planet_orichalcone_crafter_produces_mult = -0.8
 				ship_armor_mult = -0.33
-				ship_shield_mult = -0.33
 				habitat_stability_add = -30
 			}
 		}
@@ -124,20 +117,12 @@ situation_mithrils_deficit = {
 		}
 	}
 	approach = {
-		name = deficit_approach_cut_maintenance
-		icon = GFX_situation_approach_fleet
-		icon_background = GFX_situation_approach_bg_red
-		potential = {
-			owner = {
-				any_owned_planet = {
-					is_planet_class = "pc_habitat"
-				}
-			}
-		}
+		name = deficit_approach_invest_in_mithrils_production
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
 		modifier = {
-			# upkeep for habitat capital + updated version is just 5 mithrils,
-			# might as well wave off the cost entirely
-			planet_buildings_hab_capital_upkeep_mult = -1
+			planet_mithril_refiner_produces_mult = 0.50
+			planet_mithril_refiner_upkeep_mult = 0.50
 		}
 		ai_weight = {
 			base = 0
@@ -151,13 +136,508 @@ situation_mithrils_deficit = {
 			}
 		}
 	}
+}
+
+# オリハルコン
+situation_orichalcones_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				orichalcones = @bailout_alloys_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			modifier = {
+				planet_orichalcone_crafter_produces_mult = -0.2
+				planet_adamantine_refiner_produces_mult = -0.2
+				habitat_stability_add = -10
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			modifier = {
+				planet_orichalcone_crafter_produces_mult = -0.4
+				planet_adamantine_refiner_produces_mult = -0.4
+				ship_armor_mult = -0.11
+				habitat_stability_add = -15
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			modifier = {
+				planet_orichalcone_crafter_produces_mult = -0.6
+				planet_adamantine_refiner_produces_mult = -0.6
+				ship_armor_mult = -0.22
+				habitat_stability_add = -20
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = md_deficit.1 }
+			}
+			modifier = {
+				planet_orichalcone_crafter_produces_mult = -0.8
+				planet_adamantine_refiner_produces_mult = -0.8
+				ship_armor_mult = -0.33
+				habitat_stability_add = -30
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = md_deficit.2 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|orichalcones|
+			desc = string_expenditures_greater_than_income_orichalcones
+			owner = { has_actual_deficit = { RESOURCE = orichalcones } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_orichalcones
+			owner = {
+				resource_income_compare = {
+					resource = orichalcones
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_orichalcones
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = orichalcones }
+			}
+		}
+	}
 	approach = {
-		name = deficit_approach_invest_in_mithrils_production
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_orichalcones_production
 		icon = GFX_situation_approach_energy_credits
 		icon_background = GFX_situation_approach_bg_green
 		modifier = {
-			planet_mithril_refiner_produces_mult = 0.50
-			planet_mithril_refiner_upkeep_mult = 0.50
+			planet_orichalcone_refiner_produces_mult = 0.50
+			planet_orichalcone_refiner_upkeep_mult = 0.50
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
+
+# アダマンタイト
+situation_adamantines_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				adamantines = @bailout_alloys_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			modifier = {
+				habitat_stability_add = -10
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			modifier = {
+				ship_armor_mult = -0.11
+				habitat_stability_add = -15
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			modifier = {
+				ship_armor_mult = -0.22
+				habitat_stability_add = -20
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = md_deficit.1 }
+			}
+			modifier = {
+				ship_armor_mult = -0.33
+				habitat_stability_add = -30
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = md_deficit.2 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|adamantines|
+			desc = string_expenditures_greater_than_income_adamantines
+			owner = { has_actual_deficit = { RESOURCE = adamantines } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_adamantines
+			owner = {
+				resource_income_compare = {
+					resource = adamantines
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_adamantines
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = adamantines }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_adamantines_production
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		modifier = {
+			planet_adamantine_refiner_produces_mult = 0.50
+			planet_adamantine_refiner_upkeep_mult = 0.50
+		}
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
+
+# 賢者の石
+situation_philosophers_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				philosophers = @bailout_alloys_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = BIOLOGICAL
+						}
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.1
+					biological_pop_growth_speed_reduction = 0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.1
+				}
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = BIOLOGICAL
+						}
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.15
+					biological_pop_growth_speed_reduction = 0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.2
+				}
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = BIOLOGICAL
+						}
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.2
+					biological_pop_growth_speed_reduction = 0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.33
+				}
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = deficit.140 }
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					biological_pop_happiness = -0.25
+					biological_pop_growth_speed_reduction = 0.75
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						is_lithoid_empire = no
+						any_owned_species = { is_archetype = BIOLOGICAL }
+					}
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.75
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = yes }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.5
+				}
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = md_deficit.2 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|philosophers|
+			desc = string_expenditures_greater_than_income_philosophers
+			owner = { has_actual_deficit = { RESOURCE = philosophers } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_philosophers
+			owner = {
+				resource_income_compare = {
+					resource = philosophers
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_philosophers
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = philosophers }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_philosophers_production
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		modifier = {
+			planet_the_legendary_alchemist_produces_mult = 0.50
+			planet_the_legendary_alchemist_upkeep_mult = 0.50
 		}
 		ai_weight = {
 			base = 0
