@@ -1,6 +1,7 @@
 # ミスリル
 mithrils = {
 	tradable = yes
+	category = advanced
 	market_amount = 10
 	market_price = 300
 	max = 15000
@@ -23,6 +24,7 @@ mithrils = {
 # オリハルコン
 orichalcones = {
 	tradable = yes
+	category = advanced
 	market_amount = 10
 	market_price = 850
 	max = 15000
@@ -35,7 +37,8 @@ orichalcones = {
 	prerequisites = {
 		"tech_orichalcone_refinery"
 	}
-	deficit_modifier = orichalcones_deficit
+	deficit_situation = situation_orichalcones_deficit
+	# deficit_modifier = orichalcones_deficit
 	visibility_prerequisite = {
 		always = yes
 	}
@@ -44,6 +47,7 @@ orichalcones = {
 # アダマンタイト
 adamantines = {
 	tradable = yes
+	category = advanced
 	market_amount = 5
 	market_price = 1000
 	max = 15000
@@ -56,7 +60,8 @@ adamantines = {
 	prerequisites = {
 		"tech_adamantine_refinery"
 	}
-	deficit_modifier = adamantines_deficit
+	deficit_situation = situation_adamantines_deficit
+	# deficit_modifier = adamantines_deficit
 	visibility_prerequisite = {
 		always = yes
 	}
@@ -65,6 +70,7 @@ adamantines = {
 # 賢者の石
 philosophers_stone = {
 	tradable = yes
+	category = rare
 	market_amount = 5
 	market_price = 500
 	max = 10000
@@ -77,7 +83,8 @@ philosophers_stone = {
 	prerequisites = {
 		"tech_philosophers_stone"
 	}
-	deficit_modifier = philosophers_deficit
+	deficit_situation = situation_philosophers_deficit
+	# deficit_modifier = philosophers_deficit
 	visibility_prerequisite = {
 		always = yes
 	}
