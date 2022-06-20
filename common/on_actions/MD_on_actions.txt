@@ -29,11 +29,30 @@ on_yearly_pulse = {
 	}
 }
 
+# this = country
+on_yearly_pulse_country = {
+	events = {
+	}
+}
+
+# this = country
+on_bi_yearly_pulse_country = {
+	random_events = {
+		60 = 0
+		40 = magical_discoveries.8
+	}
+	events = {
+	}
+}
+
 # No scope, like on_game_start
 on_mid_game_pulse = {
 	events = {
-		
 	}
+}
+
+# this = country
+on_mid_game_pulse_country = {
 }
 
 # This = owner of ship 1 (destroyed)

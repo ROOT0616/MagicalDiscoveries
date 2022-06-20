@@ -528,13 +528,13 @@ country_event = {
 	picture = GFX_evt_ship_in_orbit
 	hide_window = no
 	## イベントの発生条件
-	is_triggered_only = no
+	is_triggered_only = yes
 	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
+	# mean_time_to_happen = {
+	# 	years = 15
+	# }
 	trigger = {
-		years_passed = 100
+		mid_game_years_passed >= 25
 		is_regular_empire = yes
 		has_country_flag = BuyGrimoireFlag03
 		has_country_flag = BuyAlchemyFlag03

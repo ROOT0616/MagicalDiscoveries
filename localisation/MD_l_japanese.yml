@@ -425,18 +425,22 @@
  situation_mithrils_deficit:0 "ミスリル不足"
  situation_mithrils_deficit_type:0 "$situation_alloys_deficit$"
  situation_mithrils_deficit_desc:0 "手に負えないほどミスリルが不足している！  $situation_deficit_desc_base$"
+ deficit_approach_invest_in_mithrils_production:0 "ミスリル産出に投資する"
 
  situation_orichalcones_deficit:0 "オリハルコン不足"
  situation_orichalcones_deficit_type:0 "$situation_alloys_deficit$"
  situation_orichalcones_deficit_desc:0 "手に負えないほどオリハルコンが不足している！  $situation_deficit_desc_base$"
+ deficit_approach_invest_in_orichalcones_production:0 "オリハルコン産出に投資する"
 
  situation_adamantines_deficit:0 "アダマンタイト不足"
  situation_adamantines_deficit_type:0 "$situation_alloys_deficit$"
  situation_adamantines_deficit_desc:0 "手に負えないほどアダマンタイトが不足している！  $situation_deficit_desc_base$"
+ deficit_approach_invest_in_adamantines_production:0 "アダマンタイト産出に投資する"
 
  situation_philosophers_deficit:0 "賢者の石不足"
  situation_philosophers_deficit_type:0 "$situation_alloys_deficit$"
  situation_philosophers_deficit_desc:0 "手に負えないほど賢者の石が不足している！  $situation_deficit_desc_base$"
+ deficit_approach_invest_in_philosophers_production:0 "賢者の石産出に投資する"
 
 #######################
 #####    装甲    ######

@@ -35,25 +35,25 @@
 #										# FROMFROM = System jumped from
 # }
 
-# md_heavenes_hole = {
-# 	name = MD_HEAVENES_HOLE
-# 	is_pathfind = yes
-# 	uses_action = yes
-# 	requires_exploration = no
-# 	always_active = yes
-# 	windup_time = 0
-# 	winddown_time = 0
-# 	ftl_multiplier = 0
-# 	extends_sensors = yes
-# 	icon_frame = 12
-# 	remember_instances = yes
-# 	animation_time = 1
-# 	galactic_map_tooltip_header = NATURAL_WORMHOLE_GALACTIC
-# 	galactic_map_tooltip_desc = NATURAL_WORMHOLE_DESC
-# 	connection_type = any_other
-# 	ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
-# 	ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
-# 	country_can_use = {
-# 		is_country_type = heavenly_realm
-# 	}
-# }
+md_heavenes_hole = {
+	name = MD_HEAVENES_HOLE
+	is_pathfind = yes
+	uses_action = yes
+	requires_exploration = no
+	always_active = yes
+	windup_time = 0
+	winddown_time = 0
+	ftl_multiplier = 0
+	extends_sensors = yes
+	icon_frame = 12
+	remember_instances = yes
+	animation_time = 1
+	galactic_map_tooltip_header = NATURAL_WORMHOLE_GALACTIC
+	galactic_map_tooltip_desc = NATURAL_WORMHOLE_DESC
+	connection_type = any_other
+	ftl_ship_effect = "wormhole_ftl_ship_effect_entity"
+	ftl_bypass_effect = "wormhole_ftl_bypass_effect_entity"
+	country_can_use = {
+		is_country_type = heavenly_realm
+	}
+}
