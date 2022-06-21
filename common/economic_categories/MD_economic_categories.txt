@@ -1,7 +1,7 @@
 # ミスリル錬金術師
 planet_mithril_refiner = {
 	icon = "job_mithril_refiner"
-	parent = planet_jobs_productive
+	parent = planet_metallurgists
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -29,7 +29,7 @@ planet_mithril_magic_tool_crafter = {
 # オリハルコン錬金術師
 planet_orichalcone_refiner = {
 	icon = "job_orichalcone_refiner"
-	parent = planet_jobs_productive
+	parent = planet_metallurgists
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -57,7 +57,7 @@ planet_orichalcone_crafter = {
 # アダマンタイト錬金術師
 planet_adamantine_refiner = {
 	icon = "job_adamantine_refiner"
-	parent = planet_jobs_productive
+	parent = planet_metallurgists
 	generate_mult_modifiers = {
 		produces
 		upkeep

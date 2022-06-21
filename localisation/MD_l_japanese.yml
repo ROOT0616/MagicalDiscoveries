@@ -161,6 +161,10 @@
 
  building_magical_furnace:0 "魔導炉"
  building_magical_furnace_desc:0 "魔導炉は星の生命ともいえるエネルギーを吸出し、人々が使いやすい形に変換する。"
+ building_magical_furnace_effect_0_desc:0 "1段階目\n£energy£ §G+25§! £minerals£ §G+25§! £alloys£ §G+10§!"
+ building_magical_furnace_effect_1_desc:0 "2段階目\n£energy£ §G+45§! £minerals£ §G+45§! £alloys£ §G+25§!"
+ building_magical_furnace_effect_2_desc:0 "3段階目\n£energy£ §G+70§! £minerals£ §G+60§! £alloys£ §G+40§!"
+ building_magical_furnace_effect_3_desc:0 "4段階目\n£energy£ §G+110§! £minerals£ §G+100§! £alloys£ §G+80§!
 
 #######################
 #####    仕事    ######
@@ -169,37 +173,48 @@
  job_white_magician:0 "白魔道士"
  job_white_magician_desc:0 "回復や修繕を行う専門家にして恐るべき力の体現者"
  job_white_magician_plural:0 "白魔道士"
+ job_white_magician_effect_desc:1 "£job_white_magician£ $job_white_magician_plural$は£energy£ §Y$energy$§!を消費して、 £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!を産出し、 £mod_pop_growth_speed£ §Y$MOD_POP_GROWTH_SPEED$§!、 £mod_planet_pop_assembly_organic_mult£ §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$§!を増加させる。"
  mod_job_white_magician_add:0 "白魔道士の職業枠"
 
  job_mithril_refiner:0 "ミスリル錬金術師"
  job_mithril_refiner_desc:0 "鉱物等から魔力によりミスリルを合成させる専門家"
  job_mithril_refiner_plural:0 "ミスリル錬金術師"
+ job_mithril_refiner_effect_desc:0 "£job_mithril_refiner£ $job_mithril_refiner_plural$は、 £minerals£ §Y$minerals$§!を消費して£mithrils£ §Y$mithrils$§!を産出する"
  mod_job_mithril_refiner_add:0 "ミスリル錬金術師の職業枠"
 
  job_mithril_magic_tool_crafter:0 "ミスリル魔道具師 "
  job_mithril_magic_tool_crafter_desc:0 "ミスリルを様々な魔法道具に加工する職人"
  job_mithril_magic_tool_crafter_plural:0 "ミスリル魔道具師 "
+ job_mithril_magic_tool_crafter_effect_desc:0 "£job_mithril_magic_tool_crafter£ $job_mithril_magic_tool_crafter_plural$は、 £minerals£ §Y$minerals$§!を消費して£consumer_goods£ §Y$consumer_goods$§! 、£unity£ §Y$unity$§!を産出する"
  mod_job_mithril_magic_tool_crafter_add:0 "ミスリル魔道具師の職業枠"
 
  job_orichalcone_refiner:0 "オリハルコン錬金術師"
  job_orichalcone_refiner_desc:0 "ミスリル等から魔力によりオリハルコンを合成させる専門家"
  job_orichalcone_refiner_plural:0 "オリハルコン錬金術師"
+ job_orichalcone_refiner_effect_desc:0 "£job_orichalcone_refiner£ $job_orichalcone_refiner_plural$は、£rare_crystals£ §Y$rare_crystals$§!、 £mithrils£ §Y$mithrils$§!を消費して£orichalcones£ §Y$orichalcones$§!を産出する"
  mod_job_orichalcone_refiner_add:0 "オリハルコン錬金術師の職業枠"
  
  job_orichalcone_crafter:0 "オリハルコン工芸士"
  job_orichalcone_crafter_desc:0 "オリハルコンを工芸に使う冶金学の大家"
  job_orichalcone_crafter_plural:0 "オリハルコン工芸士"
+ job_orichalcone_crafter_effect_desc:0 "£job_orichalcone_crafter£ $job_orichalcone_crafter_plural$は、£orichalcones£ §Y$orichalcones$§!を消費して£influence£ §Y$influence$§!を産出する"
  mod_job_orichalcone_crafter_add:0 "オリハルコン工芸士の職業枠"
 
  job_adamantine_refiner:0 "アダマンタイト錬金術師"
  job_adamantine_refiner_desc:0 "オリハルコン等から魔力によりアダマンタイトを合成させる専門家"
  job_adamantine_refiner_plural:0 "アダマンタイト錬金術師"
+ job_adamantine_refiner_effect_desc:0 "£job_adamantine_refiner£ $job_adamantine_refiner_plural$は、£orichalcones£ §Y$orichalcones$§!、 £philosophers_stone£ §Y$philosophers_stone$§!を消費して£adamantines£ §Y$adamantines$§!を産出する"
  mod_job_adamantine_refiner_add:0 "アダマンタイト錬金術師の職業枠"
 
  job_the_legendary_alchemist:0 "伝説の錬金術師"
  job_the_legendary_alchemist_desc:0 "錬金術を極めた国家有数の専門家"
  job_the_legendary_alchemist_plural:0 "伝説の錬金術師"
+ job_the_legendary_alchemist_effect_desc:0 "£job_the_legendary_alchemist£ $job_the_legendary_alchemist_plural$は、£minerals£ §Y$minerals$§!、£exotic_gases£ §Y$exotic_gases$§!、£rare_crystals£ §Y$rare_crystals$§!、 £sr_zro£ §Y$sr_zro$§!を消費して£philosophers_stone£ §Y$philosophers_stone$§!を産出する"
  mod_job_the_legendary_alchemist_add:0 "伝説の錬金術師の職業枠"
+
+########################
+#####    地上軍    ######
+########################
 
  black_magic_army:0 "魔法部隊"
  black_magic_army_plural:0 "魔法部隊"

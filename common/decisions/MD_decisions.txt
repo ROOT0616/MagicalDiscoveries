@@ -1,7 +1,7 @@
 # 魔導炉のフェーズを進める
 decision_magical_furnace = {
 	owned_planets_only = yes
-	enactment_time = 1800
+	enactment_time = 360
 	potential = {
 		has_planet_flag = building_magical_furnace_fase_0
 	}
@@ -53,7 +53,7 @@ decision_magical_furnace = {
 
 decision_magical_furnace_end = {
 	owned_planets_only = yes
-	enactment_time = 1800
+	enactment_time = 360
 	potential = {
 		has_planet_flag = building_magical_furnace_fase_0
 	}

@@ -28,6 +28,9 @@ building_white_magic_court = {
 			job_white_magician_add = 6
 		}
 	}
+	triggered_desc = {
+		text = job_white_magician_effect_desc
+	}
 }
 
 # 結界魔法院	  エネルギ200 鉱石400 ミスリル100 オリハルコン50
@@ -83,6 +86,9 @@ building_mithril_refinery = {
 			job_mithril_refiner_add = 6
 		}
 	}
+	triggered_desc = {
+		text = job_mithril_refiner_effect_desc
+	}
 }
 
 # ミスリル魔道具工場	   ミスリル魔道具師x6 エネルギ100 鉱石300 ミスリル100
@@ -113,6 +119,9 @@ building_mithril_magic_tool_factory = {
 		modifier = {
 			job_mithril_magic_tool_crafter_add = 6
 		}
+	}
+	triggered_desc = {
+		text = job_mithril_magic_tool_crafter_effect_desc
 	}
 }
 
@@ -146,6 +155,9 @@ building_orichalcone_refinery = {
 			job_orichalcone_refiner_add = 6
 		}
 	}
+	triggered_desc = {
+		text = job_orichalcone_refiner_effect_desc
+	}
 }
 
 # オリハルコン工芸所	オリハルコン工芸士x2 エネルギー200 鉱石250 ミスリル100 オリハルコン50
@@ -177,6 +189,9 @@ building_orichalcone_workshop = {
 		modifier = {
 			job_orichalcone_crafter_add = 2
 		}
+	}
+	triggered_desc = {
+		text = job_orichalcone_crafter_effect_desc
 	}
 }
 
@@ -210,6 +225,9 @@ building_adamantine_refinery = {
 			job_adamantine_refiner_add = 6
 		}
 	}
+	triggered_desc = {
+		text = job_adamantine_refiner_effect_desc
+	}
 }
 
 # 伝説の錬金術所 伝説の錬金術師x2 エネルギ300 鉱石300 ミスリル50 オリハルコン50
@@ -242,9 +260,15 @@ building_the_legendary_alchem_house = {
 			job_the_legendary_alchemist_add = 2
 		}
 	}
+	triggered_desc = {
+		text = job_the_legendary_alchemist_effect_desc
+	}
 }
 
-# 魔導炉 鉱石300 ミスリル50 オリハルコン50
+# 魔導炉 鉱石300 ミスリル300
+# energy 110
+# minerals 100
+# alloys 80
 building_magical_furnace = {
 	base_buildtime = 360
 	category = manufacturing
@@ -278,30 +302,39 @@ building_magical_furnace = {
 			trigger = {
 				has_planet_flag = building_magical_furnace_fase_1
 			}
-			energy = 10
-			minerals = 10
-			alloys = 5
+			energy = 20
+			minerals = 20
+			alloys = 15
 		}
 		produces = {
 			trigger = {
 				has_planet_flag = building_magical_furnace_fase_2
 			}
-			energy = 15
-			minerals = 5
-			alloys = 5
+			energy = 25
+			minerals = 15
+			alloys = 15
 		}
 		produces = {
 			trigger = {
 				has_planet_flag = building_magical_furnace_fase_3
 			}
-			energy = 20
-			minerals = 20
-			alloys = 20
+			energy = 40
+			minerals = 40
+			alloys = 40
 		}
 		cost = {
 			minerals = 300
 			minerals = 300
 		}
+	}
+	triggered_desc = {
+		text = building_magical_furnace_effect_1_desc
+	}
+	triggered_desc = {
+		text = building_magical_furnace_effect_2_desc
+	}
+	triggered_desc = {
+		text = building_magical_furnace_effect_3_desc
 	}
 	on_built = {
 		set_planet_flag = building_magical_furnace_fase_0
