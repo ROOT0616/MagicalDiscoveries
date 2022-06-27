@@ -312,7 +312,7 @@ situation_event = {
 		}
 		owner = {
 			add_resource = {
-				philosophers = 25
+				philosophers_stone = 25
 				mult = event_target:ruler_pop_faction.trigger:num_pops
 			}
 			event_target:ruler_pop_faction = {
@@ -340,7 +340,7 @@ situation_event = {
 		name = UNFORTUNATE
 		owner = {
 			add_resource = {
-				philosophers = @bailout_alloys_base_amount
+				philosophers_stone = @bailout_alloys_base_amount
 				mult = value:bailout_scaling_factor
 			}
 			country_defaulted_effect = yes

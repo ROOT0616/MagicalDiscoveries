@@ -22,6 +22,9 @@
  tech_ultimate_alchemy:0 "究極錬金術"
  tech_ultimate_alchemy_desc:0 "工学、合金の生産力向上は帝国全体の軍事力と建築を根本から変化させ、工業技師の大半は壺を前にして合金製造を行っていると噂される…実際は当事者しか知らない。"
 
+ tech_magical_mining_efficiency:0 "魔法による採掘の効率化"
+tech_magical_mining_efficiency_desc:0 ""
+
  tech_black_magic:0 "黒魔法"
  tech_black_magic_desc:0 "魔力を操ることで様々な能力を発揮することができるだろう。我々は「力」に注力するべきだろう。"
 
@@ -64,8 +67,20 @@
  tech_philosophers_stone:0 "賢者の石"
  tech_philosophers_stone_desc:0 "賢者の石-既知の化学組成を超えた物質-をかつての物理学者は定義した。\n通常存在しえない物質-安定的で、物質の酸化を抑え、金属の性質を根本から変化させるもの-を我々は作ることに成功したのである。"
  
+ tech_philosophers_stone_pattern:0 "賢者の石精錬の標準化"
+ tech_philosophers_stone_pattern_desc:0 ""
+
+ tech_philosophers_stone_improvement:0 "賢者の石精錬の効率化"
+ tech_philosophers_stone_improvement_desc:0 ""
+
  tech_mithril_refinery:0 "ミスリル"
  tech_mithril_refinery_desc:0 "白銀色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
+
+ tech_mithril_refinery_pattern:0 "ミスリル精錬の標準化"
+ tech_philosophers_stone_pattern_desc:0 ""
+ 
+ tech_mithril_refinery_improvement:0 "ミスリル精錬の効率化"
+ tech_philosophers_stone_improvement_desc:0 ""
 
  tech_mithril_armor:0 "ミスリル装甲"
  tech_mithril_armor_desc:0 "美しいだけではなく実用性にも優れた装甲。"
@@ -79,6 +94,12 @@
  tech_orichalcone_refinery:0 "オリハルコン"
  tech_orichalcone_refinery_desc:0 "赤金色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
 
+ tech_orichalcone_refinery_pattern:0 "オリハルコン精錬の標準化"
+ tech_philosophers_stone_pattern_desc:0 ""
+ 
+ tech_orichalcone_refinery_improvement:0 "オリハルコン精錬の効率化"
+ tech_philosophers_stone_improvement_desc:0 ""
+
  tech_orichalcone_armor:0 "オリハルコン装甲"
  tech_orichalcone_armor_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
 
@@ -90,6 +111,12 @@
 
  tech_adamantine_refinery:0 "アダマンタイト"
  tech_adamantine_refinery_desc:0 "非常に硬く、加工すら難しいこの金属は様々な重要部品として活用される。特に軍需品においてこの金属は革命的な存在となるだろう。"
+
+ tech_adamantine_refinery_pattern:0 "アダマンタイト精錬の標準化"
+ tech_philosophers_stone_pattern_desc:0 ""
+ 
+ tech_adamantine_refinery_improvement:0 "アダマンタイト精錬の効率化"
+ tech_philosophers_stone_improvement_desc:0 ""
 
  tech_adamantine_armor:0 "アダマンタイト装甲"
  tech_adamantine_armor_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
@@ -164,7 +191,7 @@
  building_magical_furnace_effect_0_desc:0 "1段階目\n£energy£ §G+25§! £minerals£ §G+25§! £alloys£ §G+10§!"
  building_magical_furnace_effect_1_desc:0 "2段階目\n£energy£ §G+45§! £minerals£ §G+45§! £alloys£ §G+25§!"
  building_magical_furnace_effect_2_desc:0 "3段階目\n£energy£ §G+70§! £minerals£ §G+60§! £alloys£ §G+40§!"
- building_magical_furnace_effect_3_desc:0 "4段階目\n£energy£ §G+110§! £minerals£ §G+100§! £alloys£ §G+80§!
+ building_magical_furnace_effect_3_desc:0 "4段階目\n£energy£ §G+110§! £minerals£ §G+100§! £alloys£ §G+80§!"
 
 #######################
 #####    仕事    ######
@@ -441,21 +468,33 @@
  situation_mithrils_deficit_type:0 "$situation_alloys_deficit$"
  situation_mithrils_deficit_desc:0 "手に負えないほどミスリルが不足している！  $situation_deficit_desc_base$"
  deficit_approach_invest_in_mithrils_production:0 "ミスリル産出に投資する"
+ string_expenditures_greater_than_income_mithrils:0 "ミスリル不足"
+ string_not_in_deficit_mithrils:0 "黒字の月間ミスリル収支"
+ string_resource_reserves_mithrils:0 "ミスリル備蓄"
 
  situation_orichalcones_deficit:0 "オリハルコン不足"
  situation_orichalcones_deficit_type:0 "$situation_alloys_deficit$"
  situation_orichalcones_deficit_desc:0 "手に負えないほどオリハルコンが不足している！  $situation_deficit_desc_base$"
  deficit_approach_invest_in_orichalcones_production:0 "オリハルコン産出に投資する"
+ string_expenditures_greater_than_income_orichalcones:0 "オリハルコン不足"
+ string_not_in_deficit_orichalcones:0 "黒字の月間オリハルコン収支"
+ string_resource_reserves_orichalcones:0 "オリハルコン備蓄"
 
  situation_adamantines_deficit:0 "アダマンタイト不足"
  situation_adamantines_deficit_type:0 "$situation_alloys_deficit$"
  situation_adamantines_deficit_desc:0 "手に負えないほどアダマンタイトが不足している！  $situation_deficit_desc_base$"
  deficit_approach_invest_in_adamantines_production:0 "アダマンタイト産出に投資する"
+ string_expenditures_greater_than_income_adamantines:0 "アダマンタイト不足"
+ string_not_in_deficit_adamantines:0 "黒字の月間アダマンタイト収支"
+ string_resource_reserves_adamantines:0 "アダマンタイト備蓄"
 
  situation_philosophers_deficit:0 "賢者の石不足"
  situation_philosophers_deficit_type:0 "$situation_alloys_deficit$"
  situation_philosophers_deficit_desc:0 "手に負えないほど賢者の石が不足している！  $situation_deficit_desc_base$"
- deficit_approach_invest_in_philosophers_production:0 "賢者の石産出に投資する"
+ deficit_approach_invest_in_philosophers_stone_production:0 "賢者の石産出に投資する"
+ string_expenditures_greater_than_income_philosophers_stone:0 "賢者の石不足"
+ string_not_in_deficit_philosophers_stone:0 "黒字の月間賢者の石収支"
+ string_resource_reserves_philosophers_stone:0 "賢者の石備蓄"
 
 #######################
 #####    装甲    ######
@@ -682,33 +721,41 @@
 
  mod_planet_mithril_refiner_produces_mult:0 "£job_mithril_refiner£ $job_mithril_refiner$の産出"
  mod_planet_mithril_refiner_produces_add:0 "£job_mithril_refiner£ $job_mithril_refiner$の産出"
+ mod_planet_mithril_refiner_mithrils_produces_mult:0 "£job_mithril_refiner£ $job_mithril_refiner$からの£mithrils£ $mithrils$"
+ mod_planet_mithril_refiner_mithrils_produces_add:0 "$mod_planet_mithril_refiner_mithrils_produces_mult$"
  mod_planet_mithril_refiner_upkeep_mult:0 "$job_mithril_refiner$維持費"
  mod_planet_mithril_refiner_upkeep_add:0 "$job_mithril_refiner$維持費"
 
- mod_planet_mithril_magic_tool_crafter_produces_mult:0 "£planet_mithril_magic_tool_crafter£ $planet_mithril_magic_tool_crafter$の産出"
- mod_planet_mithril_magic_tool_crafter_produces_add:0 "£planet_mithril_magic_tool_crafter£ $planet_mithril_magic_tool_crafter$の産出"
- mod_planet_mithril_magic_tool_crafter_upkeep_mult:0 "$planet_mithril_magic_tool_crafter$維持費"
- mod_planet_mithril_magic_tool_crafter_upkeep_add:0 "$planet_mithril_magic_tool_crafter$維持費"
+ mod_planet_mithril_magic_tool_crafter_produces_mult:0 "£job_mithril_magic_tool_crafter£ $job_mithril_magic_tool_crafter$の産出"
+ mod_planet_mithril_magic_tool_crafter_produces_add:0 "£job_mithril_magic_tool_crafter£ $job_mithril_magic_tool_crafter$の産出"
+ mod_planet_mithril_magic_tool_crafter_upkeep_mult:0 "$job_mithril_magic_tool_crafter$維持費"
+ mod_planet_mithril_magic_tool_crafter_upkeep_add:0 "$job_mithril_magic_tool_crafter$維持費"
 
- mod_planet_orichalcone_refiner_produces_mult:0 "£planet_orichalcone_refiner£ $planet_orichalcone_refiner$の産出"
- mod_planet_orichalcone_refiner_produces_add:0 "£planet_orichalcone_refiner£ $planet_orichalcone_refiner$の産出"
- mod_planet_orichalcone_refiner_upkeep_mult:0 "$planet_orichalcone_refiner$維持費"
- mod_planet_orichalcone_refiner_upkeep_add:0 "$planet_orichalcone_refiner$維持費"
+ mod_planet_orichalcone_refiner_produces_mult:0 "£job_orichalcone_refiner£ $job_orichalcone_refiner$の産出"
+ mod_planet_orichalcone_refiner_produces_add:0 "£job_orichalcone_refiner£ $job_orichalcone_refiner$の産出"
+ mod_planet_orichalcone_refiner_orichalcones_produces_mult:0 "£job_orichalcone_refiner£ $job_orichalcone_refiner$からの£orichalcones£ $orichalcones$"
+ mod_planet_orichalcone_refiner_orichalcones_produces_add:0 "$mod_planet_orichalcone_refiner_orichalcones_produces_mult$"
+ mod_planet_orichalcone_refiner_upkeep_mult:0 "$job_orichalcone_refiner$維持費"
+ mod_planet_orichalcone_refiner_upkeep_add:0 "$job_orichalcone_refiner$維持費"
 
- mod_planet_orichalcone_crafter_produces_mult:0 "£planet_orichalcone_crafter£ $planet_orichalcone_crafter$の産出"
- mod_planet_orichalcone_crafter_produces_add:0 "£planet_orichalcone_crafter£ $planet_orichalcone_crafter$の産出"
- mod_planet_orichalcone_crafter_upkeep_mult:0 "$planet_orichalcone_crafter$維持費"
- mod_planet_orichalcone_crafter_upkeep_add:0 "$planet_orichalcone_crafter$維持費"
+ mod_planet_orichalcone_crafter_produces_mult:0 "£job_orichalcone_crafter£ $job_orichalcone_crafter$の産出"
+ mod_planet_orichalcone_crafter_produces_add:0 "£job_orichalcone_crafter£ $job_orichalcone_crafter$の産出"
+ mod_planet_orichalcone_crafter_upkeep_mult:0 "$job_orichalcone_crafter$維持費"
+ mod_planet_orichalcone_crafter_upkeep_add:0 "$job_orichalcone_crafter$維持費"
 
- mod_planet_adamantine_refiner_produces_mult:0 "£planet_adamantine_refiner£ $planet_adamantine_refiner$の産出"
- mod_planet_adamantine_refiner_produces_add:0 "£planet_adamantine_refiner£ $planet_adamantine_refiner$の産出"
- mod_planet_adamantine_refiner_upkeep_mult:0 "$planet_adamantine_refiner$維持費"
- mod_planet_adamantine_refiner_upkeep_add:0 "$planet_adamantine_refiner$維持費"
+ mod_planet_adamantine_refiner_produces_mult:0 "£job_adamantine_refiner£ $job_adamantine_refiner$の産出"
+ mod_planet_adamantine_refiner_produces_add:0 "£job_adamantine_refiner£ $job_adamantine_refiner$の産出"
+ mod_planet_adamantine_refiner_adamantines_produces_mult:0 "£job_adamantine_refiner£ $job_adamantine_refiner$からの£adamantines£ $adamantines$"
+ mod_planet_adamantine_refiner_adamantines_produces_add:0 "$mod_planet_adamantine_refiner_adamantines_produces_mult$"
+ mod_planet_adamantine_refiner_upkeep_mult:0 "$job_adamantine_refiner$維持費"
+ mod_planet_adamantine_refiner_upkeep_add:0 "$job_adamantine_refiner$維持費"
 
- mod_planet_the_legendary_alchemist_produces_mult:0 "£planet_the_legendary_alchemist£ $planet_the_legendary_alchemist$の産出"
- mod_planet_the_legendary_alchemist_produces_add:0 "£planet_the_legendary_alchemist£ $planet_the_legendary_alchemist$の産出"
- mod_planet_the_legendary_alchemist_upkeep_mult:0 "$planet_the_legendary_alchemist$維持費"
- mod_planet_the_legendary_alchemist_upkeep_add:0 "$planet_the_legendary_alchemist$維持費"
+ mod_planet_the_legendary_alchemist_produces_mult:0 "£job_the_legendary_alchemist£ $job_the_legendary_alchemist$の産出"
+ mod_planet_the_legendary_alchemist_produces_add:0 "£job_the_legendary_alchemist£ $job_the_legendary_alchemist$の産出"
+ mod_planet_the_legendary_alchemist_philosophers_stone_produces_mult:0 "£job_the_legendary_alchemist£ $job_the_legendary_alchemist$からの£philosophers_stone£ $philosophers_stone$"
+ mod_planet_the_legendary_alchemist_philosophers_stone_produces_add:0 "$mod_planet_the_legendary_alchemist_philosophers_stone_produces_mult$"
+ mod_planet_the_legendary_alchemist_upkeep_mult:0 "$job_the_legendary_alchemist$維持費"
+ mod_planet_the_legendary_alchemist_upkeep_add:0 "$job_the_legendary_alchemist$維持費"
 
 #######################
 #####    〇〇    ######

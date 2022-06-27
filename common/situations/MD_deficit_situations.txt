@@ -425,7 +425,7 @@ situation_philosophers_deficit = {
 	on_abort = {
 		owner = {
 			add_resource = {
-				philosophers = @bailout_alloys_base_amount
+				philosophers_stone = @bailout_alloys_base_amount
 				mult = value:bailout_scaling_factor
 			}
 		}
@@ -597,25 +597,25 @@ situation_philosophers_deficit = {
 	monthly_progress = {
 		base = 0
 		modifier = {
-			add = value:deficit_situation_progress_value|RESOURCE|philosophers|
-			desc = string_expenditures_greater_than_income_philosophers
-			owner = { has_actual_deficit = { RESOURCE = philosophers } }
+			add = value:deficit_situation_progress_value|RESOURCE|philosophers_stone|
+			desc = string_expenditures_greater_than_income_philosophers_stone
+			owner = { has_actual_deficit = { RESOURCE = philosophers_stone } }
 		}
 		modifier = {
 			subtract = 5
-			desc = string_not_in_deficit_philosophers
+			desc = string_not_in_deficit_philosophers_stone
 			owner = {
 				resource_income_compare = {
-					resource = philosophers
+					resource = philosophers_stone
 					value >= 0
 				}
 			}
 		}
 		modifier = {
 			subtract = 1
-			desc = string_resource_reserves_philosophers
+			desc = string_resource_reserves_philosophers_stone
 			owner = {
-				has_negative_income_with_stockpile = { RESOURCE = philosophers }
+				has_negative_income_with_stockpile = { RESOURCE = philosophers_stone }
 			}
 		}
 	}
@@ -632,7 +632,7 @@ situation_philosophers_deficit = {
 		}
 	}
 	approach = {
-		name = deficit_approach_invest_in_philosophers_production
+		name = deficit_approach_invest_in_philosophers_stone_production
 		icon = GFX_situation_approach_energy_credits
 		icon_background = GFX_situation_approach_bg_green
 		modifier = {

@@ -328,12 +328,27 @@ building_magical_furnace = {
 		}
 	}
 	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = building_magical_furnace_effect_0_desc
+	}
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
 		text = building_magical_furnace_effect_1_desc
 	}
 	triggered_desc = {
+		trigger = {
+			always = yes
+		}
 		text = building_magical_furnace_effect_2_desc
 	}
 	triggered_desc = {
+		trigger = {
+			always = yes
+		}
 		text = building_magical_furnace_effect_3_desc
 	}
 	on_built = {

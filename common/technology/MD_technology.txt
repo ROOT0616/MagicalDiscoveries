@@ -146,6 +146,10 @@ tech_ultimate_magical_science = {
 				has_trait = "leader_trait_expertise_field_manipulation"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -317,6 +321,10 @@ tech_ultimate_alchemy = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -334,6 +342,38 @@ tech_ultimate_alchemy = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+	}
+}
+
+# 魔法による採掘の効率化 職業による鉱物産出+10%
+tech_magical_mining_efficiency = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = {
+		industry
+	}
+	levels = -1
+	prerequisites = {
+		"tech_ultimate_magical_science"
+		"tech_ultimate_alchemy"
+	}
+	weight = @repeatableTechWeight
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.10
+	}
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	ai_weight = {
+		factor = @ai_mining_factor
 	}
 }
 
@@ -777,6 +817,10 @@ tech_necromancy = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -1009,6 +1053,10 @@ tech_barrier_magic = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -1068,6 +1116,10 @@ tech_resuscitation_magic = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 	ai_weight = {
@@ -1145,6 +1197,120 @@ tech_philosophers_stone = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+# 賢者の石精錬の標準化
+tech_philosophers_stone_pattern = {
+	cost = @tier4cost3
+	area = society
+	tier = 5
+	prerequisites = {
+		"tech_philosophers_stone"
+	}
+	category = {
+		biology
+	}
+	weight = @tier4weight3
+	is_rare = yes
+	is_reverse_engineerable = no
+	modifier = {
+		planet_the_legendary_alchemist_philosophers_stone_produces_add = 1
+	}
+	# weight_groups = {
+	# 	repeatable
+	# }
+	# mod_weight_if_group_picked = {
+	# 	repeatable = 0.01
+	# }
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+}
+
+# 賢者の石精錬の効率化
+tech_philosophers_stone_improvement = {
+	area = society
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	prerequisites = {
+		"tech_philosophers_stone_pattern"
+	}
+	category = {
+		biology
+	}
+	levels = -1
+	weight = @repeatableTechWeight
+	is_rare = yes
+	is_reverse_engineerable = no
+	modifier = {
+		planet_the_legendary_alchemist_philosophers_stone_produces_mult = 0.1
+	}
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = society
+				has_trait = "leader_trait_expertise_biology"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.0
 	}
 }
 
@@ -1201,6 +1367,106 @@ tech_mithril_refinery = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+	}
+}
+
+# ミスリル精錬の標準化
+tech_mithril_refinery_pattern = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = {
+		industry
+	}
+	prerequisites = {
+		"tech_mithril_refinery"
+	}
+	weight = @tier3weight1
+	is_rare = no
+	is_reverse_engineerable = no
+	modifier = {
+		planet_mithril_refiner_mithrils_produces_add = 1
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# ミスリル精錬の効率化
+tech_mithril_refinery_improvement = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = {
+		industry
+	}
+	prerequisites = {
+		"tech_mithril_refinery_pattern"
+	}
+	levels = -1
+	weight = @repeatableTechWeight
+	is_rare = no
+	is_reverse_engineerable = no
+	modifier = {
+		planet_mithril_refiner_mithrils_produces_mult = 0.1
+	}
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+	ai_weight = {
+		factor = 1.0
 	}
 }
 
@@ -1417,6 +1683,10 @@ tech_orichalcone_refinery = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -1434,6 +1704,114 @@ tech_orichalcone_refinery = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+	}
+}
+
+# オリハルコン精錬の標準化
+tech_orichalcone_refinery_pattern = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = {
+		industry
+	}
+	prerequisites = {
+		"tech_orichalcone_refinery"
+	}
+	weight = @tier3weight2
+	is_rare = yes
+	is_reverse_engineerable = no
+	modifier = {
+		planet_orichalcone_refiner_orichalcones_produces_add = 1
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# オリハルコン精錬の効率化
+tech_orichalcone_refinery_improvement = {
+	cost = @tier4cost2
+	area = engineering
+	cost_per_level = @repeatableTechLevelCost
+	tier = 4
+	category = {
+		industry
+	}
+	prerequisites = {
+		"tech_orichalcone_refinery_pattern"
+	}
+	levels = -1
+	weight = @repeatableTechWeight
+	is_rare = yes
+	is_reverse_engineerable = no
+	modifier = {
+		planet_orichalcone_refiner_orichalcones_produces_mult = 0.1
+	}
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+	ai_weight = {
+		factor = 1.0
 	}
 }
 
@@ -1473,6 +1851,10 @@ tech_orichalcone_armor = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 	ai_weight = {
@@ -1534,6 +1916,10 @@ tech_cheap_type_orichalcone_armor = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -1594,6 +1980,10 @@ tech_specialized_type_orichalcone_armor = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -1650,6 +2040,10 @@ tech_adamantine_refinery = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -1667,6 +2061,114 @@ tech_adamantine_refinery = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+	}
+}
+
+# アダマンタイト精錬の標準化
+tech_adamantine_refinery_pattern = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	category = {
+		industry
+	}
+	prerequisites = {
+		"tech_adamantine_refinery"
+	}
+	weight = @tier4weight1
+	is_rare = yes
+	is_reverse_engineerable = no
+	modifier = {
+		planet_adamantine_refiner_adamantines_produces_add = 1
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+	}
+}
+
+# アダマンタイト精錬の効率化
+tech_adamantine_refinery_improvement = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = {
+		industry
+	}
+	prerequisites = {
+		"tech_adamantine_refinery_pattern"
+	}
+	levels = -1
+	weight = @repeatableTechWeight
+	is_rare = yes
+	is_reverse_engineerable = no
+	modifier = {
+		planet_adamantine_refiner_adamantines_produces_mult = 0.1
+	}
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_materials"
+			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+	}
+	ai_weight = {
+		factor = 1.0
 	}
 }
 
@@ -1706,6 +2208,10 @@ tech_adamantine_armor = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 	ai_weight = {
@@ -1767,6 +2273,10 @@ tech_cheap_type_adamantine_armor = {
 				has_trait = "leader_trait_expertise_materials"
 			}
 		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 	ai_weight = {
 		modifier = {
@@ -1826,6 +2336,10 @@ tech_specialized_type_adamantine_armor = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
 			}
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
 		}
 	}
 	ai_weight = {
@@ -1891,6 +2405,10 @@ tech_gods_shield = {
 	}
 	weight_modifier = {
 		factor = 1
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 }
 
@@ -1930,7 +2448,11 @@ tech_mythical_decay_2 = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
-		factor = 0
+		factor = 1
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 }
 
@@ -1952,6 +2474,10 @@ tech_mythical_decay_3 = {
 	}
 	weight_modifier = {
 		factor = 1
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 }
 
@@ -1973,6 +2499,10 @@ tech_longinus_spear_1 = {
 	}
 	weight_modifier = {
 		factor = 1
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 }
 
@@ -1994,6 +2524,10 @@ tech_longinus_spear_2 = {
 	}
 	weight_modifier = {
 		factor = 1
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 }
 
@@ -2007,7 +2541,6 @@ tech_longinus_spear_3 = {
 	}
 	prerequisites = {
 		"tech_longinus_spear_2"
-
 	}
 	weight = @tier5weight3
 	is_rare = yes
@@ -2016,5 +2549,9 @@ tech_longinus_spear_3 = {
 	}
 	weight_modifier = {
 		factor = 1
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
 	}
 }
