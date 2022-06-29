@@ -458,12 +458,12 @@ ship_section_template = {
 	large_utility_slots = 11
 }
 
-
+# md_adamantite_ship
 ship_section_template = {
 	key = "MD_ADAMANTITE_BOW"
 	ship_size = md_adamantite_ship
 	fits_on_slot = bow
-	should_draw_components = yes
+	should_draw_components = no
 	entity = "titan_bow_entity"
 	icon = "GFX_ship_part_core_bow"
 
@@ -479,8 +479,8 @@ ship_section_template = {
 	}
 
 	component_slot = {
-		name = "MD_ADAMANTITEIC_01"
-		template = "invisible_titanic_fixed"
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
 		locatorname = "xl_gun_01"
 	}
 
@@ -498,27 +498,27 @@ ship_section_template = {
 	key = "MD_ADAMANTITE_MID"
 	ship_size = md_adamantite_ship
 	fits_on_slot = mid
-	should_draw_components = yes
+	should_draw_components = no
 	entity = "titan_mid_entity"
 	icon = "GFX_ship_part_core_mid"
 
 	component_slot = {
-		name = "LARGE_GUN_01"
-		template = "large_turret"
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
 		locatorname = "large_gun_01"
 	}
 	component_slot = {
-		name = "LARGE_GUN_02"
-		template = "large_turret"
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
 		locatorname = "large_gun_02"
 	}
 	component_slot = {
-		name = "LARGE_GUN_03"
+		name = "LARGE_GUN_01"
 		template = "large_turret"
 		locatorname = "large_gun_03"
 	}
 	component_slot = {
-		name = "LARGE_GUN_04"
+		name = "LARGE_GUN_02"
 		template = "large_turret"
 		locatorname = "large_gun_04"
 	}
@@ -533,13 +533,11 @@ ship_section_template = {
 	}
 }
 
-#STERN
-
 ship_section_template = {
-	key = "TITAN_STERN"
+	key = "MD_ADAMANTITE_STERN"
 	ship_size = md_adamantite_ship
 	fits_on_slot = stern
-	should_draw_components = yes
+	should_draw_components = no
 	entity = "titan_stern_entity"
 	icon = "GFX_ship_part_core_stern"
 

@@ -1,0 +1,11 @@
+# objectTypes = {
+# 	pdxmesh = {
+# 		name = "SSASW_Submarine_mesh"
+# 		file = "gfx/models/ships/SSASW/SSASW_Submarine.mesh"
+# 				animation = { id = "idle"			type = "SSASW_Submarine_idle_animation" }
+# 				animation = { id = "dive"			type = "SSASW_Submarine_dive_animation" }
+# 				animation = { id = "diving"			type = "SSASW_Submarine_diving_animation" }
+# 				animation = { id = "ascend"			type = "SSASW_Submarine_ascend_animation" }
+# 		scale = 1.0
+# 	}
+# }

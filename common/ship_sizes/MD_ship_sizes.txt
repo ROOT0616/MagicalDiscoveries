@@ -1,6 +1,7 @@
 #reloadable with 'reload stats'
 # This file is where you start when you want to configure something new, then go to section
 md_adamantite_ship = {
+	graphical_culture = yes
 	formation_priority = @titan_formation_priority
 	max_speed = @speed_slow
 	acceleration = 0.2
@@ -30,7 +31,6 @@ md_adamantite_ship = {
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
-	required_component_set = "ship_aura_components"
 	potential_construction = {
 		OR = {
 			is_scope_type = starbase
