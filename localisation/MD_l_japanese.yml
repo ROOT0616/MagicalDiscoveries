@@ -23,7 +23,7 @@
  tech_ultimate_alchemy_desc:0 "工学、合金の生産力向上は帝国全体の軍事力と建築を根本から変化させ、工業技師の大半は壺を前にして合金製造を行っていると噂される…実際は当事者しか知らない。"
 
  tech_magical_mining_efficiency:0 "魔法による採掘の効率化"
-tech_magical_mining_efficiency_desc:0 ""
+ tech_magical_mining_efficiency_desc:0 "魔法技術の普及により今ではつるはしなどの道具までにも魔法が付与されるようになった。これにより様々な道具の性能が向上した。"
 
  tech_black_magic:0 "黒魔法"
  tech_black_magic_desc:0 "魔力を操ることで様々な能力を発揮することができるだろう。我々は「力」に注力するべきだろう。"
@@ -141,6 +141,15 @@ tech_magical_mining_efficiency_desc:0 ""
 
  tech_gods_shield:0 "本格 神の盾"
  tech_gods_shield_desc:0 ""
+
+ tech_md_reality_augmentation:0 "時空魔法による現実拡張"
+ tech_md_reality_augmentation_desc:0 "我々はついに時間、空間をも操れるようになった。一畳の部屋は十畳以上の部屋に広げ、物には時間による劣化という概念がなくなった。"
+
+ tech_md_fairies_and_spirits:0 "妖精・精霊との出会い"
+ tech_md_fairies_and_spirits_desc:0 ""
+
+ tech_md_adamantite_hull:0 "アダマンタイト船体"
+ tech_md_adamantite_hull_desc:0 "そうだ！アダマンタイトで船体を作ろう！"
 
 #######################
 #####    資源    ######
