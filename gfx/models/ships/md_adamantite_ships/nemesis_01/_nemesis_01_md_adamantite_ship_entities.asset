@@ -7,12 +7,12 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" 
 		
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_nemesis_md_adamantite_ship_ship_hum_01" } }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_nemesis_md_adamantite_ship_ship_hum_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_nemesis_titan_ship_hum_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_nemesis_titan_ship_hum_02" } }
 	
 	}
 	state = { name = "moving" animation = "idle"
-		event =  { trigger_once = yes sound = { soundeffect = "sfx_nemesis_md_adamantite_ship_moving_out" } }
+		event =  { trigger_once = yes sound = { soundeffect = "sfx_nemesis_titan_moving_out" } }
 	}
 	state = { name = "death" animation = "death1" looping = no chance = 2
 		event = { time = 0.2 node = "explosion_locator_01" particle = "nemesis_01_2_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" } }
@@ -37,7 +37,7 @@ entity = {
 		event = { time = 11.25 node = "ship_main" particle = "nemesis_01_ship_explosion_15_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" }}
 
 		event = { time = 16.3 node = "explosion_locator_03" particle = "nemesis_01_ship_explosion_35_dreadnought" keep_particle = yes trigger_once = yes  }
-		event = { time = 16.3 node = "explosion_locator_10" particle = "nemesis_01_ship_explosion_50_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_md_adamantite_ship_ship_death" } }
+		event = { time = 16.3 node = "explosion_locator_10" particle = "nemesis_01_ship_explosion_50_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_titan_ship_death" } }
 	}
 
 	state = { name = "death" animation = "death2" looping = no chance = 5
@@ -61,7 +61,7 @@ entity = {
 		event = { time = 9.4 node = "ship_main" particle = "nemesis_01_ship_explosion_15_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" } }
 
 		event = { time = 16.3 node = "part2" particle = "nemesis_01_ship_explosion_35_dreadnought" keep_particle = yes trigger_once = yes }
-		event = { time = 16.3 node = "part3" particle = "nemesis_01_ship_explosion_35_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_md_adamantite_ship_ship_death" } }
+		event = { time = 16.3 node = "part3" particle = "nemesis_01_ship_explosion_35_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_titan_ship_death" } }
 	}
 	
 	state = { name = "death" animation = "death3" looping = no chance = 10
@@ -86,7 +86,7 @@ entity = {
 		event = { time = 13.5 node = "explosion_locator_11" particle = "nemesis_01_2_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" } }
 		event = { time = 15.5 node = "explosion_locator_12" particle = "nemesis_0125_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" } }
 
-		event = { time = 16.35 node = "explosion_locator_12" particle = "nemesis_01_ship_explosion_60_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_md_adamantite_ship_ship_death" } }
+		event = { time = 16.35 node = "explosion_locator_12" particle = "nemesis_01_ship_explosion_60_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_titan_ship_death" } }
 	}
 		
 	game_data = {

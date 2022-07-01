@@ -1282,6 +1282,13 @@ utility_component_template = {
 @titan_power_5 = 3200
 @titan_power_6 = 4200
 
+@md_adamantite_ship_cost_1 = 160
+@md_adamantite_ship_cost_2 = 208
+@md_adamantite_ship_cost_3 = 272
+@md_adamantite_ship_cost_4 = 352
+@md_adamantite_ship_cost_5 = 448
+@md_adamantite_ship_cost_6 = 592
+
 utility_component_template = {
 	key = "MD_ADAMANTITE_FISSION_REACTOR"
 	size = small
@@ -1325,12 +1332,10 @@ utility_component_template = {
 			adamantines = 0.208
 		}
 	}
-
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
 	size_restriction = { md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_COLD_FUSION_REACTOR"
-
 	ai_weight = {
 		weight = 2
 	}

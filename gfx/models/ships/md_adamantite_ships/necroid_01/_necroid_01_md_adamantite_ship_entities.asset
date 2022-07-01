@@ -7,13 +7,13 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" 
 		
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_md_adamantite_ship_ship_hum_01" } }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_md_adamantite_ship_ship_hum_02" } }
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_md_adamantite_ship_ship_hum_03" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_03" } }
 	
 	}
 	state = { name = "moving" animation = "idle"
-		event =  { trigger_once = yes sound = { soundeffect = "moving_out_md_adamantite_ship" } }
+		event =  { trigger_once = yes sound = { soundeffect = "moving_out_titan" } }
 	}
 	state = { name = "death" animation = "death" looping = no 
 		
@@ -37,7 +37,7 @@ entity = {
 		event = { time = 1.56 node = "explosion_locator_05" particle = "ship_burn_particle" }		
 		event = { time = 1.45 node = "explosion_locator_05" particle = "necroid_01_ship_explosion_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = "ship_explosion" } }
 		
-		event = { time = 12.5 node = "ship_main" particle = "necroid_ship_explosion_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_md_adamantite_ship_ship_death" } }
+		event = { time = 12.5 node = "ship_main" particle = "necroid_ship_explosion_dreadnought" keep_particle = yes trigger_once = yes sound = { soundeffect = "amb_titan_ship_death" } }
 	}
 	
 		

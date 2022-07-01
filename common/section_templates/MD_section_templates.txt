@@ -468,7 +468,6 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_bow_entity"
 	icon = "GFX_ship_part_core_bow"
-
 	ai_weight = {
 		modifier = {
 			factor = 10.0
@@ -479,21 +478,17 @@ ship_section_template = {
 			is_preferred_weapons = weapon_type_explosive
 		}
 	}
-
 	component_slot = {
 		name = "EXTRA_LARGE_01"
 		template = "invisible_extra_large_fixed"
 		locatorname = "xl_gun_01"
 	}
-
 	component_slot = {
 		name = "EXTRA_LARGE_02"
 		template = "invisible_extra_large_fixed"
 		locatorname = "xl_gun_01"
 	}
-
 	large_utility_slots = 6
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -510,7 +505,6 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_bow_entity"
 	icon = "GFX_ship_part_core_bow"
-
 	ai_weight = {
 		modifier = {
 			factor = 0.1		
@@ -525,33 +519,30 @@ ship_section_template = {
 			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}		
 	}
-
 	component_slot = {
 		name = "STRIKE_CRAFT_01"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_01"
+		locatorname = "xl_gun_01"
 	}
 	component_slot = {
 		name = "STRIKE_CRAFT_02"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_02"
+		locatorname = "xl_gun_01"
 	}
 	component_slot = {
 		name = "STRIKE_CRAFT_03"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_03"
+		locatorname = "xl_gun_01"
 	}
 	component_slot = {
 		name = "EXTRA_LARGE_01"
 		template = "invisible_extra_large_fixed"
 		locatorname = "xl_gun_01"
 	}
-
 	large_utility_slots = 6
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -568,7 +559,6 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_bow_entity"
 	icon = "GFX_ship_part_core_bow"
-
 	ai_weight = {
 		modifier = {
 			factor = 10.0
@@ -579,15 +569,12 @@ ship_section_template = {
 			is_preferred_weapons = weapon_type_explosive
 		}
 	}
-
 	component_slot = {
 		name = "TITANIC_01"
 		template = "invisible_titanic_fixed"
 		locatorname = "xl_gun_01"
 	}
-
 	large_utility_slots = 6
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -605,7 +592,6 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_mid_entity"
 	icon = "GFX_ship_part_core_mid"
-
 	component_slot = {
 		name = "LARGE_GUN_01"
 		template = "large_turret"
@@ -626,9 +612,7 @@ ship_section_template = {
 		template = "large_turret"
 		locatorname = "large_gun_04"
 	}
-
 	large_utility_slots = 6
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -645,7 +629,6 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_mid_entity"
 	icon = "GFX_ship_part_core_mid"
-
 	component_slot = {
 		name = "EXTRA_LARGE_01"
 		template = "invisible_extra_large_fixed"
@@ -666,9 +649,7 @@ ship_section_template = {
 		template = "large_turret"
 		locatorname = "large_gun_04"
 	}
-
 	large_utility_slots = 6
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -685,47 +666,43 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_mid_entity"
 	icon = "GFX_ship_part_core_mid"
-
 	component_slot = {
 		name = "STRIKE_CRAFT_01"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_01"
+		locatorname = "large_gun_01"
 	}
 	component_slot = {
 		name = "STRIKE_CRAFT_02"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_02"
+		locatorname = "large_gun_02"
 	}
 	component_slot = {
 		name = "STRIKE_CRAFT_03"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_03"
+		locatorname = "large_gun_03"
 	}
-
 	component_slot = {
 		name = "STRIKE_CRAFT_04"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_04"
+		locatorname = "large_gun_01"
 	}
 	component_slot = {
 		name = "STRIKE_CRAFT_05"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_05"
+		locatorname = "large_gun_02"
 	}
 	component_slot = {
 		name = "STRIKE_CRAFT_06"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_06"
+		locatorname = "large_gun_03"
 	}
-
 	large_utility_slots = 6
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -743,7 +720,6 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_stern_entity"
 	icon = "GFX_ship_part_core_stern"
-
 	component_slot = {
 		name = "LARGE_GUN_01"
 		template = "large_turret"
@@ -754,9 +730,7 @@ ship_section_template = {
 		template = "large_turret"
 		locatorname = "large_gun_02"
 	}
-
 	aux_utility_slots = 4
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -773,15 +747,12 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_stern_entity"
 	icon = "GFX_ship_part_core_stern"
-
 	component_slot = {
 		name = "EXTRA_LARGE_01"
 		template = "invisible_extra_large_fixed"
 		locatorname = "large_gun_01"
 	}
-
 	aux_utility_slots = 4
-
 	resources = {
 		category = ship_sections
 		cost = {
@@ -798,7 +769,6 @@ ship_section_template = {
 	should_draw_components = no
 	entity = "md_adamantite_ship_stern_entity"
 	icon = "GFX_ship_part_core_stern"
-
 	ai_weight = {
 		modifier = {
 			factor = 0.1		
@@ -813,22 +783,31 @@ ship_section_template = {
 			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}		
 	}
-
 	component_slot = {
 		name = "STRIKE_CRAFT_01"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "	"
+		locatorname = "large_gun_01"
 	}
 	component_slot = {
 		name = "STRIKE_CRAFT_02"
 		template = "large_strike_craft"
 		rotation = 90
-		locatorname = "strike_craft_locator_02"
+		locatorname = "large_gun_01"
 	}
-
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
 	aux_utility_slots = 4
-
 	resources = {
 		category = ship_sections
 		cost = {

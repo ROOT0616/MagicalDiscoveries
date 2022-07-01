@@ -24,6 +24,6 @@ portraits = {
 		
 	# heavens
 	
-	heavens1 		= { texturefile = "gfx\models\portraits\Heavens\mg_heavens.dds" greeting_sound = "mammalian_01_greetings" }
+	heavens1 		= { texturefile = "gfx/models/portraits/Heavens/mg_heavens.dds" greeting_sound = "mammalian_01_greetings" }
 
 }

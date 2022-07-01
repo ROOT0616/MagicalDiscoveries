@@ -8,7 +8,6 @@ planet_mithril_refiner = {
 	}
 	generate_add_modifiers = {
 		produces
-		upkeep
 	}
 }
 
@@ -18,11 +17,6 @@ planet_mithril_magic_tool_crafter = {
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
 		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
 	}
 }
 
@@ -36,7 +30,6 @@ planet_orichalcone_refiner = {
 	}
 	generate_add_modifiers = {
 		produces
-		upkeep
 	}
 }
 
@@ -46,11 +39,6 @@ planet_orichalcone_crafter = {
 	parent = planet_jobs_productive
 	generate_mult_modifiers = {
 		produces
-		upkeep
-	}
-	generate_add_modifiers = {
-		produces
-		upkeep
 	}
 }
 
@@ -64,7 +52,6 @@ planet_adamantine_refiner = {
 	}
 	generate_add_modifiers = {
 		produces
-		upkeep
 	}
 }
 
@@ -78,6 +65,5 @@ planet_the_legendary_alchemist = {
 	}
 	generate_add_modifiers = {
 		produces
-		upkeep
 	}
 }
