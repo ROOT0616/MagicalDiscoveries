@@ -10,6 +10,7 @@ md_adamantite_ship = {
 	max_hitpoints = 100000
 	modifier = {
 		ship_evasion_add = @titan_evasion
+		ship_hull_regen_add_perc = 100
 	}
 	size_multiplier = 16
 	fleet_slot_size = 8
