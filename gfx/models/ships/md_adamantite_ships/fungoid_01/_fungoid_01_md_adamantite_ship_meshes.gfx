@@ -1,0 +1,65 @@
+objectTypes = {
+	pdxmesh = {
+		name = "fungoid_01_md_adamantite_ship_frame_mesh"
+		file = "gfx/models/ships/md_adamantite_ships/fungoid_01/fungoid_01_md_adamantite_ship_frame.mesh"
+		
+		animation = { id = "idle"						type = "arthropoid_01_md_adamantite_ship_frame_idle_animation" }
+		animation = { id = "death"						type = "arthropoid_01_md_adamantite_ship_frame_death_animation" }
+		
+	}
+	
+	pdxmesh = {
+		name = "fungoid_01_md_adamantite_ship_bow_mesh"
+		file = "gfx/models/ships/md_adamantite_ships/fungoid_01/fungoid_01_md_adamantite_ship_bow.mesh"
+
+		meshsettings = {
+			name = "Fungoid_md_adamantite_ship_bow_LPShape"
+			index = 0
+			texture_diffuse = "fungoid_01_md_adamantite_ship_diffuse.dds"
+			texture_normal = "fungoid_01_md_adamantite_ship_normal.dds"
+			texture_specular = "fungoid_01_md_adamantite_ship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "fungoid_01_md_adamantite_ship_mid_mesh"
+		file = "gfx/models/ships/md_adamantite_ships/fungoid_01/fungoid_01_md_adamantite_ship_mid.mesh"
+
+		meshsettings = {
+			name = "Fungoid_md_adamantite_ship_mid_LPShape"
+			index = 0
+			texture_diffuse = "fungoid_01_md_adamantite_ship_diffuse.dds"
+			texture_normal = "fungoid_01_md_adamantite_ship_normal.dds"
+			texture_specular = "fungoid_01_md_adamantite_ship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "fungoid_01_md_adamantite_ship_stern_mesh"
+		file = "gfx/models/ships/md_adamantite_ships/fungoid_01/fungoid_01_md_adamantite_ship_stern.mesh"
+
+		meshsettings = {
+			name = "Fungoid_md_adamantite_ship_stern_LPShape"
+			index = 0
+			texture_diffuse = "fungoid_01_md_adamantite_ship_diffuse.dds"
+			texture_normal = "fungoid_01_md_adamantite_ship_normal.dds"
+			texture_specular = "fungoid_01_md_adamantite_ship_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "fungoid_01_md_adamantite_ship_weapon_effect_mesh"
+		file = "gfx/models/ships/md_adamantite_ships/fungoid_01/fungoid_01_md_adamantite_ship_effect.mesh"
+
+		meshsettings = {
+			name = "fungoid_01_md_adamantite_ship_effectShape"
+			index = 0
+			texture_diffuse = "fungoid_01_md_adamantite_ship_effect.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+		}
+	}
+}

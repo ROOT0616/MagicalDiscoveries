@@ -2575,7 +2575,7 @@ tech_md_reality_augmentation = {
 	modifier = {
 		country_physics_tech_research_speed = 0.25
 		country_resource_max_add = 50000
-		planet_max_districts_mult = 0.50
+		planet_max_districts_mult = 0.20
 	}
 	weight_modifier = {
 		modifier = {
@@ -2588,36 +2588,36 @@ tech_md_reality_augmentation = {
 	}
 }
 
-# 妖精・精霊との出会い	技術的革新 社会学
-tech_md_fairies_and_spirits = {
-	cost = @tier5cost3
-	area = society
-	tier = 5
-	category = {
-		new_worlds
-	}
-	weight = 10
-	is_rare = yes
-	potential = {
-		has_country_flag = BuyGrimoireFlag03
-	}
-	prerequisites = {
-		"tech_ultimate_magical_science"
-	}
-	modifier = {
-		country_society_tech_research_speed = 0.25
-		pop_happiness = 0.2
-	}
-	weight_modifier = {
-		modifier = {
-			factor = @ap_technological_ascendancy_rare_tech
-			has_ascension_perk = ap_technological_ascendancy
-		}
-	}
-	ai_weight = {
-		factor = 100
-	}
-}
+# # 妖精・精霊との出会い	技術的革新 社会学
+# tech_md_fairies_and_spirits = {
+# 	cost = @tier5cost3
+# 	area = society
+# 	tier = 5
+# 	category = {
+# 		new_worlds
+# 	}
+# 	weight = 10
+# 	is_rare = yes
+# 	potential = {
+# 		has_country_flag = BuyGrimoireFlag03
+# 	}
+# 	prerequisites = {
+# 		"tech_ultimate_magical_science"
+# 	}
+# 	modifier = {
+# 		country_society_tech_research_speed = 0.25
+# 		pop_happiness = 0.2
+# 	}
+# 	weight_modifier = {
+# 		modifier = {
+# 			factor = @ap_technological_ascendancy_rare_tech
+# 			has_ascension_perk = ap_technological_ascendancy
+# 		}
+# 	}
+# 	ai_weight = {
+# 		factor = 100
+# 	}
+# }
 
 # アダマンタイト船体	技術的革新 工学
 tech_md_adamantite_hull = {

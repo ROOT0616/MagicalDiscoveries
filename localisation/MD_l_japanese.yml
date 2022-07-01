@@ -701,6 +701,9 @@
 
  resolution_galactic_focus_crisis_heavenly_effect_success:0 ""
 
+ TECH_UNLOCK_ADAMANTITE_CONSTRUCTION_TITLE:0 "§H艦船タイプをアンロック：§!アダマンタイタン"
+ TECH_UNLOCK_ADAMANTITE_CONSTRUCTION_DESC:0 "§Hアダマンタイタン§!\nあらゆるものをアダマンタイトで作られたタイタン。船体事態がアダマンタイトのため異様に硬さを誇る。"
+
 #######################
 #####    名前    ######
 #######################
@@ -765,6 +768,34 @@
  mod_planet_the_legendary_alchemist_philosophers_stone_produces_add:0 "$mod_planet_the_legendary_alchemist_philosophers_stone_produces_mult$"
  mod_planet_the_legendary_alchemist_upkeep_mult:0 "$job_the_legendary_alchemist$維持費"
  mod_planet_the_legendary_alchemist_upkeep_add:0 "$job_the_legendary_alchemist$維持費"
+
+###########################
+#####    ship_size    ######
+###########################
+
+ md_adamantite_ship:0 "アダマンタイタン"
+
+ large_ship_heavenly:0 ""
+ medium_ship_heavenly:0 ""
+ small_ship_heavenly:0 ""
+ dimensional_portal_heavenly:0 ""
+ construction_ship_heavenly:0 ""
+
+###############################
+#####    ship_section    ######
+###############################
+
+ MD_ADAMANTITE_BOW:0 "アダマン艦首"
+ MD_ADAMANTITE_HANGAR_BOW:0 "アダマンキャリアー艦首"
+ MD_ADAMANTITE_TITANIC_BOW:0 "アダマンタイタン艦首"
+
+ MD_ADAMANTITE_MID:0 "アダマン艦央"
+ MD_ADAMANTITE_MASSIVE_MID:0 "アダマンマシーブ艦央"
+ MD_ADAMANTITE_HANGAR_MID:0 "アダマンキャリアー艦央"
+
+ MD_ADAMANTITE_STERN:0 "アダマン艦尾"
+ MD_ADAMANTITE_MASSIVE_STERN:0 "アダマンマシーブ艦尾"
+ MD_ADAMANTITE_HANGAR_STERN:0 "アダマンキャリアー艦尾"
 
 #######################
 #####    〇〇    ######
