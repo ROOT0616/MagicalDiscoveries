@@ -653,6 +653,9 @@
  edict_MD_test_campaign:0 "MDクライシスイベントテスト用(デバック用)"
  edict_MD_test_campaign_desc:0 "マジックディスカバリーのクライシスイベントの初期化"
 
+ edict_MD_test_on_campaign:0 "MDクライシスイベント開始用(デバック用)"
+ edict_MD_test_on_campaign_desc:0 "マジックディスカバリーのクライシスイベントの強制開始"
+
 ############################
 #####    デシジョン    ######
 ############################

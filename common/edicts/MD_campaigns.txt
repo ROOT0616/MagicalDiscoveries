@@ -94,7 +94,7 @@ adamantite_skyscraper_construction_campaign = {
 	}
 }
 
-# アダマンタイトによる超高層建設
+# MDクライシスイベントテスト用
 MD_test_campaign = {
 	length = 1
 	icon = "GFX_edict_type_time"
@@ -106,6 +106,26 @@ MD_test_campaign = {
 		remove_global_flag = AppearanceAngelFlag
 		remove_global_flag = ArrestingAngelFlag
 		remove_global_flag = AttackAngelFlag
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# MDクライシスイベントテスト用
+MD_test_on_campaign = {
+	length = 1
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+	}
+
+	effect = {
+		country_event = {
+			id = magical_discoveries_crisis.1000
+			days = 7200				#20年後
+		}
 	}
 
 	ai_weight = {
