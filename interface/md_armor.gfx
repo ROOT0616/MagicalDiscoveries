@@ -63,7 +63,7 @@ spriteTypes = {
 		name = "GFX_ship_part_kusanagi"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_kusanagi.dds"
 	}
-	#	神話崩壊砲	mythical decay*2   Tire5	
+	#	神話崩壊砲
 	spriteType = {
 		name = "GFX_ship_part_mythical_decay"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay.dds"
@@ -75,5 +75,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_ship_part_mythical_decay_2"
 		texturefile = "gfx/interface/icons/ship_parts/ship_part_mythical_decay_3.dds"
+	}
+	#	ロンギヌスの槍
+	spriteType = {
+		name = "GFX_ship_part_longinus_spear_1"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_longinus_spear_1.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_longinus_spear_2"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_longinus_spear_2.dds"
+	}
+	spriteType = {
+		name = "GFX_ship_part_longinus_spear_3"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_longinus_spear_3.dds"
 	}
 }
