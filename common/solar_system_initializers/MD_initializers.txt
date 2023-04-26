@@ -298,7 +298,7 @@ guardians_curator_init_02 = {
 }
 
 # 魔導工房マジカント			(錬金術・遺物販売)
-guardians_curator_init_03 = {n
+guardians_curator_init_03 = {
 	class = sc_pulsar
 	usage = misc_system_init
 
