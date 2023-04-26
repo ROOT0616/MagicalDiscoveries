@@ -1452,3 +1452,120 @@ utility_component_template = {
 		}
 	}
 }
+
+
+utility_component_template = {
+	key = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_DEFAULT"
+	size = small
+	icon = "GFX_ship_part_computer_default"
+	icon_frame = 1
+	power = -5
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 0
+		}
+	}
+	ship_behavior = "artillery"
+
+	size_restriction = { md_adamantite_ship }
+	component_set = "combat_computers"
+	upgrades_to = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_BASIC"
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+utility_component_template = {
+	key = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_BASIC"
+	size = small
+	icon = "GFX_ship_part_computer_artillery_basic"
+	icon_frame = 1
+	power = -10
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 5
+		}
+	}
+	size_restriction = { md_adamantite_ship }
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	prerequisites = { "tech_combat_computers_1" }
+	upgrades_to = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_weapon_range_mult = 0.05
+	}
+
+	ai_weight = {
+		weight = 2
+	}
+}
+
+utility_component_template = {
+	key = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	size = small
+	icon = "GFX_ship_part_computer_artillery_advanced"
+	icon_frame = 1
+	power = -15
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 10
+		}
+	}
+	size_restriction = { md_adamantite_ship }
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	prerequisites = { "tech_combat_computers_2" }
+	upgrades_to = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_weapon_range_mult = 0.10
+	}
+
+	ai_weight = {
+		weight = 3
+	}
+}
+
+utility_component_template = {
+	key = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_SAPIENT"
+	size = small
+	icon = "GFX_ship_part_computer_artillery_sapient"
+	icon_frame = 1
+	power = -25
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = 20
+		}
+	}
+	size_restriction = { md_adamantite_ship }
+	component_set = "combat_computers"
+	ship_behavior = "artillery"
+	prerequisites = { "tech_combat_computers_3" }
+
+	ship_modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_weapon_range_mult = 0.20
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = ghost_signal_5_flag
+				has_global_flag = ghost_signal_4_flag
+				has_global_flag = ghost_signal_3_flag
+				has_global_flag = ghost_signal_2_flag
+				has_global_flag = ghost_signal_1_flag
+			}
+		}
+	}
+}

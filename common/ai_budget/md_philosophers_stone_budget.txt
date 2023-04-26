@@ -1,0 +1,182 @@
+################################################################
+###             MG budgeting : philosophers_stone            ###
+################################################################
+
+#################
+## Expenditure ##
+#################
+
+
+philosophers_stone_expenditure_planets = {
+	resource = philosophers_stone
+	type = expenditure
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.2
+	}
+}
+
+philosophers_stone_expenditure_ships = {
+	resource = philosophers_stone
+	type = expenditure
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+		modifier = {
+			factor = 10
+			has_ascension_perk = ap_become_the_crisis
+			has_crisis_level = crisis_level_5
+			NOT = {
+				count_controlled_fleet = {
+					count >= 1
+					limit = {
+						is_ship_size = star_eater
+					}
+				}
+			}
+		}
+	}
+	desired_min = {
+		base = 0
+		modifier = {
+			add = 10000
+			has_ascension_perk = ap_become_the_crisis
+			NOT = {
+				count_controlled_fleet = {
+					count >= 1
+					limit = {
+						is_ship_size = star_eater
+					}
+				}
+			}
+		}
+	}
+}
+
+philosophers_stone_expenditure_megastructures = {
+	resource = philosophers_stone
+	type = expenditure
+	category = megastructures
+	potential = {
+		has_ascension_perk = ap_become_the_crisis
+		has_crisis_level = crisis_level_5
+	}
+
+	weight = {
+		weight = 0.8
+	}
+
+	desired_min = {
+		base = 0
+		modifier = {
+			add = 20000
+			any_owned_megastructure = {
+				is_megastructure_type = crisis_sphere_0
+				is_upgrading = no
+			}
+		}
+		modifier = {
+			add = 30000
+			any_owned_megastructure = {
+				is_megastructure_type = crisis_sphere_1
+				is_upgrading = no
+			}
+		}
+		modifier = {
+			add = 40000
+			any_owned_megastructure = {
+				is_megastructure_type = crisis_sphere_2
+				is_upgrading = no
+			}
+		}
+		modifier = {
+			add = 50000
+			any_owned_megastructure = {
+				is_megastructure_type = crisis_sphere_3
+				is_upgrading = no
+			}
+		}
+	}
+}
+
+philosophers_stone_expenditure_upgrade = {
+	resource = philosophers_stone
+	type = expenditure
+	category = ship_upgrades
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		base = 0.1
+	}
+}
+
+philosophers_stone_expenditure_trade = {
+	resource = philosophers_stone
+	type = expenditure
+	category = trade
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+	}
+}
+
+# Upkeep -----------------------------------------------------------------
+
+philosophers_stone_upkeep_planets = {
+	resource = philosophers_stone
+	type = upkeep
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.9
+	}
+}
+
+philosophers_stone_upkeep_ships = {
+	resource = philosophers_stone
+	type = upkeep
+	category = ships
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1
+	}
+}
+
+philosophers_stone_upkeep_edicts = {
+	resource = philosophers_stone
+	type = upkeep
+	category = edicts
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		base = 0.25
+	}
+}
