@@ -1,89 +1,103 @@
-# 国の種類は、その国がゲームをプレイする際のルールを指定します。
-# 例
+
+# 国別タイプは、その国がゲームをプレイする際のルールを指定します。
+# Example:
 #name_of_country_type = {
-# can_own_empty_planets #デフォルトではno、国に属している空の惑星が自動的に国から取り除かれるかどうかを決める。
-# playable = yes #このタイプがプレイヤーにとって利用可能かどうか。
-# has_pulse_events = no #if このタイプがon_actionから国固有のパルスイベントのチェックを受ける場合
-# randomize_ethos = no #この帝国のエートスがランダムに生成されるか？
-# shuffle_pop_ethos = no #もしこのタイプの国に属するポップが時々エートスを変更するならば
-# sub_title = "EXAMPLE_COUNTRY" #この帝国に表示されるサブタイトルです。例えば、"Example Federation - Fallen Empire"
-# sub_title_desc = "EXAMPLE_COUNTRY_DESC" #サブタイトルの説明文。
-# needs_survey = no #default no, if yes の場合、惑星を植民地化する前に調査する必要があります。
-# has_complete_sensor = no #default no, yesの場合、帝国は銀河系の完全なセンサーを持つ。
-# has_capital = yes #default is yes, 首都は常に存在するが、これをnoにすると、首都の惑星が首都であったことが隠される。
-# enforces_borders = yes #default is yes, if the country doesn't enforce it's border, people are always free to enter.
-# can_planets_be_attack = yes #default yes, noの場合、この国のタイプが所有する惑星は攻撃できません。
-# colonizing_title = "COLONIZING_PLANET_DEFAULT" #植民地化表示のタイトルのローカライズキー
-# colonizing_desc = "PLANET_VIEW_UNDER_COLONIZATION_DEFAULT_DESC" #localization key for colonization view desc
-# orbital_bombardment = yes #default yes, with orbital bombardment
-# diplomatic_wars = no #default no, 国が敵対するために宣戦布告が必要かどうかを決める。
-# attack_unarmed_orbital_stations = no #default no, 国が非武装の軌道（採掘、研究、観測ステーション）を、明確な命令なしに攻撃するかどうかを決める。
-# ship_disengagement = no #default no, 国の船が死闘ではなく戦闘から逃げるかどうかを決める
-# army_disengagement = no #default no, 国の軍隊が死闘ではなく戦闘から逃げることができるかどうかを決める。
-# min_navy_for_wars = 0 #default 0, この国が戦争を宣言する前に必要とする海軍の規模を決める（希望する規模のうち）。
-# min_assault_armies_for_wars = 1 #default 1, 戦争を宣言する前に、この国が欲しい突撃軍の数を決める。
-# share_communications = no #default yes, 接触している人と通信を共有するかどうかを決める。
-# relations = no #default no, これは国が意見を述べるかどうかを決める
-# fallen_empire = no #default no, 帝国が特別なFallen Empire AIを使うかどうかを決める
-# awakened_fallen_empire = no #default no, これは帝国が特別なAwakened Fallen Empire AIを使うかどうかを制御する
-# piracy_risk = no #default no, 帝国が海賊行為のリスクを持つかどうかを制御する
-# uses_special_buildables = no #default no, この帝国が、通常の設計可能な船ではなく、特別な設計可能な船として定義されたグローバルな船の設計を構築するかどうかを制御する。
-# show_in_contacts_list = yes #default yes, 連絡先リストにエントリを表示するかどうか。
-# minimalist_contacts_list_profile = no #default no, 連絡先リストの外交パネルに帝国の名前と国旗だけを表示するかどうか
-# government = no #default yes, yesの場合、その国に政府が存在することになる
-# custom_starbase = x #これが設定されていると、前哨基地を建設する代わりに、建設されたスターベースの船のサイズが定義されます。
-# destroys_starbases = no #これがyesに設定されている場合、国はスターベースを無効にするのではなく、破壊する。
-# can_have_their_comms_shared #これがyesに設定されている場合、この国と接触している他の国は、その接触を共有することができる（custom_diplomacyを使用している国の場合）。
-# observable = no #ほぼ自明の理。観測可能な国のリストには表示されず, オブザーバーとしてタグ付けすることもできません.
-# can_use_invalid_technology = yes #これがnoに設定されていると、潜在的なトリガーがその国で評価されない技術を割り当てることがハードコードされてブロックされます。
+#	can_own_empty_planets					デフォルトでは#noで、国に属する空の惑星を国から自動的に削除するかどうかを決定する。
+#	playable = yes							#このタイプがプレーヤーに利用可能である場合、ホットジョインするプレーヤーの国をリストアップする際に使用されます。
+#	has_pulse_events = no					#この型がon_actionから国別のパルスイベントをチェックされる場合。
+#	has_deficits = yes						#このタイプが資源不足に陥った場合
+#	randomize_ethos = no					#この帝国には、ランダムに生成される倫理観があるのでしょうか？
+#	shuffle_pop_ethos = no					#この国に住むポップスは、時々、その倫理観を変えないといけない。
+#	sub_title = "EXAMPLE_COUNTRY"			#この帝国のために表示されるサブタイトル。"例 連邦-没落した帝国 "のように
+#	sub_title_desc = "EXAMPLE_COUNTRY_DESC" #サブタイトルの説明。ツールチップで使用される。
+#	needs_survey = no						#デフォルトは「いいえ」、「はい」の場合は、植民地化する前に惑星の調査が必要で、「はい」の場合は、探査のために科学船が必要です。
+#	has_complete_sensor = no				#デフォルトは「いいえ」、「はい」の場合、帝国は銀河の完全なセンサーを持っています。
+#	has_capital = yes						#デフォルトはyesで、首都は常に存在しますが、このnoを切り替えると、首都の惑星が首都であることを示す記述をすべて隠すことができます。
+#	enforces_borders = yes					#国境を守らない国であれば、人々はいつでも自由に入国することができます。
+#	can_planets_be_attacked = yes			#デフォルトは「はい」、「いいえ」の場合は、この国タイプが所有する惑星を攻撃することはできません。
+#	colonizing_title = "COLONIZING_PLANET_DEFAULT"		#植民地化のためのローカライズキー ビュータイトル
+#	colonizing_desc = "PLANET_VIEW_UNDER_COLONIZATION_DEFAULT_DESC"	#植民地化ビューデスクのためのローカライズキー
+#	orbital_bombardment = yes				#デフォルトではそうですが、軌道爆撃を行います。
+#	diplomatic_wars = no					#デフォルトの「いいえ」は、敵対するために宣戦布告が必要かどうかを決定します。外交戦争がオンに設定されている国に対してのみ機能します。
+#	attack_unarmed_orbital_stations = no	#デフォルトの「いいえ」は、非武装の軌道上ステーション（採掘、研究、観測ステーション）を明示的な命令なしに攻撃すべきかどうかを決定する。
+#	ship_disengagement = no					#デフォルトノー、国の船が死闘の代わりに戦闘から逃げられるかどうかを決める
+#	army_disengagement = no					#デフォルトの「いいえ」で、国の軍隊が死闘を繰り広げる代わりに、戦いから逃げることができるかどうかを決定します。
+#	min_navy_for_wars = 0					#デフォルト0、宣戦布告前に、この国の海軍の規模を決定する（希望する規模のうち）。
+#	min_assault_armies_for_wars = 1			#デフォルト1、戦争宣言をする前に必要な突撃兵の数を決定する。
+#	share_communications = no				#はい」の場合、あなたが接触した人と通信を共有するかどうかを決定します。
+#	relations = no							#デフォルトのノー、これは国が私たちを意見にするかどうかを制御します。
+#	fallen_empire = no						#デフォルトの「いいえ」で、帝国が特別なフォールンエンパイアAIを使用するかどうかを制御します。
+#	awakened_fallen_empire = no				#デフォルトの「いいえ」は、帝国が特別な「覚醒した堕落した帝国」のAIを使用するかどうかを制御します。
+#	piracy_risk	= no						#デフォルトの「いいえ」で、帝国が海賊版のリスクを持つかどうかを制御します。
+#	uses_special_buildables = no			#デフォルトはno、この帝国が通常の設計可能な船ではなく、特別な建造物として定義されたグローバルな船の設計を構築するかどうかを制御します。
+#	show_in_contacts_list = yes				#デフォルトのyes、連絡先リストにエントリーを表示するかどうか
+#	minimalist_contacts_list_profile = no	#デフォルトのno、連絡先リストの外交パネルに帝国名と国旗のみを表示するかどうか。
+#	government = no							#デフォルトの「はい」、「はい」の場合、その国には政府がある
+#	custom_starbase = x						#これが設定されている場合、前哨基地を建設する代わりに、国が建設した宇宙基地の船のサイズを定義します。
+#	destroys_starbases = no					#Yesに設定すると、スターベースを無効化するのではなく、破壊するようになる。
+#	can_have_their_comms_shared				#これがyesに設定されている場合、この国とコンタクトをとっている他の国は、そのコンタクトを共有することができます（custom_diplomacyを使用している国向け）。
+#	observable = no						#説明不要です。観測可能な国のリストには表示されず、オブザーバーとしてタグ付けすることもできません。
+#	can_use_invalid_technology = yes		#この設定をnoにすると、潜在的なトリガーがその国で評価されない技術を割り当てることをハードコードでブロックします。
 #
-# faction = { #これらの値は国にコピーされ、ゲーム中に変更することができます
-# neutral = no #if yes, フリートは何も攻撃しないし、攻撃されることもない
-# hostile = no #if yes, fleets will attack everything on sight ( except neutral fleets )
-# follow = no #if yes, fleets will follow the fleets of allies
-# auto_delete = yes #if yes, 国は死んだとみなされると自動的に削除されます（通常、コロニーとコロニー船がない場合）。ほとんどの場合はyesにすべきですが、イベントで作られた一部の国についてはオフにしておくと便利です。
-# needs_border_access = yes #ある国がその国の国境に入るために、他の国からの明示的な国境アクセスを必要とするかどうかを決定します。
-# generate_borders = yes #国が国境を生成するかどうかを決める
-# needs_colony = yes #国が生存しているとみなされるために、コロニー（またはコロニー船）を必要とするかどうかを決定する。
-# primitive = no #プリミティブな国は、他の人が作った観測所を自分の惑星の軌道上に置くことができる。
-# primitive_age = "STONE_AGE" #if primitive = yes, localization string. これらの値は動的なものであり、この値はほとんどの場合、その国を作ったのと同じイベントによって即座に上書きされることを覚えておいてください。このフィールドは空にしておいてもいいでしょう。
-# hostile_when_attacked = yes #国が攻撃者に対して敵対的になるかどうかをチェックします。
-# show_borders_in_us = yes #noの場合、このタイプの国の国境は、未知の空間では表示されません。
-# intel_effects_surveyed = yes #この国のインテルレベルに応じて、インテルシステムが調査済みの惑星を未調査に変更することを許可するかどうかをトグルします。
+#	faction = {							#these values are copied to the country and can be changed during the game
+#		neutral = no						#if yes, fleets will never attack anything and will never be attacked
+#		hostile = no						#if yes, fleets will attack everything on sight ( except neutral fleets )
+#		follow = no							#if yes, fleets will follow the fleets of allies
+#		auto_delete = yes					#if yes, country will be automatically be deleted when considered dead ( usually when out of colonies and colony ships ). Should be yes in most cases but can be useful to turn off for some countries that are created by events.
+#		needs_border_access = yes			#decides if a country needs to have explicit border access from another country to enter its borders.
+#		generate_borders = yes				#decides if a country generates borders or not
+#		needs_colony = yes					#decides if a country needs a colony ( or a colony ship ) to be considered alive.
+#		primitive = no						#primitive countries can have observation stations build by others in orbit of their planets
+#		primitive_age = "STONE_AGE"			#if primitive = yes, localization string. Remember that these values are dynamic and this value will most likely be overwritten instantly by the same event that created the country. This field can probably be left empty
+#		hostile_when_attacked = yes			#toggles if country turns hostile against attacker.
+#		show_borders_in_us = yes			#if no, borders for countries of this type will not be shown if in uncharted space
+#		intel_effects_surveyed = yes			# toggle if the intel system is allowed to change any surveyed planets to unsurveyed depending on intel level with this country
 #	}
 #
-# ai = { #AI設定のブロック
-# enabled = yes #この国のタイプでAIを実行するか？ デフォルトはno
-# declare_war = yes #AIが戦争を宣言するか？ デフォルトはyes
-# colonizer = yes #AIが植民地化するか？ デフォルトはyes
-# internal_policies = yes #AIは内部政策を更新するか？ 勅令や政府タイプの変更など デフォルトはyes
-# modification = yes #AIが遺伝子組み換えやテラフォームを行うべきか？ デフォルトはyes
-# construction = yes #AIは船や建物を作るべきか？ デフォルトはyes
-# tech = yes #AIは技術を進歩させるべきか？ デフォルトはyes
-# espionage = yes #AIはスパイ活動をすべきか？ デフォルトはyes
-# ship_data #軍艦のサイズは、最も高い艦隊スロットのサイズが優先される
+#	ai = {								#block of AI settings
+#		enabled = yes						#この国タイプでAIを実行するか？ デフォルトはノー
+#		declare_war = yes					#AIは宣戦布告すべきか？ デフォルトは「はい
+#		colonizer = yes						#AIは植民地化すべきか？ デフォルトは「はい
+#		internal_policies = yes				#AIは内部政策を更新する必要がありますか？例えば、勅令、政府タイプの変更など。
+#		modification = yes					#AIはジェネモッドとテラフォーミングを行うべきですか？ デフォルトは「はい」です。
+#		construction = yes					#AIは船や建物を作るべきですか？ デフォルトの「はい
+#		tech = yes							#AIはその技術を進歩させるべきか？ デフォルトイエス
+#		espionage = yes					#AIは諜報活動を行うべきか？ デフォルトは「はい
 #
-# modules = { #この国のタイプが持つべき様々なAIモジュールのリスト
-# military_minister_module
-# foreign_minister_module
-# interior_minister_module
-# }
-# }
+#		modules = {							#この国タイプに搭載されるべき様々なiモジュールのリスト
+#			military_minister_module
+#			foreign_minister_module
+#			interior_minister_module
+#		}
+#	}
 #
-# modules = { #この国が持つべきモジュールのリスト #
-#モジュールは、国が特定のシステムに使用するコードを制御します。例えば、猫を主要通貨として使用する、全く異なる経済モジュールを実行することを決定できます（そのようなモジュールが存在すればの話ですが...）。
-# #1つのモジュールタイプにつき、1つのモジュールしか使用できません。
-# standard_event_module = {}
-# standard_economy_module = {}
-# standard_leader_module = {}
-# standard_diplomacy_module = {}
-#contact_rule: auto (default: have first contact sites formed upon); does_first_contact_sites (first contact sites used on others); on_action_only (first contact site on this country, only on_first_contact event); never; always (on_first_contact をすぐに実行するが、サイトは形成されない)
-# standard_technology_module = {}.
-# standard_trade_routes_module = {} (スタンダード・トレード・ルート・モジュール)
-# standard_pop_factions_module = {}
-# standard_expansion_module = {}
-# }
+# 							#Note: これらの効果は、on_actionのon_fleet_contract_started、on_fleet_contract_expired、on_fleet_contract_cancelledおよびon_fleet_contract_brokenでもカバーされています。
+#	fleet_manager = {								#block of Country Fleet Manager settings
+#		on_contract_started = {						#effect fired when fleet owned by country is hired
+#		}											#Scope - Fleet, From - Country that hired the fleet, FromFrom - Country that owns fleet, FromFromFrom - Country that initiated the ending of the contract
+#		on_contract_expired = {						#effect fired when hire contract of a fleet owned by country is expired
+#		}											#Scope - Fleet, From - Country that hired the fleet, FromFrom - Country that owns fleet, FromFromFrom - Country that initiated the ending of the contract
+#		on_contract_cancelled = {					#effect fired when hire contract of a fleet owned by country is cancelled (when controller prematurely finishes the contract or when the contract cancellation is a part of trade deal)
+#		}											#Scope - Fleet, From - Country that hired the fleet, FromFrom - Country that owns fleet, FromFromFrom - Country that initiated the ending of the contract (trade deal actor when the contract cancellation is a part of trade deal)
+#		on_contract_broken = {						#effect fired when hire contract of a fleet owned by country is broken (when country is attacked by someone of when a war is started)
+#		}											#Scope - Fleet, From - Country that hired the fleet, FromFrom - Country that owns fleet, FromFromFrom - Country that initiated the ending of the contract (main attacker in a case of war)
+#	}
+#
+#	modules = {							#この国のモジュールのリストがあるはずです。
+#										#例えば、ネコを主要通貨とする全く別の経済モジュール（そのようなモジュールが存在する場合）を実行することを決定することができます。
+#										#1つのモジュールタイプにつき、1つのモジュールのみ使用可能です。
+#		standard_event_module = {}
+#		standard_economy_module = {}
+#		standard_leader_module = {}
+#		standard_diplomacy_module = {}
+#				#contact_rule: auto (デフォルト: ファーストコンタクトサイトが形成される); does_first_contact_sites (他の国のファーストコンタクトサイトを使う); on_action_only (この国のファーストコンタクトサイトはなく、on_first_contact イベントのみ); never; always (on_first_contact がすぐに発生するがサイト形成はない)
+#		standard_technology_module = {}
+#		standard_trade_routes_module = {}
+#		standard_pop_factions_module = {}
+#		standard_expansion_module = {}
+#	}
 #}
+
 gate_holder = {
 	show_in_contacts_list = no
 	is_space_critter = yes
@@ -100,17 +114,18 @@ gate_holder = {
 		auto_delete = no
 	}
 	modules = {
-		exclusive_diplomacy_module = {
-		}		# Nothing is allowed, but we need this for relationships.
-		basic_technology_module = {
-		}
+		exclusive_diplomacy_module = {} # Nothing is allowed, but we need this for relationships.
+		basic_technology_module = {}
 	}
 }
 
 heavenly_realm = {
 	attack_unarmed_orbital_stations = yes
+	blocks_piracy = yes
 	scaled_difficulty_bonuses = 4.0	# scales to setting
-	mid_game_crisis = yes
+	sub_title = "HEAVENLY_REALM_COUNTRY"
+	sub_title_desc = "HEAVENLY_REALM_COUNTRY_DESC"
+	randomize_ethos = no
 	destroys_starbases = yes
 	can_own_empty_planets = yes
 	share_survey_data = no
@@ -129,8 +144,9 @@ heavenly_realm = {
 		colonizer = yes
 		construction = yes
 		modules = {
-			invaders_military_minister_module
-			invaders_interior_minister_module
+			foreign_minister_module
+			interior_minister_module
+			machine_military_minister_module
 		}
 	}
 	faction = {

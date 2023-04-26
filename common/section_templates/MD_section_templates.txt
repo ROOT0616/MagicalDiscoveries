@@ -1,0 +1,817 @@
+# 神
+ship_section_template = {
+	key = "angel_large_warship_key"
+	ship_size = large_ship_heavenly
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_warship_large_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "EXTRA_LARGE_GUN_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}		
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "medium_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}
+
+	large_utility_slots = 9
+}
+
+# 天使（バルキリー）
+ship_section_template = {
+	key = "angel_large_warship1_key"
+	ship_size = large_ship_heavenly
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_warship_large_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}		
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+
+	large_utility_slots = 7
+}
+
+# 堕天使（バルキリー）
+ship_section_template = {
+	key = "angel_large_warship2_key"
+	ship_size = large_ship_heavenly
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_warship_large_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}		
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "large_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "large_gun_02"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "large_gun_03"
+		is_side_slot = yes
+	}
+
+	large_utility_slots = 6
+}
+
+# 女神
+ship_section_template = {
+	key = "angel_medium_warship_key"
+	ship_size = medium_ship_heavenly
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_warship_medium_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01_l"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}		
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}		
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "large_gun_01_l"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "medium_gun_01"
+	}	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "medium_gun_02"
+	}	
+
+	medium_utility_slots = 7
+}
+
+# 神兵
+ship_section_template = {
+	key = "angel_warship_small_key"
+	ship_size = small_ship_heavenly
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_warship_small_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+		is_side_slot = yes
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "medium_gun_03"
+		is_side_slot = yes
+	}
+	
+	small_utility_slots = 5
+}
+
+# ニンフ
+ship_section_template = {
+	key = "angel_constructor_section"
+	ship_size = construction_ship_heavenly
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_constructor_ed_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	small_utility_slots = 3
+}
+
+
+# Dimensional Portal
+ship_section_template = {
+	key = "angel_dimensional_portal_key_blue"
+	ship_size = dimensional_portal_heavenly
+	fits_on_slot = mid
+	entity = "extra_dimensional_01_dimensional_portal_core_entity"
+	icon = "GFX_ship_part_core_mid"
+}
+
+# Starbase
+ship_section_template = {
+	key = "angel_starbase_key"
+	ship_size = starbase_exd_0
+	fits_on_slot = "core"
+	entity = "empty_section_entity"
+	icon = "GFX_ship_part_core_mid"
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}		
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	
+	large_utility_slots = 11
+	aux_utility_slots = 1
+}
+
+# Dimensional Anchor
+ship_section_template = {
+	key = "angel_dimensional_anchor_key_blue"
+	ship_size = starbase_exd
+	fits_on_slot = core
+	entity = "empty_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}		
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_05"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_06"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_05"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_06"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	
+	large_utility_slots = 11
+}
+
+
+# BOW
+# MD_ADAMANTITE_BOW
+ship_section_template = {
+	key = "MD_ADAMANTITE_BOW"
+	ship_size = md_adamantite_ship
+	fits_on_slot = bow
+	should_draw_components = no
+	entity = "md_adamantite_ship_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+	ai_weight = {
+		modifier = {
+			factor = 10.0
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+		modifier = {
+			factor = 0.1
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+	large_utility_slots = 6
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 800
+		}
+	}
+}
+
+# MD_ADAMANTITE_HANGAR_BOW
+ship_section_template = {
+	key = "MD_ADAMANTITE_HANGAR_BOW"
+	ship_size = md_adamantite_ship
+	fits_on_slot = bow
+	should_draw_components = no
+	entity = "md_adamantite_ship_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+	ai_weight = {
+		modifier = {
+			factor = 0.1		
+			NOT = { has_technology = tech_strike_craft_3 }
+		}
+		modifier = {
+			factor = 10.0
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}		
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "xl_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+	large_utility_slots = 6
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 900
+		}
+	}
+}
+
+# MD_ADAMANTITE_TITANIC_BOW
+ship_section_template = {
+	key = "MD_ADAMANTITE_TITANIC_BOW"
+	ship_size = md_adamantite_ship
+	fits_on_slot = bow
+	should_draw_components = no
+	entity = "md_adamantite_ship_bow_entity"
+	icon = "GFX_ship_part_core_bow"
+	ai_weight = {
+		modifier = {
+			factor = 10.0
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+		modifier = {
+			factor = 0.1
+			is_preferred_weapons = weapon_type_explosive
+		}
+	}
+	component_slot = {
+		name = "TITANIC_01"
+		template = "invisible_titanic_fixed"
+		locatorname = "xl_gun_01"
+	}
+	large_utility_slots = 6
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 850
+		}
+	}
+}
+
+# MID
+# MD_ADAMANTITE_MID
+ship_section_template = {
+	key = "MD_ADAMANTITE_MID"
+	ship_size = md_adamantite_ship
+	fits_on_slot = mid
+	should_draw_components = no
+	entity = "md_adamantite_ship_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "large_gun_04"
+	}
+	large_utility_slots = 6
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 800
+		}
+	}
+}
+
+# MD_ADAMANTITE_MASSIVE_MID
+ship_section_template = {
+	key = "MD_ADAMANTITE_MASSIVE_MID"
+	ship_size = md_adamantite_ship
+	fits_on_slot = mid
+	should_draw_components = no
+	entity = "md_adamantite_ship_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "EXTRA_LARGE_02"
+		template = "invisible_extra_large_fixed"
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_04"
+	}
+	large_utility_slots = 6
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 850
+		}
+	}
+}
+
+# MD_ADAMANTITE_HANGAR_MID
+ship_section_template = {
+	key = "MD_ADAMANTITE_HANGAR_MID"
+	ship_size = md_adamantite_ship
+	fits_on_slot = mid
+	should_draw_components = no
+	entity = "md_adamantite_ship_mid_entity"
+	icon = "GFX_ship_part_core_mid"
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_03"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_05"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_02"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_06"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_03"
+	}
+	large_utility_slots = 6
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 850
+		}
+	}
+}
+
+# STERN
+# MD_ADAMANTITE_STERN
+ship_section_template = {
+	key = "MD_ADAMANTITE_STERN"
+	ship_size = md_adamantite_ship
+	fits_on_slot = stern
+	should_draw_components = no
+	entity = "md_adamantite_ship_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "large_gun_02"
+	}
+	aux_utility_slots = 4
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 800
+		}
+	}
+}
+
+# MD_ADAMANTITE_MASSIVE_STERN
+ship_section_template = {
+	key = "MD_ADAMANTITE_MASSIVE_STERN"
+	ship_size = md_adamantite_ship
+	fits_on_slot = stern
+	should_draw_components = no
+	entity = "md_adamantite_ship_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "large_gun_01"
+	}
+	aux_utility_slots = 4
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 800
+		}
+	}
+}
+
+# MD_ADAMANTITE_HANGAR_STERN
+ship_section_template = {
+	key = "MD_ADAMANTITE_HANGAR_STERN"
+	ship_size = md_adamantite_ship
+	fits_on_slot = stern
+	should_draw_components = no
+	entity = "md_adamantite_ship_stern_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_weight = {
+		modifier = {
+			factor = 0.1		
+			NOT = { has_technology = tech_strike_craft_3 }
+		}
+		modifier = {
+			factor = 10.0
+			is_preferred_weapons = weapon_type_strike_craft
+		}
+		modifier = {
+			factor = 0.1
+			NOT = { is_preferred_weapons = weapon_type_strike_craft }
+		}		
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_01"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_02"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_03"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "STRIKE_CRAFT_04"
+		template = "large_strike_craft"
+		rotation = 90
+		locatorname = "large_gun_01"
+	}
+	aux_utility_slots = 4
+	resources = {
+		category = ship_sections
+		cost = {
+			adamantines = 800
+		}
+	}
+}

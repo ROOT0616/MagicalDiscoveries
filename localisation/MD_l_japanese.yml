@@ -23,7 +23,7 @@
  tech_ultimate_alchemy_desc:0 "工学、合金の生産力向上は帝国全体の軍事力と建築を根本から変化させ、工業技師の大半は壺を前にして合金製造を行っていると噂される…実際は当事者しか知らない。"
 
  tech_magical_mining_efficiency:0 "魔法による採掘の効率化"
-tech_magical_mining_efficiency_desc:0 ""
+ tech_magical_mining_efficiency_desc:0 "魔法技術の普及により今ではつるはしなどの道具までにも魔法が付与されるようになった。これにより様々な道具の性能が向上した。"
 
  tech_black_magic:0 "黒魔法"
  tech_black_magic_desc:0 "魔力を操ることで様々な能力を発揮することができるだろう。我々は「力」に注力するべきだろう。"
@@ -77,10 +77,10 @@ tech_magical_mining_efficiency_desc:0 ""
  tech_mithril_refinery_desc:0 "白銀色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
 
  tech_mithril_refinery_pattern:0 "ミスリル精錬の標準化"
- tech_philosophers_stone_pattern_desc:0 ""
+ tech_mithril_refinery_pattern_desc:0 ""
  
  tech_mithril_refinery_improvement:0 "ミスリル精錬の効率化"
- tech_philosophers_stone_improvement_desc:0 ""
+ tech_mithril_refinery_improvement_desc:0 ""
 
  tech_mithril_armor:0 "ミスリル装甲"
  tech_mithril_armor_desc:0 "美しいだけではなく実用性にも優れた装甲。"
@@ -95,10 +95,10 @@ tech_magical_mining_efficiency_desc:0 ""
  tech_orichalcone_refinery_desc:0 "赤金色の美しいこの金属は存在しないはずの物質である。魔法により加工することができ、それ以外の方法での加工は難しい。この金属により多くの民生品、軍用品の飛躍的発展がみられるだろう。"
 
  tech_orichalcone_refinery_pattern:0 "オリハルコン精錬の標準化"
- tech_philosophers_stone_pattern_desc:0 ""
+ tech_orichalcone_refinery_pattern_desc:0 ""
  
  tech_orichalcone_refinery_improvement:0 "オリハルコン精錬の効率化"
- tech_philosophers_stone_improvement_desc:0 ""
+ tech_orichalcone_refinery_improvement_desc:0 ""
 
  tech_orichalcone_armor:0 "オリハルコン装甲"
  tech_orichalcone_armor_desc:0 "魔力により自動修復が行われる非常に硬い装甲。加工可能な機関や職も少なく、希少価値も高い。"
@@ -113,10 +113,10 @@ tech_magical_mining_efficiency_desc:0 ""
  tech_adamantine_refinery_desc:0 "非常に硬く、加工すら難しいこの金属は様々な重要部品として活用される。特に軍需品においてこの金属は革命的な存在となるだろう。"
 
  tech_adamantine_refinery_pattern:0 "アダマンタイト精錬の標準化"
- tech_philosophers_stone_pattern_desc:0 ""
+ tech_adamantine_refinery_pattern_desc:0 ""
  
  tech_adamantine_refinery_improvement:0 "アダマンタイト精錬の効率化"
- tech_philosophers_stone_improvement_desc:0 ""
+ tech_adamantine_refinery_improvement_desc:0 ""
 
  tech_adamantine_armor:0 "アダマンタイト装甲"
  tech_adamantine_armor_desc:0 "ただひたすらに硬い。これほどこの装甲を言い表すのにふさわしいものはあるか？"
@@ -141,6 +141,15 @@ tech_magical_mining_efficiency_desc:0 ""
 
  tech_gods_shield:0 "本格 神の盾"
  tech_gods_shield_desc:0 ""
+
+ tech_md_reality_augmentation:0 "時空魔法による現実拡張"
+ tech_md_reality_augmentation_desc:0 "我々はついに時間、空間をも操れるようになった。一畳の部屋は十畳以上の部屋に広げ、物には時間による劣化という概念がなくなった。"
+
+ tech_md_fairies_and_spirits:0 "妖精・精霊との出会い"
+ tech_md_fairies_and_spirits_desc:0 ""
+
+ tech_md_adamantite_hull:0 "アダマンタイト船体"
+ tech_md_adamantite_hull_desc:0 "そうだ！アダマンタイトで船体を作ろう！"
 
 #######################
 #####    資源    ######
@@ -198,42 +207,49 @@ tech_magical_mining_efficiency_desc:0 ""
 #######################
  
  job_white_magician:0 "白魔道士"
+ ob_white_magician:0 "白魔道士"
  job_white_magician_desc:0 "回復や修繕を行う専門家にして恐るべき力の体現者"
  job_white_magician_plural:0 "白魔道士"
  job_white_magician_effect_desc:1 "£job_white_magician£ $job_white_magician_plural$は£energy£ §Y$energy$§!を消費して、 £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!を産出し、 £mod_pop_growth_speed£ §Y$MOD_POP_GROWTH_SPEED$§!、 £mod_planet_pop_assembly_organic_mult£ §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_MULT$§!を増加させる。"
  mod_job_white_magician_add:0 "白魔道士の職業枠"
 
  job_mithril_refiner:0 "ミスリル錬金術師"
+ ob_mithril_refiner:0 "ミスリル錬金術師"
  job_mithril_refiner_desc:0 "鉱物等から魔力によりミスリルを合成させる専門家"
  job_mithril_refiner_plural:0 "ミスリル錬金術師"
  job_mithril_refiner_effect_desc:0 "£job_mithril_refiner£ $job_mithril_refiner_plural$は、 £minerals£ §Y$minerals$§!を消費して£mithrils£ §Y$mithrils$§!を産出する"
  mod_job_mithril_refiner_add:0 "ミスリル錬金術師の職業枠"
 
  job_mithril_magic_tool_crafter:0 "ミスリル魔道具師 "
+ ob_mithril_magic_tool_crafter:0 "ミスリル魔道具師 "
  job_mithril_magic_tool_crafter_desc:0 "ミスリルを様々な魔法道具に加工する職人"
  job_mithril_magic_tool_crafter_plural:0 "ミスリル魔道具師 "
  job_mithril_magic_tool_crafter_effect_desc:0 "£job_mithril_magic_tool_crafter£ $job_mithril_magic_tool_crafter_plural$は、 £minerals£ §Y$minerals$§!を消費して£consumer_goods£ §Y$consumer_goods$§! 、£unity£ §Y$unity$§!を産出する"
  mod_job_mithril_magic_tool_crafter_add:0 "ミスリル魔道具師の職業枠"
 
  job_orichalcone_refiner:0 "オリハルコン錬金術師"
+ ob_orichalcone_refiner:0 "オリハルコン錬金術師"
  job_orichalcone_refiner_desc:0 "ミスリル等から魔力によりオリハルコンを合成させる専門家"
  job_orichalcone_refiner_plural:0 "オリハルコン錬金術師"
  job_orichalcone_refiner_effect_desc:0 "£job_orichalcone_refiner£ $job_orichalcone_refiner_plural$は、£rare_crystals£ §Y$rare_crystals$§!、 £mithrils£ §Y$mithrils$§!を消費して£orichalcones£ §Y$orichalcones$§!を産出する"
  mod_job_orichalcone_refiner_add:0 "オリハルコン錬金術師の職業枠"
  
  job_orichalcone_crafter:0 "オリハルコン工芸士"
+ ob_orichalcone_crafter:0 "オリハルコン工芸士"
  job_orichalcone_crafter_desc:0 "オリハルコンを工芸に使う冶金学の大家"
  job_orichalcone_crafter_plural:0 "オリハルコン工芸士"
  job_orichalcone_crafter_effect_desc:0 "£job_orichalcone_crafter£ $job_orichalcone_crafter_plural$は、£orichalcones£ §Y$orichalcones$§!を消費して£influence£ §Y$influence$§!を産出する"
  mod_job_orichalcone_crafter_add:0 "オリハルコン工芸士の職業枠"
 
  job_adamantine_refiner:0 "アダマンタイト錬金術師"
+ ob_adamantine_refiner:0 "アダマンタイト錬金術師"
  job_adamantine_refiner_desc:0 "オリハルコン等から魔力によりアダマンタイトを合成させる専門家"
  job_adamantine_refiner_plural:0 "アダマンタイト錬金術師"
  job_adamantine_refiner_effect_desc:0 "£job_adamantine_refiner£ $job_adamantine_refiner_plural$は、£orichalcones£ §Y$orichalcones$§!、 £philosophers_stone£ §Y$philosophers_stone$§!を消費して£adamantines£ §Y$adamantines$§!を産出する"
  mod_job_adamantine_refiner_add:0 "アダマンタイト錬金術師の職業枠"
 
  job_the_legendary_alchemist:0 "伝説の錬金術師"
+ ob_the_legendary_alchemist:0 "伝説の錬金術師"
  job_the_legendary_alchemist_desc:0 "錬金術を極めた国家有数の専門家"
  job_the_legendary_alchemist_plural:0 "伝説の錬金術師"
  job_the_legendary_alchemist_effect_desc:0 "£job_the_legendary_alchemist£ $job_the_legendary_alchemist_plural$は、£minerals£ §Y$minerals$§!、£exotic_gases£ §Y$exotic_gases$§!、£rare_crystals£ §Y$rare_crystals$§!、 £sr_zro£ §Y$sr_zro$§!を消費して£philosophers_stone£ §Y$philosophers_stone$§!を産出する"
@@ -467,6 +483,7 @@ tech_magical_mining_efficiency_desc:0 ""
  situation_mithrils_deficit:0 "ミスリル不足"
  situation_mithrils_deficit_type:0 "$situation_alloys_deficit$"
  situation_mithrils_deficit_desc:0 "手に負えないほどミスリルが不足している！  $situation_deficit_desc_base$"
+ situation_mithrils_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
  deficit_approach_invest_in_mithrils_production:0 "ミスリル産出に投資する"
  string_expenditures_greater_than_income_mithrils:0 "ミスリル不足"
  string_not_in_deficit_mithrils:0 "黒字の月間ミスリル収支"
@@ -475,6 +492,7 @@ tech_magical_mining_efficiency_desc:0 ""
  situation_orichalcones_deficit:0 "オリハルコン不足"
  situation_orichalcones_deficit_type:0 "$situation_alloys_deficit$"
  situation_orichalcones_deficit_desc:0 "手に負えないほどオリハルコンが不足している！  $situation_deficit_desc_base$"
+ situation_orichalcones_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
  deficit_approach_invest_in_orichalcones_production:0 "オリハルコン産出に投資する"
  string_expenditures_greater_than_income_orichalcones:0 "オリハルコン不足"
  string_not_in_deficit_orichalcones:0 "黒字の月間オリハルコン収支"
@@ -483,6 +501,7 @@ tech_magical_mining_efficiency_desc:0 ""
  situation_adamantines_deficit:0 "アダマンタイト不足"
  situation_adamantines_deficit_type:0 "$situation_alloys_deficit$"
  situation_adamantines_deficit_desc:0 "手に負えないほどアダマンタイトが不足している！  $situation_deficit_desc_base$"
+ situation_adamantines_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
  deficit_approach_invest_in_adamantines_production:0 "アダマンタイト産出に投資する"
  string_expenditures_greater_than_income_adamantines:0 "アダマンタイト不足"
  string_not_in_deficit_adamantines:0 "黒字の月間アダマンタイト収支"
@@ -491,6 +510,7 @@ tech_magical_mining_efficiency_desc:0 ""
  situation_philosophers_deficit:0 "賢者の石不足"
  situation_philosophers_deficit_type:0 "$situation_alloys_deficit$"
  situation_philosophers_deficit_desc:0 "手に負えないほど賢者の石が不足している！  $situation_deficit_desc_base$"
+ situation_philosophers_deficit_monthly_change_tooltip:0 "$situation_deficit_monthly_change_tooltip$"
  deficit_approach_invest_in_philosophers_stone_production:0 "賢者の石産出に投資する"
  string_expenditures_greater_than_income_philosophers_stone:0 "賢者の石不足"
  string_not_in_deficit_philosophers_stone:0 "黒字の月間賢者の石収支"
@@ -606,6 +626,13 @@ tech_magical_mining_efficiency_desc:0 ""
  MEDIUM_MYTHICAL_DECRAY_WEAPON_3:0 "中型零式神話崩壊砲"
  LARGE_MYTHICAL_DECRAY_WEAPON_3:0 "大型零式神話崩壊砲"
 
+ LONGINUS_SPEAR_1:0 "試作型ロンギヌスの槍"
+ LONGINUS_SPEAR_1_DESC:0 ""
+ LONGINUS_SPEAR_2:0 "ロンギヌスの槍"
+ LONGINUS_SPEAR_2_DESC:0 ""
+ LONGINUS_SPEAR_3:0 "零式ロンギヌスの槍"
+ LONGINUS_SPEAR_3_DESC:0 ""
+
  KUSANAGI:0 "クサナギツヨシ"
  KUSANAGI_DESC:0 "クサナギツヨシ"
  KUSANAGI_WEAPON:0 "クサナギツヨシ"
@@ -639,6 +666,9 @@ tech_magical_mining_efficiency_desc:0 ""
 
  edict_MD_test_campaign:0 "MDクライシスイベントテスト用(デバック用)"
  edict_MD_test_campaign_desc:0 "マジックディスカバリーのクライシスイベントの初期化"
+
+ edict_MD_test_on_campaign:0 "MDクライシスイベント開始用(デバック用)"
+ edict_MD_test_on_campaign_desc:0 "マジックディスカバリーのクライシスイベントの強制開始"
 
 ############################
 #####    デシジョン    ######
@@ -691,6 +721,9 @@ tech_magical_mining_efficiency_desc:0 ""
 ##########################
 
  resolution_galactic_focus_crisis_heavenly_effect_success:0 ""
+
+ TECH_UNLOCK_ADAMANTITE_CONSTRUCTION_TITLE:0 "§H艦船タイプをアンロック：§!アダマンタイタン"
+ TECH_UNLOCK_ADAMANTITE_CONSTRUCTION_DESC:0 "§Hアダマンタイタン§!\nあらゆるものをアダマンタイトで作られたタイタン。船体事態がアダマンタイトのため異様に硬さを誇る。"
 
 #######################
 #####    名前    ######
@@ -756,6 +789,48 @@ tech_magical_mining_efficiency_desc:0 ""
  mod_planet_the_legendary_alchemist_philosophers_stone_produces_add:0 "$mod_planet_the_legendary_alchemist_philosophers_stone_produces_mult$"
  mod_planet_the_legendary_alchemist_upkeep_mult:0 "$job_the_legendary_alchemist$維持費"
  mod_planet_the_legendary_alchemist_upkeep_add:0 "$job_the_legendary_alchemist$維持費"
+
+ mod_damage_vs_country_type_heavenly_realm_mult:0 "神々へのダメージ"
+
+###########################
+#####    ship_size    ######
+###########################
+
+ md_adamantite_ship:0 "アダマンタイタン"
+ md_adamantite_ship_plural:0 "アダマンタイタン"
+
+ large_ship_heavenly:0 ""
+ medium_ship_heavenly:0 ""
+ small_ship_heavenly:0 ""
+ dimensional_portal_heavenly:0 ""
+ construction_ship_heavenly:0 ""
+
+###############################
+#####    ship_section    ######
+###############################
+
+ MD_ADAMANTITE_BOW:0 "アダマン艦首"
+ MD_ADAMANTITE_HANGAR_BOW:0 "アダマンキャリアー艦首"
+ MD_ADAMANTITE_TITANIC_BOW:0 "アダマンタイタン艦首"
+
+ MD_ADAMANTITE_MID:0 "アダマン艦央"
+ MD_ADAMANTITE_MASSIVE_MID:0 "アダマンマシーブ艦央"
+ MD_ADAMANTITE_HANGAR_MID:0 "アダマンキャリアー艦央"
+
+ MD_ADAMANTITE_STERN:0 "アダマン艦尾"
+ MD_ADAMANTITE_MASSIVE_STERN:0 "アダマンマシーブ艦尾"
+ MD_ADAMANTITE_HANGAR_STERN:0 "アダマンキャリアー艦尾"
+
+####################################
+#####    economic category    ######
+####################################
+
+ planet_mithril_refiner:0 "§job_mithril_refiner§"
+ planet_mithril_magic_tool_crafter:0 "§job_mithril_magic_tool_crafter§"
+ planet_orichalcone_refiner:0 "§job_orichalcone_refiner§"
+ planet_orichalcone_crafter:0 "§job_orichalcone_crafter§"
+ planet_adamantine_refiner:0 "§job_adamantine_refiner§"
+ planet_the_legendary_alchemist:0 "§job_the_legendary_alchemist§"
 
 #######################
 #####    〇〇    ######

@@ -18,6 +18,10 @@ event = {
 	}
 	## イベントの効果
 	immediate = {
+		country_event = {
+			id = magical_discoveries_crisis.1000
+			days = 7560				#20年後
+		}
 		every_country = {
 			country_event = {
 				id = magical_discoveries_crisis.1
@@ -257,10 +261,6 @@ country_event = {
 						}
 					}
 				}
-			}
-			country_event = {
-				id = magical_discoveries_crisis.1000
-				days = 7200				#20年後
 			}
 		}
 	}
