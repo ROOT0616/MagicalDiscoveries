@@ -2557,6 +2557,7 @@ tech_longinus_spear_3 = {
 }
 
 # 空間魔法による現実拡張	技術的革新 物理学 
+# 空間魔法による現実拡張	技術的革新 物理学 
 tech_md_reality_augmentation = {
 	cost = @tier5cost3
 	area = physics

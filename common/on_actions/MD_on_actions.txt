@@ -14,7 +14,6 @@ on_monthly_pulse = {
 		md_market.2
 		md_market.3
 		md_market.4
-		# magical_discoveries.101
 	}
 	random_events = {
 		10 = magical_discoveries_crisis.0
@@ -38,8 +37,6 @@ on_yearly_pulse_country = {
 # this = country
 on_bi_yearly_pulse_country = {
 	random_events = {
-		60 = 0
-		40 = magical_discoveries.8
 	}
 	events = {
 	}
@@ -113,5 +110,28 @@ on_country_destroyed = {
 on_custom_diplomacy = {
 	events = {
 		magical_discoveries_crisis.1050
+		magical_discoveries.100 # Wizard Enclaves (all)
+		magical_discoveries.157 # Wizard1 (refusing comms.)
+		magical_discoveries.160 # Wizard2 (refusing comms.)
+		magical_discoveries.163 # Wizard3 (refusing comms.)
+	}
+}
+
+# 船がシステムに入ったときにイベントをトリガーします。通常は on_entering_system_first_time か on_entering_system_fleet を使用するのがよいでしょう。
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system = {
+	events = {
+	}
+	random_events = {
+	}
+}
+
+# 艦隊がシステムに突入した| See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
 	}
 }

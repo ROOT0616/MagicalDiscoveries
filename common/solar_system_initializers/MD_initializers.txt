@@ -1,15 +1,11 @@
 # メテーリンク魔法魔術学院		(魔導書販売・遺物販売)
-guardians_curator_init_01 = {
+guardians_wizard_init_01 = {
 	class = "rl_standard_stars"
 	usage = misc_system_init
-
 	usage_odds = {
 		base = 0
 		modifier = {
-			OR = {
-				has_leviathans = yes
-				has_distar = yes
-			}
+			has_leviathans = yes
 			add = 100
 		}
 		modifier = {
@@ -21,179 +17,56 @@ guardians_curator_init_01 = {
 			has_star_flag = empire_cluster
 		}
 	}
-
-	max_instances = 1
-	#spawn_chance = 100
-	#sigma (2) always spawns
-	scaled_spawn_chance = 12	# scales by galaxy size (1000 stars = 10x base)
-
-	flags = { guardians_curators_system enclave }
-
-	planet = {
-		class = star
-		orbit_distance = 0
-
-		init_effect = {
-			if = {
-				limit = {
-					NOT = { exists = event_target:curator_enclave_country }
-				}
-				create_species = {
-					name = random
-					class = random_non_machine
-					portrait = random
-					traits = {
-						ideal_planet_class = pc_habitat
-						trait = random_traits
-					}
-					#homeworld = this
-				}
-				create_country = {
-					name = "NAME_Curator_Order"
-					adjective = "NAME_Curator_adj"
-					type = enclave
-					authority = "auth_oligarchic"
-					civics = {
-						civic = civic_ancient_preservers
-					}
-					origin = "origin_default"
-					species = last_created_species
-					flag = {
-						icon = {
-							category = "enclaves"
-							file = "enclaves_flag_curator.dds"
-						}
-						background= {
-							category = "backgrounds"
-							file = "vertical.dds"
-						}
-						colors={
-							"blue"
-							"dark_blue"
-							"null"
-							"null"
-						}
-					}
-					ethos = {
-						ethic = ethic_fanatic_materialist
-						ethic = ethic_pacifist
-					}
-					ignore_initial_colony_error = yes
-				}
-				last_created_country = {
-					set_country_flag = curator_enclave_country
-					set_graphical_culture = mammalian_01
-					save_global_event_target_as = curator_enclave_country
-					create_fleet = {
-						name = "NAME_Curator_Alpha_Enclave"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_Curator_Enclave_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								angle = random
-								distance = 100
-							}
-							save_event_target_as = CustomCapital
-							prev = {
-								set_custom_capital_location = event_target:CustomCapital
-							}
-						}
-					}
-					create_leader = {
-						class = ruler
-						species = this
-						name = random
-						skill = 5
-					}
-					set_leader = last_created_leader
-				}
-				solar_system = {
-					save_global_event_target_as = curator_enclave_system
-				}
-			}
-			else = {
-				event_target:curator_enclave_country = {
-					create_fleet = {
-						name = "NAME_Curator_Alpha_Enclave"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_Curator_Enclave_Station"
-								graphical_culture = prev
-							}							
-							set_location = {
-								target = prevprev
-								distance = 120
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	change_orbit = 60
-
-	planet = {
-		count = 3
-		orbit_distance = 25
-		class = "rl_unhabitable_planets"
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 10 max = 25 }
-	}
-}
-
-# シャイン魔法アカデミー・サテライト校	(魔導書販売・遺物販売)
-guardians_curator_init_02 = {
-	class = sc_black_hole
-	usage = misc_system_init
-
-	usage_odds = {
-		base = 0
-		modifier = {
-			OR = {
-				has_leviathans = yes
-				has_distar = yes
-			}
-			add = 100
-		}
-		modifier = {
-			factor = 0
-			is_fe_cluster = yes
-		}
-		modifier = {
-			factor = 0
-			has_star_flag = empire_cluster
-		}
-	}
-
 	max_instances = 1
 	spawn_chance = 100
-	#scaled_spawn_chance = 8	# scales by galaxy size (1000 stars = 10x base)
-
-	flags = { guardians_curators_system enclave }
-
+	flags = {
+		guardians_wizards_system
+		enclave
+		wizard_a_enclave_star_flag
+	}
 	planet = {
 		count = 1
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = 30
+		size = {
+			min = 20
+			max = 30
+		}
 		has_ring = no
-
+	}
+	change_orbit = 45
+	planet = {
+		count = {
+			min = 2
+			max = 5
+		}
+		orbit_distance = 20
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		change_orbit = @base_moon_distance
+		moon = {
+			count = {
+				min = 0
+				max = 1
+			}
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			orbit_distance = 5
+		}
 		init_effect = {
 			if = {
 				limit = {
-					NOT = { exists = event_target:curator_enclave_country }
+					NOT = {
+						exists = event_target:GuardiansWizardsPlanet
+					}
 				}
+				save_event_target_as = GuardiansWizardsPlanet
+				set_planet_flag = guardians_wizards_planet
 				create_species = {
 					name = random
 					class = random_non_machine
@@ -205,9 +78,9 @@ guardians_curator_init_02 = {
 					#homeworld = this
 				}
 				create_country = {
-					name = "NAME_Curator_Order"
-					adjective = "NAME_Curator_adj"
-					type = enclave
+					name = "NAME_Wizard"
+					adjective = NAME_Wizard_adj
+					type = university_of_magic
 					authority = "auth_oligarchic"
 					civics = {
 						civic = civic_ancient_preservers
@@ -216,49 +89,51 @@ guardians_curator_init_02 = {
 					species = last_created_species
 					flag = {
 						icon = {
-							category = "enclaves"
-							file = "enclaves_flag_curator.dds"
+							category = "wizard"
+							file = "wizard_flag.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
-							file = "vertical.dds"
+							file = "00_solid.dds"
 						}
-						colors={
-							"blue"
-							"dark_blue"
+						colors = {
+							"red"
+							"dark_red"
 							"null"
 							"null"
 						}
 					}
 					ethos = {
-						ethic = ethic_fanatic_materialist
+						ethic = ethic_fanatic_xenophile
 						ethic = ethic_pacifist
 					}
 					ignore_initial_colony_error = yes
 				}
 				last_created_country = {
-					set_country_flag = curator_enclave_country
+					set_country_flag = wizard_enclave_country
+					set_country_flag = wizard_enclave_country_1
 					set_graphical_culture = mammalian_01
-					save_global_event_target_as = curator_enclave_country
 					create_fleet = {
-						name = "NAME_Curator_Sigma_Enclave"
-						settings = { spawn_debris = no }
+						name = "NAME_Wizard_HQ"
+						settings = {
+							spawn_debris = no
+						}
 						effect = {
 							set_owner = prev
 							create_ship = {
 								name = random
-								design = "NAME_Curator_Enclave_Station"
+								design = "NAME_Institute_of_Witchcraft"
 								graphical_culture = prev
 							}
 							set_location = {
 								target = prevprev
-								angle = random
-								distance = 100
+								distance = 90
 							}
 							save_event_target_as = CustomCapital
 							prev = {
 								set_custom_capital_location = event_target:CustomCapital
 							}
+							set_fleet_flag = wizard_enclave_station
 						}
 					}
 					create_leader = {
@@ -268,29 +143,167 @@ guardians_curator_init_02 = {
 						skill = 5
 					}
 					set_leader = last_created_leader
+					save_global_event_target_as = wizard_a_country
 				}
 				solar_system = {
-					save_global_event_target_as = curator_enclave_system
+					save_global_event_target_as = wizard_a_enclave_system
 				}
 			}
-			else = {
-				event_target:curator_enclave_country = {
+		}
+	}
+}
+
+# シャイン魔法アカデミー・サテライト校	(魔導書販売・遺物販売)
+guardians_wizard_init_02 = {
+	class = "rl_standard_stars"
+	usage = misc_system_init
+	usage_odds = {
+		base = 0
+		modifier = {
+			has_leviathans = yes
+			add = 100
+		}
+		modifier = {
+			factor = 0
+			is_fe_cluster = yes
+		}
+		modifier = {
+			factor = 0
+			has_star_flag = empire_cluster
+		}
+	}
+	max_instances = 1
+	#spawn_chance = 100
+	scaled_spawn_chance = 16	# scales by galaxy size (1000 stars = 10x base)
+	flags = {
+		guardians_wizards_system
+		enclave
+		wizard_b_enclave_star_flag
+	}
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 1
+		size = {
+			min = 20
+			max = 30
+		}
+		has_ring = no
+	}
+	change_orbit = 45
+	planet = {
+		count = {
+			min = 2
+			max = 5
+		}
+		orbit_distance = 20
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		change_orbit = @base_moon_distance
+		moon = {
+			count = {
+				min = 0
+				max = 1
+			}
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			orbit_distance = 5
+		}
+		init_effect = {
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:GuardiansWizardsPlanet
+					}
+				}
+				save_event_target_as = GuardiansWizardsPlanet
+				set_planet_flag = guardians_wizards_planet
+				create_species = {
+					name = random
+					class = random_non_machine
+					portrait = random
+					portrait = random
+					traits = {
+						ideal_planet_class = pc_habitat
+						trait = random_traits
+					}
+					#homeworld = this
+				}
+				create_country = {
+					name = "NAME_Wizard_b"
+					adjective = NAME_Wizard_b_adj
+					type = university_of_magic
+					authority = "auth_oligarchic"
+					civics = {
+						civic = civic_ancient_preservers
+					}
+					origin = "origin_default"
+					species = last_created_species
+					flag = {
+						icon = {
+							category = "wizard"
+							file = "wizard_flag.dds"
+						}
+						background = {
+							category = "backgrounds"
+							file = "circle.dds"
+						}
+						colors = {
+							"red"
+							"dark_red"
+							"null"
+							"null"
+						}
+					}
+					ethos = {
+						ethic = ethic_fanatic_xenophile
+						ethic = ethic_egalitarian
+					}
+					ignore_initial_colony_error = yes
+				}
+				last_created_country = {
+					set_country_flag = wizard_enclave_country
+					set_country_flag = wizard_enclave_country_2
+					set_graphical_culture = mammalian_01
 					create_fleet = {
-						name = "NAME_Curator_Sigma_Enclave"
-						settings = { spawn_debris = no }
+						name = "NAME_Grand_Bazaar"
+						settings = {
+							spawn_debris = no
+						}
 						effect = {
 							set_owner = prev
 							create_ship = {
 								name = random
-								design = "NAME_Curator_Enclave_Station"
+								design = "NAME_Institute_of_Witchcraft"
 								graphical_culture = prev
 							}
 							set_location = {
 								target = prevprev
-								distance = 120
+								distance = 90
 							}
+							save_event_target_as = CustomCapital
+							prev = {
+								set_custom_capital_location = event_target:CustomCapital
+							}
+							set_fleet_flag = wizard_enclave_station
 						}
 					}
+					create_leader = {
+						class = ruler
+						species = this
+						name = random
+						skill = 5
+					}
+					set_leader = last_created_leader
+					save_global_event_target_as = wizard_b_country
+				}
+				solar_system = {
+					save_global_event_target_as = wizard_b_enclave_system
 				}
 			}
 		}
@@ -298,17 +311,13 @@ guardians_curator_init_02 = {
 }
 
 # 魔導工房マジカント			(錬金術・遺物販売)
-guardians_curator_init_03 = {
-	class = sc_pulsar
+guardians_wizard_init_03 = {
+	class = "rl_standard_stars"
 	usage = misc_system_init
-
 	usage_odds = {
 		base = 0
 		modifier = {
-			OR = {
-				has_leviathans = yes
-				has_distar = yes
-			}
+			has_leviathans = yes
 			add = 100
 		}
 		modifier = {
@@ -320,26 +329,57 @@ guardians_curator_init_03 = {
 			has_star_flag = empire_cluster
 		}
 	}
-
 	max_instances = 1
 	#spawn_chance = 100
-	scaled_spawn_chance = 16	# scales by galaxy size (1000 stars = 10x base)
-
-	flags = { guardians_curators_system enclave }
-
+	scaled_spawn_chance = 12	# scales by galaxy size (1000 stars = 10x base)
+	flags = {
+		guardians_wizards_system
+		enclave
+		wizard_c_enclave_star_flag
+	}
 	planet = {
 		count = 1
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = 30
+		size = {
+			min = 20
+			max = 30
+		}
 		has_ring = no
-
+	}
+	change_orbit = 45
+	planet = {
+		count = {
+			min = 2
+			max = 5
+		}
+		orbit_distance = 20
+		orbit_angle = {
+			min = 90
+			max = 270
+		}
+		change_orbit = @base_moon_distance
+		moon = {
+			count = {
+				min = 0
+				max = 1
+			}
+			orbit_angle = {
+				min = 90
+				max = 270
+			}
+			orbit_distance = 5
+		}
 		init_effect = {
 			if = {
 				limit = {
-					NOT = { exists = event_target:curator_enclave_country }
+					NOT = {
+						exists = event_target:GuardiansWizardsPlanet
+					}
 				}
+				save_event_target_as = GuardiansWizardsPlanet
+				set_planet_flag = guardians_wizards_planet
 				create_species = {
 					name = random
 					class = random_non_machine
@@ -351,9 +391,9 @@ guardians_curator_init_03 = {
 					#homeworld = this
 				}
 				create_country = {
-					name = "NAME_Curator_Order"
-					adjective = "NAME_Curator_adj"
-					type = enclave
+					name = "NAME_Wizard_c"
+					adjective = NAME_Wizard_c_adj
+					type = university_of_magic
 					authority = "auth_oligarchic"
 					civics = {
 						civic = civic_ancient_preservers
@@ -362,49 +402,51 @@ guardians_curator_init_03 = {
 					species = last_created_species
 					flag = {
 						icon = {
-							category = "enclaves"
-							file = "enclaves_flag_curator.dds"
+							category = "wizard"
+							file = "wizard_flag.dds"
 						}
-						background= {
+						background = {
 							category = "backgrounds"
-							file = "vertical.dds"
+							file = "double_hemispheres.dds"
 						}
-						colors={
-							"blue"
-							"dark_blue"
+						colors = {
+							"red"
+							"dark_red"
 							"null"
 							"null"
 						}
 					}
 					ethos = {
-						ethic = ethic_fanatic_materialist
-						ethic = ethic_pacifist
+						ethic = ethic_xenophile
+						ethic = ethic_fanatic_egalitarian
 					}
 					ignore_initial_colony_error = yes
 				}
 				last_created_country = {
-					set_country_flag = curator_enclave_country
+					set_country_flag = wizard_enclave_country
+					set_country_flag = wizard_enclave_country_3
 					set_graphical_culture = mammalian_01
-					save_global_event_target_as = curator_enclave_country
 					create_fleet = {
-						name = "NAME_Curator_Lambda_Enclave"
-						settings = { spawn_debris = no }
+						name = "NAME_Muutag_Station"
+						settings = {
+							spawn_debris = no
+						}
 						effect = {
 							set_owner = prev
 							create_ship = {
 								name = random
-								design = "NAME_Curator_Enclave_Station"
+								design = "NAME_Institute_of_Witchcraft"
 								graphical_culture = prev
 							}
 							set_location = {
 								target = prevprev
-								angle = random
-								distance = 100
+								distance = 90
 							}
 							save_event_target_as = CustomCapital
 							prev = {
 								set_custom_capital_location = event_target:CustomCapital
 							}
+							set_fleet_flag = wizard_enclave_station
 						}
 					}
 					create_leader = {
@@ -414,59 +456,12 @@ guardians_curator_init_03 = {
 						skill = 5
 					}
 					set_leader = last_created_leader
+					save_global_event_target_as = wizard_c_country
 				}
 				solar_system = {
-					save_global_event_target_as = curator_enclave_system
-				}
-			}
-			else = {
-				event_target:curator_enclave_country = {
-					create_fleet = {
-						name = "NAME_Curator_Lambda_Enclave"
-						settings = { spawn_debris = no }
-						effect = {
-							set_owner = prev
-							create_ship = {
-								name = random
-								design = "NAME_Curator_Enclave_Station"
-								graphical_culture = prev
-							}
-							set_location = {
-								target = prevprev
-								distance = 120
-							}
-						}
-					}
+					save_global_event_target_as = wizard_c_enclave_system
 				}
 			}
 		}
-	}
-
-	change_orbit = 60
-
-	planet = {
-		count = 1
-		class = "pc_broken"
-		size = { min = 15 max = 25 }
-		orbit_angle = { min = 90 max = 270 }
-
-		init_effect = { prevent_anomaly = yes }
-	}
-
-	planet = {
-		count = 1
-		orbit_distance = 40
-		class = "pc_broken"
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 15 max = 25 }
-
-		init_effect = { prevent_anomaly = yes }
-	}
-
-	planet = {
-		orbit_distance = 40
-		class = pc_gas_giant
-		orbit_angle = { min = 90 max = 270 }
-		size = 40
 	}
 }

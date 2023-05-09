@@ -238,23 +238,9 @@
  magical_discoveries.8a.name:0 "Buy the Necronomicon"
  magical_discoveries.8b.name:0 "It's the Necronomicon, don't bring that horrible thing!"
 
- magical_discoveries_crisis.1.name:0 "Angel Sightings"
- magical_discoveries_crisis.1.desc:0 "Sightings of mythical angelic creatures have been reported across the galaxy."
- magical_discoveries_crisis.1a.name:0 "Don't be silly."
-
- magical_discoveries_crisis.2.name:0 "Discover The Angels"
- magical_discoveries_crisis.2.desc:0 "At last we have found our angel."
- magical_discoveries_crisis.2a.name:0 "Talking peacefully with angels"
- magical_discoveries_crisis.2b.name:0 "Capture an angel"
- magical_discoveries_crisis.2c.name:0 "Let's leave it alone."
-
- magical_discoveries_crisis.3.name:0 "Cooperation of Angels"
- magical_discoveries_crisis.3.desc:0 "They say that angels will help us."
- magical_discoveries_crisis.3a.name:0 "Thank goodness."
-
- magical_discoveries_crisis.4.name:0 "Angelic Counterattack"
- magical_discoveries_crisis.4.desc:0 "When we tried to catch the angel, he turned on us."
- magical_discoveries_crisis.4a.name:0 "I may have made a mistake."
+ magical_discoveries_crisis.2.name:0 "Angel Sightings"
+ magical_discoveries_crisis.2.desc:0 "Sightings of mythical angelic creatures have been reported across the galaxy."
+ magical_discoveries_crisis.2a.name:0 "Don't be silly."
 
  magical_discoveries_crisis.1007.name:0 "Gate From TheHheavens"
  magical_discoveries_crisis.1007.desc:0 "A huge portal in the space-time structure has appeared in the [heavens_system.GetName] system!  The cause is unknown, but the gate acts as a one-way portal from another dimension. A strange fleet of ships is pouring out of it, attacking the surrounding area at random. This could be the beginning of a major invasion! \n\nWe've intercepted a powerful signal from a ship that's come through the gate. It's going to punish us."

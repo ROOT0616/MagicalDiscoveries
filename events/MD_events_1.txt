@@ -2,788 +2,450 @@
 #####  魔法使いイベント  ######
 #############################
 namespace = magical_discoveries
-## 魔法との出会い
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.1
-	title = magical_discoveries.1.name
-	desc = magical_discoveries.1.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
-	trigger = {
-		NOT = {
-			has_country_flag = MeetMagicFlag
-		}
-		NOT = {
-			has_country_flag = DenyMagicFlag
-		}
-	}
-	## イベント発生時の効果
-	immediate = {
-	}
-	## イベントの効果
-	option = {
-		name = magical_discoveries.1a.name
-		set_country_flag = MeetMagicFlag
-	}
-	option = {
-		name = magical_discoveries.1b.name
-		set_country_flag = MeetMagicFlag
-		trigger = {
-			OR = {
-				has_ethic = ethic_materialist
-				has_ethic = ethic_fanatic_materialist
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.1c.name
-		set_country_flag = MeetMagicFlag
-		trigger = {
-			OR = {
-				has_ethic = ethic_spiritualist
-				has_ethic = ethic_fanatic_spiritualist
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.1d.name
-		set_country_flag = DenyMagicFlag
-	}
-}
-
-## 魔導書1の購入
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.2
-	title = magical_discoveries.2.name
-	desc = magical_discoveries.2.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
-	trigger = {
-		is_regular_empire = yes
-		has_country_flag = MeetMagicFlag
-		NOT = {
-			has_country_flag = BuyGrimoireFlag01
-		}
-	}
-	## イベントの効果
-	option = {
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 1000
-				}
-			}
-		}
-		name = magical_discoveries.2a.name
-		set_country_flag = BuyGrimoireFlag01
-		owner = {
-			add_resource = {
-				energy = -1000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.2b.name
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 1000
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
-		}
-		set_country_flag = BuyGrimoireFlag01
-		owner = {
-			add_resource = {
-				energy = -1000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.2c.name
-	}
-	option = {
-		name = magical_discoveries.2d.name
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
-		}
-	}
-}
-
-## 魔導書2の購入
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.3
-	title = magical_discoveries.3.name
-	desc = magical_discoveries.3.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
-	trigger = {
-		is_regular_empire = yes
-		has_country_flag = MeetMagicFlag
-		has_country_flag = BuyGrimoireFlag01
-		NOT = {
-			has_country_flag = BuyGrimoireFlag02
-		}
-	}
-	## イベントの効果
-	option = {
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 2000
-				}
-			}
-		}
-		name = magical_discoveries.3a.name
-		set_country_flag = BuyGrimoireFlag02
-		owner = {
-			add_resource = {
-				energy = -2000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.3b.name
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 2000
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
-		}
-		set_country_flag = BuyGrimoireFlag02
-		owner = {
-			add_resource = {
-				energy = -2000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.3c.name
-	}
-	option = {
-		name = magical_discoveries.3d.name
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
-		}
-	}
-}
-
-## 魔導書3の購入
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.4
-	title = magical_discoveries.4.name
-	desc = magical_discoveries.4.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
-	trigger = {
-		is_regular_empire = yes
-		has_country_flag = MeetMagicFlag
-		has_country_flag = BuyGrimoireFlag02
-		NOT = {
-			has_country_flag = BuyGrimoireFlag03
-		}
-	}
-	## イベントの効果
-	option = {
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 3000
-				}
-			}
-		}
-		owner = {
-			add_resource = {
-				energy = -3000
-			}
-		}
-		name = magical_discoveries.4a.name
-		set_country_flag = BuyGrimoireFlag03
-	}
-	option = {
-		name = magical_discoveries.4b.name
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 3000
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
-		}
-		set_country_flag = BuyGrimoireFlag03
-		owner = {
-			add_resource = {
-				energy = -3000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.4c.name
-	}
-	option = {
-		name = magical_discoveries.4d.name
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
-		}
-	}
-}
-
-## 錬金術の書1の購入
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.5
-	title = magical_discoveries.5.name
-	desc = magical_discoveries.5.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
-	trigger = {
-		is_regular_empire = yes
-		has_country_flag = MeetMagicFlag
-		NOT = {
-			has_country_flag = BuyAlchemyFlag01
-		}
-	}
-	## イベントの効果
-	option = {
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 1000
-				}
-			}
-		}
-		name = magical_discoveries.5a.name
-		set_country_flag = BuyAlchemyFlag01
-		owner = {
-			add_resource = {
-				energy = -1000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.5b.name
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 1000
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
-		}
-		set_country_flag = BuyAlchemyFlag01
-		owner = {
-			add_resource = {
-				energy = -1000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.5c.name
-	}
-	option = {
-		name = magical_discoveries.5d.name
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
-		}
-	}
-}
-
-## 錬金術の書2の購入
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.6
-	title = magical_discoveries.6.name
-	desc = magical_discoveries.6.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
-	trigger = {
-		is_regular_empire = yes
-		has_country_flag = MeetMagicFlag
-		has_country_flag = BuyAlchemyFlag01
-		NOT = {
-			has_country_flag = BuyAlchemyFlag02
-		}
-	}
-	## イベントの効果
-	option = {
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 2000
-				}
-			}
-		}
-		name = magical_discoveries.6a.name
-		set_country_flag = BuyAlchemyFlag02
-		owner = {
-			add_resource = {
-				energy = -2000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.6b.name
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 2000
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
-		}
-		set_country_flag = BuyAlchemyFlag02
-		owner = {
-			add_resource = {
-				energy = -2000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.6c.name
-	}
-	option = {
-		name = magical_discoveries.6d.name
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
-		}
-	}
-}
-
-## 錬金術の書3の購入
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.7
-	title = magical_discoveries.7.name
-	desc = magical_discoveries.7.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
-	is_triggered_only = no
-	fire_only_once = no
-	mean_time_to_happen = {
-		years = 15
-	}
-	trigger = {
-		is_regular_empire = yes
-		has_country_flag = MeetMagicFlag
-		has_country_flag = BuyAlchemyFlag01
-		has_country_flag = BuyAlchemyFlag02
-		NOT = {
-			has_country_flag = BuyAlchemyFlag03
-		}
-	}
-	## イベントの効果
-	option = {
-		name = magical_discoveries.7a.name
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 3000
-				}
-			}
-		}
-		set_country_flag = BuyAlchemyFlag03
-		owner = {
-			add_resource = {
-				energy = -3000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.7b.name
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 3000
-				}
-			}
-		}
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophile
-				has_ethic = ethic_fanatic_xenophile
-			}
-		}
-		set_country_flag = BuyAlchemyFlag03
-		owner = {
-			add_resource = {
-				energy = -3000
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries.7c.name
-	}
-	option = {
-		name = magical_discoveries.7d.name
-		trigger = {
-			OR = {
-				has_ethic = ethic_xenophobe
-				has_ethic = ethic_fanatic_xenophobe
-			}
-		}
-	}
-}
-
-## ネクロノミコンの購入Necronomicon
-country_event = {
-	## イベントの基本情報
-	id = magical_discoveries.8
-	title = magical_discoveries.8.name
-	desc = magical_discoveries.8.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
+# magical_discoveries.97-102		通信の確立
+# magical_discoveries.105–107	Main menus
+# magical_discoveries.121-122	Opinion gain from active Strategic Resource deals
+# magical_discoveries.123-128	Hire a Governor
+# magical_discoveries.130-135	Strategic Resource deals
+# magical_discoveries.140-144	wizard Enclave destroyed
+# magical_discoveries.150-152	Strategic Resource deal elapses
+# magical_discoveries.155–163	Attacking a wizard Enclave
+# magical_discoveries.170-171	Defaulting on Strategic Resource deal
+# NOTE: any changes to these event IDs should be reflected in the has_wizard_event = {} scripted effect.
+# 飛び地（マーセナリーを含む）は3～4年後にコンタクトを取る
+fleet_event = {
+	id = magical_discoveries.97
+	hide_window = yes
 	is_triggered_only = yes
-	fire_only_once = no
-	# mean_time_to_happen = {
-	# 	years = 15
-	# }
 	trigger = {
-		mid_game_years_passed >= 25
-		is_regular_empire = yes
-		has_country_flag = BuyGrimoireFlag03
-		has_country_flag = BuyAlchemyFlag03
-		NOT = {
-			has_country_flag = BuyNecronomiconFlag
-		}
-		NOT = {
-			has_country_flag = DenyNecronomiconFlag
-		}
-	}
-	## イベントの効果
-	option = {
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = energy
-					value >= 3500
-				}
-			}
-		}
-		name = magical_discoveries.8a.name
-		set_country_flag = BuyNecronomiconFlag
 		if = {
 			limit = {
-				NOT = {
-					has_global_flag = LearnNecromancyFlag
+				solar_system = {
+					has_star_flag = wizard_a_enclave_star_flag
 				}
 			}
-			set_global_flag = LearnNecromancyFlag
+			exists = event_target:wizard_a_country
+			owner = {
+				NOT = {
+					has_communications = event_target:wizard_a_country
+				}
+			}
 		}
+		else_if = {
+			limit = {
+				solar_system = {
+					has_star_flag = wizard_b_enclave_star_flag
+				}
+			}
+			exists = event_target:wizard_b_country
+			owner = {
+				NOT = {
+					has_communications = event_target:wizard_b_country
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				solar_system = {
+					has_star_flag = wizard_c_enclave_star_flag
+				}
+			}
+			exists = event_target:wizard_c_country
+			owner = {
+				NOT = {
+					has_communications = event_target:wizard_c_country
+				}
+			}
+		}
+	}
+	immediate = {
 		owner = {
-			add_resource = {
-				energy = -3500
+			establish_communications_no_message = this
+			country_event = {
+				id = magical_discoveries.98
+			}
+		}
+	}
+}
+
+# エンクレイブ、通信を確立
+country_event = {
+	id = magical_discoveries.98
+	title = magical_discoveries.98.name
+	desc = magical_discoveries.98.desc
+	picture = GFX_evt_space_station
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+	after = {
+		hidden_effect = {
+			from = {
+				switch = {
+					trigger = has_country_flag
+					wizard_enclave_country = {
+						country_event = {
+							id = magical_discoveries.101
+						}
+					}
+					default = {
+						log_error = "Unexpected enclave type or missing script flag"
+					}
+				}
 			}
 		}
 	}
 	option = {
-		name = magical_discoveries.8b.name
-		set_country_flag = DenyNecronomiconFlag
+		name = SCUM
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+	option = {
+		name = TASTY
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+	option = {
+		name = EXTERMINATE
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+	option = {
+		name = leviathans.98.a
+		trigger = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
 	}
 }
 
-# ## 魔晄炉長期使用による星の不安定化
-# event = {
-# 	id = magical_discoveries.101
-# 	hide_window = yes
-# 	is_triggered_only = yes
-# 	immediate = {
-# 		every_galaxy_planet = {
-# 			limit = {
-# 				has_planet_flag = building_magical_furnace_fase_3
-# 				NOR = {
-# 					has_planet_flag = building_magical_furnace_fase_4
-# 					has_modifier = star_depletion_1_modifier
-# 					has_modifier = star_depletion_2_modifier
-# 					has_modifier = star_depletion_3_modifier
-# 					has_modifier = star_depletion_4_modifier
-# 					has_modifier = star_depletion_5_modifier
-# 				}
-# 			}
-# 			planet_event = {
-# 				id = magical_discoveries.102
-# 			}
-# 		}
-# 	}
-# }
+# Enclave Communication Spread
+# via on_decade_pulse_country
+country_event = {
+	id = magical_discoveries.560
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		is_country_type = university_of_magic
+		any_relation = {
+			is_country_type = default
+			any_relation = {
+				is_country_type = default
+				NOT = {
+					has_communications = ROOT
+				}
+			}
+		}
+	}
+	immediate = {
+		random_relation = {
+			limit = {
+				any_relation = {
+					is_country_type = default
+					NOT = {
+						has_communications = ROOT
+					}
+				}
+			}
+			random_relation = {
+				limit = {
+					is_country_type = default
+					NOT = {
+						has_communications = ROOT
+					}
+				}
+				root = {
+					establish_communications_no_message = prev
+				}
+				country_event = {
+					id = magical_discoveries.98
+				}
+			}
+		}
+	}
+}
 
-# ## 魔晄炉長期使用による星の不安定化1
-# planet_event = {
-# 	id = magical_discoveries.102
-# 	title = magical_discoveries.102.name
-# 	desc = magical_discoveries.102.desc
-# 	picture = GFX_evt_atmospheric_entry
-# 	show_sound = event_air_raid_siren
-# 	hide_window = no
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		NOT = {
-# 			has_planet_flag = building_magical_furnace_fase_4
-# 		}
-# 	}
-# 	immediate = {
-# 		add_modifier = {
-# 			modifier = "star_depletion_1_modifier"
-# 			days = 1800
-# 		}
-# 		planet_event = {
-# 			id = magical_discoveries.103
-# 			days = 1800
-# 		}
-# 	}
-# }
+# メテーリンク魔法魔術学院 通信の確立
+# wizards gatekeeper event
+# Via on_custom_diplomacy｜this = 対象国（プレーヤー）、from = 接触している国。
+country_event = {
+	id = magical_discoveries.100
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		from = {
+			is_country_type = university_of_magic
+		}
+		has_wizard_event = no
+		OR = {
+			AND = {
+				# NOT = { has_country_flag = attacked_xuracorp }
+				from = {
+					has_country_flag = wizard_enclave_country_1
+				}
+			}
+			AND = {
+				# NOT = { has_country_flag = attacked_riggans }
+				from = {
+					has_country_flag = wizard_enclave_country_2
+				}
+			}
+			AND = {
+				# NOT = { has_country_flag = attacked_muutagans }
+				from = {
+					has_country_flag = wizard_enclave_country_3
+				}
+			}
+		}
+	}
+	immediate = {
+		from = {
+			switch = {
+				trigger = has_country_flag
+				wizard_enclave_country_1 = {
+					root = {
+						country_event = {
+							id = magical_discoveries.105
+						}
+					}
+				}
+				wizard_enclave_country_2 = {
+					root = {
+						country_event = {
+							id = magical_discoveries.106
+						}
+					}
+				}
+				wizard_enclave_country_3 = {
+					root = {
+						country_event = {
+							id = magical_discoveries.107
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-# ## 魔晄炉長期使用による星の不安定化2
-# planet_event = {
-# 	id = magical_discoveries.103
-# 	title = magical_discoveries.103.name
-# 	desc = magical_discoveries.103.desc
-# 	picture = GFX_evt_atmospheric_entry
-# 	show_sound = event_air_raid_siren
-# 	hide_window = no
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		NOT = {
-# 			has_planet_flag = building_magical_furnace_fase_4
-# 		}
-# 	}
-# 	immediate = {
-# 		add_modifier = {
-# 			modifier = "star_depletion_2_modifier"
-# 			days = 1800
-# 		}
-# 		planet_event = {
-# 			id = magical_discoveries.104
-# 			days = 1800
-# 		}
-# 	}
-# }
+# コミュニケーション確立（スコープの確立）
+# via finish_first_contact_effect / action.11 / magical_discoveries.98
+# this = enclave country
+country_event = {
+	id = magical_discoveries.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		random_controlled_ship = {
+			solar_system = {
+				save_event_target_as = wizard_system
+			}
+		}
+		from = {
+			country_event = {
+				id = magical_discoveries.102
+			}
+		}
+	}
+}
 
-# ## 魔晄炉長期使用による星の不安定化3
-# planet_event = {
-# 	id = magical_discoveries.104
-# 	title = magical_discoveries.104.name
-# 	desc = magical_discoveries.104.desc
-# 	picture = GFX_evt_atmospheric_entry
-# 	show_sound = event_air_raid_siren
-# 	hide_window = no
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		NOT = {
-# 			has_planet_flag = building_magical_furnace_fase_4
-# 		}
-# 	}
-# 	immediate = {
-# 		add_modifier = {
-# 			modifier = "star_depletion_3_modifier"
-# 			days = 1800
-# 		}
-# 		planet_event = {
-# 			id = magical_discoveries.105
-# 			days = 1800
-# 		}
-# 	}
-# }
+# wizard Introduction (all wizards)
+# this = player country | from = wizard Enclave country | event_target:wizard_system = Twizard Enclave system
+country_event = {
+	id = magical_discoveries.102
+	title = magical_discoveries.102.name
+	desc = {
+		text = magical_discoveries.102a.desc
+		trigger = {
+			FROM = {
+				has_country_flag = wizard_enclave_country_1
+			}
+		}
+	}
+	desc = {
+		text = magical_discoveries.102b.desc
+		trigger = {
+			FROM = {
+				has_country_flag = wizard_enclave_country_2
+			}
+		}
+	}
+	desc = {
+		text = magical_discoveries.102c.desc
+		trigger = {
+			FROM = {
+				has_country_flag = wizard_enclave_country_3
+			}
+		}
+	}
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_wizard_window"
+	custom_gui_option = "enclave_wizard_option"
+	picture_event_data = {
+		portrait = from
+		room = enclave_wizard_room
+	}
+	option = {
+		name = {
+			trigger = {
+				has_valid_civic = civic_fanatic_purifiers
+			}
+			text = SCUM
+		}
+		name = {
+			trigger = {
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			text = TASTY
+		}
+		name = {
+			trigger = {
+				has_valid_civic = civic_machine_terminator
+			}
+			text = EXTERMINATE
+		}
+		name = {
+			trigger = {
+				NOR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm
+					has_valid_civic = civic_machine_terminator
+				}
+			}
+			text = leviathans.502.a
+		}
+		default_hide_option = yes
+	}
+}
 
-# ## 魔晄炉長期使用による星の不安定化4
-# planet_event = {
-# 	id = magical_discoveries.105
-# 	title = magical_discoveries.105.name
-# 	desc = magical_discoveries.105.desc
-# 	picture = GFX_evt_atmospheric_entry
-# 	show_sound = event_air_raid_siren
-# 	hide_window = no
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		NOT = {
-# 			has_planet_flag = building_magical_furnace_fase_4
-# 		}
-# 	}
-# 	immediate = {
-# 		add_modifier = {
-# 			modifier = "star_depletion_4_modifier"
-# 			days = 1800
-# 		}
-# 		planet_event = {
-# 			id = magical_discoveries.106
-# 			days = 1800
-# 		}
-# 	}
-# }
-
-# ## 魔晄炉長期使用による星の不安定化5
-# planet_event = {
-# 	id = magical_discoveries.106
-# 	title = magical_discoveries.106.name
-# 	desc = magical_discoveries.106.desc
-# 	picture = GFX_evt_atmospheric_entry
-# 	show_sound = event_air_raid_siren
-# 	hide_window = no
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		NOT = {
-# 			has_planet_flag = building_magical_furnace_fase_4
-# 		}
-# 	}
-# 	immediate = {
-# 		add_modifier = {
-# 			modifier = "star_depletion_5_modifier"
-# 			days = 1800
-# 		}
-# 		planet_event = {
-# 			id = magical_discoveries.107
-# 			days = 1800
-# 		}
-# 	}
-# }
-
-# ## 魔晄炉長期使用による星の不安定化6
-# planet_event = {
-# 	id = magical_discoveries.107
-# 	title = magical_discoveries.107.name
-# 	desc = magical_discoveries.107.desc
-# 	picture = GFX_evt_city_ruins
-# 	show_sound = event_ghost_town
-# 	hide_window = no
-# 	is_triggered_only = yes
-# 	trigger = {
-# 		NOT = {
-# 			has_planet_flag = building_magical_furnace_fase_4
-# 		}
-# 	}
-# 	immediate = {
-# 		destroy_colony = yes
-# 		remove_planet_flag = building_magical_furnace_fase_0
-# 		remove_planet_flag = building_magical_furnace_fase_1
-# 		remove_planet_flag = building_magical_furnace_fase_2
-# 		if = {
-# 			limit = {
-# 				NOR = {
-# 					is_planet_class = pc_ringworld_habitable
-# 					is_planet_class = pc_habitat
-# 				}
-# 			}
-# 			random_list = {
-# 				50 = {
-# 					change_pc = pc_barren
-# 				}
-# 				50 = {
-# 					change_pc = pc_barren_cold
-# 				}
-# 			}
-# 			reset_planet = yes
-# 			add_modifier = {
-# 				modifier = "terraforming_candidate"
-# 				days = -1
-# 			}
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				is_planet_class = pc_ringworld_habitable
-# 			}
-# 			change_pc = pc_ringworld_habitable_damaged
-# 			reset_planet = yes
-# 		}
-# 		else_if = {
-# 			limit = {
-# 				is_planet_class = pc_habitat
-# 			}
-# 			remove_planet = yes
-# 		}
-# 	}
-# }
+# メテーリンク魔法魔術学院 Main Menu
+# fromfrom / event_target:wizard_a_country = メテーリンク魔法魔術学院
+country_event = {
+	id = magical_discoveries.105
+	title = magical_discoveries.100.name
+	desc = magical_discoveries.100a.desc
+	desc = magical_discoveries.100b.desc
+	desc = magical_discoveries.100c.desc
+	desc = magical_discoveries.100d.desc
+	desc = magical_discoveries.100e.desc
+	desc = magical_discoveries.100f.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_wizard_window"
+	custom_gui_option = "enclave_wizard_option"
+	picture_event_data = {
+		portrait = event_target:wizard_a_country
+		room = enclave_wizard_room
+	}
+	location = event_target:wizard_a_enclave_system
+	trigger = {
+		#このイベントを継承するイベント用
+		NOR = {
+			has_global_flag = wizard_a_destroyed
+			has_country_flag = attacked_wizard_a
+		}
+	}
+	option = {
+		name = {
+			trigger = {
+				has_valid_civic = civic_fanatic_purifiers
+			}
+			text = SCUM
+		}
+		name = {
+			trigger = {
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			text = TASTY
+		}
+		name = {
+			trigger = {
+				has_valid_civic = civic_machine_terminator
+			}
+			text = EXTERMINATE
+		}
+		trigger = {
+			is_homicidal = yes
+		}
+	}
+	# 技術交渉
+	option = {
+		name = magical_discoveries.105.c
+		custom_tooltip = wizard_tt_strategicresource
+		trigger = {
+			is_homicidal = no
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = magical_discoveries.105.c.sr2
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = magical_discoveries.130
+			}
+		}
+	}
+	# 生徒を送り出し
+	option = {
+		name = magical_discoveries.105.z
+		custom_tooltip = wizard_tt_governor
+		trigger = {
+			is_homicidal = no
+		}
+		allow = {
+			custom_tooltip = {
+				text = magical_discoveries.105.c.trust
+				event_target:xuracorp_country = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}
+			}
+			custom_tooltip = {
+				fail_text = already_hired_wizard_governor
+				NOT = {
+					has_country_flag = hired_wizard_governor_xur
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = magical_discoveries.123
+			}
+		}
+	}
+	# 遺物販売
+	option = {
+		name = magical_discoveries.105.e
+		trigger = {
+			has_active_xuracorp_trade = yes
+		}
+		custom_tooltip = end_trade_1
+		custom_tooltip = opinion-5
+		hidden_effect = {
+			remove_xuracorp_trades = yes
+			event_target:wizard_a_enclave_system = {
+				add_trust = {
+					who = root
+					amount = -5
+				}
+			}
+		}
+		is_dialog_only = yes
+		response_text = magical_discoveries.105.e.response
+	}
+	option = {
+		name = leviathans.105.d
+		default_hide_option = yes
+		trigger = {
+			is_homicidal = no
+		}
+	}
+}
