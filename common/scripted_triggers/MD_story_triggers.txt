@@ -1,0 +1,18 @@
+# Magical Discoveries 2.0 story progression triggers
+
+md_can_begin_magical_awakening = {
+	is_regular_empire = yes
+	years_passed >= 5
+	NOT = { has_country_flag = md_magic_discovery_offered }
+	NOT = { has_country_flag = MeetMagicFlag }
+	NOT = { has_country_flag = DenyMagicFlag }
+}
+
+md_can_offer_necronomicon = {
+	is_regular_empire = yes
+	mid_game_years_passed >= 25
+	has_country_flag = BuyGrimoireFlag03
+	has_country_flag = BuyAlchemyFlag03
+	NOT = { has_country_flag = BuyNecronomiconFlag }
+	NOT = { has_country_flag = DenyNecronomiconFlag }
+}

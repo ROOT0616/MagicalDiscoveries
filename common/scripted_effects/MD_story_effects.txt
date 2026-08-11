@@ -1,0 +1,22 @@
+# Magical Discoveries 2.0 story progression effects
+
+md_unlock_magic_stage_1 = {
+	set_country_flag = BuyGrimoireFlag01
+	set_country_flag = BuyAlchemyFlag01
+}
+
+md_unlock_magic_stage_2 = {
+	set_country_flag = BuyGrimoireFlag02
+	set_country_flag = BuyAlchemyFlag02
+}
+
+md_unlock_magic_stage_3 = {
+	set_country_flag = BuyGrimoireFlag03
+	set_country_flag = BuyAlchemyFlag03
+}
+
+md_accept_necronomicon = {
+	set_country_flag = BuyNecronomiconFlag
+	set_global_flag = LearnNecromancyFlag
+	add_research_option = tech_necromancy
+}

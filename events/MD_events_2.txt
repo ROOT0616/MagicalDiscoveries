@@ -1,327 +1,143 @@
 ###############################
-#####  クライシスイベント  ######
+##### Heavenly Crisis 2.0 #####
 ###############################
 namespace = magical_discoveries_crisis
-## 	天使を目撃
+
+# Gatekeeper: forbidden necromancy has disturbed something outside the galaxy.
+# Fired yearly with no scope.
 event = {
-	## イベントの基本情報
 	id = magical_discoveries_crisis.0
 	hide_window = yes
-	## イベントの発生条件
 	is_triggered_only = yes
-	# fire_only_once = yes
+
 	trigger = {
 		has_global_flag = LearnNecromancyFlag
-		NOT = {
-			has_global_flag = AppearanceAngelFlag
-		}
+		NOT = { has_global_flag = md_heaven_omens_started }
+		NOT = { has_global_flag = heavenly_invasion_happened }
 	}
-	## イベントの効果
+
 	immediate = {
-		country_event = {
-			id = magical_discoveries_crisis.1000
-			days = 7560				#20年後
-		}
-		every_country = {
-			country_event = {
-				id = magical_discoveries_crisis.1
-			}
-			country_event = {
-				id = magical_discoveries_crisis.2
-				days = 360
-			}
+		set_global_flag = md_heaven_omens_started
+		every_playable_country = {
+			country_event = { id = magical_discoveries_crisis.1 }
+			country_event = { id = magical_discoveries_crisis.2 days = 1080 }
+			country_event = { id = magical_discoveries_crisis.3 days = 3060 }
+			country_event = { id = magical_discoveries_crisis.4 days = 3600 }
 		}
 	}
 }
 
-## 	天使を目撃
+# Omen I
 country_event = {
-	## イベントの基本情報
 	id = magical_discoveries_crisis.1
 	title = magical_discoveries_crisis.1.name
 	desc = magical_discoveries_crisis.1.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
+	picture = GFX_evt_shroud_tunnel
 	is_triggered_only = yes
-	# fire_only_once = yes
-	## イベントの効果
-	option = {
-		name = magical_discoveries_crisis.1a.name
-		set_global_flag = AppearanceAngelFlag
-	}
+
+	option = { name = magical_discoveries_crisis.1.a }
 }
 
-## 	天使を発見
+# Omen II
 country_event = {
-	## イベントの基本情報
 	id = magical_discoveries_crisis.2
 	title = magical_discoveries_crisis.2.name
 	desc = magical_discoveries_crisis.2.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
+	picture = GFX_evt_psionics
 	is_triggered_only = yes
+
 	trigger = {
-		has_global_flag = AppearanceAngelFlag
-		NOT = {
-			has_global_flag = ArrestingAngelFlag
-		}
+		has_global_flag = md_heaven_omens_started
+		NOT = { has_global_flag = heavenly_invasion_happened }
 	}
-	## イベントの効果
-	option = {
-		trigger = {
-			is_ai = no
-		}
-		name = magical_discoveries_crisis.2a.name
-		set_global_flag = ArrestingAngelFlag
-		hidden_effect = {
-			country_event = {
-				id = magical_discoveries_crisis.3
-			}
-		}
-	}
-	option = {
-		trigger = {
-			is_ai = no
-		}
-		name = magical_discoveries_crisis.2b.name
-		set_global_flag = AttackAngelFlag
-		hidden_effect = {
-			country_event = {
-				id = magical_discoveries_crisis.4
-			}
-		}
-	}
-	option = {
-		name = magical_discoveries_crisis.2c.name
-	}
+
+	option = { name = magical_discoveries_crisis.2.a }
 }
 
-## 	天使の協力
+# Final warning / ideological response.
 country_event = {
-	## イベントの基本情報
 	id = magical_discoveries_crisis.3
 	title = magical_discoveries_crisis.3.name
 	desc = magical_discoveries_crisis.3.desc
-	picture = GFX_evt_ship_in_orbit
-	hide_window = no
-	## イベントの発生条件
+	picture = GFX_evt_shroud_tunnel
 	is_triggered_only = yes
-	fire_only_once = no
-	trigger = {
-		is_regular_empire = yes
-	}
-	## イベントの効果
+
+	trigger = { NOT = { has_global_flag = heavenly_invasion_happened } }
+
 	option = {
-		name = magical_discoveries_crisis.3a.name
-		hidden_effect = {
-			create_fleet = {
-				effect = {
-					set_owner = root
-					create_fleet = {
-						effect = {
-							set_owner = prevprev
-							create_ship = {
-								name = "NAME_Valkyrie"
-								design = "NAME_Valkyrie"
-								graphical_culture = "extra_dimensional_01"
-							}
-							assign_leader = last_created_leader
-							while = {
-								count = 5
-								create_ship = {
-									name = random
-									design = "NAME_soldier_of_the_gods"
-									graphical_culture = "extra_dimensional_01"
-								}
-							}
-						}
-					}
-					assign_leader = last_created_leader
-					set_location = {
-						target = system_star
-						distance = 5
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-				}
-			}
-			country_event = {
-				id = magical_discoveries_crisis.1000
-				days = 9000				#25年後
-			}
-		}
+		name = magical_discoveries_crisis.3.a
+		set_country_flag = md_heaven_defiance
+		ai_chance = { factor = 4 }
+	}
+	option = {
+		name = magical_discoveries_crisis.3.b
+		set_country_flag = md_heaven_caution
+		ai_chance = { factor = 1 }
 	}
 }
 
-# 天使を反撃
+# Redundant delayed schedulers are intentionally sent to every playable country.
+# The first surviving country commits the spawn; the global flag makes the rest no-ops.
 country_event = {
 	id = magical_discoveries_crisis.4
-	title = magical_discoveries_crisis.4.name
-	desc = magical_discoveries_crisis.4.desc
-	picture = GFX_evt_ship_in_orbit
-	location = root
+	hide_window = yes
 	is_triggered_only = yes
-	## イベントの効果
-	option = {
-		name = magical_discoveries_crisis.4a.name
-		hidden_effect = {
-			solar_system = {
-				random_system_planet = {
-					limit = {
-						is_star = yes
-					}
-					save_event_target_as = local_star
-				}
-				create_country = {
-					name = "NAME_fallen"
-					type = faction
-					auto_delete = no
-					flag = {
-						icon = {
-							category = "special"
-							file = "extradimensional_02.dds"
-						}
-						background = {
-							category = "backgrounds"
-							file = "circle.dds"
-						}
-						colors = {
-							"turquoise"
-							"light_blue"
-							"null"
-							"null"
-						}
-					}
-					effect = {
-						establish_communications_no_message = root.owner
-						establish_contact = {
-							who = root.owner
-							location = system_star
-						}
-						save_global_event_target_as = angel_enemy
-						create_fleet = {
-							name = "NAME_The_Fallen"
-							settings = {
-								spawn_debris = yes
-							}
-							effect = {
-								set_owner = event_target:angel_enemy
-								create_ship = {
-									name = "NAME_Fallen_angel"
-									design = "NAME_Fallen_angel"
-									graphical_culture = "extra_dimensional_01"
-								}
-								create_ship = {
-									name = "NAME_Fallen_angel_1"
-									design = "NAME_Fallen_angel"
-									graphical_culture = "extra_dimensional_01"
-								}
-								create_ship = {
-									name = "NAME_Fallen_angel_2"
-									design = "NAME_Fallen_angel"
-									graphical_culture = "extra_dimensional_01"
-								}
-								create_ship = {
-									name = "NAME_Fallen_angel_3"
-									design = "NAME_Fallen_angel"
-									graphical_culture = "extra_dimensional_01"
-								}
-								create_ship = {
-									name = "NAME_Fallen_angel_4"
-									design = "NAME_Fallen_angel"
-									graphical_culture = "extra_dimensional_01"
-								}
-								create_ship = {
-									name = "NAME_Fallen_angel_5"
-									design = "NAME_Fallen_angel"
-									graphical_culture = "extra_dimensional_01"
-								}
-								create_ship = {
-									name = "NAME_Fallen_angel_6"
-									design = "NAME_Fallen_angel"
-									graphical_culture = "extra_dimensional_01"
-								}
-								assign_leader = last_created_leader
-								while = {
-									count = 25
-									create_ship = {
-										name = random
-										design = "NAME_soldier_of_the_gods"
-										graphical_culture = "extra_dimensional_01"
-									}
-								}
-								set_location = {
-									target = event_target:local_star
-									distance = 30
-								}
-							}
-						}
-					}
-				}
-			}
-		}
+
+	trigger = {
+		has_global_flag = md_heaven_omens_started
+		NOT = { has_global_flag = md_heaven_crisis_spawn_committed }
+		NOT = { has_global_flag = heavenly_invasion_happened }
+	}
+
+	immediate = {
+		set_global_flag = md_heaven_crisis_spawn_committed
+		country_event = { id = magical_discoveries_crisis.1000 }
 	}
 }
 
-# 天使を撃退
+# First successful destruction of a Heavenly fleet reveals recoverable divine matter.
 country_event = {
-	id = magical_discoveries_crisis.5
-	title = magical_discoveries_crisis.5.name
-	desc = magical_discoveries_crisis.5.desc
+	id = magical_discoveries_crisis.8
+	title = magical_discoveries_crisis.8.name
+	desc = magical_discoveries_crisis.8.desc
 	picture = GFX_evt_crisis_defeated
 	show_sound = event_celebration
-	location = root
 	is_triggered_only = yes
+
 	trigger = {
-		exists = event_target:angel_enemy
-		from = {
-			is_same_value = event_target:angel_enemy
-		}
+		FROM = { is_country_type = heavenly_realm }
+		has_country_flag = MeetMagicFlag
 		NOR = {
 			has_technology = tech_gods_skin
 			has_special_project = "GOD_SKIN_PROJECT"
+			has_country_flag = md_god_skin_project_seen
 		}
 	}
-	immediate = {
-		event_target:angel_enemy = {
-			destroy_country = yes
-		}
-	}
+
+	immediate = { set_country_flag = md_god_skin_project_seen }
+
 	option = {
-		name = magical_discoveries_crisis.5.a
-		trigger = {
-			has_country_flag = MeetMagicFlag
-		}
+		name = magical_discoveries_crisis.8.a
 		enable_special_project = {
 			name = "GOD_SKIN_PROJECT"
 			location = capital_scope
 			owner = root
 		}
 	}
-	option = {
-		name = magical_discoveries_crisis.5.b
-	}
 }
 
-# 天界の肌の研究
+# Divine-material analysis complete.
 country_event = {
 	id = magical_discoveries_crisis.6
 	title = magical_discoveries_crisis.6.name
 	desc = magical_discoveries_crisis.6.desc
-	picture = GFX_evt_crisis_defeated
-	show_sound = event_celebration
-	location = root
+	picture = GFX_evt_psionics
 	is_triggered_only = yes
+
 	option = {
 		name = magical_discoveries_crisis.6.a
 		add_research_option = tech_gods_skin
-		add_tech_progress = {
-			tech = tech_gods_skin
-			progress = 0.1
-		}
+		add_tech_progress = { tech = tech_gods_skin progress = 0.1 }
 		enable_special_project = {
 			name = "MYTHICAL_DECAY_PROJECT"
 			location = capital_scope
@@ -330,55 +146,17 @@ country_event = {
 	}
 }
 
-# 神をどうやって効率的に殺そうか
+# Countermeasure project complete.
 country_event = {
 	id = magical_discoveries_crisis.7
 	title = magical_discoveries_crisis.7.name
 	desc = magical_discoveries_crisis.7.desc
 	picture = GFX_evt_crisis_defeated
-	show_sound = event_celebration
-	location = root
 	is_triggered_only = yes
+
 	option = {
 		name = magical_discoveries_crisis.7.a
-		give_technology = {
-			tech = tech_mythical_decay
-		}
-	}
-}
-
-# 天使を撃退
-country_event = {
-	id = magical_discoveries_crisis.8
-	title = magical_discoveries_crisis.8.name
-	desc = magical_discoveries_crisis.8.desc
-	picture = GFX_evt_crisis_defeated
-	show_sound = event_celebration
-	location = root
-	is_triggered_only = yes
-	trigger = {
-		exists = event_target:heavenesgate
-		from = {
-			is_same_value = event_target:heavenesgate
-		}
-		NOR = {
-			has_technology = tech_gods_skin
-			has_special_project = "GOD_SKIN_PROJECT"
-		}
-	}
-	option = {
-		name = magical_discoveries_crisis.8.a
-		trigger = {
-			has_country_flag = MeetMagicFlag
-		}
-		enable_special_project = {
-			name = "GOD_SKIN_PROJECT"
-			location = capital_scope
-			owner = root
-		}
-	}
-	option = {
-		name = magical_discoveries_crisis.8.b
+		give_technology = { tech = tech_mythical_decay }
 	}
 }
 

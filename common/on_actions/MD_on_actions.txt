@@ -1,6 +1,6 @@
+# Magical Discoveries 2.0 on_actions
+
 # This = construction ship
-# Fires when construction is complete,
-# immediately before station is created
 on_building_starbase_exd_0 = {
 	events = {
 		magical_discoveries_crisis.1300
@@ -14,45 +14,23 @@ on_monthly_pulse = {
 		md_market.2
 		md_market.3
 		md_market.4
-		# magical_discoveries.101
-	}
-	random_events = {
-		10 = magical_discoveries_crisis.0
-		40 = 0
 	}
 }
 
-# No scope, like on_game_start
+# No scope.
 on_yearly_pulse = {
 	events = {
+		magical_discoveries_crisis.0
 		magical_discoveries_crisis.1254
 	}
 }
 
-# this = country
+# This = country
 on_yearly_pulse_country = {
 	events = {
+		magical_discoveries.100
+		magical_discoveries.110
 	}
-}
-
-# this = country
-on_bi_yearly_pulse_country = {
-	random_events = {
-		60 = 0
-		40 = magical_discoveries.8
-	}
-	events = {
-	}
-}
-
-# No scope, like on_game_start
-on_mid_game_pulse = {
-	events = {
-	}
-}
-
-# this = country
-on_mid_game_pulse_country = {
 }
 
 # This = owner of ship 1 (destroyed)
@@ -74,8 +52,6 @@ on_ship_destroyed_victim = {
 # FromFromFrom = fleet 2
 on_fleet_destroyed_perp = {
 	events = {
-		# 天使を撃退
-		magical_discoveries_crisis.5
 		magical_discoveries_crisis.8
 		magical_discoveries_crisis.1283
 	}
@@ -84,34 +60,20 @@ on_fleet_destroyed_perp = {
 # This = starbase being destroyed
 # From = fleet that destroyed the starbase
 on_starbase_destroyed = {
-	events = {
-		magical_discoveries_crisis.1320
-	}
+	events = { magical_discoveries_crisis.1320 }
 }
 
-# 惑星が軌道爆撃のダメージを受けた - ダメージは毎日適用される
-# This = Planet
-# From = Bombarder
+# This = Planet, From = Bombarder
 on_planet_bombarded = {
-	events = {
-		magical_discoveries_crisis.1011
-	}
+	events = { magical_discoveries_crisis.1011 }
 }
 
-#This = destroyed country
-#From = optional, destroyer (country)
+# This = destroyed country, From = optional destroyer
 on_country_destroyed = {
-	events = {
-		magical_discoveries_crisis.1270
-	}
+	events = { magical_discoveries_crisis.1270 }
 }
 
-# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
-# Country scope
-# This = target country (player)
-# From = source country
+# This = target country (player), From = source country
 on_custom_diplomacy = {
-	events = {
-		magical_discoveries_crisis.1050
-	}
+	events = { magical_discoveries_crisis.1050 }
 }

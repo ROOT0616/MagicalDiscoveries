@@ -1,0 +1,77 @@
+# Magical Discoveries 2.0 - Magical Awakening
+
+situation_md_magical_awakening = {
+	picture = GFX_evt_psionics
+	category = positive
+	complete_icon = GFX_situation_outcome_positive
+	complete_icon_frame = GFX_situation_outcome_frame_green
+	situation_log_category = developments
+
+	potential = {
+		is_regular_empire = yes
+	}
+
+	initial_progress = 0
+
+	stages = {
+		md_magic_stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 25
+		}
+		md_magic_stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 50
+			on_first_enter = { situation_event = { id = magical_discoveries.102 } }
+		}
+		md_magic_stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 75
+			on_first_enter = { situation_event = { id = magical_discoveries.103 } }
+		}
+		md_magic_stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_green
+			end = 100
+			on_first_enter = { situation_event = { id = magical_discoveries.104 } }
+		}
+	}
+
+	monthly_progress = {
+		base = 4
+		modifier = {
+			add = 1
+			desc = md_magic_progress_materialist
+			owner = {
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
+		}
+		modifier = {
+			add = 1
+			desc = md_magic_progress_spiritualist
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+	}
+
+	on_progress_complete = {
+		custom_tooltip = md_magic_awakening_complete_tt
+		hidden_effect = {
+			owner = {
+				md_unlock_magic_stage_3 = yes
+				set_country_flag = md_magic_awakening_complete
+				country_event = { id = magical_discoveries.105 }
+			}
+			destroy_situation = this
+		}
+	}
+}

@@ -1,4 +1,4 @@
-version="2.0.0-beta1-rebuild"
+version="2.0.0-beta2"
 tags={
 	"Events"
 	"Gameplay"
