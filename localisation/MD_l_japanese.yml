@@ -773,12 +773,6 @@
  md_adamantite_ship:0 "アダマンタイタン"
  md_adamantite_ship_plural:0 "アダマンタイタン"
 
- large_ship_heavenly:0 ""
- medium_ship_heavenly:0 ""
- small_ship_heavenly:0 ""
- dimensional_portal_heavenly:0 ""
- construction_ship_heavenly:0 ""
-
 ###############################
 #####    ship_section    ######
 ###############################
@@ -878,3 +872,25 @@
  magical_discoveries_crisis.7.name:0 "神話崩壊理論"
  magical_discoveries_crisis.7.desc:0 "理論は完成した。天界存在を保護する場を強制的に崩壊させ、通常兵器でも損傷可能な状態へ引きずり下ろすことができる。神話は、再現可能な工学へ変わった。"
  magical_discoveries_crisis.7.a:0 "ならば神を撃ち落とそう。"
+
+tech_longinus_spear_1:0 "試作型ロンギヌスの槍"
+ tech_longinus_spear_1_desc:0 "天界の存在に対抗する研究から生まれた、対神性兵器の試作型。"
+ tech_longinus_spear_2:0 "ロンギヌスの槍"
+ tech_longinus_spear_2_desc:0 "神聖不可侵と考えられていた防御を穿つために完成された兵器。"
+ tech_longinus_spear_3:0 "零式ロンギヌスの槍"
+ tech_longinus_spear_3_desc:0 "ロンギヌス兵器体系の最終完成形。"
+ situation_md_magical_awakening_type:0 "$situation_md_magical_awakening$"
+ situation_md_magical_awakening_monthly_change_tooltip:0 "再現可能な魔法現象を社会と科学体系へ組み込む速度に応じて進行する。"
+ magical_discoveries_crisis.1050.g:0 "ならば、我々は既にお前達のいう禁忌の領域へ触れている。"
+ magical_discoveries_crisis.1050.g.response:0 "……ならば貴様らの罪は、我々が考えていたより深い……"
+ NAME_Heavenly_Judgement_Fleet:0 "第%C%審判隊"
+ md_galcom_ai_heaven_neighbor:0 "天界勢力が国境を脅かしている"
+ md_galcom_ai_heaven_no_neighbor:0 "天界勢力はまだ国境に迫っていない"
+ md_galcom_ai_crisis_stage_1:0 "自国の危機化方針により支持が低下"
+ md_galcom_ai_crisis_stage_3:0 "危機化の進行により警戒が高まっている"
+ md_galcom_ai_crisis_stage_4:0 "銀河的危機への即時対応が必要"
+ md_galcom_ai_defender:0 "銀河の守護者"
+ md_galcom_ai_militarist:0 "軍国主義"
+ md_galcom_ai_xenophile:0 "受容主義"
+ md_galcom_ai_spiritualist:0 "精神主義"
+ md_galcom_ai_xenophobe:0 "排他主義かつ直接の脅威を受けていない"

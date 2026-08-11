@@ -10,7 +10,7 @@ philosophers_stone_campaign = {
 	}
 
 	modifier = {
-		pop_growth_speed = 0.5
+		bonus_pop_growth_mult = 0.5
 	}
 
 	potential = {

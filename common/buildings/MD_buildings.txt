@@ -3,6 +3,12 @@ building_white_magic_court = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = amenity
+
+	building_sets = {
+		government
+		urban
+		entertainment
+	}
 	prerequisites = {
 		"tech_white_magic_court"
 	}
@@ -38,6 +44,11 @@ building_barrier_magic_court = {
 	base_buildtime = 360
 	base_cap_amount = 1
 	category = army
+
+	building_sets = {
+		government
+		fortress
+	}
 	prerequisites = {
 		"tech_barrier_magic"
 	}
@@ -62,6 +73,12 @@ building_barrier_magic_court = {
 building_mithril_refinery = {
 	base_buildtime = 240
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 	prerequisites = {
 		"tech_mithril_refinery"
 	}
@@ -95,6 +112,12 @@ building_mithril_refinery = {
 building_mithril_magic_tool_factory = {
 	base_buildtime = 240
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 	prerequisites = {
 		"tech_mithril_refinery"
 	}
@@ -129,6 +152,12 @@ building_mithril_magic_tool_factory = {
 building_orichalcone_refinery = {
 	base_buildtime = 300
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 	prerequisites = {
 		"tech_orichalcone_refinery"
 	}
@@ -164,6 +193,12 @@ building_orichalcone_refinery = {
 building_orichalcone_workshop = {
 	base_buildtime = 300
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 	prerequisites = {
 		"tech_orichalcone_refinery"
 	}
@@ -199,6 +234,12 @@ building_orichalcone_workshop = {
 building_adamantine_refinery = {
 	base_buildtime = 300
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 	prerequisites = {
 		"tech_adamantine_refinery"
 	}
@@ -234,6 +275,12 @@ building_adamantine_refinery = {
 building_the_legendary_alchem_house = {
 	base_buildtime = 360
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 	prerequisites = {
 		"tech_philosophers_stone"
 	}
@@ -272,6 +319,12 @@ building_the_legendary_alchem_house = {
 building_magical_furnace = {
 	base_buildtime = 360
 	category = manufacturing
+
+	building_sets = {
+		industrial
+		factory
+		foundry
+	}
 	can_demolish = no
 	can_be_ruined = no
 	can_be_disabled = no
@@ -300,7 +353,7 @@ building_magical_furnace = {
 		}
 		produces = {
 			trigger = {
-				has_planet_flag = building_magical_furnace_fase_1
+				planet = { has_planet_flag = building_magical_furnace_fase_1 }
 			}
 			energy = 20
 			minerals = 20
@@ -308,7 +361,7 @@ building_magical_furnace = {
 		}
 		produces = {
 			trigger = {
-				has_planet_flag = building_magical_furnace_fase_2
+				planet = { has_planet_flag = building_magical_furnace_fase_2 }
 			}
 			energy = 25
 			minerals = 15
@@ -316,7 +369,7 @@ building_magical_furnace = {
 		}
 		produces = {
 			trigger = {
-				has_planet_flag = building_magical_furnace_fase_3
+				planet = { has_planet_flag = building_magical_furnace_fase_3 }
 			}
 			energy = 40
 			minerals = 40
@@ -324,7 +377,7 @@ building_magical_furnace = {
 		}
 		cost = {
 			minerals = 300
-			minerals = 300
+			mithrils = 300
 		}
 	}
 	triggered_desc = {
@@ -352,6 +405,6 @@ building_magical_furnace = {
 		text = building_magical_furnace_effect_3_desc
 	}
 	on_built = {
-		set_planet_flag = building_magical_furnace_fase_0
+		planet = { set_planet_flag = building_magical_furnace_fase_0 }
 	}
 }

@@ -120,6 +120,7 @@ gate_holder = {
 }
 
 heavenly_realm = {
+	government = no
 	end_game_crisis = yes
 	uses_origins = no
 	attack_unarmed_orbital_stations = yes

@@ -988,9 +988,9 @@ tech_resuscitation_magic = {
 		has_country_flag = BuyNecronomiconFlag
 	}
 	modifier = {
-		pop_growth_speed = 0.25
+		bonus_pop_growth_mult = 0.25
 		pop_happiness = 0.1
-		leader_age = 20
+		leader_lifespan_add = 20
 		pop_ethic_spiritualist_attraction_mult = 0.01
 	}
 	weight_modifier = {
@@ -1046,7 +1046,7 @@ tech_philosophers_stone = {
 		has_country_flag = BuyAlchemyFlag03
 	}
 	modifier = {
-		leader_age = 20
+		leader_lifespan_add = 20
 		BIOLOGICAL_species_trait_points_add = 2
 		pop_ethic_spiritualist_attraction_mult = 0.01
 	}

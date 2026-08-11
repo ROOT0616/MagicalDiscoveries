@@ -1,3 +1,29 @@
+# 2.0.0-beta2.2
+
+Second Stellaris 4.4.6 runtime hotfix.
+
+- Reduced the runtime `error.log` from the beta2.1 test to the remaining three warning families.
+- Replaced the duplicate `zz_MD_galactic_community_effects.txt` definition with an intentional exact-path override of the complete Stellaris 4.4.6 Vanilla `galactic_community_effects.txt`, adding only Heavenly-focus cleanup.
+- Added required AI-weight description keys to the Heavenly Realm Galactic Focus resolution.
+- Disabled auto-generation of default Adamantite ship designs at galaxy creation to avoid custom ship-size namelist failures.
+
+# 2.0.0-beta2.1
+
+Runtime hotfix based on the first Stellaris 4.4.6 test log.
+
+- Removed the accidental full shadow of Vanilla `galactic_community_effects.txt`.
+- Modernized custom jobs for the 4.4 `swappable_data` job schema.
+- Replaced removed triggers/modifiers (`has_job`, `num_pops`, `pop_growth_speed`, `leader_age`).
+- Updated deficit growth penalties to current 4.4 modifiers.
+- Added required building sets and corrected colony/planet flag scope.
+- Retargeted Heavenly ships to current Vanilla extradimensional ship sizes/entities.
+- Removed obsolete duplicated Swarm portrait assets and use the current extradimensional portrait.
+- Added missing Longinus, Magical Awakening and Heavenly dialogue localization.
+- Updated Adamantite ship construction to the current Titan construction triggers.
+- Fixed resource-group overrides to shadow the intended Vanilla interface files exactly.
+- Rebased the Galactic Focus category onto the exact current Vanilla 4.4 category file, eliminating the duplicate category definition while retaining the Heavenly focus entry.
+- Added aliases for generated modifier icons reported missing by the runtime log.
+
 # Changelog
 
 ## 2.0.0-beta2

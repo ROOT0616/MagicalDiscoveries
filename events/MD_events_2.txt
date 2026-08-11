@@ -220,7 +220,7 @@ country_event = {
 				create_species = {
 					name = "NAME_Celestialbeing"
 					class = EXD
-					portrait = heavens1
+					portrait = exd1_leader
 					traits = random
 					effect = {
 						save_event_target_as = heavens_species
@@ -778,7 +778,7 @@ country_event = {
 	desc = "magical_discoveries_crisis.1010.desc"
 	diplomatic = yes
 	picture_event_data = {
-		portrait = heavens1
+		portrait = exd1_leader
 		room = "heavens_room"
 	}
 	is_triggered_only = yes
@@ -904,7 +904,7 @@ country_event = {
 	trigger = {
 		is_country_type = heavenly_realm
 		FROMFROM = {
-			is_ship_size = dimensional_portal_heavenly
+			is_ship_size = dimensional_portal_ed
 		}
 	}
 	immediate = {
@@ -1000,7 +1000,7 @@ country_event = {
 	diplomatic = yes
 	force_open = yes
 	picture_event_data = {
-		portrait = heavens1
+		portrait = exd1_leader
 		room = "heavens_room"
 	}
 	is_triggered_only = yes
@@ -1083,7 +1083,7 @@ country_event = {
 				}
 			}
 		}
-		response_text = magical_discoveries_crisis.1050.e.response
+		response_text = magical_discoveries_crisis.1050.f.response
 	}
 	option = {
 		name = magical_discoveries_crisis.1050.g
@@ -1117,12 +1117,12 @@ event = {
 					num_ships < 6
 					NOR = {
 						any_owned_ship = {
-							is_ship_size = dimensional_portal_heavenly
+							is_ship_size = dimensional_portal_ed
 						}
 						any_country = {
 							is_country_type = gate_holder
 							any_owned_ship = {
-								is_ship_size = dimensional_portal_heavenly
+								is_ship_size = dimensional_portal_ed
 							}
 						}
 					}
@@ -1166,7 +1166,7 @@ country_event = {
 		OR = {
 			count_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_heavenly
+					is_ship_size = dimensional_portal_ed
 				}
 				count > 0
 			}
@@ -1174,7 +1174,7 @@ country_event = {
 				is_country_type = gate_holder
 				count_owned_ship = {
 					limit = {
-						is_ship_size = dimensional_portal_heavenly
+						is_ship_size = dimensional_portal_ed
 					}
 					count > 0
 				}
@@ -1378,7 +1378,7 @@ country_event = {
 		OR = {
 			count_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_heavenly
+					is_ship_size = dimensional_portal_ed
 				}
 				count > 0
 			}
@@ -1387,7 +1387,7 @@ country_event = {
 					is_country_type = gate_holder
 					count_owned_ship = {
 						limit = {
-							is_ship_size = dimensional_portal_heavenly
+							is_ship_size = dimensional_portal_ed
 						}
 						count > 0
 					}
@@ -1402,14 +1402,14 @@ country_event = {
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_heavenly
+					is_ship_size = dimensional_portal_ed
 				}
 				save_event_target_as = heavenes_gate
 			}
 		}
 		random_owned_ship = {
 			limit = {
-				is_ship_size = dimensional_portal_heavenly
+				is_ship_size = dimensional_portal_ed
 			}
 			save_event_target_as = heavenes_gate
 		}
@@ -1516,7 +1516,7 @@ country_event = {
 		OR = {
 			count_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_heavenly
+					is_ship_size = dimensional_portal_ed
 				}
 				count > 0
 			}
@@ -1525,7 +1525,7 @@ country_event = {
 					is_country_type = gate_holder
 					count_owned_ship = {
 						limit = {
-							is_ship_size = dimensional_portal_heavenly
+							is_ship_size = dimensional_portal_ed
 						}
 						count > 0
 					}
@@ -1534,7 +1534,7 @@ country_event = {
 		}
 		count_owned_ship = {
 			limit = {
-				is_ship_size = construction_ship_heavenly
+				is_ship_size = construction_ship_ed
 			}
 			count < 3
 		}
@@ -1547,14 +1547,14 @@ country_event = {
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_heavenly
+					is_ship_size = dimensional_portal_ed
 				}
 				save_event_target_as = heavenes_gate
 			}
 		}
 		random_owned_ship = {
 			limit = {
-				is_ship_size = dimensional_portal_heavenly
+				is_ship_size = dimensional_portal_ed
 			}
 			save_event_target_as = heavenes_gate
 		}
@@ -1596,7 +1596,7 @@ ship_event = {
 			OR = {
 				count_owned_ship = {
 					limit = {
-						is_ship_size = dimensional_portal_heavenly
+						is_ship_size = dimensional_portal_ed
 					}
 					count > 0
 				}
@@ -1605,7 +1605,7 @@ ship_event = {
 						is_country_type = gate_holder
 						count_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_heavenly
+								is_ship_size = dimensional_portal_ed
 							}
 							count > 0
 						}
@@ -1629,14 +1629,14 @@ ship_event = {
 				}
 				random_owned_ship = {
 					limit = {
-						is_ship_size = dimensional_portal_heavenly
+						is_ship_size = dimensional_portal_ed
 					}
 					save_event_target_as = heavenes_gate
 				}
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_heavenly
+					is_ship_size = dimensional_portal_ed
 				}
 				save_event_target_as = heavenes_gate
 			}
@@ -1924,7 +1924,7 @@ ship_event = {
 			}
 			random_owned_ship = {
 				limit = {
-					is_ship_size = dimensional_portal_heavenly
+					is_ship_size = dimensional_portal_ed
 				}
 				fleet = {
 					set_event_locked = yes
@@ -1983,7 +1983,7 @@ country_event = {
 						}
 						random_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_heavenly
+								is_ship_size = dimensional_portal_ed
 								has_ship_flag = heavenly_portal
 							}
 							fleet = {
@@ -2002,7 +2002,7 @@ country_event = {
 						}
 						random_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_heavenly
+								is_ship_size = dimensional_portal_ed
 								has_ship_flag = aberrant_portal
 							}
 							fleet = {
@@ -2021,7 +2021,7 @@ country_event = {
 						}
 						random_owned_ship = {
 							limit = {
-								is_ship_size = dimensional_portal_heavenly
+								is_ship_size = dimensional_portal_ed
 								has_ship_flag = vehement_portal
 							}
 							fleet = {

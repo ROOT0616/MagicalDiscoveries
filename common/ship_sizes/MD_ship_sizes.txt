@@ -20,7 +20,7 @@ md_adamantite_ship = {
 	icon = ship_size_military_16
 	base_buildtime = @titan_build_time
 	can_have_federation_design = yes
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
+	enable_default_design = no	#if yes, countries will have an auto-generated design at start
 	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	default_behavior = artillery
 	prerequisites = { "tech_md_adamantite_hull" }
@@ -33,50 +33,10 @@ md_adamantite_ship = {
 	required_component_set = "sensor_components"
 	required_component_set = "combat_computers"
 	potential_construction = {
-		OR = {
-			is_scope_type = starbase
-			AND = {
-				is_scope_type = megastructure
-				OR = {
-					is_megastructure_type = mega_shipyard_3
-					is_megastructure_type = mega_shipyard_restored
-				}
-			}
-		}
+		titan_potential_construction = yes
 	}
 	possible_construction = {
-		custom_tooltip = {
-			fail_text = starbase_citadel_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_size >= starbase_citadel
-				}
-			}
-		}
-		custom_tooltip = {
-			fail_text = starbase_titan_yards_trigger
-			OR = {
-				AND = {
-					is_scope_type = megastructure
-					OR = {
-						is_megastructure_type = mega_shipyard_3
-						is_megastructure_type = mega_shipyard_restored
-					}
-				}
-				AND = {
-					is_scope_type = starbase
-					has_starbase_building = titan_yards
-				}
-			}
-		}
+		titan_possible_construction = yes
 	}
 	resources = {
 		category = ships
@@ -88,123 +48,4 @@ md_adamantite_ship = {
 	min_upgrade_cost = {
 		adamantines = 16
 	}
-}
-
-####################
-# EXTRADIMENSIONAL #
-####################
-
-# Extradimensional Large Ship  
-large_ship_heavenly = {
-	graphical_culture = { "extra_dimensional_01"}
-	max_speed = @speed_slow
-	acceleration = 0.2
-	rotation_speed = 0.15
-	collision_radius = @battleship_collision_radius
-	modifier = {
-		ship_evasion_add = 15
-	}
-	max_hitpoints = 3000
-	size_multiplier = 8
-	fleet_slot_size = 8
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
-	is_space_station = no
-	icon = ship_size_military_8
-	
-	class = shipclass_military
-	is_designable = no
-}
-
-# Extradimensional Medium Ship
-medium_ship_heavenly = {
-	graphical_culture = { "extra_dimensional_01" }
-	max_speed = @speed_default
-	acceleration = 0.25
-	rotation_speed = 0.175
-	collision_radius = @cruiser_collision_radius
-	modifier = {
-		ship_evasion_add = 25
-	}
-	max_hitpoints = 1500
-	size_multiplier = 4
-	fleet_slot_size = 4
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
-	is_space_station = no
-	icon = ship_size_military_4
-	
-	class = shipclass_military
-	is_designable = no
-}
-
-# Extradimensional Small Ship
-small_ship_heavenly = {
-	graphical_culture = { "extra_dimensional_01"}
-	max_speed = @speed_fast
-	acceleration = 0.3
-	rotation_speed = 0.2
-	collision_radius = @destroyer_collision_radius
-	modifier = {
-		ship_evasion_add = 20
-	}
-	max_hitpoints = 750
-	size_multiplier = 2
-	fleet_slot_size = 2
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
-	is_space_station = no
-	icon = ship_size_military_2
-	
-	class = shipclass_military
-	is_designable = no
-}
-
-# Dimensional Portal
-dimensional_portal_heavenly = {
-	graphical_culture = { "extra_dimensional_01"}
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ships_upkeep_mult = -0.25
-	}
-	max_hitpoints = 100000
-	size_multiplier = 16
-	fleet_slot_size = 4
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
-	is_space_station = yes
-	build_block_radius = @build_block_radius_none
-	
-	icon = ship_size_space_monster
-	
-	class = shipclass_military_station
-	is_designable = no
-}
-
-# Extradimensional Constructor
-construction_ship_heavenly = {
-	graphical_culture = { "extra_dimensional_01"}
-	is_space_object = yes
-	max_speed = @speed_slow
-	acceleration = 0.3
-	rotation_speed = 0.2
-	modifier = {
-		ship_evasion_add = 30
-	}
-	max_hitpoints = 600
-	size_multiplier = 1
-	fleet_slot_size = 3
-	section_slots = { "mid" = { locator = "part1" } }
-	num_target_locators = 0
-	is_space_station = no
-	icon = ship_size_constructor
-	
-	is_civilian = yes
-	is_designable = no
-	class = shipclass_constructor
-	required_component_set = "ftl_components"
-	required_component_set = "thruster_components"
 }

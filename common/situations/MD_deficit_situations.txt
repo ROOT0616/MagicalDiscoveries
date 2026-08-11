@@ -451,7 +451,7 @@ situation_philosophers_deficit = {
 				}
 				modifier = {
 					biological_pop_happiness = -0.1
-					biological_pop_growth_speed_reduction = 0.2
+					biological_logistic_growth_mult = -0.2
 				}
 			}
 			triggered_modifier = {
@@ -462,7 +462,7 @@ situation_philosophers_deficit = {
 					}
 				}
 				modifier = {
-					planet_pop_assembly_organic_reduction = 0.2
+					bonus_pop_growth_mult = -0.2
 				}
 			}
 			triggered_modifier = {
@@ -488,7 +488,7 @@ situation_philosophers_deficit = {
 				}
 				modifier = {
 					biological_pop_happiness = -0.15
-					biological_pop_growth_speed_reduction = 0.33
+					biological_logistic_growth_mult = -0.33
 				}
 			}
 			triggered_modifier = {
@@ -499,7 +499,7 @@ situation_philosophers_deficit = {
 					}
 				}
 				modifier = {
-					planet_pop_assembly_organic_reduction = 0.33
+					bonus_pop_growth_mult = -0.33
 				}
 			}
 			triggered_modifier = {
@@ -525,7 +525,7 @@ situation_philosophers_deficit = {
 				}
 				modifier = {
 					biological_pop_happiness = -0.2
-					biological_pop_growth_speed_reduction = 0.5
+					biological_logistic_growth_mult = -0.5
 				}
 			}
 			triggered_modifier = {
@@ -536,7 +536,7 @@ situation_philosophers_deficit = {
 					}
 				}
 				modifier = {
-					planet_pop_assembly_organic_reduction = 0.5
+					bonus_pop_growth_mult = -0.5
 				}
 			}
 			triggered_modifier = {
@@ -563,7 +563,7 @@ situation_philosophers_deficit = {
 				}
 				modifier = {
 					biological_pop_happiness = -0.25
-					biological_pop_growth_speed_reduction = 0.75
+					biological_logistic_growth_mult = -0.75
 				}
 			}
 			triggered_modifier = {
@@ -574,7 +574,7 @@ situation_philosophers_deficit = {
 					}
 				}
 				modifier = {
-					planet_pop_assembly_organic_reduction = 0.75
+					bonus_pop_growth_mult = -0.75
 				}
 			}
 			triggered_modifier = {

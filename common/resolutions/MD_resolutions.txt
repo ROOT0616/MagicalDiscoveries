@@ -47,6 +47,7 @@ resolution_galactic_focus_crisis_heavenly = {
 			any_neighbor_country = {
 				is_country_type = heavenly_realm
 			}
+			desc = md_galcom_ai_heaven_neighbor
 		}
 		modifier = {
 			factor = 0.75
@@ -55,34 +56,42 @@ resolution_galactic_focus_crisis_heavenly = {
 					is_country_type = heavenly_realm
 				}
 			}
+			desc = md_galcom_ai_heaven_no_neighbor
 		}
 		modifier = {
 			factor = 0.75
 			has_crisis_stage_1 = yes
+			desc = md_galcom_ai_crisis_stage_1
 		}
 		modifier = {
 			factor = 1.25
 			has_crisis_stage_3 = yes
+			desc = md_galcom_ai_crisis_stage_3
 		}
 		modifier = {
 			factor = 10
 			has_crisis_stage_4 = yes
+			desc = md_galcom_ai_crisis_stage_4
 		}
 		modifier = {
 			factor = 10
 			has_ascension_perk = ap_defender_of_the_galaxy
+			desc = md_galcom_ai_defender
 		}
 		modifier = {
 			factor = 1.2
 			is_militarist = yes
+			desc = md_galcom_ai_militarist
 		}
 		modifier = {
 			factor = 1.1
 			is_xenophile = yes
+			desc = md_galcom_ai_xenophile
 		}
 		modifier = {
 			factor = 1.1
 			is_spiritualist = yes
+			desc = md_galcom_ai_spiritualist
 		}
 		modifier = {
 			factor = 0.5
@@ -92,6 +101,7 @@ resolution_galactic_focus_crisis_heavenly = {
 					is_country_type = heavenly_realm
 				}
 			}
+			desc = md_galcom_ai_xenophobe
 		}
 	}
 }
