@@ -553,7 +553,7 @@ country_event = {
 						}
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 5
@@ -694,7 +694,7 @@ fleet_event = {
 			random_list = {
 				25 = {
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 6
@@ -703,7 +703,7 @@ fleet_event = {
 						}
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -712,7 +712,7 @@ fleet_event = {
 						}
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -721,7 +721,7 @@ fleet_event = {
 						}
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -732,7 +732,7 @@ fleet_event = {
 				}
 				25 = {
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 6
@@ -741,7 +741,7 @@ fleet_event = {
 						}
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -750,7 +750,7 @@ fleet_event = {
 						}
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -759,7 +759,7 @@ fleet_event = {
 						}
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -770,25 +770,25 @@ fleet_event = {
 				}
 				50 = {
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 5
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
 					}
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -1651,7 +1651,7 @@ country_event = {
 			random_list = {
 				25 = {
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -1662,7 +1662,7 @@ country_event = {
 				}
 				25 = {
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -1673,7 +1673,7 @@ country_event = {
 				}
 				50 = {
 					create_leader = {
-						class = admiral
+						class = commander
 						species = event_target:heavens_species
 						name = random
 						skill = 3
@@ -1873,7 +1873,7 @@ ship_event = {
 				random_list = {
 					25 = {
 						create_leader = {
-							class = admiral
+							class = commander
 							species = event_target:heavens_species
 							name = random
 							skill = 3
@@ -1884,7 +1884,7 @@ ship_event = {
 					}
 					25 = {
 						create_leader = {
-							class = admiral
+							class = commander
 							species = event_target:heavens_species
 							name = random
 							skill = 3
@@ -1895,7 +1895,7 @@ ship_event = {
 					}
 					50 = {
 						create_leader = {
-							class = admiral
+							class = commander
 							species = event_target:heavens_species
 							name = random
 							skill = 3

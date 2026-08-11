@@ -2,6 +2,7 @@
 situation_mithrils_deficit = {
 	picture = GFX_evt_galactic_market
 	category = negative
+	situation_log_category = urgent_matters
 	fail_icon = GFX_situation_outcome_meh
 	fail_icon_frame = GFX_situation_outcome_frame_green
 	complete_icon = GFX_situation_outcome_bankrupcy
@@ -19,7 +20,7 @@ situation_mithrils_deficit = {
 		}
 	}
 
-	start_value = 15
+	initial_progress = 15
 	stages = {
 		deficit_first = {
 			icon = GFX_situation_stage_1
@@ -142,6 +143,7 @@ situation_mithrils_deficit = {
 situation_orichalcones_deficit = {
 	picture = GFX_evt_galactic_market
 	category = negative
+	situation_log_category = urgent_matters
 	fail_icon = GFX_situation_outcome_meh
 	fail_icon_frame = GFX_situation_outcome_frame_green
 	complete_icon = GFX_situation_outcome_bankrupcy
@@ -159,7 +161,7 @@ situation_orichalcones_deficit = {
 		}
 	}
 
-	start_value = 15
+	initial_progress = 15
 	stages = {
 		deficit_first = {
 			icon = GFX_situation_stage_1
@@ -198,7 +200,7 @@ situation_orichalcones_deficit = {
 			icon_background = GFX_situation_stage_frame_red
 			end = 100
 			on_first_enter = {
-				situation_event = { id = md_deficit.1 }
+				situation_event = { id = md_deficit.3 }
 			}
 			modifier = {
 				planet_orichalcone_crafter_produces_mult = -0.8
@@ -212,7 +214,7 @@ situation_orichalcones_deficit = {
 	on_progress_complete = {
 		country_defaulted_in_situation_tooltip = yes
 		hidden_effect = {
-			situation_event = { id = md_deficit.2 }
+			situation_event = { id = md_deficit.4 }
 		}
 	}
 	on_fail = {
@@ -282,6 +284,7 @@ situation_orichalcones_deficit = {
 situation_adamantines_deficit = {
 	picture = GFX_evt_galactic_market
 	category = negative
+	situation_log_category = urgent_matters
 	fail_icon = GFX_situation_outcome_meh
 	fail_icon_frame = GFX_situation_outcome_frame_green
 	complete_icon = GFX_situation_outcome_bankrupcy
@@ -299,7 +302,7 @@ situation_adamantines_deficit = {
 		}
 	}
 
-	start_value = 15
+	initial_progress = 15
 	stages = {
 		deficit_first = {
 			icon = GFX_situation_stage_1
@@ -332,7 +335,7 @@ situation_adamantines_deficit = {
 			icon_background = GFX_situation_stage_frame_red
 			end = 100
 			on_first_enter = {
-				situation_event = { id = md_deficit.1 }
+				situation_event = { id = md_deficit.5 }
 			}
 			modifier = {
 				ship_armor_mult = -0.33
@@ -344,7 +347,7 @@ situation_adamantines_deficit = {
 	on_progress_complete = {
 		country_defaulted_in_situation_tooltip = yes
 		hidden_effect = {
-			situation_event = { id = md_deficit.2 }
+			situation_event = { id = md_deficit.6 }
 		}
 	}
 	on_fail = {
@@ -414,6 +417,7 @@ situation_adamantines_deficit = {
 situation_philosophers_deficit = {
 	picture = GFX_evt_galactic_market
 	category = negative
+	situation_log_category = urgent_matters
 	fail_icon = GFX_situation_outcome_meh
 	fail_icon_frame = GFX_situation_outcome_frame_green
 	complete_icon = GFX_situation_outcome_bankrupcy
@@ -431,7 +435,7 @@ situation_philosophers_deficit = {
 		}
 	}
 
-	start_value = 15
+	initial_progress = 15
 	stages = {
 		deficit_first = {
 			icon = GFX_situation_stage_1
@@ -549,7 +553,7 @@ situation_philosophers_deficit = {
 			icon_background = GFX_situation_stage_frame_red
 			end = 100
 			on_first_enter = {
-				situation_event = { id = deficit.140 }
+				situation_event = { id = md_deficit.7 }
 			}
 			triggered_modifier = {
 				potential = {
@@ -587,7 +591,7 @@ situation_philosophers_deficit = {
 	on_progress_complete = {
 		country_defaulted_in_situation_tooltip = yes
 		hidden_effect = {
-			situation_event = { id = md_deficit.2 }
+			situation_event = { id = md_deficit.8 }
 		}
 	}
 	on_fail = {

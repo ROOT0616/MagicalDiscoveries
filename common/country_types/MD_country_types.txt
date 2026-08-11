@@ -120,6 +120,8 @@ gate_holder = {
 }
 
 heavenly_realm = {
+	end_game_crisis = yes
+	uses_origins = no
 	attack_unarmed_orbital_stations = yes
 	blocks_piracy = yes
 	scaled_difficulty_bonuses = 4.0	# scales to setting
@@ -144,9 +146,8 @@ heavenly_realm = {
 		colonizer = yes
 		construction = yes
 		modules = {
-			foreign_minister_module
-			interior_minister_module
-			machine_military_minister_module
+			invaders_military_minister_module
+			invaders_interior_minister_module
 		}
 	}
 	faction = {

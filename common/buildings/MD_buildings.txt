@@ -25,7 +25,7 @@ building_white_magic_court = {
 			}
 		}
 		modifier = {
-			job_white_magician_add = 6
+			job_white_magician_add = 600
 		}
 	}
 	triggered_desc = {
@@ -83,7 +83,7 @@ building_mithril_refinery = {
 			}
 		}
 		modifier = {
-			job_mithril_refiner_add = 6
+			job_mithril_refiner_add = 600
 		}
 	}
 	triggered_desc = {
@@ -117,7 +117,7 @@ building_mithril_magic_tool_factory = {
 			}
 		}
 		modifier = {
-			job_mithril_magic_tool_crafter_add = 6
+			job_mithril_magic_tool_crafter_add = 600
 		}
 	}
 	triggered_desc = {
@@ -152,7 +152,7 @@ building_orichalcone_refinery = {
 		}
 		modifier = {
 			planet_amenities_add = 15
-			job_orichalcone_refiner_add = 6
+			job_orichalcone_refiner_add = 600
 		}
 	}
 	triggered_desc = {
@@ -187,7 +187,7 @@ building_orichalcone_workshop = {
 			}
 		}
 		modifier = {
-			job_orichalcone_crafter_add = 2
+			job_orichalcone_crafter_add = 200
 		}
 	}
 	triggered_desc = {
@@ -222,7 +222,7 @@ building_adamantine_refinery = {
 			}
 		}
 		modifier = {
-			job_adamantine_refiner_add = 6
+			job_adamantine_refiner_add = 600
 		}
 	}
 	triggered_desc = {
@@ -257,7 +257,7 @@ building_the_legendary_alchem_house = {
 			}
 		}
 		modifier = {
-			job_the_legendary_alchemist_add = 2
+			job_the_legendary_alchemist_add = 200
 		}
 	}
 	triggered_desc = {

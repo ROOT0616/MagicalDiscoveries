@@ -1150,7 +1150,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_1" }
 	component_set = "thruster_components"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_SHIP_THRUSTER_2"
 
 	ai_weight = {
@@ -1178,7 +1178,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_2" }
 	component_set = "thruster_components"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_SHIP_THRUSTER_3"
 
 	ai_weight = {
@@ -1205,7 +1205,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_3" }
 	component_set = "thruster_components"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_SHIP_THRUSTER_4"
 
 	ai_weight = {
@@ -1232,7 +1232,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_thrusters_4" }
 	component_set = "thruster_components"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_SHIP_THRUSTER_5"
 
 	ai_weight = {
@@ -1260,8 +1260,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_propulsion" }
 	component_set = "thruster_components"
-	size_restriction = { md_adamantite_ship }
-
+	potential = { is_ship_size = md_adamantite_ship }
 	ai_weight = {
 		weight = 5
 		modifier = {
@@ -1308,7 +1307,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_fission_power" }
 	component_set = "power_core"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_FUSION_REACTOR"
 
 	ai_weight = {
@@ -1334,7 +1333,7 @@ utility_component_template = {
 	}
 	prerequisites = { "tech_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_COLD_FUSION_REACTOR"
 	ai_weight = {
 		weight = 2
@@ -1360,7 +1359,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_cold_fusion_power" }
 	component_set = "power_core"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_ANTIMATTER_REACTOR"
 
 	ai_weight = {
@@ -1387,7 +1386,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_antimatter_power" }
 	component_set = "power_core"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_ZERO_POINT_REACTOR"
 
 	ai_weight = {
@@ -1414,7 +1413,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_zero_point_power" }
 	component_set = "power_core"
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	upgrades_to = "MD_ADAMANTITE_DARK_MATTER_REACTOR"
 
 	ai_weight = {
@@ -1442,8 +1441,7 @@ utility_component_template = {
 
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "power_core"
-	size_restriction = { md_adamantite_ship }
-
+	potential = { is_ship_size = md_adamantite_ship }
 	ai_weight = {
 		weight = 6
 		modifier = {
@@ -1468,7 +1466,7 @@ utility_component_template = {
 	}
 	ship_behavior = "artillery"
 
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	component_set = "combat_computers"
 	upgrades_to = "MD_ADAMANTITE_COMBAT_COMPUTER_ARTILLERY_BASIC"
 
@@ -1489,7 +1487,7 @@ utility_component_template = {
 			alloys = 5
 		}
 	}
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
@@ -1517,7 +1515,7 @@ utility_component_template = {
 			alloys = 10
 		}
 	}
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
@@ -1545,7 +1543,7 @@ utility_component_template = {
 			alloys = 20
 		}
 	}
-	size_restriction = { md_adamantite_ship }
+	potential = { is_ship_size = md_adamantite_ship }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_3" }

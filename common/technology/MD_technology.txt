@@ -27,10 +27,7 @@ tech_magical_science = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
 		}
 	}
 	ai_weight = {
@@ -44,10 +41,7 @@ tech_magical_science = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
 		}
 	}
 }
@@ -84,10 +78,7 @@ tech_advanced_magical_science = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
 		}
 	}
 	ai_weight = {
@@ -101,10 +92,7 @@ tech_advanced_magical_science = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
 		}
 	}
 }
@@ -141,10 +129,7 @@ tech_ultimate_magical_science = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -162,10 +147,7 @@ tech_ultimate_magical_science = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_field_manipulation"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_field_manipulation }
 		}
 	}
 }
@@ -200,10 +182,7 @@ tech_alchemy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -217,10 +196,7 @@ tech_alchemy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -258,10 +234,7 @@ tech_advanced_alchemy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -275,10 +248,7 @@ tech_advanced_alchemy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -316,10 +286,7 @@ tech_ultimate_alchemy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -337,10 +304,7 @@ tech_ultimate_alchemy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -410,10 +374,7 @@ tech_black_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 	ai_weight = {
@@ -427,10 +388,7 @@ tech_black_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 }
@@ -467,10 +425,7 @@ tech_attac_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 	ai_weight = {
@@ -484,10 +439,7 @@ tech_attac_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 }
@@ -525,10 +477,7 @@ tech_advanced_attac_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 	ai_weight = {
@@ -542,10 +491,7 @@ tech_advanced_attac_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 }
@@ -582,10 +528,7 @@ tech_defensive_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 	ai_weight = {
@@ -599,10 +542,7 @@ tech_defensive_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 }
@@ -640,10 +580,7 @@ tech_advanced_defensive_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 	ai_weight = {
@@ -657,10 +594,7 @@ tech_advanced_defensive_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 }
@@ -697,10 +631,7 @@ tech_black_magic_army = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 	ai_weight = {
@@ -714,10 +645,7 @@ tech_black_magic_army = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 }
@@ -754,10 +682,7 @@ tech_elite_black_magic_army = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 	ai_weight = {
@@ -771,10 +696,7 @@ tech_elite_black_magic_army = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_military_theory"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_military_theory }
 		}
 	}
 }
@@ -812,10 +734,7 @@ tech_necromancy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -833,10 +752,7 @@ tech_necromancy = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
@@ -876,10 +792,7 @@ tech_white_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 	ai_weight = {
@@ -893,10 +806,7 @@ tech_white_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
@@ -932,10 +842,7 @@ tech_white_magic_court = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 	ai_weight = {
@@ -949,10 +856,7 @@ tech_white_magic_court = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
@@ -992,10 +896,7 @@ tech_advanced_white_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 	ai_weight = {
@@ -1009,10 +910,7 @@ tech_advanced_white_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
@@ -1048,10 +946,7 @@ tech_barrier_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1069,10 +964,7 @@ tech_barrier_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
@@ -1112,10 +1004,7 @@ tech_resuscitation_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1133,10 +1022,7 @@ tech_resuscitation_magic = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 }
@@ -1175,10 +1061,7 @@ tech_philosophers_stone = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 	ai_weight = {
@@ -1192,10 +1075,7 @@ tech_philosophers_stone = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1238,10 +1118,7 @@ tech_philosophers_stone_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 	ai_weight = {
@@ -1255,10 +1132,7 @@ tech_philosophers_stone_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1303,10 +1177,7 @@ tech_philosophers_stone_improvement = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_biology"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_biology }
 		}
 	}
 	ai_weight = {
@@ -1345,10 +1216,7 @@ tech_mithril_refinery = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -1362,10 +1230,7 @@ tech_mithril_refinery = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1398,10 +1263,7 @@ tech_mithril_refinery_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -1415,10 +1277,7 @@ tech_mithril_refinery_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1459,10 +1318,7 @@ tech_mithril_refinery_improvement = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -1502,10 +1358,7 @@ tech_mithril_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -1519,10 +1372,7 @@ tech_mithril_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1562,10 +1412,7 @@ tech_cheap_type_mithril_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -1579,10 +1426,7 @@ tech_cheap_type_mithril_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1622,10 +1466,7 @@ tech_specialized_type_mithril_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 	ai_weight = {
@@ -1639,10 +1480,7 @@ tech_specialized_type_mithril_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1678,10 +1516,7 @@ tech_orichalcone_refinery = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1699,10 +1534,7 @@ tech_orichalcone_refinery = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1735,10 +1567,7 @@ tech_orichalcone_refinery_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1756,10 +1585,7 @@ tech_orichalcone_refinery_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1800,10 +1626,7 @@ tech_orichalcone_refinery_improvement = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1847,10 +1670,7 @@ tech_orichalcone_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1868,10 +1688,7 @@ tech_orichalcone_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1911,10 +1728,7 @@ tech_cheap_type_orichalcone_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1932,10 +1746,7 @@ tech_cheap_type_orichalcone_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -1975,10 +1786,7 @@ tech_specialized_type_orichalcone_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -1996,10 +1804,7 @@ tech_specialized_type_orichalcone_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -2035,10 +1840,7 @@ tech_adamantine_refinery = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -2056,10 +1858,7 @@ tech_adamantine_refinery = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -2092,10 +1891,7 @@ tech_adamantine_refinery_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -2113,10 +1909,7 @@ tech_adamantine_refinery_pattern = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -2157,10 +1950,7 @@ tech_adamantine_refinery_improvement = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -2204,10 +1994,7 @@ tech_adamantine_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -2225,10 +2012,7 @@ tech_adamantine_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -2268,10 +2052,7 @@ tech_cheap_type_adamantine_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -2289,10 +2070,7 @@ tech_cheap_type_adamantine_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
@@ -2332,10 +2110,7 @@ tech_specialized_type_adamantine_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 		modifier = {
 			factor = @ap_technological_ascendancy_rare_tech
@@ -2353,10 +2128,7 @@ tech_specialized_type_adamantine_armor = {
 		}
 		modifier = {
 			factor = 1.25
-			research_leader = {
-				area = engineering
-				has_trait = "leader_trait_expertise_materials"
-			}
+			has_trait_in_council = { TRAIT = leader_trait_expertise_materials }
 		}
 	}
 }
