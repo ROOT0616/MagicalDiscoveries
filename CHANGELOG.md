@@ -1,3 +1,20 @@
+# 2.0.0-beta3.0.2
+
+Stellaris 4.5.2 static compatibility review and English localization hotfix.
+
+- Retargeted descriptor and portable Launcher metadata to Stellaris 4.5.x;
+  the installed reference build is Cygnus v4.5.2 (9776).
+- Checked the existing four exact-path overrides against installed Vanilla.
+  Their base content still matches; only the existing MD additions remain.
+- Verified technology prerequisites, scripted references, event links and pictures
+  against the installed game files. This is not a runtime certification.
+- Fixed an unescaped quotation pair in the English Alchemy description.
+- Added the missing English bombardment event title and all sixteen resource-
+  deficit event strings, including machine-empire description branches.
+- Added a portable Launcher descriptor and a new-game runtime test checklist.
+- Kept gameplay definitions, technology IDs and story migration unchanged.
+- Use a new 4.5.2 campaign for validation. Loading 4.4 saves is not guaranteed.
+
 # 2.0.0-beta3.0.1
 
 Chapter I readability and technology-tree hotfix.

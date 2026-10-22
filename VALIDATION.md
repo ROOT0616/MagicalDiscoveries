@@ -173,3 +173,47 @@ Society:
 
 Materials:
 Mithril -> Orichalcum -> Ultimate Alchemy -> Philosopher's Stone -> Adamantite.
+
+## 2.0.0-beta3.0.2 — installed Stellaris 4.5.2 review
+
+Reference: the user's installed `launcher-settings.json` reports
+`Cygnus v4.5.2 (9776)`, `modsCompatibilityVersion = 4.5`.
+Review date: 2026-10-22 (Asia/Tokyo).
+
+The project archives under `sources/` are read-only. Their common/events/interface
+text files match the corresponding installed files. Their original version/date
+of acquisition is not established here: this does not demonstrate that every
+engine behavior is unchanged between 4.4.6 and 4.5.2. Earlier version labels in
+this document are historical; this review uses the installed game directly.
+
+Static review covers script delimiters/strings, duplicate event IDs and
+localization keys, direct and nested event localization, UTF-8 BOM, technology
+prerequisite existence and cycles, MD scripted references, event call links,
+event pictures and referenced Vanilla definitions. Core Chapter I ordering
+and civilization gates are retained from beta3.0.1.
+
+Exact-path overrides retained, checked against installed 4.5.2:
+
+- `common/resolution_categories/00_resolution_categories.txt`: adds only
+  `resolution_galactic_focus_crisis_heavenly` to the Galactic Focus category.
+- `common/scripted_effects/galactic_community_effects.txt`: extends
+  `repeal_all_galactic_focus_resolutions` with Heavenly flag/resolution cleanup.
+- `interface/resource_groups/sectors_other_resource_groups.txt`: MD resources.
+- `interface/resource_groups/topbar_other_resource_groups.txt`: MD resources.
+
+These files can conflict with other mods replacing the same paths/definitions.
+No new Vanilla override is introduced in this release. No replace_path is used.
+
+Save compatibility:
+
+- The beta3.0.1 -> beta3.0.2 content changes preserve all gameplay IDs and state.
+- Existing beta2 -> beta3 yearly migration remains unchanged.
+- Loading a 4.4 campaign in game version 4.5.2 is not guaranteed. A new 4.5.2
+  campaign is required as the baseline for this release's runtime validation.
+- No save-conversion operation is performed or claimed.
+
+Runtime NOT YET VERIFIED: startup/parser log with MD enabled, Chapter I stages,
+research draws, building/job production, Heavenly invasion/AI, and save/reload.
+An existing empty error.log from a session without enabled mods is not evidence
+of MD compatibility. The Launcher target version is metadata, not a test result.
+Follow the README checklist and retain the fresh error.log/game.log.
