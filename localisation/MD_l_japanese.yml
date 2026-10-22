@@ -919,3 +919,7 @@ tech_longinus_spear_1:0 "試作型ロンギヌスの槍"
  md_alchemy_granted_tt:0 "§Y錬金術§!はSituationの成果として既に取得されている。"
  md_mithril_discovered_tt:0 "§Yミスリル§!を発見した。工業化技術はSituation完了時に研究候補として保証される。"
  md_magic_research_options_added_tt:0 "保証研究候補を追加：§Yミスリル精錬§!、§Y発展魔法科学§!、§Y発展錬金術§!。"
+
+ BYPASS_MD_HEAVENES_HOLE:0 "天界通路"
+ ENTRY_BYPASS_MD_HEAVENES_HOLE:0 "$BYPASS_TYPE$入口"
+ EXIT_BYPASS_MD_HEAVENES_HOLE:0 "$BYPASS_TYPE$出口"

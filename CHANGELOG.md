@@ -1,3 +1,17 @@
+# 2.0.0-beta3.0.3
+
+First Stellaris 4.5.2 Chapter I runtime-log follow-up.
+
+- Added the three engine-required Heavenly passage localization keys in English
+  and Japanese: BYPASS_MD_HEAVENES_HOLE, ENTRY_BYPASS_MD_HEAVENES_HOLE and
+  EXIT_BYPASS_MD_HEAVENES_HOLE. These were the only three entries in the supplied
+  beta3.0.2 error.log. The bypass definition and travel behavior are unchanged.
+- Recorded the user's new-game Chapter I test, six screenshots and event log.
+  The four main stage descriptions/tooltips display; the two optional events
+  also appeared. Research-option availability is user-reported; a research-screen
+  capture, prerequisite tests and save/reload remain pending.
+- Added bypass-localization coverage to the static release check.
+
 # 2.0.0-beta3.0.2
 
 Stellaris 4.5.2 static compatibility review and English localization hotfix.

@@ -547,3 +547,7 @@ tech_longinus_spear_1:0 "Prototype Longinus Spear"
  md_deficit.7.desc:0 "Our shortage of the Philosopher's Stone has forced [Owner.GetFinancialAdvisorAgencyCap] to consider emergency measures. Unless we can cover the deficit, the consequences will spread across our industries."
  md_deficit.7.desc.machine:0 "Budget warning: the shortage of the Philosopher's Stone is approaching a critical threshold. Failure to correct the deficit will disrupt multiple industrial systems."
  md_deficit.8.desc:0 "Unable to resolve the shortage of the Philosopher's Stone, we have been forced to declare bankruptcy and default on our obligations. [Owner.GetFinancialAdvisorAgencyCap] has prepared emergency spending cuts to prevent another collapse."
+
+ BYPASS_MD_HEAVENES_HOLE:0 "Heavenly Passage"
+ ENTRY_BYPASS_MD_HEAVENES_HOLE:0 "Entry $BYPASS_TYPE$"
+ EXIT_BYPASS_MD_HEAVENES_HOLE:0 "Exit $BYPASS_TYPE$"

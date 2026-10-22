@@ -217,3 +217,45 @@ research draws, building/job production, Heavenly invasion/AI, and save/reload.
 An existing empty error.log from a session without enabled mods is not evidence
 of MD compatibility. The Launcher target version is metadata, not a test result.
 Follow the README checklist and retain the fresh error.log/game.log.
+
+## 2.0.0-beta3.0.3 — Chapter I runtime follow-up
+
+Evidence: user-provided six screenshots and beta3.0.2 error.log/game.log,
+reviewed on 2026-10-22 (Asia/Tokyo). game.log identifies Cygnus v4.5.2;
+the active local descriptor reports beta3.0.2. The inspected dlc_load.json
+enables only mod/MagicalDiscoveries.mod.
+
+Observed event selections in game.log (real-world log times, not in-game dates):
+
+- 11:59:30: magical_discoveries.101, option 0.
+- 12:00:57: magical_discoveries.106, option 1.
+- 12:01:28: magical_discoveries.102, option 0.
+- 12:02:03: magical_discoveries.107, option 0.
+- 12:02:16: magical_discoveries.103, option 1.
+- 12:02:31: magical_discoveries.104, option 0.
+- 12:02:45: magical_discoveries.105, option 0.
+
+The log records option selections; it does not independently record the exact
+instant each event opened, technology acquisition, or research-option state.
+The screenshots show Japanese descriptions at 25/50/75/100%, corresponding
+gain/discovery/candidate tooltips, and the laboratory/folklore optional events.
+The user reports completing the requested stage and research-option checks.
+A research-screen capture and owned-technology inspection were not supplied.
+
+The supplied error.log contains only three missing bypass localization keys.
+It contains no recorded parser, unknown trigger/effect/modifier or invalid-scope
+errors. This is evidence for that session only, not certification of every path.
+The missing keys are added in both languages in beta3.0.3 using the installed
+Vanilla entry/exit naming pattern. No bypass ID or gameplay behavior changes.
+
+Still pending:
+
+- Fresh startup error.log after beta3.0.3, to confirm the three messages disappear.
+- Research-screen/owned-technology confirmation, prerequisite/early-draw testing.
+- Save/reload during and after the Situation; building/job production.
+- English in-game rendering; Heavenly crisis behavior, AI and other-mod conflicts.
+
+Same-game-version beta3.0.2 -> beta3.0.3 changes only localization and release
+documentation/metadata; no migration or new campaign is required by this patch.
+Continue the current 4.5.2 test save. 4.4 -> 4.5.2 save conversion remains unsupported.
+Existing Vanilla overrides and their conflict scope remain as listed above.
