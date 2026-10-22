@@ -10,7 +10,7 @@ tech_magical_science = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag01
+		md_has_magic_stage_1 = yes
 	}
 	modifier = {
 		country_physics_tech_research_speed = 0.025
@@ -58,7 +58,7 @@ tech_advanced_magical_science = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag02
+		md_has_magical_civilization = yes
 	}
 	prerequisites = {
 		"tech_magical_science"
@@ -109,7 +109,7 @@ tech_ultimate_magical_science = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag03
+		md_has_magical_civilization = yes
 	}
 	prerequisites = {
 		"tech_advanced_magical_science"
@@ -161,7 +161,7 @@ tech_alchemy = {
 		materials
 	}
 	potential = {
-		has_country_flag = BuyAlchemyFlag01
+		md_has_alchemy_stage_1 = yes
 	}
 	weight = @tier1weight1
 	is_rare = no
@@ -210,7 +210,7 @@ tech_advanced_alchemy = {
 		materials
 	}
 	potential = {
-		has_country_flag = BuyAlchemyFlag02
+		md_has_magical_civilization = yes
 	}
 	prerequisites = {
 		"tech_alchemy"
@@ -262,10 +262,11 @@ tech_ultimate_alchemy = {
 		materials
 	}
 	potential = {
-		has_country_flag = BuyAlchemyFlag03
+		md_has_magical_civilization = yes
 	}
 	prerequisites = {
 		"tech_advanced_alchemy"
+		"tech_orichalcone_refinery"
 	}
 	weight = @tier4weight3
 	is_rare = yes
@@ -356,7 +357,7 @@ tech_black_magic = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag01
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		army_attack_damage_mult = 0.05
@@ -408,7 +409,7 @@ tech_attac_magic = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag02
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		army_attack_damage_mult = 0.1
@@ -460,7 +461,7 @@ tech_advanced_attac_magic = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag03
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		army_attack_damage_mult = 0.2
@@ -505,13 +506,13 @@ tech_defensive_magic = {
 		military_theory
 	}
 	prerequisites = {
-		"tech_black_magic"
+		"tech_white_magic"
 	}
 	weight = @tier2weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag02
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		army_defense_damage_mult = 0.1
@@ -556,14 +557,14 @@ tech_advanced_defensive_magic = {
 		military_theory
 	}
 	prerequisites = {
-		"tech_advanced_magical_science"
 		"tech_defensive_magic"
+		"tech_advanced_magical_science"
 	}
 	weight = @tier3weight2
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag03
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		army_defense_damage_mult = 0.2
@@ -615,7 +616,7 @@ tech_black_magic_army = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag03
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -659,6 +660,7 @@ tech_elite_black_magic_army = {
 		military_theory
 	}
 	prerequisites = {
+		"tech_black_magic_army"
 		"tech_advanced_attac_magic"
 		"tech_advanced_defensive_magic"
 	}
@@ -666,7 +668,7 @@ tech_elite_black_magic_army = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag03
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -772,7 +774,7 @@ tech_white_magic = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag01
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		army_attack_health_mult = 0.1
@@ -817,7 +819,7 @@ tech_white_magic_court = {
 	area = society
 	tier = 2
 	prerequisites = {
-		"tech_magical_science"
+		"tech_white_magic"
 	}
 	category = {
 		biology
@@ -826,7 +828,7 @@ tech_white_magic_court = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag01
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -867,6 +869,7 @@ tech_advanced_white_magic = {
 	area = society
 	tier = 3
 	prerequisites = {
+		"tech_white_magic"
 		"tech_advanced_magical_science"
 	}
 	category = {
@@ -876,7 +879,7 @@ tech_advanced_white_magic = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag02
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		army_attack_health_mult = 0.2
@@ -921,7 +924,8 @@ tech_barrier_magic = {
 	area = society
 	tier = 4
 	prerequisites = {
-		"tech_magical_science"
+		"tech_advanced_white_magic"
+		"tech_advanced_defensive_magic"
 	}
 	category = {
 		biology
@@ -930,7 +934,7 @@ tech_barrier_magic = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag02
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -1033,7 +1037,7 @@ tech_philosophers_stone = {
 	area = society
 	tier = 5
 	prerequisites = {
-		"tech_magical_science"
+		"tech_ultimate_alchemy"
 	}
 	category = {
 		biology
@@ -1042,8 +1046,7 @@ tech_philosophers_stone = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyGrimoireFlag03
-		has_country_flag = BuyAlchemyFlag03
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		leader_lifespan_add = 20
@@ -1200,7 +1203,7 @@ tech_mithril_refinery = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag01
+		md_has_mithril_discovery = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -1342,7 +1345,7 @@ tech_mithril_armor = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag01
+		md_has_alchemy_stage_1 = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -1393,7 +1396,7 @@ tech_cheap_type_mithril_armor = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag01
+		md_has_alchemy_stage_1 = yes
 		NOT = {
 			has_technology = tech_specialized_type_mithril_armor
 		}
@@ -1447,7 +1450,7 @@ tech_specialized_type_mithril_armor = {
 	is_rare = no
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag01
+		md_has_alchemy_stage_1 = yes
 		NOT = {
 			has_technology = tech_cheap_type_mithril_armor
 		}
@@ -1494,13 +1497,14 @@ tech_orichalcone_refinery = {
 		materials
 	}
 	prerequisites = {
+		"tech_mithril_refinery"
 		"tech_advanced_alchemy"
 	}
 	weight = @tier3weight2
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag02
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -1654,7 +1658,7 @@ tech_orichalcone_armor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag02
+		md_has_alchemy_stage_2 = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -1709,7 +1713,7 @@ tech_cheap_type_orichalcone_armor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag02
+		md_has_alchemy_stage_2 = yes
 		NOT = {
 			has_technology = tech_specialized_type_orichalcone_armor
 		}
@@ -1767,7 +1771,7 @@ tech_specialized_type_orichalcone_armor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag02
+		md_has_alchemy_stage_2 = yes
 		NOT = {
 			has_technology = tech_cheap_type_orichalcone_armor
 		}
@@ -1819,12 +1823,13 @@ tech_adamantine_refinery = {
 	}
 	prerequisites = {
 		"tech_ultimate_alchemy"
+		"tech_philosophers_stone"
 	}
 	weight = @tier4weight1
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag03
+		md_has_magical_civilization = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -1978,7 +1983,7 @@ tech_adamantine_armor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag03
+		md_has_alchemy_stage_3 = yes
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.01
@@ -2033,7 +2038,7 @@ tech_cheap_type_adamantine_armor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag03
+		md_has_alchemy_stage_3 = yes
 		NOT = {
 			has_technology = tech_specialized_type_adamantine_armor
 		}
@@ -2091,7 +2096,7 @@ tech_specialized_type_adamantine_armor = {
 	is_rare = yes
 	is_reverse_engineerable = no
 	potential = {
-		has_country_flag = BuyAlchemyFlag03
+		md_has_alchemy_stage_3 = yes
 		NOT = {
 			has_technology = tech_cheap_type_adamantine_armor
 		}
@@ -2339,7 +2344,7 @@ tech_md_reality_augmentation = {
 	weight = 10
 	is_rare = yes
 	potential = {
-		has_country_flag = BuyGrimoireFlag03
+		md_has_magic_stage_3 = yes
 	}
 	prerequisites = {
 		"tech_ultimate_magical_science"
@@ -2371,7 +2376,7 @@ tech_md_reality_augmentation = {
 # 	weight = 10
 # 	is_rare = yes
 # 	potential = {
-# 		has_country_flag = BuyGrimoireFlag03
+# 		md_has_magic_stage_3 = yes
 # 	}
 # 	prerequisites = {
 # 		"tech_ultimate_magical_science"
@@ -2402,7 +2407,7 @@ tech_md_adamantite_hull = {
 	weight = 10
 	is_rare = yes
 	potential = {
-		has_country_flag = BuyAlchemyFlag03
+		md_has_alchemy_stage_3 = yes
 	}
 	prerequisites = {
 		"tech_adamantine_armor"
@@ -2422,10 +2427,6 @@ tech_md_adamantite_hull = {
 	weight_modifier = {
 		modifier = {
 			factor = 3
-			resource_income_compare = {
-				resource = adamantines
-				value = x
-			}
 			resource_stockpile_compare = {
 				resource = adamantines
 				value >= 5000

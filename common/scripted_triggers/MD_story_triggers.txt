@@ -1,18 +1,93 @@
-# Magical Discoveries 2.0 story progression triggers
+# Magical Discoveries 2.0-beta3 story progression triggers
+#
+# New beta3 content should use these scripted triggers instead of directly
+# checking the old Buy*/Meet* flags. Legacy flags are centralized here so
+# older saves can continue to satisfy technology/story conditions.
+
+md_has_magic_stage_1 = {
+	OR = {
+		has_country_flag = md_magic_stage_1
+		has_country_flag = BuyGrimoireFlag01
+		has_technology = tech_magical_science
+	}
+}
+
+md_has_magic_stage_2 = {
+	OR = {
+		has_country_flag = md_magic_stage_2
+		has_country_flag = BuyGrimoireFlag02
+		has_technology = tech_advanced_magical_science
+	}
+}
+
+md_has_magic_stage_3 = {
+	OR = {
+		has_country_flag = md_magic_stage_3
+		has_country_flag = BuyGrimoireFlag03
+		has_technology = tech_ultimate_magical_science
+	}
+}
+
+md_has_alchemy_stage_1 = {
+	OR = {
+		has_country_flag = md_alchemy_stage_1
+		has_country_flag = BuyAlchemyFlag01
+		has_technology = tech_alchemy
+	}
+}
+
+md_has_alchemy_stage_2 = {
+	OR = {
+		has_country_flag = md_alchemy_stage_2
+		has_country_flag = BuyAlchemyFlag02
+		has_technology = tech_advanced_alchemy
+	}
+}
+
+md_has_alchemy_stage_3 = {
+	OR = {
+		has_country_flag = md_alchemy_stage_3
+		has_country_flag = BuyAlchemyFlag03
+		has_technology = tech_ultimate_alchemy
+	}
+}
+
+md_has_magical_civilization = {
+	OR = {
+		has_country_flag = md_magic_civilization_established
+		has_country_flag = md_magic_awakening_complete
+		AND = {
+			has_country_flag = BuyGrimoireFlag03
+			has_country_flag = BuyAlchemyFlag03
+		}
+	}
+}
+
+md_has_mithril_discovery = {
+	OR = {
+		has_country_flag = md_mithril_discovered
+		has_technology = tech_mithril_refinery
+	}
+}
 
 md_can_begin_magical_awakening = {
 	is_regular_empire = yes
 	years_passed >= 5
 	NOT = { has_country_flag = md_magic_discovery_offered }
-	NOT = { has_country_flag = MeetMagicFlag }
-	NOT = { has_country_flag = DenyMagicFlag }
+	NOT = { has_country_flag = md_magic_awakening_started }
+	NOT = { has_country_flag = md_magic_civilization_established }
+	NOT = { has_country_flag = md_magic_awakening_suspended }
+	NOT = { has_country_flag = MeetMagicFlag } # legacy save compatibility
+	NOT = { has_country_flag = DenyMagicFlag } # legacy save compatibility
+	NOT = {
+		country_has_situation = {
+			SITUATION = situation_md_magical_awakening
+		}
+	}
 }
 
+# The beta2 "buy the Necronomicon" branch is deliberately retired for beta3.
+# beta3.1 will replace it with the sealed archive / mid-game crisis storyline.
 md_can_offer_necronomicon = {
-	is_regular_empire = yes
-	mid_game_years_passed >= 25
-	has_country_flag = BuyGrimoireFlag03
-	has_country_flag = BuyAlchemyFlag03
-	NOT = { has_country_flag = BuyNecronomiconFlag }
-	NOT = { has_country_flag = DenyNecronomiconFlag }
+	always = no
 }

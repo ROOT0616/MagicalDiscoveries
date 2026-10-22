@@ -1,22 +1,477 @@
-# Magical Discoveries 2.0 story progression effects
+# Magical Discoveries 2.0-beta3 story progression effects
 
+# 25%: magic becomes a reproducible natural science.
 md_unlock_magic_stage_1 = {
-	set_country_flag = BuyGrimoireFlag01
-	set_country_flag = BuyAlchemyFlag01
+	set_country_flag = md_magic_stage_1
+
+	if = {
+		limit = { NOT = { has_technology = tech_magical_science } }
+		give_technology = { tech = tech_magical_science }
+	}
 }
 
+# 50%: deliberate magical manipulation of matter establishes alchemy.
 md_unlock_magic_stage_2 = {
-	set_country_flag = BuyGrimoireFlag02
-	set_country_flag = BuyAlchemyFlag02
+	set_country_flag = md_magic_stage_2
+	set_country_flag = md_alchemy_stage_1
+
+	if = {
+		limit = { NOT = { has_technology = tech_alchemy } }
+		give_technology = { tech = tech_alchemy }
+	}
 }
 
+# 75%: a stable mana-bearing artificial material is reproduced: Mithril.
 md_unlock_magic_stage_3 = {
-	set_country_flag = BuyGrimoireFlag03
-	set_country_flag = BuyAlchemyFlag03
+	set_country_flag = md_magic_stage_3
+	set_country_flag = md_alchemy_stage_2
+	set_country_flag = md_mithril_discovered
 }
 
+# 100%: magic is now a civilizational discipline rather than an anomaly.
+# The discoveries themselves were made by the Situation; industrialization
+# and advanced applications remain normal research decisions.
+md_complete_magical_awakening = {
+	set_country_flag = md_alchemy_stage_3
+	set_country_flag = md_magic_civilization_established
+	set_country_flag = md_magic_awakening_complete # beta2 save/UI compatibility
+
+	if = {
+		limit = { NOT = { has_technology = tech_mithril_refinery } }
+		add_research_option = tech_mithril_refinery
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_advanced_magical_science } }
+		add_research_option = tech_advanced_magical_science
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_advanced_alchemy } }
+		add_research_option = tech_advanced_alchemy
+	}
+}
+
+# One-time country migration from beta2 / the original purchase-era flags.
+# No new beta3 content writes the old Buy*/Meet* progression flags.
+md_migrate_beta2_story_flags = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = MeetMagicFlag
+				has_country_flag = BuyGrimoireFlag01
+				has_country_flag = BuyAlchemyFlag01
+				has_technology = tech_magical_science
+				has_technology = tech_alchemy
+			}
+		}
+		set_country_flag = md_magic_awakening_started
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = BuyGrimoireFlag01
+				has_technology = tech_magical_science
+			}
+		}
+		set_country_flag = md_magic_stage_1
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = BuyGrimoireFlag02
+				has_technology = tech_advanced_magical_science
+			}
+		}
+		set_country_flag = md_magic_stage_2
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = BuyGrimoireFlag03
+				has_technology = tech_ultimate_magical_science
+			}
+		}
+		set_country_flag = md_magic_stage_3
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = BuyAlchemyFlag01
+				has_technology = tech_alchemy
+			}
+		}
+		set_country_flag = md_alchemy_stage_1
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = BuyAlchemyFlag02
+				has_technology = tech_advanced_alchemy
+			}
+		}
+		set_country_flag = md_alchemy_stage_2
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = BuyAlchemyFlag03
+				has_technology = tech_ultimate_alchemy
+			}
+		}
+		set_country_flag = md_alchemy_stage_3
+	}
+
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = md_magic_awakening_complete
+				AND = {
+					has_country_flag = BuyGrimoireFlag03
+					has_country_flag = BuyAlchemyFlag03
+				}
+			}
+		}
+		set_country_flag = md_magic_civilization_established
+
+		# Rebuild guaranteed story research options for an older save.
+		if = {
+			limit = { NOT = { has_technology = tech_mithril_refinery } }
+			add_research_option = tech_mithril_refinery
+		}
+		if = {
+			limit = { NOT = { has_technology = tech_advanced_magical_science } }
+			add_research_option = tech_advanced_magical_science
+		}
+		if = {
+			limit = { NOT = { has_technology = tech_advanced_alchemy } }
+			add_research_option = tech_advanced_alchemy
+		}
+	}
+
+	if = {
+		limit = { has_technology = tech_mithril_refinery }
+		set_country_flag = md_mithril_discovered
+	}
+
+	set_country_flag = md_beta3_story_migration_done
+}
+
+# Legacy/debug helper retained temporarily for beta2 saves and manual console tests.
+# The normal beta3 story never calls this effect.
 md_accept_necronomicon = {
 	set_country_flag = BuyNecronomiconFlag
 	set_global_flag = LearnNecromancyFlag
+	save_global_event_target_as = md_necronomicon_country
 	add_research_option = tech_necromancy
+}
+
+
+# Fleet scope.
+# Gives Heavenly combat fleets deterministic strategic movement instead of
+# relying solely on the engine invader military minister.
+md_heaven_assign_invasion_orders = {
+	clear_fleet_actions = this
+	set_fleet_stance = aggressive
+	set_aggro_range = 500
+	set_aggro_range_measure_from = self
+	set_fleet_flag = md_heaven_orders_initialized
+
+	queue_actions = {
+		repeat = {
+			max_iterations = 200
+
+			while = {
+				id = $EVENT_ID$.while
+				exists = owner
+				owner = { is_country_type = heavenly_realm }
+			}
+
+			find_closest_system = {
+				trigger = {
+					id = $EVENT_ID$.target
+					exists = space_owner
+					space_owner = {
+						OR = {
+							is_country_type = default
+							is_country_type = fallen_empire
+							is_country_type = awakened_fallen_empire
+						}
+					}
+				}
+				found_system = {
+					move_to = this
+				}
+			}
+
+			# Allow time for automatic hostile engagement and starbase combat
+			# before looking for the next strategic target.
+			wait = 120
+		}
+	}
+}
+
+
+# Country scope: Heavenly Realm.
+# Reactive scaling modeled after the Stellaris 4.4 awakened-FE fleet-power target.
+md_heaven_refresh_scaling = {
+	ordered_playable_country = {
+		order_by = trigger:fleet_power
+		position = 0
+		save_event_target_as = md_heaven_strongest_empire
+	}
+
+	set_variable = {
+		which = md_heaven_reference_power
+		value = event_target:md_heaven_strongest_empire.trigger:fleet_power
+	}
+	set_variable = {
+		which = md_heaven_target_power
+		value = md_heaven_reference_power
+	}
+	multiply_variable = {
+		which = md_heaven_target_power
+		value = 1.10
+	}
+
+	# Soft Crisis Strength scaling.
+	if = {
+		limit = {
+			check_galaxy_setup_value = {
+				setting = crisis_strength_scale
+				value < 1
+			}
+		}
+		multiply_variable = {
+			which = md_heaven_target_power
+			value = 0.75
+		}
+	}
+	else_if = {
+		limit = {
+			check_galaxy_setup_value = {
+				setting = crisis_strength_scale
+				value >= 5
+			}
+			check_galaxy_setup_value = {
+				setting = crisis_strength_scale
+				value < 10
+			}
+		}
+		multiply_variable = {
+			which = md_heaven_target_power
+			value = 1.20
+		}
+	}
+	else_if = {
+		limit = {
+			check_galaxy_setup_value = {
+				setting = crisis_strength_scale
+				value >= 10
+			}
+			check_galaxy_setup_value = {
+				setting = crisis_strength_scale
+				value <= 20
+			}
+		}
+		multiply_variable = {
+			which = md_heaven_target_power
+			value = 1.40
+		}
+	}
+	else_if = {
+		limit = {
+			check_galaxy_setup_value = {
+				setting = crisis_strength_scale
+				value > 20
+			}
+		}
+		multiply_variable = {
+			which = md_heaven_target_power
+			value = 1.80
+		}
+	}
+
+	# Anchor network escalation.
+	if = {
+		limit = {
+			count_owned_ship = {
+				limit = { is_ship_size = starbase_exd }
+				count >= 10
+			}
+		}
+		multiply_variable = {
+			which = md_heaven_target_power
+			value = 1.50
+		}
+	}
+	else_if = {
+		limit = {
+			count_owned_ship = {
+				limit = { is_ship_size = starbase_exd }
+				count >= 6
+			}
+		}
+		multiply_variable = {
+			which = md_heaven_target_power
+			value = 1.30
+		}
+	}
+	else_if = {
+		limit = {
+			count_owned_ship = {
+				limit = { is_ship_size = starbase_exd }
+				count >= 3
+			}
+		}
+		multiply_variable = {
+			which = md_heaven_target_power
+			value = 1.15
+		}
+	}
+
+	if = {
+		limit = {
+			check_variable = {
+				which = md_heaven_target_power
+				value < 100000
+			}
+		}
+		set_variable = {
+			which = md_heaven_target_power
+			value = 100000
+		}
+	}
+
+	remove_modifier = md_heaven_scaling_tier_1
+	remove_modifier = md_heaven_scaling_tier_2
+	remove_modifier = md_heaven_scaling_tier_3
+	remove_modifier = md_heaven_scaling_tier_4
+	remove_modifier = md_heaven_scaling_tier_5
+
+	# High-output mod environments scale stats instead of ship count.
+	if = {
+		limit = {
+			check_variable = {
+				which = md_heaven_reference_power
+				value >= 200000000
+			}
+		}
+		add_modifier = { modifier = md_heaven_scaling_tier_5 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = md_heaven_reference_power
+				value >= 50000000
+			}
+		}
+		add_modifier = { modifier = md_heaven_scaling_tier_4 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = md_heaven_reference_power
+				value >= 10000000
+			}
+		}
+		add_modifier = { modifier = md_heaven_scaling_tier_3 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = md_heaven_reference_power
+				value >= 2000000
+			}
+		}
+		add_modifier = { modifier = md_heaven_scaling_tier_2 }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				which = md_heaven_reference_power
+				value >= 500000
+			}
+		}
+		add_modifier = { modifier = md_heaven_scaling_tier_1 }
+	}
+}
+
+# Country scope: Heavenly Realm.
+# Compact 12-ship formation: 1 God, 3 Goddesses, 8 Divine Soldiers.
+md_heaven_create_adaptive_combat_fleet = {
+	random_list = {
+		25 = {
+			create_leader = {
+				class = commander
+				species = event_target:heavens_species
+				name = random
+				skill = 4
+				traits = { trait = leader_trait_ethereal }
+			}
+		}
+		25 = {
+			create_leader = {
+				class = commander
+				species = event_target:heavens_species
+				name = random
+				skill = 4
+				traits = { trait = leader_trait_dimensional_stutter }
+			}
+		}
+		50 = {
+			create_leader = {
+				class = commander
+				species = event_target:heavens_species
+				name = random
+				skill = 4
+			}
+		}
+	}
+
+	create_fleet = {
+		effect = {
+			set_owner = PREV
+
+			create_ship = {
+				name = random
+				design = "NAME_Gods"
+				graphical_culture = "extra_dimensional_01"
+			}
+			assign_leader = last_created_leader
+
+			while = {
+				count = 3
+				create_ship = {
+					name = random
+					design = "NAME_Goddess"
+					graphical_culture = "extra_dimensional_01"
+				}
+			}
+			while = {
+				count = 8
+				create_ship = {
+					name = random
+					design = "NAME_soldier_of_the_gods"
+					graphical_culture = "extra_dimensional_01"
+				}
+			}
+
+			set_location = {
+				target = event_target:heavenes_gate
+				distance = 5
+				angle = random
+			}
+			set_fleet_stance = aggressive
+			set_aggro_range = 500
+			set_aggro_range_measure_from = self
+			md_heaven_assign_invasion_orders = {
+				EVENT_ID = md_heaven_adaptive_wave_orders
+			}
+		}
+	}
 }

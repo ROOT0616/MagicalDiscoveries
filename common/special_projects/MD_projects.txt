@@ -2,8 +2,9 @@
 special_project = {
 	key = "GOD_SKIN_PROJECT"
 	cost = {
-		base = 20000
+		base = 4000
 	}
+	situation_log_category = crises
 	tech_department = society_technology
 	picture = GFX_evt_sapient_AI
 
@@ -24,8 +25,9 @@ special_project = {
 special_project = {
 	key = "MYTHICAL_DECAY_PROJECT"
 	cost = {
-		base = 20000
+		base = 6000
 	}
+	situation_log_category = crises
 	tech_department = engineering_technology
 	picture = GFX_evt_sapient_AI
 

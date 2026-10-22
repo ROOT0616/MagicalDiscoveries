@@ -1,4 +1,5 @@
-# Magical Discoveries 2.0 - Magical Awakening
+# Magical Discoveries 2.0-beta3
+# Chapter I: Magical Awakening
 
 situation_md_magical_awakening = {
 	picture = GFX_evt_psionics
@@ -14,28 +15,51 @@ situation_md_magical_awakening = {
 	initial_progress = 0
 
 	stages = {
+		# 0-25: prove that the phenomenon is reproducible.
 		md_magic_stage_1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_blue
 			end = 25
 		}
+
+		# 25-50: mathematical description of the unknown field.
 		md_magic_stage_2 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
 			end = 50
-			on_first_enter = { situation_event = { id = magical_discoveries.102 } }
+			on_first_enter = {
+				situation_event = { id = magical_discoveries.102 }
+			}
 		}
+
+		# 50-75: deliberate manipulation of matter; alchemy becomes real.
 		md_magic_stage_3 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_blue
 			end = 75
-			on_first_enter = { situation_event = { id = magical_discoveries.103 } }
+			on_first_enter = {
+				situation_event = { id = magical_discoveries.103 }
+			}
 		}
+
+		# 75-100: reproduce a stable mana-bearing artificial material.
 		md_magic_stage_4 = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_green
 			end = 100
-			on_first_enter = { situation_event = { id = magical_discoveries.104 } }
+			on_first_enter = {
+				situation_event = { id = magical_discoveries.104 }
+			}
+		}
+	}
+
+	# Two small first-chapter story events. Their choices are remembered for
+	# later beta3 story text rather than giving large balance bonuses.
+	on_monthly = {
+		random_events = {
+			90 = 0
+			5 = magical_discoveries.106
+			5 = magical_discoveries.107
 		}
 	}
 
@@ -67,8 +91,7 @@ situation_md_magical_awakening = {
 		custom_tooltip = md_magic_awakening_complete_tt
 		hidden_effect = {
 			owner = {
-				md_unlock_magic_stage_3 = yes
-				set_country_flag = md_magic_awakening_complete
+				md_complete_magical_awakening = yes
 				country_event = { id = magical_discoveries.105 }
 			}
 			destroy_situation = this

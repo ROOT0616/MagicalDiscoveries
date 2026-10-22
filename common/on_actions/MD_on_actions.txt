@@ -21,6 +21,7 @@ on_monthly_pulse = {
 on_yearly_pulse = {
 	events = {
 		magical_discoveries_crisis.0
+		magical_discoveries_crisis.22
 		magical_discoveries_crisis.1254
 	}
 }
@@ -28,6 +29,7 @@ on_yearly_pulse = {
 # This = country
 on_yearly_pulse_country = {
 	events = {
+		magical_discoveries.90
 		magical_discoveries.100
 		magical_discoveries.110
 	}

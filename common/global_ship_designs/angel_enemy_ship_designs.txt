@@ -417,86 +417,52 @@ ship_design = {
 	}
 }
 
-# Heavenly Starbase	NAME_Heavenly_base
+# Heavenly Starbase NAME_Heavenly_Base
+# Conservative 4.4 fallback: current Vanilla ED starbase hull with weapons only.
+# Sensor and utility components are omitted after beta2.7 still triggered the
+# engine's invalid mobile/FTL starbase validator.
 ship_design = {
 	name = "NAME_Heavenly_Base"
 	ship_size = starbase_exd_0
 	country_type = heavenly_realm
-	
+
 	section = {
-		template = "angel_starbase_key"
+		template = "ed_starbase_key"
 		slot = "core"
-		
+
 		component = {
 			slot = "LARGE_GUN_01"
-			template = "LARGE_GODS_BREATH_WEAPON"
+			template = "LARGE_ED_WEAPON"
 		}
 		component = {
 			slot = "LARGE_GUN_02"
-			template = "LARGE_GODS_BREATH_WEAPON"
+			template = "LARGE_ED_WEAPON"
 		}
 		component = {
 			slot = "LARGE_GUN_03"
-			template = "LARGE_GODS_BREATH_WEAPON"
+			template = "LARGE_ED_WEAPON"
 		}
 		component = {
 			slot = "LARGE_GUN_04"
-			template = "LARGE_GODS_BREATH_WEAPON"
+			template = "LARGE_ED_WEAPON"
 		}
 		component = {
 			slot = "MEDIUM_GUN_01"
-			template = "MEDIUM_GODS_BREATH_WEAPON"
+			template = "MEDIUM_ED_WEAPON"
 		}
 		component = {
 			slot = "MEDIUM_GUN_02"
-			template = "MEDIUM_GODS_BREATH_WEAPON"
+			template = "MEDIUM_ED_WEAPON"
 		}
 		component = {
-			slot = "LARGE_UTILITY_1"
-			template = "LARGE_GODS_SKIN"
+			slot = "PD_01"
+			template = "ED_POINT_DEFENCE"
 		}
 		component = {
-			slot = "LARGE_UTILITY_2"
-			template = "LARGE_GODS_SKIN"
+			slot = "PD_02"
+			template = "ED_POINT_DEFENCE"
 		}
-		component = {
-			slot = "LARGE_UTILITY_3"
-			template = "LARGE_GODS_SKIN"
-		}
-		component = {
-			slot = "LARGE_UTILITY_4"
-			template = "LARGE_GODS_SKIN"
-		}
-		component = {
-			slot = "LARGE_UTILITY_5"
-			template = "LARGE_GODS_SKIN"
-		}
-		component = {
-			slot = "LARGE_UTILITY_6"
-			template = "LARGE_GODS_SHIELD"
-		}
-		component = {
-			slot = "LARGE_UTILITY_7"
-			template = "LARGE_GODS_SHIELD"
-		}
-		component = {
-			slot = "LARGE_UTILITY_8"
-			template = "LARGE_GODS_SHIELD"
-		}
-		component = {
-			slot = "LARGE_UTILITY_9"
-			template = "LARGE_GODS_SHIELD"
-		}
-		component = {
-			slot = "LARGE_UTILITY_10"
-			template = "LARGE_GODS_SHIELD"
-		}		
-		component = {
-			slot = "LARGE_UTILITY_11"
-			template = "LARGE_GODS_SHIELD"
-		}		
 	}
-	required_component="SENSOR_4"
 }
 
 # Heavenly Anchor	NAME_Heavenly_Anchor

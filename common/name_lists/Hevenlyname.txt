@@ -6,6 +6,14 @@ Hevenlyname = {
 	### SHIPS
 
 	ship_names = {
+
+		generic = {
+			NAME_Heavenly_Generic_Vessel
+		}
+
+		dimensional_portal_ed = {
+			NAME_Heavenly_Portal
+		}
 	
     
     large_ship_ed = {

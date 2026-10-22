@@ -27,6 +27,39 @@ event = {
 	}
 }
 
+
+# Retrofit strategic invasion orders to Heavenly combat fleets already present
+# in a save created before beta2.4. Also acts as a safety net once per year.
+event = {
+	id = magical_discoveries_crisis.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = { is_country_type = heavenly_realm }
+	}
+
+	immediate = {
+		every_country = {
+			limit = { is_country_type = heavenly_realm }
+			every_owned_fleet = {
+				limit = {
+					is_mobile = yes
+					any_owned_ship = {
+						OR = {
+							is_ship_size = large_ship_ed
+							is_ship_size = medium_ship_ed
+							is_ship_size = small_ship_ed
+						}
+					}
+					NOT = { has_fleet_flag = md_heaven_orders_initialized }
+				}
+				md_heaven_assign_invasion_orders = { EVENT_ID = md_heaven_retrofit_orders }
+			}
+		}
+	}
+}
+
 # Omen I
 country_event = {
 	id = magical_discoveries_crisis.1
@@ -106,7 +139,58 @@ country_event = {
 
 	trigger = {
 		FROM = { is_country_type = heavenly_realm }
-		has_country_flag = MeetMagicFlag
+		NOT = { has_global_flag = md_god_skin_recovered }
+	}
+
+	immediate = {
+		set_global_flag = md_god_skin_recovered
+	}
+
+	option = {
+		name = magical_discoveries_crisis.8.a
+
+		# Any surviving empire that has entered the magical branch receives
+		# the countermeasure project. This prevents the crisis from deadlocking
+		# when a non-magical empire scores the first Heavenly fleet kill.
+		every_playable_country = {
+			limit = {
+				md_has_magical_civilization = yes
+				NOR = {
+					has_technology = tech_gods_skin
+					has_special_project = "GOD_SKIN_PROJECT"
+					has_country_flag = md_god_skin_project_seen
+				}
+			}
+			country_event = { id = magical_discoveries_crisis.9 }
+		}
+
+		# Fallback: if no magical empire survives, the victorious empire
+		# receives the project so the Heavenly portal remains beatable.
+		if = {
+			limit = {
+				NOT = {
+					any_playable_country = {
+						md_has_magical_civilization = yes
+					}
+				}
+				NOR = {
+					has_technology = tech_gods_skin
+					has_special_project = "GOD_SKIN_PROJECT"
+					has_country_flag = md_god_skin_project_seen
+				}
+			}
+			country_event = { id = magical_discoveries_crisis.9 }
+		}
+	}
+}
+
+# Hidden distributor for the divine-material project.
+country_event = {
+	id = magical_discoveries_crisis.9
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
 		NOR = {
 			has_technology = tech_gods_skin
 			has_special_project = "GOD_SKIN_PROJECT"
@@ -114,14 +198,150 @@ country_event = {
 		}
 	}
 
-	immediate = { set_country_flag = md_god_skin_project_seen }
-
-	option = {
-		name = magical_discoveries_crisis.8.a
+	immediate = {
+		set_country_flag = md_god_skin_project_seen
 		enable_special_project = {
 			name = "GOD_SKIN_PROJECT"
 			location = capital_scope
 			owner = root
+		}
+		if = {
+			limit = { is_ai = no }
+			country_event = {
+				id = magical_discoveries_crisis.30
+				days = 45
+				random = 90
+			}
+		}
+	}
+}
+
+# Fallen Empire reaction to divine-material analysis (HIDDEN)
+country_event = {
+	id = magical_discoveries_crisis.30
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		NOT = { has_country_flag = md_heaven_fallen_contact_checked }
+		has_special_project = "GOD_SKIN_PROJECT"
+		any_country = {
+			is_country_type = fallen_empire
+			is_machine_empire = no
+			NOT = { has_country_flag = awakening_not_allowed }
+		}
+	}
+
+	immediate = {
+		set_country_flag = md_heaven_fallen_contact_checked
+
+		random_list = {
+			40 = { }
+			60 = {
+				if = {
+					limit = {
+						any_country = {
+							is_country_type = fallen_empire
+							is_machine_empire = no
+							has_country_flag = guardians_of_the_galaxy
+							NOT = { has_country_flag = awakening_not_allowed }
+						}
+					}
+					random_country = {
+						limit = {
+							is_country_type = fallen_empire
+							is_machine_empire = no
+							has_country_flag = guardians_of_the_galaxy
+							NOT = { has_country_flag = awakening_not_allowed }
+						}
+						save_event_target_as = md_heaven_fallen_contact
+					}
+				}
+				else = {
+					random_country = {
+						limit = {
+							is_country_type = fallen_empire
+							is_machine_empire = no
+							NOT = { has_country_flag = awakening_not_allowed }
+						}
+						save_event_target_as = md_heaven_fallen_contact
+					}
+				}
+
+				if = {
+					limit = { exists = event_target:md_heaven_fallen_contact }
+					establish_communications_no_message = event_target:md_heaven_fallen_contact
+					country_event = { id = magical_discoveries_crisis.31 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = magical_discoveries_crisis.31
+	title = magical_discoveries_crisis.31.name
+	desc = magical_discoveries_crisis.31.desc
+	diplomatic_title = magical_discoveries_crisis.31.diplomatic_title
+	show_sound = event_conversation
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		exists = event_target:md_heaven_fallen_contact
+	}
+
+	picture_event_data = {
+		portrait = event_target:md_heaven_fallen_contact
+		planet_background = event_target:md_heaven_fallen_contact
+		graphical_culture = event_target:md_heaven_fallen_contact
+		city_level = event_target:md_heaven_fallen_contact
+		room = event_target:md_heaven_fallen_contact.ruler
+	}
+
+	option = {
+		name = magical_discoveries_crisis.31.a
+		response_text = magical_discoveries_crisis.31.a.response
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = magical_discoveries_crisis.31.b
+		response_text = magical_discoveries_crisis.31.b.response
+	}
+
+	after = {
+		hidden_effect = {
+			random_list = {
+				65 = { }
+				35 = {
+					if = {
+						limit = {
+							NOT = { has_global_flag = guardians_of_the_galaxy_happened }
+							NOT = { has_global_flag = sleepers_awake_rival_waking }
+							event_target:md_heaven_fallen_contact = {
+								is_country_type = fallen_empire
+								is_machine_empire = no
+								is_hive_empire = no
+								fleet_power > 60000
+								NOT = { has_country_flag = awakening_not_allowed }
+								OR = {
+									is_fanatic_materialist = yes
+									is_fanatic_xenophile = yes
+								}
+							}
+						}
+						event_target:md_heaven_fallen_contact = {
+							set_country_flag = guardians_of_the_galaxy
+							remove_country_flag = timed_guardians_of_the_galaxy
+							remove_country_flag = timed_guardians_of_the_galaxy_2
+						}
+						set_global_flag = md_heaven_fallen_guardian_stirring
+					}
+				}
+			}
 		}
 	}
 }
@@ -157,6 +377,23 @@ country_event = {
 	option = {
 		name = magical_discoveries_crisis.7.a
 		give_technology = { tech = tech_mythical_decay }
+	}
+}
+
+# Spawn one adaptive Heavenly combat formation (HIDDEN)
+country_event = {
+	id = magical_discoveries_crisis.24
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_country_type = heavenly_realm
+		exists = event_target:heavenes_gate
+	}
+	immediate = {
+		owner_species = {
+			save_event_target_as = heavens_species
+		}
+		md_heaven_create_adaptive_combat_fleet = yes
 	}
 }
 
@@ -197,20 +434,24 @@ country_event = {
 		}
 		awaken_guardians_of_the_galaxy = yes
 		set_global_flag = heavenly_invasion_happened
+		set_global_flag = galactic_crisis_happened
 		# クライシス国を作成
 		random_system = {
-			# 没落帝国、覚醒帝国以外の星系
+			# Follow the current Stellaris 4.4 extradimensional crisis exclusions.
 			limit = {
-				NOT = {
-					any_country = {
-						OR = {
-							is_country_type = fallen_empire
-							is_country_type = awakened_fallen_empire
-						}
-						any_system_within_border = {
-							is_same_value = prev
+				NOR = {
+					is_star_class = sc_pulsar
+					is_star_class = sc_binary_1
+					AND = {
+						exists = owner
+						owner = {
+							OR = {
+								is_country_type = fallen_empire
+								is_country_type = awakened_fallen_empire
+							}
 						}
 					}
+					has_star_flag = crisis_spawn_exclude
 				}
 			}
 			set_star_flag = heavens_origin_system
@@ -220,6 +461,7 @@ country_event = {
 				create_species = {
 					name = "NAME_Celestialbeing"
 					class = EXD
+					namelist = Hevenlyname
 					portrait = exd1_leader
 					traits = random
 					effect = {
@@ -277,7 +519,7 @@ country_event = {
 						effect = {
 							set_owner = PREV
 							create_ship = {
-								name = random
+								name = "NAME_Heavenly_Portal"
 								design = "NAME_Heavenly_Portal"
 								graphical_culture = "extra_dimensional_01"
 								effect = {
@@ -290,24 +532,10 @@ country_event = {
 								angle = random
 							}
 							save_event_target_as = heavenes_gate
+							# Adaptive reinforcement check after six months.
 							fleet_event = {
 								id = magical_discoveries_crisis.1003
-								days = 15
-							}
-							# Second Fleet Arrives
-							fleet_event = {
-								id = magical_discoveries_crisis.1003
-								days = 30
-							}
-							# Third Fleet Arrives
-							fleet_event = {
-								id = magical_discoveries_crisis.1003
-								days = 55
-							}
-							# Fourth Fleet Arrives
-							fleet_event = {
-								id = magical_discoveries_crisis.1003
-								days = 365
+								days = 180
 							}
 							# 5 Fleet Arrives
 							fleet_event = {
@@ -330,57 +558,23 @@ country_event = {
 							#set_owner = event_target:gate_holder_1 #when first anchor built
 						}
 					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 5
-						traits = {
-							trait = leader_trait_ethereal
+					# Adaptive initial invasion force.
+					md_heaven_refresh_scaling = yes
+
+					# Spawn one compact formation, then use event boundaries while
+					# filling toward the measured target (same principle as the
+					# current awakened-FE reactive fleet scaler).
+					country_event = { id = magical_discoveries_crisis.24 }
+					while = {
+						count = 15
+						limit = {
+							check_variable_arithmetic = {
+								which = trigger:fleet_power
+								subtract = md_heaven_target_power
+								value < 0
+							}
 						}
-					}
-					create_fleet = {
-						effect = {
-							set_owner = PREV
-							create_ship = {
-								name = random
-								design = "NAME_Gods"
-								graphical_culture = "extra_dimensional_01"
-							}
-							assign_leader = last_created_leader
-							while = {
-								count = 15
-								create_ship = {
-									name = random
-									design = "NAME_Gods"
-									graphical_culture = "extra_dimensional_01"
-								}
-							}
-							while = {
-								count = 20
-								create_ship = {
-									name = random
-									design = "NAME_Goddess"
-									graphical_culture = "extra_dimensional_01"
-								}
-							}
-							while = {
-								count = 25
-								create_ship = {
-									name = random
-									design = "NAME_soldier_of_the_gods"
-									graphical_culture = "extra_dimensional_01"
-								}
-							}
-							set_location = {
-								target = event_target:heavenes_gate
-								distance = 5
-								angle = random
-							}
-							set_fleet_stance = aggressive
-							set_aggro_range = 500
-							set_aggro_range_measure_from = self
-						}
+						country_event = { id = magical_discoveries_crisis.24 }
 					}
 				}
 			}
@@ -418,13 +612,29 @@ country_event = {
 		}
 		# 扉を無敵にする
 		event_target:heavenesgate = {
-			random_owned_ship = {
+			random_controlled_ship = {
 				ship_event = {
 					id = magical_discoveries_crisis.1280
 				}
 			}
 		}
 		event_target:heavenesgate = { save_event_target_as = crisis_country }
+
+		# Current 4.4 Galactic Custodian / Emperor crisis announcements.
+		if = {
+			limit = { has_galactic_custodian = yes }
+			random_playable_country = {
+				limit = { is_galactic_custodian = yes }
+				country_event = { id = custodian.50 days = 30 }
+			}
+		}
+		if = {
+			limit = { has_galactic_emperor = yes }
+			event_target:gal_emperor = {
+				country_event = { id = emperor.90 days = 30 }
+			}
+		}
+
 		every_country = {
 			limit = {
 				OR = {
@@ -463,158 +673,26 @@ country_event = {
 }
 
 # 艦隊の増強 (HIDDEN)
+# Adaptive early reinforcement check (HIDDEN)
 fleet_event = {
 	id = magical_discoveries_crisis.1003
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		event_target:heavenesgate = {
-			random_list = {
-				25 = {
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 6
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_ethereal
-						}
-					}
-				}
-				25 = {
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 6
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 5
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-					}
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-					}
-				}
+			owner_species = {
+				save_event_target_as = heavens_species
 			}
-			create_fleet = {
-				effect = {
-					set_owner = PREV
-					create_ship = {
-						name = random
-						design = "NAME_Gods"
-						graphical_culture = "extra_dimensional_01"
+			md_heaven_refresh_scaling = yes
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = trigger:fleet_power
+						subtract = md_heaven_target_power
+						value < 0
 					}
-					assign_leader = last_created_leader
-					while = {
-						count = 10
-						create_ship = {
-							name = random
-							design = "NAME_Gods"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 15
-						create_ship = {
-							name = random
-							design = "NAME_Goddess"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 20
-						create_ship = {
-							name = random
-							design = "NAME_soldier_of_the_gods"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					set_location = {
-						target = ROOT
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
 				}
+				country_event = { id = magical_discoveries_crisis.24 }
 			}
 		}
 	}
@@ -766,6 +844,15 @@ country_event = {
 		name = magical_discoveries_crisis.1007.b
 		trigger = {
 			has_ethic = "ethic_fanatic_authoritarian"
+		}
+	}
+	option = {
+		name = magical_discoveries_crisis.1009.c
+		trigger = {
+			NOR = {
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_fanatic_authoritarian"
+			}
 		}
 	}
 }
@@ -1369,26 +1456,22 @@ country_event = {
 }
 
 # 援軍到着 (HIDDEN)
+# Adaptive reinforcements arrive (HIDDEN)
 country_event = {
 	id = magical_discoveries_crisis.1265
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		# Must only trigger if portal is still alive
 		OR = {
 			count_owned_ship = {
-				limit = {
-					is_ship_size = dimensional_portal_ed
-				}
+				limit = { is_ship_size = dimensional_portal_ed }
 				count > 0
 			}
 			any_country = {
 				AND = {
 					is_country_type = gate_holder
 					count_owned_ship = {
-						limit = {
-							is_ship_size = dimensional_portal_ed
-						}
+						limit = { is_ship_size = dimensional_portal_ed }
 						count > 0
 					}
 				}
@@ -1397,110 +1480,34 @@ country_event = {
 	}
 	immediate = {
 		random_country = {
-			limit = {
-				is_country_type = gate_holder
-			}
+			limit = { is_country_type = gate_holder }
 			random_owned_ship = {
-				limit = {
-					is_ship_size = dimensional_portal_ed
-				}
+				limit = { is_ship_size = dimensional_portal_ed }
 				save_event_target_as = heavenes_gate
 			}
 		}
 		random_owned_ship = {
-			limit = {
-				is_ship_size = dimensional_portal_ed
-			}
+			limit = { is_ship_size = dimensional_portal_ed }
 			save_event_target_as = heavenes_gate
 		}
 		owner_species = {
 			save_event_target_as = heavens_species
 		}
-		country_event = {
-			id = magical_discoveries_crisis.1260
-		}
-		# Restart spawn cycle
-		# Extradimensionals 1
+
+		country_event = { id = magical_discoveries_crisis.1260 }
+
 		if = {
-			limit = {
-				is_country_type = heavenly_realm
-			}
-			# Create Admiral
-			random_list = {
-				25 = {
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_ethereal
-						}
+			limit = { is_country_type = heavenly_realm }
+			md_heaven_refresh_scaling = yes
+			if = {
+				limit = {
+					check_variable_arithmetic = {
+						which = trigger:fleet_power
+						subtract = md_heaven_target_power
+						value < 0
 					}
 				}
-				25 = {
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-						traits = {
-							trait = leader_trait_dimensional_stutter
-						}
-					}
-				}
-				50 = {
-					create_leader = {
-						class = commander
-						species = event_target:heavens_species
-						name = random
-						skill = 3
-					}
-				}
-			}
-			# Create Fleet
-			create_fleet = {
-				effect = {
-					set_owner = ROOT
-					create_ship = {
-						name = random
-						design = "NAME_Gods"
-						graphical_culture = "extra_dimensional_01"
-					}
-					assign_leader = last_created_leader
-					while = {
-						count = 4
-						create_ship = {
-							name = random
-							design = "NAME_Gods"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 10
-						create_ship = {
-							name = random
-							design = "NAME_Goddess"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					while = {
-						count = 15
-						create_ship = {
-							name = random
-							design = "NAME_soldier_of_the_gods"
-							graphical_culture = "extra_dimensional_01"
-						}
-					}
-					set_location = {
-						target = event_target:heavenes_gate
-						distance = 5
-						angle = random
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range = 500
-					set_aggro_range_measure_from = self
-				}
+				country_event = { id = magical_discoveries_crisis.24 }
 			}
 		}
 	}
@@ -1585,6 +1592,7 @@ country_event = {
 }
 
 # アンカーを構築した後、増援部隊が到着 (HIDDEN)
+# Anchor completion reinforcement check (HIDDEN)
 ship_event = {
 	id = magical_discoveries_crisis.1267
 	hide_window = yes
@@ -1592,28 +1600,21 @@ ship_event = {
 	trigger = {
 		owner = {
 			is_country_type = heavenly_realm
-			# ポータルがまだ生きている場合にのみ起動する必要があります。
 			OR = {
 				count_owned_ship = {
-					limit = {
-						is_ship_size = dimensional_portal_ed
-					}
+					limit = { is_ship_size = dimensional_portal_ed }
 					count > 0
 				}
 				any_country = {
 					AND = {
 						is_country_type = gate_holder
 						count_owned_ship = {
-							limit = {
-								is_ship_size = dimensional_portal_ed
-							}
+							limit = { is_ship_size = dimensional_portal_ed }
 							count > 0
 						}
 					}
 				}
 			}
-			is_country_type = heavenly_realm
-			num_ships < 2001
 		}
 	}
 	immediate = {
@@ -1622,108 +1623,32 @@ ship_event = {
 				id = magical_discoveries_crisis.1266
 				days = 6
 			}
-			# 必要に応じて建設船をスポーン
+
 			random_country = {
-				limit = {
-					is_country_type = gate_holder
-				}
+				limit = { is_country_type = gate_holder }
 				random_owned_ship = {
-					limit = {
-						is_ship_size = dimensional_portal_ed
-					}
+					limit = { is_ship_size = dimensional_portal_ed }
 					save_event_target_as = heavenes_gate
 				}
 			}
 			random_owned_ship = {
-				limit = {
-					is_ship_size = dimensional_portal_ed
-				}
+				limit = { is_ship_size = dimensional_portal_ed }
 				save_event_target_as = heavenes_gate
 			}
 			owner_species = {
 				save_event_target_as = heavens_species
 			}
+
+			md_heaven_refresh_scaling = yes
 			if = {
 				limit = {
-					is_country_type = heavenly_realm
-				}
-				# Create Admiral
-				random_list = {
-					25 = {
-						create_leader = {
-							class = commander
-							species = event_target:heavens_species
-							name = random
-							skill = 3
-							traits = {
-								trait = leader_trait_ethereal
-							}
-						}
-					}
-					25 = {
-						create_leader = {
-							class = commander
-							species = event_target:heavens_species
-							name = random
-							skill = 3
-							traits = {
-								trait = leader_trait_dimensional_stutter
-							}
-						}
-					}
-					50 = {
-						create_leader = {
-							class = commander
-							species = event_target:heavens_species
-							name = random
-							skill = 3
-						}
+					check_variable_arithmetic = {
+						which = trigger:fleet_power
+						subtract = md_heaven_target_power
+						value < 0
 					}
 				}
-				# Create Fleet
-				create_fleet = {
-					effect = {
-						set_owner = ROOT.owner
-						create_ship = {
-							name = random
-							design = "NAME_Gods"
-							graphical_culture = "extra_dimensional_01"
-						}
-						assign_leader = last_created_leader
-						while = {
-							count = 4
-							create_ship = {
-								name = random
-								design = "NAME_Gods"
-								graphical_culture = "extra_dimensional_01"
-							}
-						}
-						while = {
-							count = 10
-							create_ship = {
-								name = random
-								design = "NAME_Goddess"
-								graphical_culture = "extra_dimensional_01"
-							}
-						}
-						while = {
-							count = 15
-							create_ship = {
-								name = random
-								design = "NAME_soldier_of_the_gods"
-								graphical_culture = "extra_dimensional_01"
-							}
-						}
-						set_location = {
-							target = event_target:heavenes_gate
-							distance = 5
-							angle = random
-						}
-						set_fleet_stance = aggressive
-						set_aggro_range = 500
-						set_aggro_range_measure_from = self
-					}
-				}
+				country_event = { id = magical_discoveries_crisis.24 }
 			}
 		}
 	}

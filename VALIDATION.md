@@ -32,3 +32,144 @@ The second Stellaris 4.4.6 `error.log` contained only:
 3. automatic class-name generation failures for `md_adamantite_ship`.
 
 beta2.2 targets exactly those remaining startup-log warnings.
+
+## 2.0.0-beta2.3 Heavenly crisis validation
+
+Compared the Heavenly crisis entry event against Stellaris 4.4.6 `crisis_events_2.txt`.
+
+Runtime-test target:
+- Necronomicon accepted;
+- Heavenly omen events fire;
+- Heavenly Realm country, portal, starbase and initial fleet spawn;
+- no new `error.log` entries;
+- first Heavenly fleet destruction enables `GOD_SKIN_PROJECT`;
+- `GOD_SKIN_PROJECT` -> `MYTHICAL_DECAY_PROJECT` -> `tech_mythical_decay`.
+
+## 2.0.0-beta2.4 Heavenly fleet test fixes
+
+Based on the runtime report where Heavenly fleets remained at the portal for multiple years.
+
+Runtime log findings addressed:
+- missing EXD species namelist;
+- malformed Heavenly fleet sequential-name format;
+- missing random portal name;
+- `magical_discoveries_crisis.1009` lacking valid AI options;
+- unsupported custom-fleet bombardment stance.
+
+Strategic movement is now explicitly scripted with the Stellaris 4.4 `queue_actions`,
+`find_closest_system`, `space_owner`, and `move_to` interfaces verified in the supplied Vanilla files.
+
+Heavenly combat-fleet creation sites updated: 4.
+
+## 2.0.0-beta2.5 trigger-ID validation
+
+The beta2.4 runtime log showed that `md_heaven_assign_invasion_orders` was expanded
+at five script locations while its internal trigger IDs were constant. Stellaris
+requires trigger IDs to be globally unique.
+
+The effect now uses `$EVENT_ID$.while` and `$EVENT_ID$.target`, following the
+parameterized trigger-ID pattern used by current Stellaris 4.4 Vanilla scripted
+effects. Each call site supplies a distinct `EVENT_ID`.
+
+## 2.0.0-beta2.6 adaptive Heavenly balance
+
+Vanilla 4.4.6 references used:
+- `add_awakened_fallen_empire_fleet` in
+  `common/scripted_effects/fallen_empire_scripted_effects.txt`, including
+  `ordered_playable_country`, `trigger:fleet_power`, target variables and bounded scaling.
+- current `check_galaxy_setup_value` usage for `crisis_strength_scale`.
+
+Model:
+- formation: 1 God / 3 Goddesses / 8 Divine Soldiers;
+- base target: strongest playable fleet power x 1.10;
+- crisis-strength soft factors: 0.75 / 1.00 / 1.20 / 1.40 / 1.80;
+- anchor factors: 1.00 / 1.15 / 1.30 / 1.50;
+- high-power combat tiers begin at 500k / 2M / 10M / 50M / 200M.
+
+A save created after the old Heavenly invasion already contains the oversized
+fleets, so actual balance must be tested from a pre-invasion save.
+
+- Descriptor validation: `version="2.0.0-beta2.6"`, `supported_version="4.4.*"`.
+
+## 2.0.0-beta2.7 Heavenly starbase
+
+Runtime error addressed:
+`Trying to create a starbase with an invalid starbase design ... for ship size starbase_exd_0`.
+
+The Heavenly normal-starbase design now uses the exact current Stellaris 4.4
+Vanilla `ed_starbase_key` layout and Vanilla extradimensional components.
+The MD-specific `angel_starbase_key` remains defined but is no longer used by
+the normal Heavenly starbase.
+
+## 2.0.0-beta2.8
+
+Verified against supplied Stellaris 4.4.6 Vanilla:
+- `awaken_guardians_of_the_galaxy`;
+- `fallen_empires_awakening.4`;
+- `guardians_of_the_galaxy`;
+- `timed_guardians_of_the_galaxy`;
+- `timed_guardians_of_the_galaxy_2`;
+- diplomatic `picture_event_data` with a Fallen Empire event target;
+- `situation_log_category = crises`.
+
+Pacing:
+- GOD_SKIN_PROJECT = 4,000 Society.
+- MYTHICAL_DECAY_PROJECT = 6,000 Engineering.
+
+Fallen Empire:
+- 60% one-time contact chance.
+- 35% accelerated Guardian chance after contact for a valid non-machine,
+  non-hive Fanatic Materialist/Xenophile Fallen Empire with >60k fleet power.
+- Actual awakening/transformation remains Vanilla's responsibility.
+
+## 2.0.0-beta3.0 — Chapter I / story-state validation
+
+Verified against supplied Stellaris 4.4.6 Vanilla before implementation:
+
+- `give_technology = { tech = ... }` is current and used by Vanilla.
+- `add_research_option = tech_xxx` is current and used by Vanilla.
+- `set_timed_country_flag` is current.
+- `country_has_situation = { SITUATION = ... }` is current.
+- Situation `on_monthly -> random_events`, `situation_event`, `set_situation_flag`,
+  `has_situation_flag`, and `on_first_enter` are current.
+- No Vanilla technology, Situation, event or global definition is overridden.
+
+Canonical beta3 Chapter I state:
+
+- 25%: `md_magic_stage_1`, grants `tech_magical_science`.
+- 50%: `md_magic_stage_2`, `md_alchemy_stage_1`, grants `tech_alchemy`.
+- 75%: `md_magic_stage_3`, `md_alchemy_stage_2`, `md_mithril_discovered`.
+- 100%: `md_alchemy_stage_3`, `md_magic_civilization_established`;
+  guarantees Mithril Refining, Advanced Magical Science and Advanced Alchemy.
+
+Legacy handling:
+
+- old purchase-era flags are read only through scripted compatibility triggers
+  and the one-time migration effect;
+- new beta3 story progression does not set them;
+- the beta2 Necronomicon purchase gate is disabled pending beta3.1.
+
+## 2.0.0-beta3.0.1
+
+Runtime issues reproduced from the user test:
+- malformed Chapter I localization;
+- invalid event picture `GFX_evt_laboratory`;
+- unset variable `x` in `tech_md_adamantite_hull`.
+
+Technology structure after this patch:
+
+Core:
+`tech_magical_science`
+-> `tech_advanced_magical_science`
+-> `tech_ultimate_magical_science`
+
+Society:
+- Black Magic -> Attack Magic -> Advanced Attack Magic.
+- White Magic -> Defensive Magic -> Advanced Defensive Magic.
+- White Magic -> White Magic Court.
+- Advanced White Magic + Advanced Defensive Magic -> Barrier Magic.
+- Magical Forces requires Attack + Defensive Magic.
+- Elite Magical Forces also requires Magical Forces itself.
+
+Materials:
+Mithril -> Orichalcum -> Ultimate Alchemy -> Philosopher's Stone -> Adamantite.

@@ -46,3 +46,39 @@ star_depletion_5_modifier = {
 	pop_environment_tolerance = -0.5
 	planet_jobs_food_produces_mult = -0.5
 }
+
+# Adaptive Heavenly combat tiers for non-Vanilla power environments.
+md_heaven_scaling_tier_1 = {
+	ship_weapon_damage = 0.50
+	ship_hull_mult = 0.50
+	ship_armor_mult = 0.50
+	ship_shield_mult = 0.50
+}
+
+md_heaven_scaling_tier_2 = {
+	ship_weapon_damage = 1.50
+	ship_hull_mult = 1.50
+	ship_armor_mult = 1.50
+	ship_shield_mult = 1.50
+}
+
+md_heaven_scaling_tier_3 = {
+	ship_weapon_damage = 4.00
+	ship_hull_mult = 4.00
+	ship_armor_mult = 4.00
+	ship_shield_mult = 4.00
+}
+
+md_heaven_scaling_tier_4 = {
+	ship_weapon_damage = 19.00
+	ship_hull_mult = 19.00
+	ship_armor_mult = 19.00
+	ship_shield_mult = 19.00
+}
+
+md_heaven_scaling_tier_5 = {
+	ship_weapon_damage = 49.00
+	ship_hull_mult = 49.00
+	ship_armor_mult = 49.00
+	ship_shield_mult = 49.00
+}

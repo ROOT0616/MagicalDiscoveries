@@ -3,7 +3,23 @@
 #############################
 namespace = magical_discoveries
 
-# Yearly gatekeeper. Fired from on_yearly_pulse_country.
+# One-time beta2 -> beta3 story-state migration.
+# Fired before the normal story gatekeeper from on_yearly_pulse_country.
+country_event = {
+	id = magical_discoveries.90
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_country_flag = md_beta3_story_migration_done }
+	}
+
+	immediate = {
+		md_migrate_beta2_story_flags = yes
+	}
+}
+
+# Yearly gatekeeper.
 country_event = {
 	id = magical_discoveries.100
 	hide_window = yes
@@ -27,7 +43,7 @@ country_event = {
 
 	option = {
 		name = magical_discoveries.101.a
-		set_country_flag = MeetMagicFlag
+		set_country_flag = md_magic_awakening_started
 		start_situation = {
 			type = situation_md_magical_awakening
 			target = root
@@ -36,51 +52,96 @@ country_event = {
 	}
 	option = {
 		name = magical_discoveries.101.b
-		set_country_flag = DenyMagicFlag
+		# Rejection is no longer permanent. After ten years, the anomaly can
+		# be reconsidered if the empire still exists.
+		remove_country_flag = md_magic_discovery_offered
+		set_timed_country_flag = {
+			flag = md_magic_awakening_suspended
+			days = 3600
+		}
 		ai_chance = { factor = 1 }
 	}
 }
 
-# Stage 1: Basic magical theory and basic alchemy become researchable.
+# 25%: magic is proven to be a reproducible natural phenomenon.
 situation_event = {
 	id = magical_discoveries.102
 	title = magical_discoveries.102.name
 	desc = magical_discoveries.102.desc
 	picture = GFX_evt_psionics
 	is_triggered_only = yes
+	situation = this
 
-	immediate = { owner = { md_unlock_magic_stage_1 = yes } }
+	immediate = {
+		owner = { md_unlock_magic_stage_1 = yes }
+	}
 
-	option = { name = magical_discoveries.102.a }
+	option = {
+		name = magical_discoveries.102.a
+		custom_tooltip = md_magic_science_granted_tt
+		owner = { set_country_flag = md_magic_interpretation_scientific }
+	}
+	option = {
+		name = magical_discoveries.102.b
+		custom_tooltip = md_magic_science_granted_tt
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		owner = { set_country_flag = md_magic_interpretation_traditional }
+	}
 }
 
-# Stage 2: The two disciplines become institutions.
+# 50%: manipulating the new field changes matter in repeatable ways.
 situation_event = {
 	id = magical_discoveries.103
 	title = magical_discoveries.103.name
 	desc = magical_discoveries.103.desc
 	picture = GFX_evt_psionics
 	is_triggered_only = yes
+	situation = this
 
-	immediate = { owner = { md_unlock_magic_stage_2 = yes } }
+	immediate = {
+		owner = { md_unlock_magic_stage_2 = yes }
+	}
 
-	option = { name = magical_discoveries.103.a }
+	option = {
+		name = magical_discoveries.103.a
+		custom_tooltip = md_alchemy_granted_tt
+		owner = { set_country_flag = md_magic_research_open }
+	}
+	option = {
+		name = magical_discoveries.103.b
+		custom_tooltip = md_alchemy_granted_tt
+		owner = { set_country_flag = md_magic_research_state_controlled }
+	}
 }
 
-# Stage 3: Mature magical and alchemical frameworks are established.
+# 75%: the first stable artificial mana-bearing material is reproduced.
 situation_event = {
 	id = magical_discoveries.104
 	title = magical_discoveries.104.name
 	desc = magical_discoveries.104.desc
 	picture = GFX_evt_psionics
 	is_triggered_only = yes
+	situation = this
 
-	immediate = { owner = { md_unlock_magic_stage_3 = yes } }
+	immediate = {
+		owner = { md_unlock_magic_stage_3 = yes }
+	}
 
-	option = { name = magical_discoveries.104.a }
+	option = {
+		name = magical_discoveries.104.a
+		custom_tooltip = md_mithril_discovered_tt
+	}
 }
 
-# Situation completion.
+# Situation completion: magic enters institutions and Mithril becomes an
+# engineering problem rather than an unexplained anomaly.
 country_event = {
 	id = magical_discoveries.105
 	title = magical_discoveries.105.name
@@ -88,10 +149,69 @@ country_event = {
 	picture = GFX_evt_psionics
 	is_triggered_only = yes
 
-	option = { name = magical_discoveries.105.a }
+	option = {
+		name = magical_discoveries.105.a
+		custom_tooltip = md_magic_research_options_added_tt
+	}
 }
 
-# Yearly gatekeeper for the forbidden branch.
+# Random chapter event: the first serious magical laboratory accident.
+situation_event = {
+	id = magical_discoveries.106
+	title = magical_discoveries.106.name
+	desc = magical_discoveries.106.desc
+	picture = GFX_evt_physics_research
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = { has_situation_flag = md_magic_accident_seen }
+		owner = { md_has_magic_stage_1 = yes }
+	}
+
+	immediate = {
+		set_situation_flag = md_magic_accident_seen
+	}
+
+	option = {
+		name = magical_discoveries.106.a
+		owner = { set_country_flag = md_magic_safety_cautious }
+	}
+	option = {
+		name = magical_discoveries.106.b
+		owner = { set_country_flag = md_magic_safety_aggressive }
+	}
+}
+
+# Random chapter event: old folklore begins matching modern measurements.
+situation_event = {
+	id = magical_discoveries.107
+	title = magical_discoveries.107.name
+	desc = magical_discoveries.107.desc
+	picture = GFX_evt_archaeological_dig
+	is_triggered_only = yes
+	situation = this
+
+	trigger = {
+		NOT = { has_situation_flag = md_magic_folklore_seen }
+		owner = { md_has_magic_stage_1 = yes }
+	}
+
+	immediate = {
+		set_situation_flag = md_magic_folklore_seen
+	}
+
+	option = {
+		name = magical_discoveries.107.a
+		owner = { set_country_flag = md_magic_folklore_evidence_accepted }
+	}
+	option = {
+		name = magical_discoveries.107.b
+		owner = { set_country_flag = md_magic_folklore_evidence_rejected }
+	}
+}
+
+# Legacy beta2 gatekeeper retained but disabled by md_can_offer_necronomicon.
 country_event = {
 	id = magical_discoveries.110
 	hide_window = yes
@@ -99,10 +219,12 @@ country_event = {
 
 	trigger = { md_can_offer_necronomicon = yes }
 
-	immediate = { country_event = { id = magical_discoveries.111 } }
+	immediate = {
+		country_event = { id = magical_discoveries.111 }
+	}
 }
 
-# The Necronomicon. This is the deliberate point of no return for the Heaven scenario.
+# Legacy/debug-only beta2 purchase event. The normal beta3 story never fires it.
 country_event = {
 	id = magical_discoveries.111
 	title = magical_discoveries.111.name
@@ -113,7 +235,10 @@ country_event = {
 	option = {
 		name = magical_discoveries.111.a
 		trigger = {
-			resource_stockpile_compare = { resource = energy value >= 3500 }
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 3500
+			}
 		}
 		add_resource = { energy = -3500 }
 		md_accept_necronomicon = yes
